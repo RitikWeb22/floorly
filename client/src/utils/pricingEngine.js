@@ -200,7 +200,7 @@ export function computePricing(input = {}, rules = {}) {
     roundingStep,
     rulesCurrency,
     targetCurrency,
-    version: rules.version || 1,
+    version: safeRules.version || 1,
     tiers: {
       essential,
       standard,
@@ -229,12 +229,13 @@ export function computePricing(input = {}, rules = {}) {
  * Validate pricing rules against business invariants
  */
 export function validatePricingRules(rules = {}) {
+  const safeRules = rules || {};
   const errors = {};
   const warnings = [];
 
-  const standardRate = Number(rules.hourlyRate) || 0;
-  const lowestRate = Number(rules.minHourlyRate) || 0;
-  const minProjectFee = Number(rules.minProjectFee) || 0;
+  const standardRate = Number(safeRules.hourlyRate) || 0;
+  const lowestRate = Number(safeRules.minHourlyRate) || 0;
+  const minProjectFee = Number(safeRules.minProjectFee) || 0;
 
   if (standardRate <= 0) errors.hourlyRate = 'Standard hourly rate must be greater than zero.';
   if (lowestRate <= 0) errors.minHourlyRate = 'Lowest hourly rate must be greater than zero.';
@@ -244,7 +245,7 @@ export function validatePricingRules(rules = {}) {
   if (minProjectFee <= 0) errors.minProjectFee = 'Minimum project fee must be greater than zero.';
 
   // Complexity multipliers: Simple <= Medium <= Complex and all >= 1.00
-  const comp = rules.complexityMultipliers || {};
+  const comp = safeRules.complexityMultipliers || {};
   const simple = Number(comp.simple);
   const medium = Number(comp.medium);
   const complex = Number(comp.complex);
@@ -254,7 +255,7 @@ export function validatePricingRules(rules = {}) {
   if (isNaN(complex) || complex < (medium || 1.25)) errors.complexityComplex = 'Complex complexity must be at least Medium.';
 
   // Tiers: Essential fixed 1.00, Standard > 1.00, Premium > Standard
-  const tiers = rules.tierMultipliers || {};
+  const tiers = safeRules.tierMultipliers || {};
   const standardMult = Number(tiers.standard);
   const premiumMult = Number(tiers.premium);
 
@@ -262,25 +263,25 @@ export function validatePricingRules(rules = {}) {
   if (isNaN(premiumMult) || premiumMult <= standardMult) errors.premiumMultiplier = 'Premium tier multiplier must be greater than Standard tier multiplier.';
 
   // Contingency 0-50%
-  const contingency = Number(rules.defaultContingencyPercent ?? rules.contingencyPercent ?? 10);
+  const contingency = Number(safeRules.defaultContingencyPercent ?? safeRules.contingencyPercent ?? 10);
   if (isNaN(contingency) || contingency < 0 || contingency > 50) {
     errors.contingencyPercent = 'Contingency buffer must be between 0% and 50%.';
   }
 
   // Target margin 0-80%
-  const targetMargin = Number(rules.preferredProfitMargin ?? rules.targetMargin ?? 25);
+  const targetMargin = Number(safeRules.preferredProfitMargin ?? safeRules.targetMargin ?? 25);
   if (isNaN(targetMargin) || targetMargin < 0 || targetMargin > 80) {
     errors.targetMargin = 'Target profit margin must be between 0% and 80%.';
   }
 
   // Rush >= 1.00
-  const rush = Number(rules.rushMultiplier ?? 1.30);
+  const rush = Number(safeRules.rushMultiplier ?? 1.30);
   if (isNaN(rush) || rush < 1.0) {
     errors.rushMultiplier = 'Rush multiplier must be at least 1.00.';
   }
 
   // Project types / Category floors >= minProjectFee
-  const categories = Array.isArray(rules.projectTypes) ? rules.projectTypes : [];
+  const categories = Array.isArray(safeRules.projectTypes) ? safeRules.projectTypes : [];
   categories.forEach((cat) => {
     const f = Number(cat.floor);
     if (isNaN(f) || f < minProjectFee) {
@@ -362,8 +363,9 @@ export function calculatePricing({
   currency = null,
   exchangeRate = 1,
 }) {
-  const standardRate = Number(pricingSettings?.hourlyRate) || 50;
-  const minHourlyRate = Number(pricingSettings?.minHourlyRate) || 35;
+  const safeSettings = pricingSettings || {};
+  const standardRate = Number(safeSettings.hourlyRate) || 50;
+  const minHourlyRate = Number(safeSettings.minHourlyRate) || 35;
 
   // 1. Calculate Total Hours and Line Item Costs
   let totalHours = 0;
@@ -411,7 +413,7 @@ export function calculatePricing({
       currency,
       exchangeRate,
     },
-    pricingSettings
+    safeSettings
   );
 
   const floor = computed.floor;

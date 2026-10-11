@@ -5,7 +5,6 @@ const processedEventSchema = new mongoose.Schema(
     eventId: {
       type: String,
       required: true,
-      index: true,
     },
     provider: {
       type: String,

@@ -123,11 +123,27 @@ export function validateRequiredEnv() {
  * or dynamically resolves using request protocol and host.
  */
 export function getGoogleCallbackUrl(req) {
-  if (config.googleCallbackUrl) {
-    return config.googleCallbackUrl;
+  const host = req?.get ? req.get('host') : req?.headers?.host;
+  const isLocalRequest = host ? (host.includes('localhost') || host.includes('127.0.0.1')) : !config.isProduction;
+
+  // When testing or running locally, use the local callback URL
+  if (isLocalRequest) {
+    const proto = req?.protocol || 'http';
+    const localHost = host || `localhost:${config.port}`;
+    return `${proto}://${localHost}/api/v1/auth/google/callback`;
   }
-  const protocol = req?.protocol || (req?.secure ? 'https' : 'http');
-  const host = req?.get ? req.get('host') : (req?.headers?.host || `localhost:${config.port}`);
-  return `${protocol}://${host}/api/v1/auth/google/callback`;
+
+  // If incoming request is available in production, prioritize the actual host being visited
+  if (req && host) {
+    const proto = req.headers?.['x-forwarded-proto'] || req.protocol || (req.secure ? 'https' : 'http');
+    return `${proto}://${host}/api/v1/auth/google/callback`;
+  }
+
+  // Use configured callback URL with auto-correction for stale service names
+  if (config.googleCallbackUrl) {
+    return config.googleCallbackUrl.replace('floorly-api.onrender.com', 'floorly.onrender.com');
+  }
+
+  return 'https://floorly.onrender.com/api/v1/auth/google/callback';
 }
 

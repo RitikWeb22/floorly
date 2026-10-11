@@ -57,7 +57,7 @@ export function ProposalBuilderPage() {
 
   // Core Data
   const [clients, setClients] = useState([]);
-  const [pricingSettings, setPricingSettings] = useState(null);
+  const [pricingSettings, setPricingSettings] = useState({});
   const [existingProposal, setExistingProposal] = useState(null);
   const [analysisData, setAnalysisData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);

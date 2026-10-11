@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: floorly-api
+    name: floorly
     env: node
     plan: free
     rootDir: server
