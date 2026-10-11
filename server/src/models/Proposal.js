@@ -38,7 +38,7 @@ const proposalSchema = new mongoose.Schema({
     dueTrigger: { type: String },
   }],
   projectType: { type: String, default: 'landing-pages' },
-  selectedTier: { type: String, enum: ['minimum', 'recommended', 'premium', 'custom'], default: 'recommended' },
+  selectedTier: { type: String, enum: ['essential', 'standard', 'minimum', 'recommended', 'premium', 'custom'], default: 'standard' },
   paymentMethod: { type: String, default: 'upi' },
   paymentDetails: { type: String, default: '' },
   paymentScheduleType: { type: String, default: '50_50' },
