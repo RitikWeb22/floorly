@@ -29,8 +29,8 @@ export const config = {
   mongoUri: process.env.MONGO_URI || '',
 
   // Domains & URLs
-  siteUrl: process.env.SITE_URL || process.env.FRONTEND_URL || 'http://localhost:5173',
-  frontendUrl: process.env.FRONTEND_URL || process.env.SITE_URL || 'http://localhost:5173',
+  siteUrl: (process.env.SITE_URL || process.env.FRONTEND_URL || 'http://localhost:5173').replace(/\/+$/, ''),
+  frontendUrl: (process.env.FRONTEND_URL || process.env.SITE_URL || 'http://localhost:5173').replace(/\/+$/, ''),
 
   // Support & Privacy Emails
   supportEmail: process.env.SUPPORT_EMAIL || 'support@floorly.com',

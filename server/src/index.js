@@ -67,18 +67,19 @@ app.use(securityHeaders);
 
 const configuredFrontendUrls = (process.env.FRONTEND_URL || '')
   .split(',')
-  .map((u) => u.trim())
+  .map((u) => u.trim().replace(/\/+$/, ''))
   .filter(Boolean);
 
 app.use(cors({
   origin: (origin, callback) => {
     if (!origin) return callback(null, true);
+    const cleanOrigin = origin.replace(/\/+$/, '');
     if (
       configuredFrontendUrls.length === 0 ||
-      configuredFrontendUrls.includes(origin) ||
-      origin.endsWith('.vercel.app') ||
-      origin === 'http://localhost:5173' ||
-      origin === 'http://127.0.0.1:5173'
+      configuredFrontendUrls.includes(cleanOrigin) ||
+      cleanOrigin.endsWith('.vercel.app') ||
+      cleanOrigin === 'http://localhost:5173' ||
+      cleanOrigin === 'http://127.0.0.1:5173'
     ) {
       return callback(null, true);
     }
