@@ -123,6 +123,21 @@ app.use((req, res, next) => {
   next();
 });
 
+// Root landing endpoint for browser and platform health monitoring
+app.get('/', (req, res) => {
+  res.json({
+    success: true,
+    message: '🚀 Floorly API is active and running',
+    version: '1.0.0',
+    status: 'healthy',
+    frontend: process.env.FRONTEND_URL || 'https://floorly-studio.vercel.app',
+    endpoints: {
+      health: '/health',
+      businessInfo: '/api/v1/public/business-info',
+    },
+  });
+});
+
 // Health check endpoint with Redis and database telemetry
 app.get('/health', (req, res) => {
   const cacheStatus = getCacheStatus();
