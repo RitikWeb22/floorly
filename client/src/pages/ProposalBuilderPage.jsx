@@ -2013,9 +2013,9 @@ export function ProposalBuilderPage() {
               amount: r.amount,
               dueTrigger: r.dueTrigger,
             })),
-            termsAndConditions: DEFAULT_CLAUSES
-              .filter(c => selectedClauseIds.includes(c.id))
-              .map(c => `${c.title}: ${c.content}`)
+            termsAndConditions: availableClauses
+              .filter(c => selectedClauseIds.includes(c.id || c._id))
+              .map(c => `${c.title}: ${c.body || c.content || ''}`)
               .join('\n\n') + (clientNote ? `\n\n${clientNote}` : ''),
             validUntil: new Date(Date.now() + (Number(validForDays) || 14) * 86400000).toISOString(),
             taxMode,

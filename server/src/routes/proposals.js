@@ -1,4 +1,5 @@
 import express from 'express';
+import mongoose from 'mongoose';
 import { Proposal } from '../models/Proposal.js';
 import { PricingSetting } from '../models/PricingSetting.js';
 import { Client } from '../models/Client.js';
@@ -122,15 +123,16 @@ router.post('/', async (req, res) => {
     const rulesVersion = settings.version || 1;
     const rawAmount = floorCheck.calculation?.adjusted || subtotal;
     const floorUplift = floorCheck.calculation?.floorUplift || 0;
+    const proposalNumber = await getNextProposalNumber(userId);
 
     const newProposal = await Proposal.create({
       userId,
       clientId,
-      analysisId: analysisId || null,
+      analysisId: analysisId && mongoose.Types.ObjectId.isValid(analysisId) ? analysisId : null,
       proposalNumber,
       version: 1,
       title,
-      status: 'draft',
+      status: req.body.status || 'draft',
       currency: currency || req.user.currency || 'USD',
       taxType: req.user.taxType || 'VAT',
       taxRate: req.user.taxRate || 0,
