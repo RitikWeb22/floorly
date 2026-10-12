@@ -18,6 +18,7 @@ import { useAuthStore } from '../store/useAuthStore';
 import { useQuickModalStore } from '../store/useQuickModalStore';
 import { getProfessionConfig } from '../config/professions';
 import { getClientSubscription } from '../lib/subscription';
+import { copyToClipboard } from '../utils/clipboard';
 
 export function AgentsDocPage() {
   const { user } = useAuthStore();
@@ -94,10 +95,14 @@ export function AgentsDocPage() {
     }
   };
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(markdownContent);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+  const handleCopy = async () => {
+    const success = await copyToClipboard(markdownContent);
+    if (success) {
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } else {
+      window.prompt('Copy agents documentation:', markdownContent);
+    }
   };
 
   const handleDownload = () => {

@@ -10,8 +10,12 @@ import {
   Clock,
   Loader2,
   ExternalLink,
+  Share2,
+  Check,
 } from 'lucide-react';
 import { sanitizeFreeText } from '../../utils/documentSanitizer';
+import { api } from '../../lib/api';
+import { copyToClipboard } from '../../utils/clipboard';
 
 /**
  * Pure, shared printable invoice document sheet.
@@ -585,6 +589,7 @@ export function InvoiceDocument({ invoice, client, user, onClose }) {
   const previouslyFocusedElementRef = useRef(null);
 
   const [isDownloading, setIsDownloading] = useState(false);
+  const [copiedLink, setCopiedLink] = useState(false);
   const [downloadError, setDownloadError] = useState(null);
 
   const invoiceId = invoice?.id || invoice?._id;
@@ -593,6 +598,25 @@ export function InvoiceDocument({ invoice, client, user, onClose }) {
   const clientName = (effectiveClient?.company || effectiveClient?.name || 'Client')
     .trim()
     .replace(/[^a-zA-Z0-9_-]/g, '_');
+
+  // Copy share link
+  const handleCopyShareLink = async () => {
+    if (!invoiceId) return;
+    try {
+      const res = await api.createInvoiceShareLink(invoiceId);
+      const shareUrl = res.shareUrl || `${window.location.origin}/i/${res.rawToken}`;
+      const copied = await copyToClipboard(shareUrl);
+      if (copied) {
+        setCopiedLink(true);
+        setTimeout(() => setCopiedLink(false), 2500);
+      } else {
+        window.prompt('Copy your secure invoice share link:', shareUrl);
+      }
+    } catch (err) {
+      console.error('Failed to create invoice share link', err);
+      window.alert(err.message || 'Could not generate share link.');
+    }
+  };
 
   // Focus trap & Escape key
   useEffect(() => {
@@ -705,6 +729,27 @@ export function InvoiceDocument({ invoice, client, user, onClose }) {
         </div>
 
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+          {/* Copy Share Link */}
+          <button
+            type="button"
+            onClick={handleCopyShareLink}
+            aria-label="Copy share link"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#D9D4C7] text-xs font-semibold text-[#0E1A2B] hover:bg-[#F3F7FD] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0047AB] cursor-pointer"
+          >
+            {copiedLink ? (
+              <>
+                <Check className="w-3.5 h-3.5 text-[#067647]" />
+                <span className="text-[#067647]">Link copied</span>
+              </>
+            ) : (
+              <>
+                <Share2 className="w-3.5 h-3.5 text-[#5B6676]" />
+                <span className="hidden sm:inline">Copy share link</span>
+                <span className="sm:hidden">Share link</span>
+              </>
+            )}
+          </button>
+
           {/* Print Button (Opens dedicated print route) */}
           <button
             type="button"

@@ -34,6 +34,7 @@ import { useCurrencyStore } from '../store/useCurrencyStore';
 import { InvoiceDocument } from '../components/documents/InvoiceDocument';
 import { PaymentReceiptDocument } from '../components/documents/PaymentReceiptDocument';
 import { SendMessageModal } from '../components/invoices/SendMessageModal';
+import { copyToClipboard } from '../utils/clipboard';
 
 export function InvoicesPage() {
   const { user } = useAuthStore();
@@ -162,17 +163,32 @@ export function InvoicesPage() {
   // Generate & Copy Public Share Link for Client
   const handleCopyShareLink = async (inv) => {
     if (!inv) return;
+    const invoiceId = inv.id || inv._id;
+    if (!invoiceId) {
+      showToast({
+        type: 'error',
+        title: 'Share Link Failed',
+        message: 'Invoice identifier not found.',
+      });
+      return;
+    }
+
     try {
       setShareLinkLoading(true);
-      const res = await api.createInvoiceShareLink(inv.id);
+      const res = await api.createInvoiceShareLink(invoiceId);
       const url = res.shareUrl || `${window.location.origin}/i/${res.rawToken}`;
-      await navigator.clipboard.writeText(url);
-      setCopiedInvoiceId(inv.id);
-      showToast({
-        type: 'success',
-        title: 'Share Link Ready',
-        message: 'Public client invoice link copied! Anyone with the link can view and download without logging in.',
-      });
+      const copied = await copyToClipboard(url);
+      setCopiedInvoiceId(invoiceId);
+      if (copied) {
+        showToast({
+          type: 'success',
+          title: 'Share Link Copied',
+          message: 'Public client invoice link copied! Anyone with the link can view and download without logging in.',
+        });
+      } else {
+        // Fallback for prompt
+        window.prompt('Copy your secure invoice share link:', url);
+      }
       setTimeout(() => setCopiedInvoiceId(null), 2500);
     } catch (err) {
       showToast({
@@ -674,12 +690,12 @@ export function InvoicesPage() {
                         title="Copy secure public share link for client"
                         className="btn-secondary text-xs py-1.5 px-3 flex items-center gap-1.5 cursor-pointer"
                       >
-                        {copiedInvoiceId === selectedInvoice.id ? (
+                        {copiedInvoiceId === (selectedInvoice.id || selectedInvoice._id) ? (
                           <Check className="w-3.5 h-3.5 text-emerald-600" />
                         ) : (
                           <Copy className="w-3.5 h-3.5 text-[#0047AB]" />
                         )}
-                        <span>Share Link</span>
+                        <span>{copiedInvoiceId === (selectedInvoice.id || selectedInvoice._id) ? 'Link Copied' : 'Copy share link'}</span>
                       </button>
                     </div>
                   </div>

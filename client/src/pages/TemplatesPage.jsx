@@ -28,6 +28,7 @@ import { StarterLibraryModal } from '../components/templates/StarterLibraryModal
 import { ClauseMigrationModal, LEGACY_MIGRATION_PAIRS } from '../components/templates/ClauseMigrationModal';
 import { MessageEditorDrawer } from '../components/templates/MessageEditorDrawer';
 import { resolveVariables, SAMPLE_VARIABLE_DATA } from '../utils/variableResolver';
+import { copyToClipboard } from '../utils/clipboard';
 
 const CATEGORIES = [
   'All',
@@ -169,9 +170,9 @@ export function TemplatesPage() {
   };
 
   // Copy clause text resolved with sample values
-  const handleCopyClause = (clause) => {
+  const handleCopyClause = async (clause) => {
     const resolved = resolveVariables(clause.body, SAMPLE_VARIABLE_DATA, true);
-    navigator.clipboard.writeText(resolved);
+    await copyToClipboard(resolved);
     setCopiedId(clause.id);
     setAriaAnnouncement(`Copied "${clause.title}" to clipboard.`);
     setTimeout(() => {

@@ -15,6 +15,7 @@ import { ProposalDocument } from './ProposalDocument';
 import { computeProposalTotals } from '../../utils/pricingEngine';
 import { validateUnresolvedVariables, buildVariableContext } from '../../utils/variableResolver';
 import { api } from '../../lib/api';
+import { copyToClipboard } from '../../utils/clipboard';
 
 export function ProposalDocumentModal({
   proposal,
@@ -205,15 +206,21 @@ export function ProposalDocumentModal({
 
   // Copy share link
   const handleCopyShareLink = async () => {
-    if (!proposalId) return;
+    const id = proposalId || proposal?.id || proposal?._id;
+    if (!id) return;
     try {
-      const res = await api.createProposalShareLink(proposalId);
+      const res = await api.createProposalShareLink(id);
       const shareUrl = res.shareUrl || `${window.location.origin}/p/${res.rawToken}`;
-      await navigator.clipboard.writeText(shareUrl);
-      setCopiedLink(true);
-      setTimeout(() => setCopiedLink(false), 2000);
+      const copied = await copyToClipboard(shareUrl);
+      if (copied) {
+        setCopiedLink(true);
+        setTimeout(() => setCopiedLink(false), 2500);
+      } else {
+        window.prompt('Copy your secure proposal share link:', shareUrl);
+      }
     } catch (err) {
       console.error('Failed to create proposal share link', err);
+      window.alert(err.message || 'Could not generate share link.');
     }
   };
 
@@ -253,7 +260,7 @@ export function ProposalDocumentModal({
             type="button"
             onClick={handleCopyShareLink}
             aria-label="Copy share link"
-            className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#D9D4C7] text-xs font-semibold text-[#0E1A2B] hover:bg-[#F3F7FD] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0047AB] cursor-pointer"
+            className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-[#D9D4C7] text-xs font-semibold text-[#0E1A2B] hover:bg-[#F3F7FD] transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#0047AB] cursor-pointer"
           >
             {copiedLink ? (
               <>
@@ -263,7 +270,8 @@ export function ProposalDocumentModal({
             ) : (
               <>
                 <Share2 className="w-3.5 h-3.5 text-[#5B6676]" />
-                <span>Copy share link</span>
+                <span className="hidden sm:inline">Copy share link</span>
+                <span className="sm:hidden">Share link</span>
               </>
             )}
           </button>

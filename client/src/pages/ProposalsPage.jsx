@@ -30,6 +30,7 @@ import { useAuthStore } from '../store/useAuthStore';
 import { useNotificationStore } from '../store/useNotificationStore';
 import { useCurrencyStore } from '../store/useCurrencyStore';
 import { ProposalDocumentModal } from '../components/documents/ProposalDocumentModal';
+import { copyToClipboard } from '../utils/clipboard';
 
 export function ProposalsPage() {
   const navigate = useNavigate();
@@ -214,16 +215,22 @@ export function ProposalsPage() {
 
   // Proposal Actions
   const handleCopyLink = async (p) => {
+    const propId = p?.id || p?._id;
+    if (!propId) return;
     try {
-      const res = await api.createProposalShareLink(p.id || p._id);
+      const res = await api.createProposalShareLink(propId);
       const url = res.shareUrl || `${window.location.origin}/p/${res.rawToken}`;
-      await navigator.clipboard.writeText(url);
-      setCopiedProposalId(p.id || p._id);
-      showToast({
-        type: 'success',
-        title: 'Share link ready',
-        message: 'Public client proposal link copied! Anyone with the link can view and accept without an account.',
-      });
+      const copied = await copyToClipboard(url);
+      setCopiedProposalId(propId);
+      if (copied) {
+        showToast({
+          type: 'success',
+          title: 'Share link ready',
+          message: 'Public client proposal link copied! Anyone with the link can view and accept without an account.',
+        });
+      } else {
+        window.prompt('Copy your secure proposal share link:', url);
+      }
       setTimeout(() => setCopiedProposalId(null), 2500);
     } catch (err) {
       showToast({

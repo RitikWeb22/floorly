@@ -28,6 +28,7 @@ import { useNotificationStore } from '../store/useNotificationStore';
 import { useCurrencyStore } from '../store/useCurrencyStore';
 import { getProfessionConfig } from '../config/professions';
 import { calculatePricing } from '../utils/pricingEngine';
+import { copyToClipboard } from '../utils/clipboard';
 
 // Category display name formatter (fixes "E Commerce" typo)
 function formatCategoryLabel(catId) {
@@ -461,7 +462,7 @@ export function AnalyzerPage() {
   };
 
   // Copy Scope to Clipboard
-  const handleCopyScope = () => {
+  const handleCopyScope = async () => {
     if (!selectedAnalysis) return;
     const textToCopy = `# ${selectedAnalysis.projectTitle}
 Category: ${formatCategoryLabel(selectedAnalysis.projectType)}
@@ -482,7 +483,7 @@ ${(selectedAnalysis.deliverables || []).map((d) => `- ${d}`).join('\n')}
 ## Not Included (Out of Scope)
 ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
 `;
-    navigator.clipboard.writeText(textToCopy);
+    await copyToClipboard(textToCopy);
     showToast({
       type: 'success',
       title: 'Scope Copied',

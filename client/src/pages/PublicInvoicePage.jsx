@@ -12,6 +12,7 @@ import {
   Check,
 } from 'lucide-react';
 import { InvoiceDocumentSheet } from '../components/documents/InvoiceDocument';
+import { copyToClipboard } from '../utils/clipboard';
 
 export function PublicInvoicePage() {
   const { token } = useParams();
@@ -52,11 +53,15 @@ export function PublicInvoicePage() {
     };
   }, [token]);
 
-  const copyToClipboard = (text, key) => {
+  const handleCopyText = async (text, key) => {
     if (!text) return;
-    navigator.clipboard.writeText(text);
-    setCopiedKey(key);
-    setTimeout(() => setCopiedKey(null), 2000);
+    const success = await copyToClipboard(text);
+    if (success) {
+      setCopiedKey(key);
+      setTimeout(() => setCopiedKey(null), 2000);
+    } else {
+      window.prompt('Copy text:', text);
+    }
   };
 
   const handleRazorpayPayment = async () => {
@@ -275,7 +280,7 @@ export function PublicInvoicePage() {
                       </div>
                       <button
                         type="button"
-                        onClick={() => copyToClipboard(paymentMethods.bankDetails, 'bank')}
+                        onClick={() => handleCopyText(paymentMethods.bankDetails, 'bank')}
                         className="p-1.5 text-[#5B6676] hover:text-[#0047AB] rounded-md transition-colors"
                         title="Copy details"
                       >
@@ -294,7 +299,7 @@ export function PublicInvoicePage() {
                       </div>
                       <button
                         type="button"
-                        onClick={() => copyToClipboard(paymentMethods.upiId, 'upi')}
+                        onClick={() => handleCopyText(paymentMethods.upiId, 'upi')}
                         className="p-1.5 text-[#5B6676] hover:text-[#0047AB] rounded-md transition-colors"
                         title="Copy UPI ID"
                       >
@@ -313,7 +318,7 @@ export function PublicInvoicePage() {
                       </div>
                       <button
                         type="button"
-                        onClick={() => copyToClipboard(paymentMethods.paypalEmail, 'paypal')}
+                        onClick={() => handleCopyText(paymentMethods.paypalEmail, 'paypal')}
                         className="p-1.5 text-[#5B6676] hover:text-[#0047AB] rounded-md transition-colors"
                         title="Copy PayPal Email"
                       >

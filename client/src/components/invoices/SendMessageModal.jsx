@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { api } from '../../lib/api';
 import { resolveVariables, buildVariableContext } from '../../utils/variableResolver';
+import { copyToClipboard } from '../../utils/clipboard';
 
 export function SendMessageModal({
   isOpen,
@@ -134,10 +135,14 @@ export function SendMessageModal({
   const handleCopy = async () => {
     try {
       const fullText = `To: ${recipient}\nSubject: ${subject}\n\n${body}`;
-      await navigator.clipboard.writeText(fullText);
-      setCopied(true);
-      setStatusMsg({ type: 'success', text: 'Message copied to clipboard' });
-      setTimeout(() => setCopied(false), 2500);
+      const success = await copyToClipboard(fullText);
+      if (success) {
+        setCopied(true);
+        setStatusMsg({ type: 'success', text: 'Message copied to clipboard' });
+        setTimeout(() => setCopied(false), 2500);
+      } else {
+        window.prompt('Copy message text:', fullText);
+      }
     } catch {
       setStatusMsg({ type: 'error', text: 'Failed to copy to clipboard' });
     }
