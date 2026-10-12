@@ -339,10 +339,10 @@ export function LandingPage() {
           <div>
             <h1
               style={{
-                fontSize: 'clamp(38px, 5.5vw, 68px)',
+                fontSize: 'clamp(28px, 3.6vw, 46px)',
                 fontWeight: 800,
                 color: 'var(--ink, #0E1A2B)',
-                lineHeight: 1.08,
+                lineHeight: 1.15,
                 letterSpacing: '-0.02em',
                 fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
               }}
@@ -2167,110 +2167,6 @@ export function LandingPage() {
               <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Complexity Multiplier: 1.25x ($5,625)</span>
               <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Contingency Buffer: 20% (+$1,125)</span>
               <span style={{ color: '#047857' }}>★ Enforced Floor: $6,750 Total</span>
-            </div>
-          </div>
-
-          {/* Authoritative Citations & Source Documentation */}
-          <div
-            style={{
-              padding: '24px',
-              background: '#FFFFFF',
-              borderRadius: '16px',
-              border: '1px solid var(--line, #E8E0CF)',
-            }}
-          >
-            <h3 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 12px' }}>
-              Where does Floorly source verified industry research and benchmarks?
-            </h3>
-            <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.8 }}>
-              <li>
-                Independent workforce statistics cited from the{' '}
-                <a
-                  href="https://www.freelancersunion.org/research/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline', fontWeight: 600 }}
-                >
-                  Freelancers Union Independent Workforce Report
-                </a>
-                .
-              </li>
-              <li>
-                Pricing psychology and contract negotiation benchmarks from{' '}
-                <a
-                  href="https://hbr.org/2021/04/how-freelancers-can-protect-their-pricing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline', fontWeight: 600 }}
-                >
-                  Harvard Business Review Freelance Pricing Analysis
-                </a>
-                .
-              </li>
-              <li>
-                Global card and subscription billing infrastructure powered by{' '}
-                <a
-                  href="https://docs.stripe.com/billing"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline', fontWeight: 600 }}
-                >
-                  Stripe Official Billing Documentation
-                </a>
-                .
-              </li>
-              <li>
-                Domestic Indian UPI, QR and NetBanking processing implemented via{' '}
-                <a
-                  href="https://razorpay.com/docs/payments/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline', fontWeight: 600 }}
-                >
-                  Razorpay Payment Gateway API Documentation
-                </a>
-                .
-              </li>
-              <li>
-                Web accessibility standards compliant with{' '}
-                <a
-                  href="https://www.w3.org/WAI/standards-guidelines/wcag/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline', fontWeight: 600 }}
-                >
-                  W3C Web Content Accessibility Guidelines (WCAG 2.1 AA)
-                </a>
-                .
-              </li>
-            </ul>
-
-            <div
-              style={{
-                marginTop: '16px',
-                paddingTop: '16px',
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                fontSize: '13px',
-                color: 'var(--muted, #5B6676)',
-                display: 'flex',
-                justifyContent: 'space-between',
-                flexWrap: 'wrap',
-                gap: '8px',
-              }}
-            >
-              <span>Published: October 1, 2026 · Last Updated: October 12, 2026</span>
-              <span>
-                Authored by{' '}
-                <a
-                  href="https://github.com/RitikWeb22"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  style={{ color: 'var(--ink, #0E1A2B)', fontWeight: 600, textDecoration: 'underline' }}
-                >
-                  Ritik
-                </a>
-                , Founder &amp; Engineer at Floorly
-              </span>
             </div>
           </div>
         </div>
