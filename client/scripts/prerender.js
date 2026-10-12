@@ -33,7 +33,7 @@ const ROUTES = [
             <p itemprop="description">Floorly is an AI-powered freelance studio operating system that turns unstructured client briefs and email threads into scoped, professional proposals with an unbreakable, mathematically enforced price floor. Built for independent developers, UI/UX designers, and creative studios, Floorly algorithmically computes project break-even baselines—combining minimum hourly rates, technical complexity multipliers, and a 20% to 25% scope contingency buffer. This deterministic guardrail prevents freelancers from underquoting fixed-price engagements, allowing them to issue branded proposals with digital signatures, collect milestone payments via Stripe and Razorpay, and track true take-home profit.</p>
             
             <aside aria-label="Key Takeaways and AI Executive Summary" class="executive-summary">
-              <h2>Key Takeaways &amp; Executive Summary</h2>
+              <h2>What are the key takeaways and core benefits of Floorly?</h2>
               <p><strong>Bottom-Line Answer:</strong> Floorly is an AI-powered freelance studio operating system that ingests client briefs, algorithmically scopes deliverables, and deterministically enforces a mathematical price floor below which proposals cannot be quoted. It guarantees freelancers never work at a financial deficit, providing milestone invoicing and profit tracking.</p>
               <ul>
                 <li><strong>Core Problem Solved:</strong> Prevents the chronic 28% contractor underquoting gap caused by unestimated revisions, vague client requirements, and emotional discounting during negotiations.</li>
@@ -86,19 +86,19 @@ const ROUTES = [
             <p>A sustainable freelance price floor is calculated using four deterministic variables to guarantee profitable project execution:</p>
             <ol>
               <li>
-                <h3>1. Base Labor Break-Even Cost</h3>
+                <h3>1. How is base labor break-even cost calculated?</h3>
                 <p>Estimated Engineering Hours multiplied by your Baseline Hourly Rate (derived from living expenses, healthcare, and software overhead).</p>
               </li>
               <li>
-                <h3>2. Technical Complexity Multiplier</h3>
+                <h3>2. How does the technical complexity multiplier adjust project rates?</h3>
                 <p>A dynamic factor ranging between 1.15x and 1.50x to account for third-party API dependencies, authentication systems, and database architecture.</p>
               </li>
               <li>
-                <h3>3. Mandatory Scope Contingency Buffer</h3>
+                <h3>3. Why is a 20% to 25% scope contingency buffer essential?</h3>
                 <p>A non-negotiable 20% to 25% buffer added to fixed estimates, which saves an estimated $8,400 to $14,200 annually in unbilled revision hours.</p>
               </li>
               <li>
-                <h3>4. Algorithmic Server-Side Enforcement</h3>
+                <h3>4. How does server-side algorithmic floor enforcement work?</h3>
                 <p>The mathematical formula: Project Floor = (Base Hours × Hourly Rate × Complexity Multiplier) + Contingency Buffer. The AI proposal engine cannot override this floor.</p>
               </li>
             </ol>
@@ -115,7 +115,7 @@ const ROUTES = [
           </section>
 
           <section aria-labelledby="case-study-template">
-            <h2 id="case-study-template">Real-World Case Study: Calculating a Scoped Project Price Floor</h2>
+            <h2 id="case-study-template">Case Study: How did a mathematical price floor preserve $2,250 on a fixed quote?</h2>
             <p>To demonstrate how mathematical guardrails prevent financial loss, consider a typical client engagement for a custom e-commerce web application:</p>
             <ul>
               <li><strong>Client Requirement:</strong> Custom e-commerce store with user authentication, product catalog, cart persistence, and payment gateway checkout.</li>
@@ -169,7 +169,7 @@ const ROUTES = [
           </section>
 
           <section aria-labelledby="free-tools">
-            <h2 id="free-tools">Free Interactive Financial Tools for Freelancers</h2>
+            <h2 id="free-tools">What free interactive pricing calculators are available for freelancers?</h2>
             <p>Calculate your sustainable freelance pricing baseline before you pitch your next prospective client:</p>
             <ul>
               <li><a href="/tools/freelance-rate-calculator">Freelance Hourly Rate &amp; Price Floor Calculator</a> — Determine your absolute minimum hourly rate and daily rate based on living expenses, billable capacity, and business overhead.</li>

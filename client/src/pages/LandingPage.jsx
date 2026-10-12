@@ -463,7 +463,7 @@ export function LandingPage() {
                 fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
               }}
             >
-              Try the floor
+              What is your break-even project price floor?
             </h2>
             <p style={{ color: 'var(--muted, #5B6676)', fontSize: '14px', marginBottom: '22px' }}>
               A client says the landing page budget is&hellip;
@@ -660,10 +660,10 @@ export function LandingPage() {
               fontSize: 'clamp(34px, 4.6vw, 54px)',
               fontWeight: 800,
               fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-              maxWidth: '15em',
+              maxWidth: '18em',
             }}
           >
-            From messy message to paid invoice in three steps
+            How do you turn a client brief into a paid invoice in three steps?
           </h2>
           <p style={{ color: 'var(--muted, #5B6676)', fontSize: '19px', maxWidth: '34em', marginTop: '16px' }}>
             No spreadsheets, no guessing hours, no awkward rate negotiation.
@@ -700,7 +700,7 @@ export function LandingPage() {
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 }}
               >
-                Paste the brief
+                Step 1: How do you scope an unstructured client brief?
               </h3>
               <p style={{ color: 'var(--muted, #5B6676)' }}>
                 Drop in an email, chat or call notes. Floorly pulls out the scope, flags unclear points and estimates
@@ -730,7 +730,7 @@ export function LandingPage() {
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 }}
               >
-                Get a protected proposal
+                Step 2: How does AI enforce your minimum price floor?
               </h3>
               <p style={{ color: 'var(--muted, #5B6676)' }}>
                 Three pricing tiers, a print-ready PDF and your scope-guard clauses. Every number is checked against your
@@ -760,7 +760,7 @@ export function LandingPage() {
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 }}
               >
-                Invoice and see real profit
+                Step 3: How do you collect milestone payments and see real profit?
               </h3>
               <p style={{ color: 'var(--muted, #5B6676)' }}>
                 Milestone invoices, payment tracking and expenses roll into a net margin that counts your own time, not
@@ -783,7 +783,7 @@ export function LandingPage() {
                 margin: '0 auto',
               }}
             >
-              See Floorly in action
+              How does Floorly work across proposals, floors, and profit tracking?
             </h2>
             <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px' }}>
               Clean, fast and purpose-built for client work.
@@ -909,7 +909,7 @@ export function LandingPage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
                   <div style={{ border: '1px solid var(--line, #E8E0CF)', borderRadius: '12px', padding: '20px' }}>
                     <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--muted, #5B6676)' }}>CLIENT SCOPE</div>
-                    <h3 style={{ fontSize: '20px', margin: '6px 0 12px', fontWeight: 700 }}>Landing Page &amp; Auth Portal</h3>
+                    <h3 style={{ fontSize: '20px', margin: '6px 0 12px', fontWeight: 700 }}>How is deliverable scope structured in proposals?</h3>
                     <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)' }}>
                       Estimated Effort: 42 hours • 3 Milestones • Scope confidence: 85%
                     </p>
@@ -947,7 +947,7 @@ export function LandingPage() {
 
               {activeShowcase === 'floor' && (
                 <div style={{ maxWidth: '640px', margin: '0 auto' }}>
-                  <h3 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '6px' }}>Configured Pricing Safeguards</h3>
+                  <h3 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '6px' }}>What pricing safeguards prevent freelancer undercharging?</h3>
                   <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', marginBottom: '24px' }}>
                     These rules execute deterministically on the server after AI drafts any quote.
                   </p>
@@ -1014,7 +1014,7 @@ export function LandingPage() {
               fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
             }}
           >
-            Everything a solo business needs to hold its price
+            What core features protect freelancers from scope creep and low quotes?
           </h2>
           <p style={{ color: '#CFE0F7', fontSize: '19px', maxWidth: '34em', marginTop: '16px' }}>
             One workspace instead of five tools that don't talk to each other.
@@ -1050,7 +1050,7 @@ export function LandingPage() {
                     shrink: 0,
                   }}
                 />
-                Price floor protection
+                How does server-enforced price floor protection work?
               </h3>
               <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
                 Set a minimum hourly rate and a minimum fee per project type. No proposal leaves below them.
@@ -1079,7 +1079,7 @@ export function LandingPage() {
                     shrink: 0,
                   }}
                 />
-                AI requirement analyzer
+                How does the AI requirement analyzer detect hidden deliverables?
               </h3>
               <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
                 Turns unstructured client messages into scoped deliverables, open questions and hour estimates.
@@ -1108,7 +1108,7 @@ export function LandingPage() {
                     shrink: 0,
                   }}
                 />
-                Scope guard clauses
+                What scope guard clauses prevent unpaid client revisions?
               </h3>
               <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
                 Revision limits and change-order language that you can drop into any proposal in one click.
@@ -1137,7 +1137,7 @@ export function LandingPage() {
                     shrink: 0,
                   }}
                 />
-                Global invoicing
+                Which global payment gateways and currencies are supported?
               </h3>
               <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
                 Multi-currency, VAT/GST/sales tax, tax IDs, and payment instructions for card, PayPal or bank transfer.
@@ -1166,7 +1166,7 @@ export function LandingPage() {
                     shrink: 0,
                   }}
                 />
-                Profit that counts your time
+                How does Floorly calculate real net margins after logging time?
               </h3>
               <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
                 Net margin after expenses, tax and your own hourly rate, so a "good" project isn't secretly a loss.
@@ -1195,7 +1195,7 @@ export function LandingPage() {
                     shrink: 0,
                   }}
                 />
-                AGENTS.md generator
+                How does Floorly generate AGENTS.md for AI coding assistants?
               </h3>
               <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
                 Turn an approved scope into coding instructions for AI assistants, so the build stays inside what was
@@ -1218,7 +1218,7 @@ export function LandingPage() {
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 }}
               >
-                Calculate your project floor
+                How do you calculate a safe project price floor before quoting?
               </h2>
               <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px' }}>
                 See how complexity multipliers and baseline rules safeguard your quotation.
@@ -1446,7 +1446,7 @@ export function LandingPage() {
               fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
             }}
           >
-            Pricing that pays for itself with one saved quote
+            What are the pricing plans for Floorly Freelance Studio OS?
           </h2>
 
           {/* Toggle */}
@@ -1660,7 +1660,7 @@ export function LandingPage() {
                 margin: '0 auto',
               }}
             >
-              Built for people who build for clients
+              Why do independent developers and designers trust Floorly?
             </h2>
             <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px', fontSize: '16px' }}>
               Used by freelance developers, agency owners and consultants holding their ground on pricing.
@@ -1738,7 +1738,7 @@ export function LandingPage() {
               fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
             }}
           >
-            Questions, answered
+            Frequently asked questions: how does Floorly protect freelancer income?
           </h2>
 
           <div style={{ maxWidth: '780px', marginTop: '40px' }}>
@@ -2071,7 +2071,7 @@ export function LandingPage() {
               }}
             >
               <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
-                Full-Stack Developers
+                How does Floorly protect full-stack developers?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
                 Catches unstated API integrations, background task queues, and edge cases from unstructured client briefs.
@@ -2089,7 +2089,7 @@ export function LandingPage() {
               }}
             >
               <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
-                UI/UX Product Designers
+                How does Floorly protect UI/UX product designers?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
                 Defines itemized screen deliverables, design systems, and explicit revision limits. Bakes in a 20% scope
@@ -2107,7 +2107,7 @@ export function LandingPage() {
               }}
             >
               <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
-                Copywriters &amp; Strategists
+                How does Floorly benefit copywriters and strategists?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
                 Prevents open-ended feedback loops and rewrites. Locks in milestone billing structures (50% deposit upfront)
@@ -2125,7 +2125,7 @@ export function LandingPage() {
               }}
             >
               <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
-                Boutique Creative Studios
+                How does Floorly streamline boutique creative studios?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
                 For 2–5 person agencies standardizing intake. Guarantees team members never quote below target margin floors,
@@ -2154,7 +2154,7 @@ export function LandingPage() {
                 margin: '0 0 12px',
               }}
             >
-              Case Study: How a Price Floor Preserved $2,250 on a Fixed Quote
+              Case Study: How did a mathematical price floor preserve $2,250 on a fixed quote?
             </h3>
             <p style={{ fontSize: '15px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: '0 0 16px' }}>
               On a custom e-commerce web build (60 estimated hours at a baseline of $75/hr), the raw labor estimate was
@@ -2180,7 +2180,7 @@ export function LandingPage() {
             }}
           >
             <h3 style={{ fontSize: '16px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 12px' }}>
-              Verified Research &amp; Payment Documentation Sources
+              Where does Floorly source verified industry research and benchmarks?
             </h3>
             <ul style={{ margin: 0, paddingLeft: '20px', fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.8 }}>
               <li>
@@ -2298,7 +2298,7 @@ export function LandingPage() {
               margin: '0 auto',
             }}
           >
-            Quote with confidence from today
+            Ready to quote with confidence and stop undercharging?
           </h2>
           <p
             style={{
