@@ -58,6 +58,40 @@ export function PricingPage() {
       });
 
       if (res.provider === 'razorpay' || res.mode === 'razorpay') {
+        let orderId = res.orderId;
+        let activeKey = res.keyId || import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_TmqM7yD9Sgy60G';
+
+        // If orderId is missing from legacy endpoint, create order via /api/create-order
+        if (!orderId) {
+          try {
+            const planAmountPaise = isAnnual
+              ? (PLANS[planKey]?.annualPriceUSD || 10) * 83 * 100
+              : (PLANS[planKey]?.monthlyPriceUSD || 10) * 83 * 100;
+
+            const orderFallback = await api.createRazorpayOrder({
+              amount: Math.max(100, planAmountPaise),
+              currency: 'INR',
+              notes: { plan: planKey, interval: isAnnual ? 'year' : 'month' },
+            });
+
+            if (orderFallback.success && orderFallback.order_id) {
+              orderId = orderFallback.order_id;
+              if (orderFallback.key_id) activeKey = orderFallback.key_id;
+            }
+          } catch (e) {
+            console.warn('Fallback order creation error:', e);
+          }
+        }
+
+        if (!orderId) {
+          setNotice({
+            type: 'error',
+            message: res.error || 'Could not generate Razorpay order ID. Please verify server API credentials.',
+          });
+          setLoadingPlan(null);
+          return;
+        }
+
         if (!window.Razorpay) {
           await new Promise((resolve, reject) => {
             const script = document.createElement('script');
@@ -69,12 +103,12 @@ export function PricingPage() {
         }
 
         const options = {
-          key: res.keyId,
-          amount: res.amount,
+          key: activeKey,
+          amount: res.amount || 100,
           currency: res.currency || 'INR',
           name: `Floorly ${res.planName || ''}`,
           description: `Floorly ${res.planName || ''} Subscription (${isAnnual ? 'Annual' : 'Monthly'})`,
-          order_id: res.orderId,
+          order_id: orderId,
           prefill: {
             name: user?.name || user?.businessName || '',
             email: user?.email || '',
@@ -85,19 +119,29 @@ export function PricingPage() {
           handler: async function (response) {
             setLoadingPlan(planKey);
             try {
-              const verifyRes = await api.verifyRazorpaySubscription({
+              // Verify via subscription verify endpoint or standard verify endpoint
+              let verifyRes = await api.verifyRazorpaySubscription({
                 razorpay_order_id: response.razorpay_order_id,
                 razorpay_payment_id: response.razorpay_payment_id,
                 razorpay_signature: response.razorpay_signature,
                 plan: planKey,
                 interval: isAnnual ? 'year' : 'month',
-              });
+              }).catch(() => null);
+
+              if (!verifyRes || !verifyRes.success) {
+                // Also verify via standard endpoint /api/verify-payment
+                verifyRes = await api.verifyRazorpayPayment({
+                  razorpay_order_id: response.razorpay_order_id,
+                  razorpay_payment_id: response.razorpay_payment_id,
+                  razorpay_signature: response.razorpay_signature,
+                });
+              }
 
               if (verifyRes.success) {
                 await useAuthStore.getState().fetchUser();
                 setNotice({
                   type: 'success',
-                  message: `Payment successful! Your account is now upgraded to the ${PLANS[planKey]?.name} plan.`,
+                  message: `Payment successful! Your account is now upgraded to the ${PLANS[planKey]?.name || 'Pro'} plan.`,
                 });
                 setTimeout(() => {
                   navigate('/dashboard');
@@ -125,6 +169,13 @@ export function PricingPage() {
         };
 
         const rzp = new window.Razorpay(options);
+        rzp.on('payment.failed', function (resp) {
+          setLoadingPlan(null);
+          setNotice({
+            type: 'error',
+            message: resp.error?.description || resp.error?.reason || 'Payment failed on Razorpay gateway.',
+          });
+        });
         rzp.open();
         return;
       }

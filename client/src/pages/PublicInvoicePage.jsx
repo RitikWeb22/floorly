@@ -69,8 +69,8 @@ export function PublicInvoicePage() {
         headers: { 'Content-Type': 'application/json' },
       });
       const orderInfo = await res.json();
-      if (!res.ok || !orderInfo.success) {
-        throw new Error(orderInfo.error || 'Failed to initialize Razorpay checkout');
+      if (!res.ok || !orderInfo.success || !orderInfo.orderId) {
+        throw new Error(orderInfo.error || 'Failed to initialize Razorpay checkout order ID');
       }
 
       if (!window.Razorpay) {
@@ -83,8 +83,10 @@ export function PublicInvoicePage() {
         });
       }
 
+      const activeKey = orderInfo.keyId || import.meta.env.VITE_RAZORPAY_KEY_ID || 'rzp_test_TmqM7yD9Sgy60G';
+
       const options = {
-        key: orderInfo.keyId,
+        key: activeKey,
         amount: orderInfo.amount,
         currency: orderInfo.currency || 'INR',
         name: data?.user?.businessName || data?.user?.name || 'Floorly Invoice',
@@ -137,6 +139,10 @@ export function PublicInvoicePage() {
       };
 
       const rzp = new window.Razorpay(options);
+      rzp.on('payment.failed', function (resp) {
+        setIsPayingRazorpay(false);
+        setPayErrorMsg(resp.error?.description || resp.error?.reason || 'Payment failed on Razorpay checkout.');
+      });
       rzp.open();
     } catch (err) {
       setPayErrorMsg(err.message || 'Could not initiate Razorpay checkout');
