@@ -20,6 +20,8 @@ import { PricingPage } from './pages/PricingPage';
 import { AboutPage } from './pages/AboutPage';
 import { DeliveryPage } from './pages/DeliveryPage';
 import { RazorpayTestPage } from './pages/RazorpayTestPage';
+import { FreelanceRateCalculatorPage } from './pages/tools/FreelanceRateCalculatorPage';
+import { ProjectPriceCalculatorPage } from './pages/tools/ProjectPriceCalculatorPage';
 
 import { DashboardPage } from './pages/DashboardPage';
 import { AnalyzerPage } from './pages/AnalyzerPage';
@@ -108,6 +110,8 @@ function AppContent() {
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/tools/freelance-rate-calculator" element={<FreelanceRateCalculatorPage />} />
+        <Route path="/tools/project-price-calculator" element={<ProjectPriceCalculatorPage />} />
         <Route path="/checkout-test" element={<RazorpayTestPage />} />
         <Route path="/razorpay-test" element={<RazorpayTestPage />} />
 

@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FAF5EA" />
+      <stop offset="100%" stop-color="#F3EBD8" />
+    </linearGradient>
+    <linearGradient id="cobaltG" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0047AB" />
+      <stop offset="100%" stop-color="#003580" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Subtle Grid Accent -->
+  <g opacity="0.07" stroke="#0E1A2B" stroke-width="1.5">
+    <line x1="80" y1="0" x2="80" y2="630" />
+    <line x1="280" y1="0" x2="280" y2="630" />
+    <line x1="480" y1="0" x2="480" y2="630" />
+    <line x1="680" y1="0" x2="680" y2="630" />
+    <line x1="880" y1="0" x2="880" y2="630" />
+    <line x1="1080" y1="0" x2="1080" y2="630" />
+    <line x1="0" y1="130" x2="1200" y2="130" />
+    <line x1="0" y1="330" x2="1200" y2="330" />
+    <line x1="0" y1="530" x2="1200" y2="530" />
+  </g>
+
+  <!-- Brand Badge Top Left -->
+  <g transform="translate(100, 90)">
+    <rect width="64" height="64" rx="16" fill="url(#cobaltG)" />
+    <path d="M41 16C35 16 31 20 31 26V44" fill="none" stroke="#FFFFFF" stroke-width="6.4" stroke-linecap="round"/>
+    <path d="M22 27H39" stroke="#FFFFFF" stroke-width="6.4" stroke-linecap="round"/>
+    <rect x="16" y="51" width="32" height="5" rx="2.5" fill="#FFC72C"/>
+    
+    <text x="84" y="44" font-family="'Bricolage Grotesque', system-ui, -apple-system, sans-serif" font-size="40" font-weight="800" fill="#0E1A2B" letter-spacing="-1">Floorly</text>
+    <rect x="235" y="16" width="145" height="34" rx="17" fill="#E8F0FE" stroke="#CCE0FF" stroke-width="1.5" />
+    <text x="252" y="38" font-family="'Instrument Sans', system-ui, sans-serif" font-size="14" font-weight="700" fill="#0047AB" letter-spacing="0.5">STUDIO OS</text>
+  </g>
+
+  <!-- Hero Typography -->
+  <text x="100" y="270" font-family="'Bricolage Grotesque', system-ui, -apple-system, sans-serif" font-size="68" font-weight="800" fill="#0E1A2B" letter-spacing="-2">
+    Never undercharge
+  </text>
+  <text x="100" y="348" font-family="'Bricolage Grotesque', system-ui, -apple-system, sans-serif" font-size="68" font-weight="800" fill="#0047AB" letter-spacing="-2">
+    again.
+  </text>
+
+  <!-- Tagline / Subtitle -->
+  <text x="100" y="415" font-family="'Instrument Sans', system-ui, sans-serif" font-size="24" font-weight="500" fill="#5B6676" max-width="800">
+    AI-scoped proposals with a built-in price floor for freelancers &amp; studios.
+  </text>
+  <text x="100" y="450" font-family="'Instrument Sans', system-ui, sans-serif" font-size="24" font-weight="500" fill="#5B6676">
+    From brief to signed proposal, milestone invoices, and real profit tracking.
+  </text>
+
+  <!-- Feature Pills -->
+  <g transform="translate(100, 500)">
+    <!-- Pill 1 -->
+    <rect x="0" y="0" width="230" height="48" rx="24" fill="#FFFFFF" stroke="#E8E0CF" stroke-width="2" />
+    <circle cx="24" cy="24" r="8" fill="#0047AB" />
+    <text x="44" y="30" font-family="'Instrument Sans', system-ui, sans-serif" font-size="16" font-weight="600" fill="#0E1A2B">AI Scope Analyzer</text>
+
+    <!-- Pill 2 -->
+    <rect x="250" y="0" width="235" height="48" rx="24" fill="#FFFFFF" stroke="#E8E0CF" stroke-width="2" />
+    <circle cx="274" cy="24" r="8" fill="#FFC72C" />
+    <text x="294" y="30" font-family="'Instrument Sans', system-ui, sans-serif" font-size="16" font-weight="600" fill="#0E1A2B">Price Floor Guard</text>
+
+    <!-- Pill 3 -->
+    <rect x="505" y="0" width="225" height="48" rx="24" fill="#FFFFFF" stroke="#E8E0CF" stroke-width="2" />
+    <circle cx="529" cy="24" r="8" fill="#10B981" />
+    <text x="549" y="30" font-family="'Instrument Sans', system-ui, sans-serif" font-size="16" font-weight="600" fill="#0E1A2B">Milestone Invoicing</text>
+  </g>
+
+  <!-- Website Domain Tag Bottom Right -->
+  <text x="1100" y="550" text-anchor="end" font-family="'Instrument Sans', system-ui, sans-serif" font-size="20" font-weight="700" fill="#0047AB">
+    floorlystudio.me
+  </text>
+</svg>

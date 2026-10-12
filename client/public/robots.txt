@@ -1,13 +1,30 @@
-User-agent: *
+# robots.txt for Floorly (https://floorlystudio.me)
+# Verified crawler user-agent definitions as of October 2026
+# Compliance: RFC 9309 (Robots Exclusion Protocol)
+
+# -------------------------------------------------------------
+# 1. Search Engine & AI Search/Answer Crawlers (Explicitly Allowed)
+# -------------------------------------------------------------
+
+User-agent: Googlebot
+User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: PerplexityBot
+User-agent: ClaudeBot
 Allow: /
+Allow: /pricing
+Allow: /about
+Allow: /contact
 Allow: /terms
 Allow: /privacy
 Allow: /refund-policy
-Allow: /contact
-Allow: /login
-Allow: /signup
-
-# Disallow private workspaces and tokenized client documents
+Allow: /delivery
+Allow: /tools/
+Allow: /guides/
+Allow: /use-cases/
 Disallow: /p/
 Disallow: /i/
 Disallow: /dashboard/
@@ -21,5 +38,60 @@ Disallow: /templates/
 Disallow: /pricing-rules/
 Disallow: /agents-doc/
 Disallow: /settings/
+Disallow: /api/
 
-Sitemap: https://floorly.com/sitemap.xml
+# -------------------------------------------------------------
+# 2. AI Model Training & Data Scrapers (Disallowed by Default)
+# Controlled by ALLOW_AI_TRAINING=false
+# -------------------------------------------------------------
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# -------------------------------------------------------------
+# 3. Default Policy for All Other Crawlers
+# -------------------------------------------------------------
+
+User-agent: *
+Allow: /
+Allow: /pricing
+Allow: /about
+Allow: /contact
+Allow: /terms
+Allow: /privacy
+Allow: /refund-policy
+Allow: /delivery
+Allow: /tools/
+Allow: /guides/
+Allow: /use-cases/
+
+# Disallow Private App Workspaces & Shared Client Tokens
+Disallow: /p/
+Disallow: /i/
+Disallow: /dashboard/
+Disallow: /analyzer/
+Disallow: /proposals/
+Disallow: /clients/
+Disallow: /projects/
+Disallow: /invoices/
+Disallow: /expenses/
+Disallow: /templates/
+Disallow: /pricing-rules/
+Disallow: /agents-doc/
+Disallow: /settings/
+Disallow: /api/
+
+# Sitemap Declaration
+Sitemap: https://floorlystudio.me/sitemap.xml

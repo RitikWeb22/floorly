@@ -55,6 +55,24 @@ export function Footer() {
 
               <div>
                 <div style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#0E1A2B', marginBottom: '12px' }}>
+                  Free Tools
+                </div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li>
+                    <Link to="/tools/freelance-rate-calculator" style={{ color: 'var(--muted, #5B6676)', textDecoration: 'none' }} className="hover:text-[var(--cobalt,#0047AB)]">
+                      Rate &amp; Floor Calculator
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/tools/project-price-calculator" style={{ color: 'var(--muted, #5B6676)', textDecoration: 'none' }} className="hover:text-[var(--cobalt,#0047AB)]">
+                      Project Price Calculator
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#0E1A2B', marginBottom: '12px' }}>
                   Legal &amp; Compliance
                 </div>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>

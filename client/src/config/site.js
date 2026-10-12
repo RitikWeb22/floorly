@@ -4,16 +4,19 @@
  */
 
 export const siteConfig = {
-  siteUrl: import.meta.env.VITE_SITE_URL || window.location.origin,
-  supportEmail: import.meta.env.VITE_SUPPORT_EMAIL || 'support@floorly.com',
-  privacyEmail: import.meta.env.VITE_PRIVACY_EMAIL || import.meta.env.VITE_SUPPORT_EMAIL || 'privacy@floorly.com',
-  contactEmail: import.meta.env.VITE_CONTACT_EMAIL || import.meta.env.VITE_SUPPORT_EMAIL || 'support@floorly.com',
-  contactPhone: import.meta.env.VITE_CONTACT_PHONE || '',
-  contactAddress: import.meta.env.VITE_CONTACT_ADDRESS || '',
-  legalName: import.meta.env.VITE_LEGAL_NAME || '',
+  siteUrl: (import.meta.env.VITE_SITE_URL || (typeof window !== 'undefined' ? window.location.origin : 'https://floorlystudio.me')).replace(/\/+$/, ''),
+  siteName: 'Floorly',
+  siteTitle: 'Floorly – AI-Scoped Proposals & Price Floors for Freelancers',
+  defaultOgImage: 'https://floorlystudio.me/og-image.png',
+  supportEmail: import.meta.env.VITE_SUPPORT_EMAIL || 'support@floorlystudio.me',
+  privacyEmail: import.meta.env.VITE_PRIVACY_EMAIL || import.meta.env.VITE_SUPPORT_EMAIL || 'privacy@floorlystudio.me',
+  contactEmail: import.meta.env.VITE_CONTACT_EMAIL || import.meta.env.VITE_SUPPORT_EMAIL || 'support@floorlystudio.me',
+  contactPhone: import.meta.env.VITE_CONTACT_PHONE || '8287384970',
+  contactAddress: import.meta.env.VITE_CONTACT_ADDRESS || 'Munirka, New Delhi, India 110067',
+  legalName: import.meta.env.VITE_LEGAL_NAME || 'Floorly',
   grievanceOfficerName: import.meta.env.VITE_GRIEVANCE_OFFICER_NAME || '',
   grievanceEmail: import.meta.env.VITE_GRIEVANCE_EMAIL || '',
-  legalJurisdiction: import.meta.env.VITE_LEGAL_JURISDICTION || '',
+  legalJurisdiction: import.meta.env.VITE_LEGAL_JURISDICTION || 'New Delhi, India',
 };
 
 // Attempt to fetch business compliance info asynchronously

@@ -1,0 +1,28 @@
+# Floorly (Freelancer OS)
+> AI-scoped proposals with a built-in price floor for freelancers and independent studios.
+> Canonical Website: https://floorlystudio.me
+
+## Overview
+Floorly is a business operating system designed for independent developers, designers, and creative studios. It solves the endemic problems of project scope creep and underpricing by pairing an AI Scope & Risk Analyzer with an algorithmic price floor. Users paste raw client briefs to generate scoped, branded interactive proposals that clients can digitally sign. Upon acceptance, Floorly manages milestone invoicing, domestic (Razorpay/UPI) and international (Stripe/USD) payment collection, and tracks take-home profit margins.
+
+## Key Features
+- **AI Scope & Risk Analyzer**: Extracts technical deliverables from messy client briefs, detects unstated edge cases, and calculates risk multipliers.
+- **Price Floor Enforcement**: Computes the break-even baseline (hours × minimum rate × complexity) and prevents the user from quoting below this safety floor.
+- **Interactive Proposals**: High-converting web proposals with deliverable breakdowns and one-click digital signatures.
+- **Milestone Invoicing & Payments**: Built-in multi-currency invoicing with Razorpay (INR) and Stripe (USD) payment gateways.
+- **Financial Ledger & Profit Tracking**: Real-time visibility into active retainers, expense deductions, and effective hourly rate.
+
+## Key Public Pages
+- Home: https://floorlystudio.me/
+- Pricing: https://floorlystudio.me/pricing (Starter $0, Solo $10/mo, Pro $19/mo, Agency $49/mo)
+- Freelance Rate Calculator: https://floorlystudio.me/tools/freelance-rate-calculator (Free public tool to calculate minimum hourly rate and project floor)
+- Project Price Calculator: https://floorlystudio.me/tools/project-price-calculator (Free tool estimating hours × rate × complexity × contingency buffer)
+- About Floorly: https://floorlystudio.me/about
+- Contact & Support: https://floorlystudio.me/contact (support@floorlystudio.me)
+- Terms of Service: https://floorlystudio.me/terms
+- Privacy Policy: https://floorlystudio.me/privacy
+- Refund Policy: https://floorlystudio.me/refund-policy
+- Delivery Policy: https://floorlystudio.me/delivery
+
+## Brand Disambiguation
+Floorly (https://floorlystudio.me) is a SaaS platform for freelance proposals, price floor protection, and studio business management. It is NOT affiliated with floor plan drafting or architecture software tools.

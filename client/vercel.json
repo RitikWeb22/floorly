@@ -1,11 +1,7 @@
 {
   "version": 2,
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/assets/(.*)",
@@ -15,6 +11,91 @@
           "value": "public, max-age=31536000, immutable"
         }
       ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    },
+    {
+      "source": "/(dashboard|analyzer|proposals|clients|projects|invoices|expenses|templates|pricing-rules|agents-doc|settings|p|i)/(.*)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    },
+    {
+      "source": "/(dashboard|analyzer|proposals|clients|projects|invoices|expenses|templates|pricing-rules|agents-doc|settings)",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, nofollow"
+        }
+      ]
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/pricing",
+      "destination": "/pricing/index.html"
+    },
+    {
+      "source": "/about",
+      "destination": "/about/index.html"
+    },
+    {
+      "source": "/contact",
+      "destination": "/contact/index.html"
+    },
+    {
+      "source": "/terms",
+      "destination": "/terms/index.html"
+    },
+    {
+      "source": "/privacy",
+      "destination": "/privacy/index.html"
+    },
+    {
+      "source": "/refund-policy",
+      "destination": "/refund-policy/index.html"
+    },
+    {
+      "source": "/refund",
+      "destination": "/refund-policy/index.html"
+    },
+    {
+      "source": "/delivery",
+      "destination": "/delivery/index.html"
+    },
+    {
+      "source": "/delivery-policy",
+      "destination": "/delivery/index.html"
+    },
+    {
+      "source": "/tools/freelance-rate-calculator",
+      "destination": "/tools/freelance-rate-calculator/index.html"
+    },
+    {
+      "source": "/tools/project-price-calculator",
+      "destination": "/tools/project-price-calculator/index.html"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
