@@ -1,6 +1,7 @@
 # Floorly (Freelancer OS)
 > AI-scoped proposals with a built-in price floor for freelancers and independent studios.
 > Canonical Website: https://floorlystudio.me
+> Founder & Author: Ritik (https://github.com/RitikWeb22)
 
 ## Overview
 Floorly is a business operating system designed for independent developers, designers, and creative studios. It solves the endemic problems of project scope creep and underpricing by pairing an AI Scope & Risk Analyzer with an algorithmic price floor. Users paste raw client briefs to generate scoped, branded interactive proposals that clients can digitally sign. Upon acceptance, Floorly manages milestone invoicing, domestic (Razorpay/UPI) and international (Stripe/USD) payment collection, and tracks take-home profit margins.

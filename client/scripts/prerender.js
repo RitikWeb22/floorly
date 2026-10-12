@@ -13,7 +13,7 @@ const ROUTES = [
     path: '/',
     outPath: 'index.html',
     title: 'Floorly – AI-Scoped Proposals & Price Floors for Freelancers',
-    description: 'Floorly turns client briefs into AI-scoped proposals that can never drop below your price floor. Invoice, collect payments via Stripe & Razorpay, and track real profit.',
+    description: 'Floorly turns client briefs into AI proposals with unbreakable price floors. Scope projects, invoice with Stripe & Razorpay, and track true profit.',
     h1: 'Never undercharge again.',
     content: `
       <main>
@@ -35,26 +35,39 @@ const ROUTES = [
 
         <section aria-labelledby="core-capabilities">
           <h2 id="core-capabilities">AI-Scoped Proposals &amp; Deterministic Price Floors for Freelancers</h2>
-          <article>
-            <h3>1. AI-Scoped Proposals from Raw Client Briefs</h3>
-            <p>Stop spending hours decoding vague client requirements. Floorly ingests client emails, RFP documents, and project briefs to generate complete AI-scoped proposals. It identifies exact deliverables, flags out-of-scope tasks, estimates realistic engineering hours, and structures 3-tier milestone schedules that clients can digitally sign in minutes.</p>
-          </article>
-          <article>
-            <h3>2. Unbreakable Price Floors</h3>
-            <p>Freelancers frequently undercharge under client pressure. Floorly enforces a strict mathematical price floor based on your living expenses, tax reserves, hourly break-even costs, and project complexity. The system algorithmically prevents you from sending proposals or issuing invoices below your defined price floor.</p>
-          </article>
-          <article>
-            <h3>3. Branded Proposals &amp; Digital Signatures</h3>
-            <p>Deliver interactive, branded proposals that build trust and close contracts faster. Clients can review milestone breakdowns, select project add-ons, and provide one-click digital signatures with full audit logging.</p>
-          </article>
-          <article>
-            <h3>4. Multi-Currency Global &amp; Domestic Invoicing</h3>
-            <p>Issue professional invoices with automated payment tracking. Accept international cards in USD via Stripe and domestic payments in INR via Razorpay with instant UPI and NetBanking checkout.</p>
-          </article>
-          <article>
-            <h3>5. Real Net Profit &amp; Expense Tracking</h3>
-            <p>Revenue is not profit. Floorly deducts software subscriptions, sub-contractor fees, transaction processing costs, and tax obligations to reveal your true hourly take-home profit margin on every client engagement.</p>
-          </article>
+          <ol>
+            <li>
+              <strong>1. AI-Scoped Proposals from Raw Client Briefs:</strong>
+              <p>Stop spending hours decoding vague client requirements. Floorly ingests client emails, RFP documents, and project briefs to generate complete AI-scoped proposals. It identifies exact deliverables, flags out-of-scope tasks, estimates realistic engineering hours, and structures 3-tier milestone schedules that clients can digitally sign in minutes.</p>
+            </li>
+            <li>
+              <strong>2. Unbreakable Price Floors:</strong>
+              <p>Freelancers frequently undercharge under client pressure. Floorly enforces a strict mathematical price floor based on your living expenses, tax reserves, hourly break-even costs, and project complexity. The system algorithmically prevents you from sending proposals or issuing invoices below your defined price floor.</p>
+            </li>
+            <li>
+              <strong>3. Branded Proposals &amp; Digital Signatures:</strong>
+              <p>Deliver interactive, branded proposals that build trust and close contracts faster. Clients can review milestone breakdowns, select project add-ons, and provide one-click digital signatures with full audit logging.</p>
+            </li>
+            <li>
+              <strong>4. Multi-Currency Global &amp; Domestic Invoicing:</strong>
+              <p>Issue professional invoices with automated payment tracking. Accept international cards in USD via Stripe and domestic payments in INR via Razorpay with instant UPI and NetBanking checkout.</p>
+            </li>
+            <li>
+              <strong>5. Real Net Profit &amp; Expense Tracking:</strong>
+              <p>Revenue is not profit. Floorly deducts software subscriptions, sub-contractor fees, transaction processing costs, and tax obligations to reveal your true hourly take-home profit margin on every client engagement.</p>
+            </li>
+          </ol>
+        </section>
+
+        <section aria-labelledby="feature-summary">
+          <h2 id="feature-summary">Why Freelancers Choose Floorly</h2>
+          <ul>
+            <li><strong>Automated Scope Breakdown:</strong> AI extracts technical deliverables and flags hidden scope creep.</li>
+            <li><strong>Mathematically Enforced Price Floors:</strong> Deterministic protection against unprofitable proposals.</li>
+            <li><strong>Interactive Client Proposals:</strong> Web-based proposals with one-click digital signatures.</li>
+            <li><strong>Dual Payment Rails:</strong> Domestic UPI/INR via Razorpay and global USD cards via Stripe.</li>
+            <li><strong>True Net Profit Visibility:</strong> Real-time expense deduction revealing actual take-home margins.</li>
+          </ul>
         </section>
 
         <section aria-labelledby="free-tools">
@@ -67,14 +80,17 @@ const ROUTES = [
         </section>
 
         <section aria-labelledby="comparison">
-          <h2 id="comparison">Why Freelancers Choose Floorly Over Generic Invoicing Software</h2>
-          <p>Traditional invoicing tools like FreshBooks, Bonsai, and HoneyBook only record numbers after the contract is already agreed upon. Floorly safeguards your revenue before you quote by calculating scope risks and enforcing non-negotiable price floors.</p>
+          <h2 id="comparison">Floorly vs. Generic Freelance Invoicing Software</h2>
+          <ul>
+            <li><strong>Floorly:</strong> Safeguards revenue before you quote with AI scoping, risk detection, and mathematical price floors.</li>
+            <li><strong>Generic Invoicing Tools:</strong> Only record numbers after the contract is already signed, offering zero undercharging prevention.</li>
+          </ul>
         </section>
 
         <footer>
           <nav aria-label="Footer Navigation">
             <p>Product &amp; Tools: <a href="/pricing">Pricing</a> | <a href="/tools/freelance-rate-calculator">Rate Calculator</a> | <a href="/tools/project-price-calculator">Price Calculator</a> | <a href="/signup">Sign Up Free</a></p>
-            <p>Company: <a href="/about">About Floorly</a> | <a href="/contact">Contact</a> | <a href="mailto:support@floorlystudio.me">support@floorlystudio.me</a></p>
+            <p>Company: <a href="/about">About Floorly</a> | <a href="/contact">Contact</a> | <a href="mailto:support@floorlystudio.me">support@floorlystudio.me</a> | Founder: Ritik</p>
             <p>Legal &amp; Compliance: <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a> | <a href="/refund-policy">Refund Policy</a> | <a href="/delivery">Delivery Policy</a></p>
             <p>Connect &amp; Community: <a href="https://github.com/RitikWeb22/floorly" target="_blank" rel="noopener noreferrer">Floorly on GitHub</a> | <a href="https://www.producthunt.com/products/floorly" target="_blank" rel="noopener noreferrer">Floorly on Product Hunt</a> | <a href="https://x.com/floorlystudio" target="_blank" rel="noopener noreferrer">Follow @floorlystudio on X</a></p>
           </nav>
@@ -87,9 +103,19 @@ const ROUTES = [
         "@type": "SoftwareApplication",
         "name": "Floorly",
         "headline": "Never undercharge again",
-        "description": "Floorly turns client briefs into AI-scoped proposals that can never drop below your price floor.",
+        "description": "Floorly turns client briefs into AI proposals with unbreakable price floors. Scope projects, invoice with Stripe & Razorpay, and track true profit.",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
+        "author": {
+          "@type": "Person",
+          "name": "Ritik",
+          "url": "https://github.com/RitikWeb22"
+        },
+        "creator": {
+          "@type": "Person",
+          "name": "Ritik",
+          "url": "https://github.com/RitikWeb22"
+        },
         "offers": [
           { "@type": "Offer", "name": "Starter", "price": "0", "priceCurrency": "USD" },
           { "@type": "Offer", "name": "Solo", "price": "10", "priceCurrency": "USD" },

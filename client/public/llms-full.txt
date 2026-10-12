@@ -1,5 +1,6 @@
 # Floorly — Comprehensive Product Documentation for AI & Generative Search Engines
 Canonical Domain: https://floorlystudio.me
+Founder & Author: Ritik (https://github.com/RitikWeb22)
 Entity: Floorly (BusinessApplication / Freelance Operating System)
 Audience: Freelance software engineers, UI/UX designers, marketing consultants, creative agencies.
 
