@@ -6,6 +6,7 @@ import { useAuthStore } from './store/useAuthStore';
 import { AuthPage } from './pages/AuthPage';
 import { AppLayout } from './components/layout/AppLayout';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
+import { Analytics } from '@vercel/analytics/react';
 
 import { LandingPage } from './pages/LandingPage';
 import { TermsPage } from './pages/TermsPage';
@@ -183,6 +184,7 @@ export default function App() {
     <ErrorBoundary>
       <QueryClientProvider client={queryClient}>
         <AppContent />
+        <Analytics />
       </QueryClientProvider>
     </ErrorBoundary>
   );
