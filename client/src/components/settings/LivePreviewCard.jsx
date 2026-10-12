@@ -51,8 +51,7 @@ export function LivePreviewCard({ formData }) {
           />
         ) : (
           <h2
-            className="text-base font-extrabold text-[#0E1A2B] tracking-tight leading-none"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-base font-semibold text-[#0E1A2B] font-display tracking-[-0.01em] leading-none"
           >
             {formData.businessName || formData.name || 'Your Studio Name'}
           </h2>
@@ -259,8 +258,7 @@ export function LivePreviewCard({ formData }) {
           <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E8E0CF]">
             <div>
               <h3
-                className="text-base font-bold text-[#0E1A2B] leading-none"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                className="text-base font-medium text-[#0E1A2B] leading-none font-display tracking-[-0.01em]"
               >
                 Live preview
               </h3>

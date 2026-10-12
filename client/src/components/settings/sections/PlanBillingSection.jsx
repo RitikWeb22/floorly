@@ -67,8 +67,7 @@ export function PlanBillingSection({ user }) {
               </span>
             </div>
             <h2
-              className="text-2xl font-black text-[#0E1A2B] mt-2"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-2xl font-medium text-[#0E1A2B] font-display tracking-[-0.01em] mt-2"
             >
               {currentPlan.name}
             </h2>
@@ -79,8 +78,7 @@ export function PlanBillingSection({ user }) {
 
           <div className="text-right sm:text-right">
             <span
-              className="text-3xl font-black text-[#0E1A2B] leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-3xl font-semibold text-[#0E1A2B] font-display tabular-nums lining-nums leading-none"
             >
               {currentPlan.price}
             </span>
@@ -215,8 +213,7 @@ export function PlanBillingSection({ user }) {
       <div className="bg-white rounded-2xl border border-[#E8E0CF] p-6 space-y-4">
         <div>
           <h3
-            className="text-base font-bold text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-base font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
           >
             Cancel or pause subscription
           </h3>

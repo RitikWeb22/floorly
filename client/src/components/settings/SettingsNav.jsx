@@ -51,7 +51,7 @@ export function SettingsNav({ activeSection, onSelectSection }) {
                     ? 'bg-[#E8F0FB] text-[#0047AB]'
                     : 'text-[#5B6676] hover:bg-[#FAF5EA] hover:text-[#0E1A2B]'
                 }`}
-                style={{ fontFamily: "'Instrument Sans', system-ui, sans-serif" }}
+                style={{ fontFamily: 'var(--font-sans)' }}
               >
                 <Icon
                   className={`w-4 h-4 shrink-0 transition-colors ${
@@ -81,7 +81,7 @@ export function SettingsNav({ activeSection, onSelectSection }) {
                     ? 'bg-[#0047AB] text-white shadow-sm'
                     : 'bg-white text-[#5B6676] border border-[#E8E0CF] hover:bg-[#FAF5EA]'
                 }`}
-                style={{ fontFamily: "'Instrument Sans', system-ui, sans-serif" }}
+                style={{ fontFamily: 'var(--font-sans)' }}
               >
                 <Icon className="w-3.5 h-3.5 shrink-0" />
                 <span>{sec.label}</span>

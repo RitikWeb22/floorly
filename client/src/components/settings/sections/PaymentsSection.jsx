@@ -54,8 +54,7 @@ export function PaymentsSection({
       <div className="bg-white rounded-2xl border border-[#E8E0CF] p-6 space-y-6">
         <div>
           <h2
-            className="text-lg font-bold text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-lg font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
           >
             Payment methods & remittance
           </h2>
@@ -532,7 +531,7 @@ export function PaymentsSection({
                       ? 'border-[#B42318] focus-visible:ring-2 focus-visible:ring-[#B42318]'
                       : 'border-[#E8E0CF] hover:border-[#0E1A2B]/40 focus-visible:ring-2 focus-visible:ring-[#0047AB] focus-visible:border-[#0047AB]'
                   }`}
-                  style={{ fontFamily: "'Instrument Sans', system-ui, sans-serif" }}
+                  style={{ fontFamily: 'var(--font-sans)' }}
                 />
               </FormField>
             </div>

@@ -111,8 +111,7 @@ export function AccountSection({ user, onUpdateUser, onLogout }) {
       <div className="bg-white rounded-2xl border border-[#E8E0CF] p-6 space-y-6">
         <div>
           <h2
-            className="text-lg font-bold text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-lg font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
           >
             Account & login security
           </h2>

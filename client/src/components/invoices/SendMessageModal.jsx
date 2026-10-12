@@ -183,8 +183,7 @@ export function SendMessageModal({
               </span>
               <h2
                 id="message-dialog-title"
-                className="text-lg font-bold text-[#0E1A2B]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                className="text-lg font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
               >
                 {isReminderType ? 'Send payment reminder' : 'Send invoice to client'}
               </h2>

@@ -314,10 +314,7 @@ export function ProposalsPage() {
          1. PAGE HEADER (Sentence case, no "Create Proposal" here)
          ============================================================= */}
       <div className="pb-2 border-b border-[var(--line,#E8E0CF)]">
-        <h1
-          className="text-[32px] font-extrabold text-[var(--ink,#0E1A2B)] tracking-tight leading-none"
-          style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-        >
+        <h1 className="font-display font-semibold text-[30px] text-[var(--ink,#0E1A2B)] tracking-[-0.02em] leading-[1.15]">
           Proposals
         </h1>
         <p className="text-[15px] text-[var(--muted,#5B6676)] mt-1.5">
@@ -334,10 +331,7 @@ export function ProposalsPage() {
           <span className="text-xs font-semibold text-[var(--muted,#5B6676)] block">
             Open pipeline
           </span>
-          <div
-            className="text-[26px] font-extrabold text-[var(--ink,#0E1A2B)] font-tabular leading-none"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <div className="font-display font-semibold text-[26px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
             {format(kpiMetrics.openPipelineValue)}
           </div>
           <span className="text-[11px] text-[var(--muted,#5B6676)] block pt-1">
@@ -350,10 +344,7 @@ export function ProposalsPage() {
           <span className="text-xs font-semibold text-[var(--muted,#5B6676)] block">
             Accepted
           </span>
-          <div
-            className="text-[26px] font-extrabold text-[var(--success,#067647)] font-tabular leading-none"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <div className="font-display font-semibold text-[26px] text-[var(--success,#067647)] tabular-nums lining-nums leading-none">
             {format(kpiMetrics.acceptedValue)}
           </div>
           <span className="text-[11px] text-[var(--muted,#5B6676)] block pt-1">
@@ -366,10 +357,7 @@ export function ProposalsPage() {
           <span className="text-xs font-semibold text-[var(--muted,#5B6676)] block">
             Awaiting response
           </span>
-          <div
-            className="text-[26px] font-extrabold text-[var(--ink,#0E1A2B)] font-tabular leading-none"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <div className="font-display font-semibold text-[26px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
             {kpiMetrics.sentCount}
           </div>
           <span className="text-[11px] text-[var(--muted,#5B6676)] block pt-1">
@@ -390,10 +378,7 @@ export function ProposalsPage() {
               <HelpCircle className="w-3.5 h-3.5" />
             </div>
           </div>
-          <div
-            className="text-[26px] font-extrabold text-[var(--cobalt,#0047AB)] font-tabular leading-none"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <div className="font-display font-semibold text-[26px] text-[var(--cobalt,#0047AB)] tabular-nums lining-nums leading-none">
             {format(kpiMetrics.totalRevenueProtected)}
           </div>
           <span className="text-[11px] text-[var(--muted,#5B6676)] block pt-1">
@@ -487,10 +472,7 @@ export function ProposalsPage() {
             <FileText className="w-7 h-7" />
           </div>
           <div>
-            <h3
-              className="text-[20px] font-bold text-[var(--ink,#0E1A2B)]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <h3 className="font-display font-medium text-[20px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
               No proposals yet
             </h3>
             <p className="text-xs text-[var(--muted,#5B6676)] mt-1 max-w-sm mx-auto">
@@ -545,9 +527,8 @@ export function ProposalsPage() {
                   {/* Title & Client */}
                   <div>
                     <h3
-                      className="text-[16px] font-bold text-[var(--ink,#0E1A2B)] line-clamp-2 leading-snug"
+                      className="font-display font-medium text-[16px] text-[var(--ink,#0E1A2B)] line-clamp-2 leading-snug tracking-[-0.01em]"
                       title={p.title}
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
                     >
                       {p.title}
                     </h3>
@@ -567,10 +548,7 @@ export function ProposalsPage() {
                   <div className="pt-2 border-t border-[var(--line,#E8E0CF)] flex items-baseline justify-between">
                     <div>
                       <span className="text-[10px] text-[var(--muted,#5B6676)] block font-semibold">Quoted price</span>
-                      <span
-                        className="text-[26px] font-extrabold text-[var(--ink,#0E1A2B)] font-tabular leading-none"
-                        style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                      >
+                      <span className="font-display font-semibold text-[26px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
                         {format(finalAmount)}
                       </span>
                     </div>

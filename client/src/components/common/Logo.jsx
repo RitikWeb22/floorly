@@ -5,7 +5,7 @@ import React from 'react';
  * - Cobalt rounded square (#0047AB)
  * - Clean lowercase "f": straight vertical stem + top hook, no base crossbar or curls
  * - Separate sun-yellow floor bar (#FFC72C) with a visible gap
- * - Wordmark "Floorly" in Bricolage Grotesque
+ * - Wordmark "Floorly" in Clash Grotesk
  */
 export function LogoIcon({
   size = 32,
@@ -82,10 +82,9 @@ export function Logo({
 
       {showText && (
         <span
-          className={`font-extrabold tracking-tight ${currentSize.textClass} ${textClassName}`}
+          className={`font-semibold tracking-[-0.03em] ${currentSize.textClass} ${textClassName}`}
           style={{
-            fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-            letterSpacing: '-0.03em',
+            fontFamily: 'var(--font-display)',
             color: textColor,
           }}
         >

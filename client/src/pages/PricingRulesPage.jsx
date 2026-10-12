@@ -855,7 +855,7 @@ export function PricingRulesPage() {
             {/* Essential */}
             <div className="p-2.5 bg-[var(--page,#FAF5EA)] rounded-xl border border-[var(--line,#E8E0CF)]">
               <span className="text-[11px] font-semibold text-[var(--muted,#5B6676)] block">Essential</span>
-              <span className="text-[22px] font-extrabold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] block my-0.5 leading-tight">
+              <span className="text-[22px] font-semibold font-display tabular-nums lining-nums text-[var(--ink,#0E1A2B)] block my-0.5 leading-tight">
                 {formatCurrencyAmount(simResult.tiers.essential, rulesCurrency)}
               </span>
               <span className="text-[10px] text-[var(--muted,#5B6676)] font-semibold">1.00x floor</span>
@@ -867,7 +867,7 @@ export function PricingRulesPage() {
                 Recommended
               </span>
               <span className="text-[11px] font-semibold text-[var(--cobalt,#0047AB)] block">Standard</span>
-              <span className="text-[22px] font-extrabold font-['Bricolage_Grotesque',sans-serif] text-[var(--cobalt,#0047AB)] block my-0.5 leading-tight">
+              <span className="text-[22px] font-semibold font-display tabular-nums lining-nums text-[var(--cobalt,#0047AB)] block my-0.5 leading-tight">
                 {formatCurrencyAmount(simResult.tiers.standard, rulesCurrency)}
               </span>
               <span className="text-[10px] text-[var(--cobalt,#0047AB)] font-semibold">{form.tierMultipliers.standard}x</span>
@@ -876,7 +876,7 @@ export function PricingRulesPage() {
             {/* Premium */}
             <div className="p-2.5 bg-white rounded-xl border border-[var(--line,#E8E0CF)]">
               <span className="text-[11px] font-semibold text-[var(--muted,#5B6676)] block">Premium</span>
-              <span className="text-[22px] font-extrabold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] block my-0.5 leading-tight">
+              <span className="text-[22px] font-semibold font-display tabular-nums lining-nums text-[var(--ink,#0E1A2B)] block my-0.5 leading-tight">
                 {formatCurrencyAmount(simResult.tiers.premium, rulesCurrency)}
               </span>
               <span className="text-[10px] text-[var(--muted,#5B6676)] font-semibold">{form.tierMultipliers.premium}x</span>
@@ -906,7 +906,7 @@ export function PricingRulesPage() {
   );
 
   return (
-    <div className="max-w-[1200px] mx-auto pb-20 font-['Instrument_Sans',sans-serif] text-[var(--ink,#0E1A2B)]">
+    <div className="max-w-[1200px] mx-auto pb-20 text-[var(--ink,#0E1A2B)]">
       {/* 10-Second Undo Banner */}
       {undoSecondsLeft > 0 && undoSnapshot && (
         <div className="fixed top-20 right-6 z-50 flex items-center gap-3 bg-[var(--ink,#0E1A2B)] text-white px-5 py-3 rounded-xl shadow-xl animate-fade-in text-sm">
@@ -930,7 +930,7 @@ export function PricingRulesPage() {
             <h1
               ref={h1Ref}
               tabIndex="-1"
-              className="text-[30px] font-extrabold leading-[1.15] font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] tracking-tight outline-none focus:outline-none"
+              className="text-[30px] font-semibold leading-[1.15] font-display text-[var(--ink,#0E1A2B)] tracking-[-0.02em] outline-none focus:outline-none"
             >
               Pricing rules
             </h1>
@@ -981,7 +981,7 @@ export function PricingRulesPage() {
             >
               <div className="flex items-center gap-2">
                 <Sliders className="w-4 h-4 text-[var(--cobalt,#0047AB)]" />
-                <span className="text-[16px] font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)]">
+                <span className="text-[16px] font-medium font-display text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                   Try your rules
                 </span>
                 {isDirty && (
@@ -1003,7 +1003,7 @@ export function PricingRulesPage() {
           </div>
           {/* CARD 1: HOURLY RATES & PROJECT MINIMUM */}
           <section className="bg-white border border-[var(--line,#E8E0CF)] rounded-2xl p-4 sm:p-6 shadow-xs">
-            <h2 className="text-[18px] font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] mb-1">
+            <h2 className="text-[18px] font-medium font-display text-[var(--ink,#0E1A2B)] mb-1 tracking-[-0.01em]">
               Hourly rates and project minimum
             </h2>
             <p className="text-[14px] text-[var(--muted,#5B6676)] mb-5">
@@ -1143,7 +1143,7 @@ export function PricingRulesPage() {
           <section className="bg-white border border-[var(--line,#E8E0CF)] rounded-2xl p-4 sm:p-6 shadow-xs">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
               <div>
-                <h2 className="text-[18px] font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] mb-1">
+                <h2 className="text-[18px] font-medium font-display text-[var(--ink,#0E1A2B)] mb-1 tracking-[-0.01em]">
                   Project types and floors
                 </h2>
                 <p className="text-[14px] text-[var(--muted,#5B6676)]">
@@ -1396,7 +1396,7 @@ export function PricingRulesPage() {
 
           {/* CARD 3: COMPLEXITY AND ADJUSTMENTS */}
           <section className="bg-white border border-[var(--line,#E8E0CF)] rounded-2xl p-4 sm:p-6 shadow-xs">
-            <h2 className="text-[18px] font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] mb-1">
+            <h2 className="text-[18px] font-medium font-display text-[var(--ink,#0E1A2B)] mb-1 tracking-[-0.01em]">
               Complexity and adjustments
             </h2>
             <p className="text-[14px] text-[var(--muted,#5B6676)] mb-5">
@@ -1527,7 +1527,7 @@ export function PricingRulesPage() {
           <section className="bg-white border border-[var(--line,#E8E0CF)] rounded-2xl p-4 sm:p-6 shadow-xs">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
               <div>
-                <h2 className="text-[18px] font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] mb-1">
+                <h2 className="text-[18px] font-medium font-display text-[var(--ink,#0E1A2B)] mb-1 tracking-[-0.01em]">
                   Packages
                 </h2>
                 <p className="text-[14px] text-[var(--muted,#5B6676)]">
@@ -1557,7 +1557,7 @@ export function PricingRulesPage() {
               <div className="p-4 border border-[var(--line,#E8E0CF)] rounded-xl bg-[var(--page,#FAF5EA)]/30 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="font-bold text-sm text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]">
+                    <span className="font-medium text-sm text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]">
                       {form.packageTiers?.essential?.name || 'Essential'}
                     </span>
                     <span
@@ -1569,7 +1569,7 @@ export function PricingRulesPage() {
                     </span>
                   </div>
                   {simResult && (
-                    <span className="text-sm font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)]">
+                    <span className="text-sm font-semibold font-display tabular-nums lining-nums text-[var(--ink,#0E1A2B)]">
                       {formatCurrencyAmount(simResult.tiers.essential, rulesCurrency)}
                     </span>
                   )}
@@ -1642,7 +1642,7 @@ export function PricingRulesPage() {
               <div className="p-4 border-2 border-[var(--cobalt,#0047AB)]/30 rounded-xl bg-[var(--cobalt-tint,#E8F0FB)]/20 space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="font-bold text-sm text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]">
+                    <span className="font-medium text-sm text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]">
                       {form.packageTiers?.standard?.name || 'Standard'}
                     </span>
                     <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--cobalt,#0047AB)] text-white">
@@ -1650,7 +1650,7 @@ export function PricingRulesPage() {
                     </span>
                   </div>
                   {simResult && (
-                    <span className="text-sm font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--cobalt,#0047AB)]">
+                    <span className="text-sm font-semibold font-display tabular-nums lining-nums text-[var(--cobalt,#0047AB)]">
                       {formatCurrencyAmount(simResult.tiers.standard, rulesCurrency)}
                     </span>
                   )}
@@ -1740,7 +1740,7 @@ export function PricingRulesPage() {
               <div className="p-4 border border-[var(--line,#E8E0CF)] rounded-xl bg-white space-y-3">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <span className="font-bold text-sm text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]">
+                    <span className="font-medium text-sm text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]">
                       {form.packageTiers?.premium?.name || 'Premium'}
                     </span>
                     <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--sun-tint,#FFF4CC)] text-[var(--ink,#0E1A2B)]">
@@ -1748,7 +1748,7 @@ export function PricingRulesPage() {
                     </span>
                   </div>
                   {simResult && (
-                    <span className="text-sm font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)]">
+                    <span className="text-sm font-semibold font-display tabular-nums lining-nums text-[var(--ink,#0E1A2B)]">
                       {formatCurrencyAmount(simResult.tiers.premium, rulesCurrency)}
                     </span>
                   )}
@@ -1872,7 +1872,7 @@ export function PricingRulesPage() {
             <div className="flex items-center justify-between pb-3 border-b border-[var(--line,#E8E0CF)]">
               <div className="flex items-center gap-2">
                 <Sliders className="w-4 h-4 text-[var(--cobalt,#0047AB)]" />
-                <h3 className="text-[18px] font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)]">
+                <h3 className="text-[18px] font-medium font-display text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                   Try your rules
                 </h3>
               </div>
@@ -1963,7 +1963,7 @@ export function PricingRulesPage() {
       {presetConfirmModal.open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
           <div className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-[var(--line,#E8E0CF)] animate-scale-in">
-            <h3 className="text-xl font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] mb-2">
+            <h3 className="text-xl font-medium font-display text-[var(--ink,#0E1A2B)] mb-2 tracking-[-0.01em]">
               Apply preset: {presetConfirmModal.presetName}
             </h3>
             <p className="text-sm text-[var(--muted,#5B6676)] mb-4">
@@ -2015,7 +2015,7 @@ export function PricingRulesPage() {
       {suggestFloorsModal.open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
           <div className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-[var(--line,#E8E0CF)] animate-scale-in">
-            <h3 className="text-xl font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] mb-2">
+            <h3 className="text-xl font-medium font-display text-[var(--ink,#0E1A2B)] mb-2 tracking-[-0.01em]">
               Apply suggested category floors
             </h3>
             <p className="text-sm text-[var(--muted,#5B6676)] mb-4">
@@ -2067,7 +2067,7 @@ export function PricingRulesPage() {
       {saveSummaryModal.open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
           <div className="bg-white rounded-2xl max-w-lg w-full p-6 shadow-2xl border border-[var(--line,#E8E0CF)] animate-scale-in">
-            <h3 className="text-xl font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] mb-2">
+            <h3 className="text-xl font-medium font-display text-[var(--ink,#0E1A2B)] mb-2 tracking-[-0.01em]">
               Confirm pricing rules update
             </h3>
             <p className="text-sm text-[var(--muted,#5B6676)] mb-3">
@@ -2125,7 +2125,7 @@ export function PricingRulesPage() {
       {profileConfirmModal.open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
           <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-[var(--line,#E8E0CF)] animate-scale-in">
-            <h3 className="text-lg font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] mb-2">
+            <h3 className="text-lg font-medium font-display text-[var(--ink,#0E1A2B)] mb-2 tracking-[-0.01em]">
               Change profile starter list?
             </h3>
             <p className="text-sm text-[var(--muted,#5B6676)] mb-6">
@@ -2155,7 +2155,7 @@ export function PricingRulesPage() {
       {deleteTypeModal.open && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/40 backdrop-blur-xs">
           <div className="bg-white rounded-2xl max-w-md w-full p-6 shadow-2xl border border-[var(--line,#E8E0CF)] animate-scale-in">
-            <h3 className="text-lg font-bold font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] mb-2">
+            <h3 className="text-lg font-medium font-display text-[var(--ink,#0E1A2B)] mb-2 tracking-[-0.01em]">
               Remove "{deleteTypeModal.typeName}"?
             </h3>
             <p className="text-sm text-[var(--muted,#5B6676)] mb-6">

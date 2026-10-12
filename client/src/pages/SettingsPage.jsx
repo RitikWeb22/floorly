@@ -657,16 +657,12 @@ export function SettingsPage() {
       className="settings-page-wrapper min-h-screen text-[#0E1A2B] pb-24"
       style={{
         backgroundColor: 'var(--page, #FAF5EA)',
-        fontFamily: "'Instrument Sans', system-ui, -apple-system, sans-serif",
       }}
     >
       {/* Page Header */}
       <header className="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1
-            className="text-3xl sm:text-4xl font-extrabold text-[#0E1A2B] tracking-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h1 className="font-display font-semibold text-[30px] text-[#0E1A2B] tracking-[-0.02em] leading-[1.15]">
             Settings
           </h1>
           <p className="text-sm sm:text-[15px] text-[#5B6676] mt-1.5 max-w-2xl leading-relaxed">

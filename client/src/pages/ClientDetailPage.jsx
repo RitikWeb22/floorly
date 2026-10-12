@@ -309,10 +309,7 @@ export function ClientDetailPage() {
         <div className="w-12 h-12 rounded-full bg-[var(--error-tint,#FEE4E2)] text-[var(--error,#B42318)] flex items-center justify-center mx-auto">
           <AlertTriangle className="w-6 h-6" />
         </div>
-        <h2
-          className="text-lg font-bold text-[var(--ink,#0E1A2B)]"
-          style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-        >
+        <h2 className="font-display font-medium text-lg text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
           {error || 'Client not found'}
         </h2>
         <p className="text-xs text-[var(--muted,#5B6676)]">
@@ -349,11 +346,10 @@ export function ClientDetailPage() {
       <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6 sm:p-7 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex items-start gap-4">
           <div
-            className="w-14 h-14 rounded-2xl flex items-center justify-center text-lg font-extrabold shrink-0"
+            className="w-14 h-14 rounded-2xl flex items-center justify-center text-lg font-semibold shrink-0 font-display"
             style={{
               backgroundColor: 'var(--cobalt-tint, #E8F0FB)',
               color: 'var(--cobalt, #0047AB)',
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
             }}
           >
             {initials}
@@ -361,10 +357,7 @@ export function ClientDetailPage() {
 
           <div className="space-y-1 min-w-0">
             <div className="flex flex-wrap items-center gap-3">
-              <h1
-                className="text-xl sm:text-2xl font-extrabold text-[var(--ink,#0E1A2B)] tracking-tight truncate"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h1 className="font-display font-semibold text-xl sm:text-2xl text-[var(--ink,#0E1A2B)] tracking-[-0.02em] truncate leading-tight">
                 {clientName}
               </h1>
 
@@ -507,10 +500,7 @@ export function ClientDetailPage() {
             <span>Billed (incl. tax)</span>
             <Receipt className="w-4 h-4 text-[var(--cobalt,#0047AB)]" />
           </div>
-          <div
-            className="text-xl sm:text-2xl font-black text-[var(--ink,#0E1A2B)] font-tabular"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <div className="font-display font-semibold text-xl sm:text-2xl text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
             {formatMoney(totals.totalBilled)}
           </div>
           <p className="text-[11px] text-[var(--muted,#5B6676)]">
@@ -524,10 +514,7 @@ export function ClientDetailPage() {
             <span>Paid</span>
             <CheckCircle2 className="w-4 h-4 text-[var(--success,#067647)]" />
           </div>
-          <div
-            className="text-xl sm:text-2xl font-black text-[var(--success,#067647)] font-tabular"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <div className="font-display font-semibold text-xl sm:text-2xl text-[var(--success,#067647)] tabular-nums lining-nums">
             {formatMoney(totals.totalPaid)}
           </div>
           <p className="text-[11px] text-[var(--muted,#5B6676)]">
@@ -545,11 +532,9 @@ export function ClientDetailPage() {
             <span>Outstanding</span>
             <TrendingUp className="w-4 h-4 text-[var(--warning,#B54708)]" />
           </div>
-          <div
-            className={`text-xl sm:text-2xl font-black font-tabular ${
+          <div className={`font-display font-semibold text-xl sm:text-2xl tabular-nums lining-nums ${
               totals.outstandingBalance > 0 ? 'text-[var(--warning,#B54708)]' : 'text-[var(--ink,#0E1A2B)]'
             }`}
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
           >
             {formatMoney(totals.outstandingBalance)}
           </div>
@@ -568,11 +553,9 @@ export function ClientDetailPage() {
             <span>Overdue</span>
             <AlertTriangle className={`w-4 h-4 ${totals.overdueCount > 0 ? 'text-[var(--error,#B42318)]' : 'text-[var(--muted,#5B6676)]'}`} />
           </div>
-          <div
-            className={`text-xl sm:text-2xl font-black font-tabular ${
+          <div className={`font-display font-semibold text-xl sm:text-2xl tabular-nums lining-nums ${
               totals.overdueCount > 0 ? 'text-[var(--error,#B42318)]' : 'text-[var(--ink,#0E1A2B)]'
             }`}
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
           >
             {totals.overdueCount > 0 ? formatMoney(totals.overdueAmount) : formatMoney(0)}
           </div>
@@ -661,10 +644,7 @@ export function ClientDetailPage() {
           {/* Left: Activity Timeline (2 cols) */}
           <div className="lg:col-span-2 space-y-4">
             <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6 space-y-4 shadow-sm">
-              <h2
-                className="text-base font-bold text-[var(--ink,#0E1A2B)]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-base text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                 Recent activity timeline
               </h2>
 
@@ -711,10 +691,7 @@ export function ClientDetailPage() {
           {/* Right: Client Details Card (1 col) */}
           <div className="space-y-4">
             <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6 space-y-4 shadow-sm text-xs">
-              <h2
-                className="text-base font-bold text-[var(--ink,#0E1A2B)]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-base text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                 Client details
               </h2>
 
@@ -982,10 +959,7 @@ export function ClientDetailPage() {
         <div className="space-y-6">
           {/* Add Note Input Box */}
           <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-5 space-y-3 shadow-sm">
-            <h3
-              className="text-sm font-bold text-[var(--ink,#0E1A2B)]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <h3 className="font-display font-medium text-sm text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
               Add private note
             </h3>
             <form onSubmit={handleAddNote} className="space-y-3">

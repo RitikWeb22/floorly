@@ -681,10 +681,7 @@ export function ProposalBuilderPage() {
             </span>
           </nav>
           <div className="flex items-center gap-3">
-            <h1
-              className="text-[28px] sm:text-[32px] font-extrabold text-[var(--ink,#0E1A2B)] tracking-tight leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <h1 className="font-display font-semibold text-[30px] text-[var(--ink,#0E1A2B)] tracking-[-0.02em] leading-[1.15]">
               {isEditMode ? 'Edit proposal' : 'Create proposal'}
             </h1>
             {existingProposal?.proposalNumber && (
@@ -805,10 +802,7 @@ export function ProposalBuilderPage() {
           >
             <div className="flex items-center justify-between pb-3 border-b border-[var(--line,#E8E0CF)]">
               <div>
-                <h2
-                  className="text-[18px] font-bold text-[var(--ink,#0E1A2B)]"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                   1. Project details
                 </h2>
                 <p className="text-xs text-[var(--muted,#5B6676)] mt-0.5">
@@ -955,10 +949,7 @@ export function ProposalBuilderPage() {
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[var(--line,#E8E0CF)]">
               <div>
-                <h2
-                  className="text-[18px] font-bold text-[var(--ink,#0E1A2B)]"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                   2. Scope and hours
                 </h2>
                 <p className="text-xs text-[var(--muted,#5B6676)] mt-0.5">
@@ -966,10 +957,7 @@ export function ProposalBuilderPage() {
                 </p>
               </div>
               <div className="text-right">
-                <span
-                  className="text-[20px] font-extrabold text-[var(--ink,#0E1A2B)] whitespace-nowrap"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <span className="font-display font-semibold text-[20px] text-[var(--ink,#0E1A2B)] whitespace-nowrap tabular-nums lining-nums">
                   {pricingResult.totalHours} hrs total
                 </span>
               </div>
@@ -1215,10 +1203,7 @@ export function ProposalBuilderPage() {
           >
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-3 border-b border-[var(--line,#E8E0CF)]">
               <div>
-                <h2
-                  className="text-[18px] font-bold text-[var(--ink,#0E1A2B)]"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                   3. Package tier
                 </h2>
                 <p className="text-xs text-[var(--muted,#5B6676)] mt-0.5">
@@ -1275,10 +1260,7 @@ export function ProposalBuilderPage() {
                       </div>
                     )}
                   </div>
-                  <div
-                    className="text-[26px] font-extrabold text-[var(--ink,#0E1A2B)] font-tabular"
-                    style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                  >
+                  <div className="font-display font-semibold text-[26px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
                     {format(pricingResult.tiers.essential)}
                   </div>
                   <p className="text-xs text-[var(--muted,#5B6676)] mt-1">Core project floor package</p>
@@ -1339,10 +1321,7 @@ export function ProposalBuilderPage() {
                       </div>
                     )}
                   </div>
-                  <div
-                    className="text-[26px] font-extrabold text-[var(--ink,#0E1A2B)] font-tabular"
-                    style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                  >
+                  <div className="font-display font-semibold text-[26px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
                     {format(pricingResult.tiers.standard)}
                   </div>
                   <p className="text-xs text-[var(--muted,#5B6676)] mt-1">Optimal freelance commercial quote</p>
@@ -1398,10 +1377,7 @@ export function ProposalBuilderPage() {
                       </div>
                     )}
                   </div>
-                  <div
-                    className="text-[26px] font-extrabold text-[var(--ink,#0E1A2B)] font-tabular"
-                    style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                  >
+                  <div className="font-display font-semibold text-[26px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
                     {format(pricingResult.tiers.premium)}
                   </div>
                   <p className="text-xs text-[var(--muted,#5B6676)] mt-1">Priority SLA & extended support</p>
@@ -1434,10 +1410,7 @@ export function ProposalBuilderPage() {
             className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6 space-y-6"
           >
             <div className="pb-3 border-b border-[var(--line,#E8E0CF)]">
-              <h2
-                className="text-[18px] font-bold text-[var(--ink,#0E1A2B)]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                 4. Payment terms & remittance
               </h2>
               <p className="text-xs text-[var(--muted,#5B6676)] mt-0.5">
@@ -1601,10 +1574,7 @@ export function ProposalBuilderPage() {
             className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6 space-y-6"
           >
             <div className="pb-3 border-b border-[var(--line,#E8E0CF)]">
-              <h2
-                className="text-[18px] font-bold text-[var(--ink,#0E1A2B)]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                 5. Terms, clauses & exclusions
               </h2>
               <p className="text-xs text-[var(--muted,#5B6676)] mt-0.5">
@@ -1764,10 +1734,7 @@ export function ProposalBuilderPage() {
                   {selectedTier.toUpperCase()}
                 </span>
               </div>
-              <h3
-                className="text-[17px] font-bold text-[var(--ink,#0E1A2B)] line-clamp-2"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h3 className="font-display font-medium text-[17px] text-[var(--ink,#0E1A2B)] line-clamp-2 tracking-[-0.01em]">
                 {title || 'Untitled proposal'}
               </h3>
               <p className="text-xs text-[var(--muted,#5B6676)] mt-0.5">
@@ -1805,10 +1772,7 @@ export function ProposalBuilderPage() {
               {/* Total Price */}
               <div className="pt-3 border-t border-[var(--line,#E8E0CF)] flex items-baseline justify-between">
                 <span className="text-sm font-bold text-[var(--ink,#0E1A2B)]">Total</span>
-                <span
-                  className="text-[32px] font-black text-[var(--ink,#0E1A2B)] font-tabular leading-none"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <span className="font-display font-semibold text-[32px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
                   {format(pricingResult.totalWithTax)}
                 </span>
               </div>
@@ -1899,10 +1863,7 @@ export function ProposalBuilderPage() {
       <div className="lg:hidden fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-[var(--line,#E8E0CF)] p-3.5 px-4 z-40 flex items-center justify-between shadow-lg">
         <div>
           <span className="text-[10px] text-[var(--muted,#5B6676)] block font-semibold">Total quote</span>
-          <span
-            className="text-[20px] font-black text-[var(--ink,#0E1A2B)] font-tabular"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <span className="font-display font-semibold text-[20px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
             {format(pricingResult.totalWithTax)}
           </span>
         </div>
@@ -1938,10 +1899,7 @@ export function ProposalBuilderPage() {
         >
           <div className="w-full max-w-md bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6 space-y-5">
             <div>
-              <h3
-                className="text-[20px] font-bold text-[var(--ink,#0E1A2B)]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h3 className="font-display font-medium text-[20px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                 Send proposal to client
               </h3>
               <p className="text-xs text-[var(--muted,#5B6676)] mt-1">

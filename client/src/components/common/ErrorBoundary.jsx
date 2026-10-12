@@ -35,7 +35,7 @@ export class ErrorBoundary extends React.Component {
             minHeight: '100vh',
             backgroundColor: 'var(--page, #FAF5EA)',
             color: 'var(--ink, #0E1A2B)',
-            fontFamily: "'Instrument Sans', system-ui, sans-serif",
+            fontFamily: 'var(--font-sans)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -72,12 +72,12 @@ export class ErrorBoundary extends React.Component {
 
             <h1
               style={{
-                fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                fontSize: '22px',
-                fontWeight: 700,
+                fontFamily: 'var(--font-display)',
+                fontSize: '24px',
+                fontWeight: 600,
                 color: 'var(--ink, #0E1A2B)',
                 marginBottom: '8px',
-                letterSpacing: '-0.01em',
+                letterSpacing: '-0.02em',
               }}
             >
               Something went wrong

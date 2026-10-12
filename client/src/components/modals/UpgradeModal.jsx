@@ -18,8 +18,7 @@ export function UpgradeModal({ isOpen, onClose, currentPlan = 'starter' }) {
                 <Sparkles className="w-4 h-4" />
               </span>
               <h2
-                className="text-xl sm:text-2xl font-black text-[#0E1A2B]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                className="text-xl sm:text-2xl font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
               >
                 Choose the Right Plan for Your Studio
               </h2>

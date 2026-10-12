@@ -62,8 +62,7 @@ export function CountryChangeDialog({
         <div>
           <h3
             id="country-dialog-title"
-            className="text-lg font-bold text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-lg font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
           >
             Update defaults for {targetCountry.name}?
           </h3>

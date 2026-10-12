@@ -63,7 +63,7 @@ export function ClauseMigrationModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0E1A2B]/40 backdrop-blur-xs animate-fade-in font-['Instrument_Sans',sans-serif]"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0E1A2B]/40 backdrop-blur-xs animate-fade-in font-sans"
       role="dialog"
       aria-modal="true"
       aria-labelledby="migration-modal-title"
@@ -76,7 +76,7 @@ export function ClauseMigrationModal({
               <Sparkles className="w-4 h-4 text-[var(--cobalt,#0047AB)]" />
               <h2
                 id="migration-modal-title"
-                className="text-[20px] font-bold text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]"
+                className="text-[20px] font-medium text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]"
               >
                 Review suggested clause upgrades
               </h2>
@@ -109,7 +109,7 @@ export function ClauseMigrationModal({
             {LEGACY_MIGRATION_PAIRS.map((pair, idx) => (
               <div key={idx} className="p-4 rounded-xl border border-[var(--line,#E8E0CF)] bg-white space-y-3">
                 <div className="flex items-center justify-between">
-                  <span className="font-bold text-[15px] text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]">
+                  <span className="font-medium text-[15px] text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]">
                     {pair.title}
                   </span>
                   <span className="text-[11px] text-[var(--muted,#5B6676)] italic">{pair.rationale}</span>

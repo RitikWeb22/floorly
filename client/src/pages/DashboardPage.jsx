@@ -338,10 +338,7 @@ export function DashboardPage() {
         <div className="w-12 h-12 rounded-full mx-auto flex items-center justify-center mb-4 bg-rose-50 text-[var(--error,#B42318)]">
           <AlertCircle className="w-6 h-6" />
         </div>
-        <h2
-          className="text-xl font-bold text-[var(--ink,#0E1A2B)] mb-2"
-          style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-        >
+        <h2 className="font-display font-medium text-[20px] text-[var(--ink,#0E1A2B)] mb-2 tracking-[-0.01em]">
           We couldn't load your dashboard
         </h2>
         <p className="text-sm text-[var(--muted,#5B6676)] mb-6">
@@ -369,10 +366,7 @@ export function DashboardPage() {
         className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[var(--line,#E8E0CF)]"
       >
         <div>
-          <h1
-            className="text-[32px] font-extrabold text-[var(--ink,#0E1A2B)] tracking-tight leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h1 className="font-display font-semibold text-[30px] text-[var(--ink,#0E1A2B)] tracking-[-0.02em] leading-[1.15]">
             {greeting}
           </h1>
           <p className="text-[15px] text-[var(--muted,#5B6676)] mt-1 font-normal">
@@ -413,10 +407,7 @@ export function DashboardPage() {
             </div>
           </div>
           <div className="mt-4">
-            <div
-              className="text-[36px] font-extrabold text-[var(--ink,#0E1A2B)] tabular-nums leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <div className="font-display font-semibold text-[36px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
               {format(metrics?.totalContracted || 0)}
             </div>
             <p className="text-[13px] text-[var(--muted,#5B6676)] mt-2 truncate font-medium">
@@ -439,10 +430,7 @@ export function DashboardPage() {
             </div>
           </div>
           <div className="mt-4">
-            <div
-              className="text-[36px] font-extrabold text-[var(--ink,#0E1A2B)] tabular-nums leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <div className="font-display font-semibold text-[36px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
               {format(metrics?.totalReceived || 0)}
             </div>
             <p className="text-[13px] text-[var(--muted,#5B6676)] mt-2 truncate font-medium">
@@ -465,10 +453,7 @@ export function DashboardPage() {
             </div>
           </div>
           <div className="mt-4">
-            <div
-              className="text-[36px] font-extrabold text-[var(--ink,#0E1A2B)] tabular-nums leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <div className="font-display font-semibold text-[36px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
               {format(metrics?.outstandingReceivables || 0)}
             </div>
             <p
@@ -509,10 +494,7 @@ export function DashboardPage() {
           <div className="mt-4">
             {(metrics?.totalReceived || 0) === 0 ? (
               <>
-                <div
-                  className="text-[36px] font-extrabold text-[var(--ink,#0E1A2B)] tabular-nums leading-none"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <div className="font-display font-semibold text-[36px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
                   —
                 </div>
                 <p className="text-[13px] text-[var(--muted,#5B6676)] mt-2 truncate font-medium">
@@ -555,10 +537,7 @@ export function DashboardPage() {
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
-              <h2
-                className="text-[20px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-[20px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.01em]">
                 Your price floor
               </h2>
               <p className="text-[13px] text-[var(--muted,#5B6676)] font-medium">
@@ -581,10 +560,7 @@ export function DashboardPage() {
             <span className="text-[12px] font-medium text-[var(--muted,#5B6676)] block">
               Minimum hourly rate
             </span>
-            <span
-              className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <span className="font-display font-semibold text-[18px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
               ${pricingSettings?.minHourlyRate || 35}/hr
             </span>
           </div>
@@ -593,10 +569,7 @@ export function DashboardPage() {
             <span className="text-[12px] font-medium text-[var(--muted,#5B6676)] block">
               Minimum project fee
             </span>
-            <span
-              className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <span className="font-display font-semibold text-[18px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
               ${pricingSettings?.minProjectFee || 300}
             </span>
           </div>
@@ -605,10 +578,7 @@ export function DashboardPage() {
             <span className="text-[12px] font-medium text-[var(--muted,#5B6676)] block">
               Protected this month
             </span>
-            <span
-              className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <span className="font-display font-semibold text-[18px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
               {proposals?.length || 0} proposals
             </span>
           </div>
@@ -617,10 +587,7 @@ export function DashboardPage() {
             <span className="text-[12px] font-medium text-[var(--muted,#5B6676)] block">
               Revenue protected
             </span>
-            <span
-              className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <span className="font-display font-semibold text-[18px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
               {revenueProtectedAmount ? format(revenueProtectedAmount) : '—'}
             </span>
           </div>
@@ -660,10 +627,7 @@ export function DashboardPage() {
         >
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-4">
             <div>
-              <h2
-                className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.01em]">
                 Invoiced vs collected
               </h2>
               <p className="text-[13px] text-[var(--muted,#5B6676)] font-normal">
@@ -763,10 +727,7 @@ export function DashboardPage() {
                 <div className="w-10 h-10 rounded-full bg-[var(--cobalt-tint,#E8F0FB)] text-[var(--cobalt,#0047AB)] flex items-center justify-center mb-3">
                   <Receipt className="w-5 h-5" />
                 </div>
-                <h3
-                  className="text-[16px] font-bold text-[var(--ink,#0E1A2B)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h3 className="font-display font-medium text-[16px] text-[var(--ink,#0E1A2B)] mb-1 tracking-[-0.01em]">
                   No invoices yet
                 </h3>
                 <p className="text-[13px] text-[var(--muted,#5B6676)] max-w-sm mb-4">
@@ -793,10 +754,7 @@ export function DashboardPage() {
           >
             <div>
               <div className="flex items-center justify-between mb-2">
-                <h2
-                  className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.01em]">
                   Next steps
                 </h2>
                 <span className="text-xs font-bold text-[var(--cobalt,#0047AB)]">
@@ -891,10 +849,7 @@ export function DashboardPage() {
         >
           <div>
             <div className="flex items-center justify-between pb-3 border-b border-[var(--line,#E8E0CF)] mb-4">
-              <h2
-                className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.01em]">
                 Recent proposals
               </h2>
               <Link
@@ -943,10 +898,7 @@ export function DashboardPage() {
                       </div>
                     </div>
                     <div className="text-right shrink-0">
-                      <div
-                        className="text-[14px] font-extrabold text-[var(--ink,#0E1A2B)] tabular-nums"
-                        style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                      >
+                      <div className="font-display font-semibold text-[14px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
                         {format(p.totalAmount || 0)}
                       </div>
                       <div className="mt-1">{formatStatusPill(p.status)}</div>
@@ -965,10 +917,7 @@ export function DashboardPage() {
         >
           <div>
             <div className="flex items-center justify-between pb-3 border-b border-[var(--line,#E8E0CF)] mb-4">
-              <h2
-                className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.01em]">
                 Upcoming payments
               </h2>
               <Link
@@ -1016,7 +965,7 @@ export function DashboardPage() {
                       className="py-3 flex items-center justify-between gap-3 hover:bg-[var(--page,#FAF5EA)] px-2 rounded-lg transition-colors group"
                     >
                       <div className="min-w-0">
-                        <div className="text-[14px] font-semibold text-[var(--ink,#0E1A2B)] group-hover:text-[var(--cobalt,#0047AB)] truncate">
+                        <div className="font-mono text-[13px] font-medium text-[var(--ink,#0E1A2B)] group-hover:text-[var(--cobalt,#0047AB)] truncate">
                           {inv.invoiceNumber || 'INV-001'}
                         </div>
                         <div className="text-xs text-[var(--muted,#5B6676)] truncate mt-0.5">
@@ -1024,10 +973,7 @@ export function DashboardPage() {
                         </div>
                       </div>
                       <div className="text-right shrink-0">
-                        <div
-                          className="text-[14px] font-extrabold text-[var(--ink,#0E1A2B)] tabular-nums"
-                          style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                        >
+                        <div className="font-display font-semibold text-[14px] text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
                           {format(inv.balanceDue || inv.totalAmount || 0)}
                         </div>
                         <div

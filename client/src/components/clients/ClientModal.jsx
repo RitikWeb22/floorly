@@ -225,8 +225,7 @@ export function ClientModal({
           <div>
             <h2
               id="client-modal-title"
-              className="text-lg font-bold text-[var(--ink,#0E1A2B)]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-lg font-medium text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]"
             >
               {isEdit ? 'Edit client' : 'Add client'}
             </h2>
@@ -252,8 +251,7 @@ export function ClientModal({
             </div>
             <div className="space-y-1">
               <h3
-                className="text-base font-bold text-[var(--ink,#0E1A2B)]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                className="text-base font-medium text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]"
               >
                 Starter plan limit reached
               </h3>

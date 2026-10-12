@@ -68,8 +68,7 @@ export function ChecklistBanner({ formData, onNavigateSection }) {
         <div className="space-y-2 flex-1">
           <div>
             <h3
-              className="text-[15px] font-bold text-[#0E1A2B] leading-tight"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-[15px] font-medium text-[#0E1A2B] leading-tight font-display tracking-[-0.01em]"
             >
               {missingItems.length} {missingItems.length === 1 ? 'thing' : 'things'} to finish before you can send invoices
             </h3>

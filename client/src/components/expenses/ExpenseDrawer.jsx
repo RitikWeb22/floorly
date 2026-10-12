@@ -263,8 +263,7 @@ export function ExpenseDrawer({
           <div>
             <h2
               id="expense-drawer-title"
-              className="text-lg font-bold text-[var(--ink,#0E1A2B)]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-lg font-medium text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]"
             >
               {isEditing ? 'Edit expense' : 'Add expense'}
             </h2>

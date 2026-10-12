@@ -51,7 +51,7 @@ export function StarterLibraryModal({
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0E1A2B]/40 backdrop-blur-xs animate-fade-in font-['Instrument_Sans',sans-serif]"
+      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-[#0E1A2B]/40 backdrop-blur-xs animate-fade-in font-sans"
       role="dialog"
       aria-modal="true"
       aria-labelledby="library-modal-title"
@@ -64,7 +64,7 @@ export function StarterLibraryModal({
               <Sparkles className="w-4 h-4 text-[var(--cobalt,#0047AB)]" />
               <h2
                 id="library-modal-title"
-                className="text-[20px] font-bold text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]"
+                className="text-[20px] font-medium text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]"
               >
                 Add clauses from starter library
               </h2>
@@ -139,7 +139,7 @@ export function StarterLibraryModal({
               >
                 <div className="space-y-1 max-w-xl">
                   <div className="flex items-center gap-2 flex-wrap">
-                    <span className="font-bold text-[15px] text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]">
+                    <span className="font-medium text-[15px] text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]">
                       {item.title}
                     </span>
                     <span className="px-2 py-0.5 rounded-full text-[11px] font-semibold bg-[var(--cobalt-tint,#E8F0FB)] text-[var(--cobalt,#0047AB)]">

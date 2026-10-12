@@ -802,7 +802,7 @@ export function ProjectsPage() {
       {/* Header */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-charcoal-200/60">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-charcoal-900">
+          <h1 className="font-display font-semibold text-[30px] tracking-[-0.02em] leading-[1.15] text-charcoal-900">
             Project Management & Scope Tracking
           </h1>
           <p className="text-sm text-charcoal-500">
@@ -815,12 +815,12 @@ export function ProjectsPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="card-premium p-6 bg-gradient-to-br from-white to-charcoal-50/50">
           <div className="flex items-center justify-between text-charcoal-500">
-            <span className="text-xs font-semibold uppercase tracking-wider">Active Contract Value</span>
+            <span className="font-mono font-medium text-[12px] text-charcoal-500">Active Contract Value</span>
             <div className="p-2 bg-brand-50 text-brand-600 rounded-lg">
               <TrendingUp className="w-4 h-4" />
             </div>
           </div>
-          <div className="text-2xl font-bold text-charcoal-900 mt-2">
+          <div className="font-display font-semibold text-2xl text-charcoal-900 mt-2 tabular-nums lining-nums">
             {format(totalContractValue)}
           </div>
           <div className="text-xs text-charcoal-400 mt-1 flex items-center gap-1">
@@ -830,12 +830,12 @@ export function ProjectsPage() {
 
         <div className="card-premium p-6 bg-gradient-to-br from-white to-brand-50/30">
           <div className="flex items-center justify-between text-brand-700">
-            <span className="text-xs font-semibold uppercase tracking-wider">Active Projects</span>
+            <span className="font-mono font-medium text-[12px] text-brand-700">Active Projects</span>
             <div className="p-2 bg-brand-50 text-brand-600 rounded-lg">
               <FolderGit2 className="w-4 h-4" />
             </div>
           </div>
-          <div className="text-2xl font-bold text-brand-950 mt-2">
+          <div className="font-display font-semibold text-2xl text-brand-950 mt-2 tabular-nums lining-nums">
             {activeProjectsCount}
           </div>
           <div className="text-xs text-brand-700/80 mt-1 flex items-center gap-1">
@@ -845,12 +845,12 @@ export function ProjectsPage() {
 
         <div className="card-premium p-6 bg-gradient-to-br from-white to-emerald-50/30">
           <div className="flex items-center justify-between text-emerald-700">
-            <span className="text-xs font-semibold uppercase tracking-wider">Task Completion</span>
+            <span className="font-mono font-medium text-[12px] text-emerald-700">Task Completion</span>
             <div className="p-2 bg-emerald-50 text-emerald-600 rounded-lg">
               <CheckCircle2 className="w-4 h-4" />
             </div>
           </div>
-          <div className="text-2xl font-bold text-emerald-950 mt-2">
+          <div className="font-display font-semibold text-2xl text-emerald-950 mt-2 tabular-nums lining-nums">
             {overallTaskPercent}%
           </div>
           <div className="text-xs text-emerald-700/80 mt-1 flex items-center gap-1">

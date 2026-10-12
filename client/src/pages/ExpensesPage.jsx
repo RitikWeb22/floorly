@@ -692,10 +692,7 @@ export function ExpensesPage() {
           ===================================================================== */}
       <header className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-[var(--line,#E8E0CF)]">
         <div>
-          <h1
-            className="text-2xl sm:text-3xl font-extrabold text-[var(--ink,#0E1A2B)] tracking-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h1 className="font-display font-semibold text-[30px] text-[var(--ink,#0E1A2B)] tracking-[-0.02em] leading-[1.15]">
             Expenses & profit
           </h1>
           <p className="text-sm text-[var(--muted,#5B6676)] mt-0.5">
@@ -808,10 +805,7 @@ export function ExpensesPage() {
             </div>
           </div>
           <div className="mt-3">
-            <div
-              className="text-2xl sm:text-3xl font-extrabold text-[var(--ink,#0E1A2B)] tabular-nums leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <div className="font-display font-semibold text-2xl sm:text-3xl text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
               {formatMoney(profitMetrics.revenue)}
             </div>
             <p className="text-xs text-[var(--muted,#5B6676)] mt-2 font-medium">
@@ -834,10 +828,7 @@ export function ExpensesPage() {
             </div>
           </div>
           <div className="mt-3">
-            <div
-              className="text-2xl sm:text-3xl font-extrabold text-[var(--ink,#0E1A2B)] tabular-nums leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <div className="font-display font-semibold text-2xl sm:text-3xl text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
               {formatMoney(profitMetrics.totalExpenses)}
             </div>
             <p className="text-xs text-[var(--muted,#5B6676)] mt-2 font-medium">
@@ -860,10 +851,7 @@ export function ExpensesPage() {
             </div>
           </div>
           <div className="mt-3">
-            <div
-              className="text-2xl sm:text-3xl font-extrabold text-[var(--ink,#0E1A2B)] tabular-nums leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <div className="font-display font-semibold text-2xl sm:text-3xl text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-none">
               {formatMoney(profitMetrics.timeCost)}
             </div>
             <p className="text-xs text-[var(--muted,#5B6676)] mt-2 font-medium">
@@ -886,11 +874,9 @@ export function ExpensesPage() {
             </div>
           </div>
           <div className="mt-3">
-            <div
-              className={`text-2xl sm:text-3xl font-extrabold tabular-nums leading-none ${
+            <div className={`font-display font-semibold text-2xl sm:text-3xl tabular-nums lining-nums leading-none ${
                 profitMetrics.netProfit < 0 ? 'text-[var(--error,#B42318)]' : 'text-[var(--ink,#0E1A2B)]'
               }`}
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
             >
               {formatMoney(profitMetrics.netProfit)}
             </div>
@@ -995,10 +981,7 @@ export function ExpensesPage() {
               <div className="w-12 h-12 rounded-2xl bg-[var(--cobalt-tint,#E8F0FB)] text-[var(--cobalt,#0047AB)] flex items-center justify-center mx-auto mb-4">
                 <TrendingUp className="w-6 h-6" />
               </div>
-              <h2
-                className="text-lg font-bold text-[var(--ink,#0E1A2B)] mb-1"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-lg text-[var(--ink,#0E1A2B)] mb-1 tracking-[-0.01em]">
                 See your real profit
               </h2>
               <p className="text-xs text-[var(--muted,#5B6676)] max-w-sm mx-auto mb-6">
@@ -1029,10 +1012,7 @@ export function ExpensesPage() {
               <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] overflow-hidden">
                 <div className="px-6 py-4 border-b border-[var(--line,#E8E0CF)] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div>
-                    <h3
-                      className="text-base font-bold text-[var(--ink,#0E1A2B)]"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                    >
+                    <h3 className="font-display font-medium text-base text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                       Profit by project
                     </h3>
                     <p className="text-xs text-[var(--muted,#5B6676)]">
@@ -1323,10 +1303,7 @@ export function ExpensesPage() {
               <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6 space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
                   <div>
-                    <h3
-                      className="text-base font-bold text-[var(--ink,#0E1A2B)]"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                    >
+                    <h3 className="font-display font-medium text-base text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                       Revenue, expenses and profit
                     </h3>
                     <p className="text-xs text-[var(--muted,#5B6676)]">
@@ -1439,13 +1416,10 @@ export function ExpensesPage() {
                 {/* General Overhead Card */}
                 <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-5 flex flex-col justify-between">
                   <div>
-                    <span className="text-xs font-semibold text-[var(--muted,#5B6676)] uppercase tracking-wider block">
+                    <span className="font-mono font-medium text-[12px] text-[var(--muted,#5B6676)] block">
                       General overhead
                     </span>
-                    <div
-                      className="text-2xl font-bold text-[var(--ink,#0E1A2B)] mt-1 tabular-nums"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                    >
+                    <div className="font-display font-semibold text-2xl text-[var(--ink,#0E1A2B)] mt-1 tabular-nums lining-nums">
                       {formatMoney(profitMetrics.overheadCosts)}
                     </div>
                     <p className="text-xs text-[var(--muted,#5B6676)] mt-1">
@@ -1472,7 +1446,7 @@ export function ExpensesPage() {
                 <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-5 flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between">
-                      <span className="text-xs font-semibold text-[var(--muted,#5B6676)] uppercase tracking-wider block">
+                      <span className="font-mono font-medium text-[12px] text-[var(--muted,#5B6676)] block">
                         Tax set-aside estimate
                       </span>
                       <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-[var(--sun-tint,#FFF4CC)] text-[var(--ink,#0E1A2B)]">
@@ -1480,10 +1454,7 @@ export function ExpensesPage() {
                       </span>
                     </div>
 
-                    <div
-                      className="text-2xl font-bold text-[var(--ink,#0E1A2B)] mt-1 tabular-nums"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                    >
+                    <div className="font-display font-semibold text-2xl text-[var(--ink,#0E1A2B)] mt-1 tabular-nums lining-nums">
                       {formatMoney(profitMetrics.estimatedTaxSetAside)}
                     </div>
                     <p className="text-xs text-[var(--muted,#5B6676)] mt-1">
@@ -1665,10 +1636,7 @@ export function ExpensesPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[var(--cobalt-tint,#E8F0FB)] text-[var(--cobalt,#0047AB)] flex items-center justify-center mx-auto mb-3">
                   <Tag className="w-6 h-6" />
                 </div>
-                <h3
-                  className="text-base font-bold text-[var(--ink,#0E1A2B)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h3 className="font-display font-medium text-base text-[var(--ink,#0E1A2B)] mb-1 tracking-[-0.01em]">
                   No expenses yet
                 </h3>
                 <p className="text-xs text-[var(--muted,#5B6676)] mb-6">
@@ -1950,10 +1918,7 @@ export function ExpensesPage() {
           <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-[var(--line,#E8E0CF)]">
               <div>
-                <h3
-                  className="text-base font-bold text-[var(--ink,#0E1A2B)]"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h3 className="font-display font-medium text-base text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                   Recurring subscriptions & licenses
                 </h3>
                 <p className="text-xs text-[var(--muted,#5B6676)]">
@@ -1978,10 +1943,7 @@ export function ExpensesPage() {
                 <div className="w-12 h-12 rounded-2xl bg-[var(--cobalt-tint,#E8F0FB)] text-[var(--cobalt,#0047AB)] flex items-center justify-center mx-auto mb-3">
                   <RefreshCw className="w-6 h-6" />
                 </div>
-                <h4
-                  className="text-base font-bold text-[var(--ink,#0E1A2B)] mb-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h4 className="font-display font-medium text-base text-[var(--ink,#0E1A2B)] mb-1 tracking-[-0.01em]">
                   No recurring costs
                 </h4>
                 <p className="text-xs text-[var(--muted,#5B6676)] mb-6">

@@ -113,8 +113,7 @@ export function DeleteClientDialog({
             <div>
               <h3
                 id="delete-dialog-title"
-                className="text-base font-bold text-[var(--ink,#0E1A2B)]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                className="text-base font-medium text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]"
               >
                 {hasFinancialRecords ? `Cannot delete ${clientName}` : `Delete ${clientName}?`}
               </h3>

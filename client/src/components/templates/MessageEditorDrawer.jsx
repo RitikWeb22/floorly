@@ -172,14 +172,14 @@ export function MessageEditorDrawer({
       {/* Drawer Body */}
       <div
         ref={drawerRef}
-        className="relative w-full max-w-xl h-full bg-white shadow-2xl flex flex-col z-10 border-l border-[var(--line,#E8E0CF)] animate-slide-in font-['Instrument_Sans',sans-serif]"
+        className="relative w-full max-w-xl h-full bg-white shadow-2xl flex flex-col z-10 border-l border-[var(--line,#E8E0CF)] animate-slide-in font-sans"
       >
         {/* Header */}
         <header className="px-6 py-4 border-b border-[var(--line,#E8E0CF)] flex items-center justify-between shrink-0 bg-white">
           <div>
             <h2
               id="message-drawer-title"
-              className="text-[18px] font-bold text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]"
+              className="text-[18px] font-medium text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]"
             >
               Edit message: {template.title}
             </h2>

@@ -122,8 +122,7 @@ export function DataPrivacySection({ user, onLogout }) {
       <div className="bg-white rounded-2xl border border-[#E8E0CF] p-6 space-y-4">
         <div>
           <h2
-            className="text-lg font-bold text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-lg font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
           >
             Export workspace data
           </h2>
@@ -150,8 +149,7 @@ export function DataPrivacySection({ user, onLogout }) {
         <div>
           <div className="flex items-center gap-2">
             <h2
-              className="text-lg font-bold text-[#0E1A2B]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-lg font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
             >
               Demo & sample data
             </h2>
@@ -206,8 +204,7 @@ export function DataPrivacySection({ user, onLogout }) {
         <div className="flex items-center gap-2 text-[#0047AB]">
           <ShieldCheck className="w-5 h-5" />
           <h3
-            className="text-base font-bold text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-base font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
           >
             AI privacy & model usage policy
           </h3>
@@ -222,8 +219,7 @@ export function DataPrivacySection({ user, onLogout }) {
       <div className="bg-[#FAF5EA]/50 rounded-2xl border border-[#B42318]/30 p-6 space-y-4">
         <div>
           <h2
-            className="text-lg font-bold text-[#B42318]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-lg font-medium text-[#B42318] font-display tracking-[-0.01em]"
           >
             Delete account & all data
           </h2>

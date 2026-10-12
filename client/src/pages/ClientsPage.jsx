@@ -312,10 +312,7 @@ export function ClientsPage() {
          ============================================================= */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-1">
         <div>
-          <h1
-            className="text-2xl sm:text-3xl font-extrabold text-[var(--ink,#0E1A2B)] tracking-tight leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h1 className="font-display font-semibold text-[30px] text-[var(--ink,#0E1A2B)] tracking-[-0.02em] leading-[1.15]">
             Clients
           </h1>
           <p className="text-sm text-[var(--muted,#5B6676)] mt-0.5">
@@ -381,10 +378,7 @@ export function ClientsPage() {
           <span className="text-xs font-semibold text-[var(--muted,#5B6676)] block">
             Active clients
           </span>
-          <div
-            className="text-xl sm:text-2xl font-black text-[var(--ink,#0E1A2B)] font-tabular leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <div className="font-display font-semibold text-xl sm:text-2xl text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-tight">
             {activeClientsCount}
           </div>
         </div>
@@ -394,10 +388,7 @@ export function ClientsPage() {
           <span className="text-xs font-semibold text-[var(--muted,#5B6676)] block">
             Total billed
           </span>
-          <div
-            className="text-xl sm:text-2xl font-black text-[var(--ink,#0E1A2B)] font-tabular leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <div className="font-display font-semibold text-xl sm:text-2xl text-[var(--ink,#0E1A2B)] tabular-nums lining-nums leading-tight">
             {Object.keys(summaryStrip).length === 0
               ? formatMoney(0, globalCurrency)
               : Object.entries(summaryStrip).map(([cur, data]) => formatMoney(data.billed, cur)).join(' · ')}
@@ -409,13 +400,7 @@ export function ClientsPage() {
           <span className="text-xs font-semibold text-[var(--muted,#5B6676)] block">
             Outstanding
           </span>
-          <div
-            className="text-xl sm:text-2xl font-black font-tabular leading-tight"
-            style={{
-              color: 'var(--warning, #B54708)',
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-            }}
-          >
+          <div className="font-display font-semibold text-xl sm:text-2xl tabular-nums lining-nums leading-tight text-[var(--warning,#B54708)]">
             {Object.keys(summaryStrip).length === 0
               ? formatMoney(0, globalCurrency)
               : Object.entries(summaryStrip).map(([cur, data]) => formatMoney(data.outstanding, cur)).join(' · ')}
@@ -571,10 +556,7 @@ export function ClientsPage() {
           <div className="w-10 h-10 rounded-full bg-[var(--error-tint,#FEE4E2)] text-[var(--error,#B42318)] flex items-center justify-center mx-auto">
             <AlertTriangle className="w-5 h-5" />
           </div>
-          <h3
-            className="text-base font-bold text-[var(--ink,#0E1A2B)]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h3 className="font-display font-medium text-base text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
             We couldn't load your clients
           </h3>
           <p className="text-xs text-[var(--muted,#5B6676)]">{loadError}</p>
@@ -600,10 +582,7 @@ export function ClientsPage() {
             <Users className="w-6 h-6" />
           </div>
           <div className="space-y-1">
-            <h3
-              className="text-base sm:text-lg font-bold text-[var(--ink,#0E1A2B)]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <h3 className="font-display font-medium text-base sm:text-lg text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
               Add your first client
             </h3>
             <p className="text-xs text-[var(--muted,#5B6676)] max-w-sm mx-auto">
@@ -693,20 +672,16 @@ export function ClientsPage() {
                   <div className="flex items-start justify-between gap-3">
                     <div className="flex items-center gap-3 min-w-0">
                       <div
-                        className="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-bold shrink-0"
+                        className="w-10 h-10 rounded-xl flex items-center justify-center text-sm font-semibold shrink-0 font-display"
                         style={{
                           backgroundColor: 'var(--cobalt-tint, #E8F0FB)',
                           color: 'var(--cobalt, #0047AB)',
-                          fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                         }}
                       >
                         {initials}
                       </div>
                       <div className="min-w-0">
-                        <h2
-                          className="text-base sm:text-[18px] font-bold text-[var(--ink,#0E1A2B)] truncate leading-snug group-hover:text-[var(--cobalt,#0047AB)] transition-colors"
-                          style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                        >
+                        <h2 className="font-display font-medium text-base sm:text-[18px] text-[var(--ink,#0E1A2B)] truncate leading-snug group-hover:text-[var(--cobalt,#0047AB)] transition-colors tracking-[-0.01em]">
                           {compName}
                         </h2>
                         {contact && (
@@ -910,7 +885,7 @@ export function ClientsPage() {
         <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] overflow-hidden shadow-sm">
           <div className="overflow-x-auto">
             <table className="w-full text-left text-xs border-collapse">
-              <thead className="bg-[var(--page,#FAF5EA)] text-[var(--muted,#5B6676)] font-semibold border-b border-[var(--line,#E8E0CF)]">
+              <thead className="bg-[var(--page,#FAF5EA)] text-[var(--muted,#5B6676)] font-sans font-medium text-[13px] border-b border-[var(--line,#E8E0CF)]">
                 <tr>
                   <th scope="col" className="py-3 px-4">Client</th>
                   <th scope="col" className="py-3 px-4">Contact</th>
@@ -945,7 +920,7 @@ export function ClientsPage() {
                       <td className="py-3 px-4">
                         {renderStatusPill(c.status)}
                       </td>
-                      <td className="py-3 px-4 text-right font-bold text-[var(--ink,#0E1A2B)] font-tabular">
+                      <td className="py-3 px-4 text-right font-display font-semibold text-[var(--ink,#0E1A2B)] tabular-nums lining-nums">
                         {formatMoney(billedAmt, cCurrency)}
                       </td>
                       <td

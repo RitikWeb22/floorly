@@ -18,8 +18,7 @@ export function NotificationsSection({ formData, onChange }) {
       <div className="bg-white rounded-2xl border border-[#E8E0CF] p-6 space-y-6">
         <div>
           <h2
-            className="text-lg font-bold text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-lg font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
           >
             Email notifications
           </h2>
@@ -83,8 +82,7 @@ export function NotificationsSection({ formData, onChange }) {
       <div className="bg-white rounded-2xl border border-[#E8E0CF] p-6 space-y-6">
         <div>
           <h2
-            className="text-lg font-bold text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-lg font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
           >
             Automated payment reminders
           </h2>

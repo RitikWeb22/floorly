@@ -399,7 +399,7 @@ export function TemplatesPage() {
   }, [clauses, showArchived, selectedCategory, searchTerm]);
 
   return (
-    <div className="max-w-[1200px] mx-auto pb-16 font-['Instrument_Sans',sans-serif] text-[var(--ink,#0E1A2B)]">
+    <div className="max-w-[1200px] mx-auto pb-16 text-[var(--ink,#0E1A2B)]">
       {/* Aria Live Announcement Region */}
       <div className="sr-only" aria-live="polite" aria-atomic="true">
         {ariaAnnouncement}
@@ -411,7 +411,7 @@ export function TemplatesPage() {
           <h1
             ref={h1Ref}
             tabIndex="-1"
-            className="text-[30px] font-extrabold leading-[1.15] font-['Bricolage_Grotesque',sans-serif] text-[var(--ink,#0E1A2B)] tracking-tight outline-none focus:outline-none"
+            className="text-[30px] font-semibold leading-[1.15] font-display text-[var(--ink,#0E1A2B)] tracking-[-0.02em] outline-none focus:outline-none"
           >
             Templates
           </h1>
@@ -670,7 +670,7 @@ export function TemplatesPage() {
             <div className="p-12 text-center bg-white rounded-2xl border border-[var(--line,#E8E0CF)] space-y-4">
               <Layers className="w-10 h-10 text-[var(--muted,#5B6676)] mx-auto opacity-50" />
               <div>
-                <h3 className="text-lg font-bold text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]">
+                <h3 className="text-lg font-medium text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]">
                   No clauses yet
                 </h3>
                 <p className="text-sm text-[var(--muted,#5B6676)] max-w-md mx-auto mt-1">
@@ -772,8 +772,8 @@ export function TemplatesPage() {
                         </div>
                       </div>
 
-                      {/* Title (Bricolage Grotesque 18px) */}
-                      <h2 className="text-[18px] font-bold text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif] leading-tight">
+                      {/* Title (Clash Grotesk 18px) */}
+                      <h2 className="text-[18px] font-medium text-[var(--ink,#0E1A2B)] font-display leading-tight tracking-[-0.01em]">
                         {clause.title}
                       </h2>
 
@@ -954,7 +954,7 @@ export function TemplatesPage() {
         <section id="panel-messages" role="tabpanel" aria-labelledby="tab-messages" className="space-y-6">
           <div className="p-4 rounded-2xl bg-white border border-[var(--line,#E8E0CF)] flex items-center justify-between gap-4">
             <div>
-              <h2 className="text-[16px] font-bold text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]">
+              <h2 className="text-[16px] font-medium text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]">
                 Email & Reminder Templates
               </h2>
               <p className="text-[13px] text-[var(--muted,#5B6676)]">
@@ -971,7 +971,7 @@ export function TemplatesPage() {
               >
                 <div className="space-y-2">
                   <div className="flex items-center justify-between">
-                    <span className="font-bold text-[16px] text-[var(--ink,#0E1A2B)] font-['Bricolage_Grotesque',sans-serif]">
+                    <span className="font-medium text-[16px] text-[var(--ink,#0E1A2B)] font-display tracking-[-0.01em]">
                       {msg.title}
                     </span>
                     <span className="text-[11px] font-semibold px-2.5 py-0.5 rounded-full bg-[var(--cobalt-tint,#E8F0FB)] text-[var(--cobalt,#0047AB)]">

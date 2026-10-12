@@ -66,10 +66,7 @@ export function RazorpayTestPage() {
             <ShieldCheck className="w-3.5 h-3.5" />
             <span>Razorpay Standard Web Checkout</span>
           </div>
-          <h1
-            className="text-2xl sm:text-4xl font-black text-[#0E1A2B] tracking-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h1 className="font-display font-semibold text-[30px] text-[#0E1A2B] tracking-[-0.02em] leading-[1.15]">
             Razorpay Payment Gateway Integration
           </h1>
           <p className="text-sm text-[#5B6676] mt-1">
@@ -108,10 +105,7 @@ export function RazorpayTestPage() {
 
         {/* Interactive Payment Simulator Form */}
         <div className="bg-white rounded-2xl border border-[#E8E0CF] p-6 sm:p-8 shadow-xs space-y-6">
-          <h2
-            className="text-lg font-black text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h2 className="font-display font-medium text-lg text-[#0E1A2B] tracking-[-0.01em]">
             Test Payment Parameters
           </h2>
 

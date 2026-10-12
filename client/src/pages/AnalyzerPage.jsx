@@ -524,10 +524,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
           PAGE HEADER
           ===================================================================== */}
       <section aria-label="Analyzer Header" className="pb-2 border-b border-[var(--line,#E8E0CF)]">
-        <h1
-          className="text-[32px] font-extrabold text-[var(--ink,#0E1A2B)] tracking-tight leading-tight"
-          style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-        >
+        <h1 className="font-display font-semibold text-[30px] text-[var(--ink,#0E1A2B)] tracking-[-0.02em] leading-[1.15]">
           Analyzer
         </h1>
         <p className="text-[15px] text-[var(--muted,#5B6676)] mt-1 font-normal">
@@ -546,10 +543,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
           {/* Card: Paste a client brief */}
           <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-5 space-y-4">
             <div>
-              <h2
-                className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h2 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.01em]">
                 Paste a client brief
               </h2>
               <p className="text-[13px] text-[var(--muted,#5B6676)] mt-0.5">
@@ -677,10 +671,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
 
           {/* Card: Past analyses (History) */}
           <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-5">
-            <h3
-              className="text-[16px] font-bold text-[var(--ink,#0E1A2B)] mb-3"
-              style={{ fontFamily: "'Bricolage Grotedque', system-ui, sans-serif" }}
-            >
+            <h3 className="font-display font-medium text-[16px] text-[var(--ink,#0E1A2B)] mb-3 tracking-[-0.01em]">
               Past analyses
             </h3>
 
@@ -776,10 +767,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
             >
               <div className="flex items-center gap-2">
                 <Loader2 className="w-5 h-5 text-[var(--cobalt,#0047AB)] animate-spin" />
-                <h3
-                  className="text-[18px] font-bold text-[var(--ink,#0E1A2B)]"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h3 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                   Analyzing brief...
                 </h3>
               </div>
@@ -893,10 +881,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
                 )}
 
                 {/* Title (Full text, no truncation) */}
-                <h2
-                  className="text-[28px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight tracking-tight"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h2 className="font-display font-semibold text-[26px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.02em]">
                   {selectedAnalysis.projectTitle}
                 </h2>
 
@@ -924,10 +909,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
                       <ShieldCheck className="w-4 h-4" />
                     </div>
                     <div>
-                      <h3
-                        className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight"
-                        style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                      >
+                      <h3 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.01em]">
                         Price floor check
                       </h3>
                       <p className="text-[12px] text-[var(--muted,#5B6676)]">
@@ -996,10 +978,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
 
                   <div className="p-3 rounded-xl bg-white border border-[var(--cobalt,#0047AB)] shadow-xs">
                     <span className="text-[11px] text-[var(--cobalt,#0047AB)] block font-bold">Recommended quote</span>
-                    <span
-                      className="text-[18px] font-extrabold text-[var(--cobalt,#0047AB)] block mt-0.5"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                    >
+                    <span className="font-display font-semibold text-[18px] text-[var(--cobalt,#0047AB)] block mt-0.5 tabular-nums lining-nums">
                       {format(floorCalculation.recommendedQuote)}
                     </span>
                     <span className="text-[10px] text-[var(--muted,#5B6676)]">
@@ -1037,10 +1016,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
               <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6 space-y-4">
                 <div className="flex items-start justify-between gap-4">
                   <div className="space-y-1">
-                    <h3
-                      className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                    >
+                    <h3 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.01em]">
                       Questions to confirm with your client
                     </h3>
                     <p className="text-[13px] text-[var(--muted,#5B6676)]">
@@ -1218,10 +1194,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
               <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-6 space-y-4">
                 <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                   <div>
-                    <h3
-                      className="text-[18px] font-extrabold text-[var(--ink,#0E1A2B)] leading-tight"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                    >
+                    <h3 className="font-display font-medium text-[18px] text-[var(--ink,#0E1A2B)] leading-tight tracking-[-0.01em]">
                       Features and effort
                     </h3>
                     <p className="text-[13px] text-[var(--muted,#5B6676)]">
@@ -1230,10 +1203,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
                   </div>
 
                   <div className="flex items-center gap-3 shrink-0">
-                    <span
-                      className="text-[24px] font-extrabold text-[var(--ink,#0E1A2B)] whitespace-nowrap tabular-nums"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                    >
+                    <span className="font-display font-semibold text-[22px] text-[var(--ink,#0E1A2B)] whitespace-nowrap tabular-nums lining-nums">
                       {currentTotalHours} hrs total
                     </span>
 
@@ -1403,10 +1373,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
                 {/* Included deliverables */}
                 <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-5 space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-[var(--line,#E8E0CF)]">
-                    <h4
-                      className="text-[16px] font-bold text-[var(--ink,#0E1A2B)]"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                    >
+                    <h4 className="font-display font-medium text-[16px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                       Included deliverables
                     </h4>
                     {!isEditingDeliverables ? (
@@ -1470,10 +1437,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
                 <div className="bg-white rounded-2xl border border-[var(--line,#E8E0CF)] p-5 space-y-3">
                   <div className="flex items-center justify-between pb-2 border-b border-[var(--line,#E8E0CF)]">
                     <div>
-                      <h4
-                        className="text-[16px] font-bold text-[var(--ink,#0E1A2B)]"
-                        style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                      >
+                      <h4 className="font-display font-medium text-[16px] text-[var(--ink,#0E1A2B)] tracking-[-0.01em]">
                         Not included
                       </h4>
                       <p className="text-[11px] text-[var(--muted,#5B6676)] mt-0.5">
@@ -1544,15 +1508,12 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
                   ============================================================= */}
               <div className="sticky bottom-4 z-20 bg-white border border-[var(--line,#E8E0CF)] rounded-2xl p-4 shadow-lg flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-2 text-sm text-[var(--ink,#0E1A2B)]">
-                  <span className="font-extrabold" style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}>
+                  <span className="font-display font-semibold tabular-nums lining-nums">
                     {currentTotalHours} hrs
                   </span>
                   <span>·</span>
                   <span className="text-[var(--muted,#5B6676)]">Recommended quote</span>
-                  <span
-                    className="text-[17px] font-extrabold text-[var(--cobalt,#0047AB)]"
-                    style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                  >
+                  <span className="font-display font-semibold text-[17px] text-[var(--cobalt,#0047AB)] tabular-nums lining-nums">
                     {format(floorCalculation.recommendedQuote)}
                   </span>
                 </div>
@@ -1614,10 +1575,7 @@ ${(selectedAnalysis.exclusions || []).map((e) => `- ${e}`).join('\n')}
               </div>
 
               <div>
-                <h3
-                  className="text-[22px] font-extrabold text-[var(--ink,#0E1A2B)]"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-                >
+                <h3 className="font-display font-semibold text-[22px] text-[var(--ink,#0E1A2B)] tracking-[-0.015em]">
                   Turn a client message into a scoped proposal
                 </h3>
                 <p className="text-[14px] text-[var(--muted,#5B6676)] mt-1.5 max-w-md mx-auto">

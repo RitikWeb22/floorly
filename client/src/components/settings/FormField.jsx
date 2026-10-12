@@ -25,7 +25,7 @@ export function FormField({
         <label
           htmlFor={id}
           className="text-sm font-semibold text-[#0E1A2B] leading-none select-none flex items-center gap-1.5"
-          style={{ fontFamily: "'Instrument Sans', system-ui, sans-serif" }}
+          style={{ fontFamily: 'var(--font-sans)' }}
         >
           <span>{label}</span>
           {required && <span className="text-[#B42318] text-xs font-bold leading-none" aria-hidden="true">*</span>}
@@ -111,7 +111,7 @@ export function TextInput({
           : 'border-[#E8E0CF] hover:border-[#0E1A2B]/40 focus-visible:ring-2 focus-visible:ring-[#0047AB] focus-visible:border-[#0047AB]'
       } ${disabled ? 'bg-[#FAF5EA]/50 text-[#5B6676] cursor-not-allowed border-[#E8E0CF]' : ''} ${className}`}
       style={{
-        fontFamily: "'Instrument Sans', system-ui, -apple-system, sans-serif",
+        fontFamily: 'var(--font-sans)',
       }}
       {...props}
     />
@@ -144,7 +144,7 @@ export function SelectInput({
           : 'border-[#E8E0CF] hover:border-[#0E1A2B]/40 focus-visible:ring-2 focus-visible:ring-[#0047AB] focus-visible:border-[#0047AB]'
       } ${disabled ? 'bg-[#FAF5EA]/50 text-[#5B6676] cursor-not-allowed' : ''} ${className}`}
       style={{
-        fontFamily: "'Instrument Sans', system-ui, -apple-system, sans-serif",
+        fontFamily: 'var(--font-sans)',
         backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%235B6676' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E")`,
       }}
       {...props}
@@ -168,7 +168,7 @@ export function ToggleSwitch({
         <label
           htmlFor={id}
           className="text-sm font-semibold text-[#0E1A2B] block cursor-pointer select-none leading-tight"
-          style={{ fontFamily: "'Instrument Sans', system-ui, sans-serif" }}
+          style={{ fontFamily: 'var(--font-sans)' }}
         >
           {label}
         </label>

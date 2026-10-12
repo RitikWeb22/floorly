@@ -368,7 +368,7 @@ export function InvoicesPage() {
       {/* Top Header & Actions */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-2 border-b border-charcoal-200/60">
         <div>
-          <h1 className="text-2xl font-bold tracking-tight text-charcoal-900">
+          <h1 className="font-display font-semibold text-[30px] tracking-[-0.02em] leading-[1.15] text-charcoal-900">
             Invoices & Payments Management
           </h1>
           <p className="text-sm text-charcoal-500">
@@ -404,7 +404,7 @@ export function InvoicesPage() {
             <span>Total Invoiced</span>
             <Receipt className="w-4 h-4 text-brand-600" />
           </div>
-          <div className="text-xl font-bold text-charcoal-900 mt-1">
+          <div className="font-display font-semibold text-xl text-charcoal-900 mt-1 tabular-nums lining-nums">
             {format(totalBilled)}
           </div>
           <div className="text-[11px] text-charcoal-500 mt-0.5">
@@ -417,7 +417,7 @@ export function InvoicesPage() {
             <span>Cash Collected</span>
             <CheckCircle2 className="w-4 h-4 text-emerald-600" />
           </div>
-          <div className="text-xl font-bold text-emerald-700 mt-1">
+          <div className="font-display font-semibold text-xl text-emerald-700 mt-1 tabular-nums lining-nums">
             {format(totalReceived)}
           </div>
           <div className="text-[11px] text-emerald-600 font-medium mt-0.5">
@@ -430,7 +430,7 @@ export function InvoicesPage() {
             <span>Outstanding Balance</span>
             <Clock className="w-4 h-4 text-amber-600" />
           </div>
-          <div className="text-xl font-bold text-amber-700 mt-1">
+          <div className="font-display font-semibold text-xl text-amber-700 mt-1 tabular-nums lining-nums">
             {format(totalOutstanding)}
           </div>
           <div className="text-[11px] text-amber-700 font-medium mt-0.5">
@@ -444,7 +444,7 @@ export function InvoicesPage() {
             <span>Floor Guard Floor Rate</span>
             <ShieldCheck className="w-4 h-4 text-brand-600" />
           </div>
-          <div className="text-xl font-bold text-charcoal-900 mt-1">
+          <div className="font-display font-semibold text-xl text-charcoal-900 mt-1 tabular-nums lining-nums">
             {format(pricingSettings?.minHourlyRate || pricingSettings?.hourlyRate || 35)}/hr
           </div>
           <div className="text-[11px] text-charcoal-500 mt-0.5">
