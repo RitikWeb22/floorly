@@ -1,6 +1,6 @@
 # 🚀 Floorly (Freelancer OS) — Launch & Promotion Playbook
 
-> **Live Website:** [https://floorly-studio.vercel.app](https://floorly-studio.vercel.app)  
+> **Live Website:** [https://floorlystudio.me](https://floorlystudio.me)
 > **Tagline:** Never Underprice Again — The All-in-One Operating System for Freelancers & Independent Studios.
 
 ---
@@ -21,6 +21,7 @@
 ## 💼 1. LinkedIn Posts
 
 ### Option A: The Founder Story Post (High Engagement & Relatability)
+
 *Best for: Personal profile or company page launch.*
 
 ```markdown
@@ -34,7 +35,7 @@ Every freelancer knows this cycle:
 
 I got tired of juggling 6 disjointed tools and leaving money on the table.
 
-So I built Floorly (Freelancer OS) 🚀
+So I built Floorly  🚀
 
 Floorly is an all-in-one studio operating system built specifically for freelancers, developers, designers, and creative studios.
 
@@ -46,7 +47,7 @@ What it does for you:
 
 Stop guessing your rates. Never underprice your craft again.
 
-👉 Check it out live: https://floorly-studio.vercel.app
+👉 Check it out live: https://floorlystudio.me
 
 I’d love your honest feedback in the comments! What's the biggest headache in your freelance workflow right now?
 
@@ -56,6 +57,7 @@ I’d love your honest feedback in the comments! What's the biggest headache in 
 ---
 
 ### Option B: Value-First & ROI Post (For Agencies & Experienced Pros)
+
 *Best for: Mid-to-senior freelancers, tech consultants, and agency owners.*
 
 ```markdown
@@ -77,7 +79,7 @@ We launched Floorly to fix the business side of freelancing:
 
 If your time is worth $50+/hr, you shouldn't spend 5 hours a week doing administrative manual work.
 
-Try the platform here: https://floorly-studio.vercel.app
+Try the platform here: https://floorlystudio.me
 
 Drop your thoughts below 👇
 
@@ -91,16 +93,18 @@ Drop your thoughts below 👇
 ### Launch Thread (Hook + 6 Tweets)
 
 **Tweet 1 (The Hook):**
+
 ```text
 I got tired of seeing freelancers and developers underprice their work by 50% and drown in messy spreadsheets.
 
 So I built Floorly: an AI-powered operating system to help you scope, price, propose, and get paid like a top-tier studio.
 
 Here is what we built & why it will change how you run your business 🧵👇
-https://floorly-studio.vercel.app
+https://floorlystudio.me
 ```
 
 **Tweet 2 (AI Scoping & Pricing):**
+
 ```text
 1/ The AI Scope & Pricing Engine 🧠
 
@@ -114,6 +118,7 @@ No more guessing quotes.
 ```
 
 **Tweet 3 (Proposals that Close):**
+
 ```text
 2/ Interactive Client Proposals 📑
 
@@ -124,6 +129,7 @@ Clients sign faster when the presentation looks high-end.
 ```
 
 **Tweet 4 (Invoices & Global Payments):**
+
 ```text
 3/ Domestic & Global Payments 💳
 
@@ -134,6 +140,7 @@ Get paid without friction:
 ```
 
 **Tweet 5 (Cash Flow & Financial Health):**
+
 ```text
 4/ Studio Analytics & Expense Tracking 📊
 
@@ -143,11 +150,12 @@ Know exactly where your freelance business stands at all times.
 ```
 
 **Tweet 6 (Call to Action / Outro):**
+
 ```text
 Floorly is live right now! 🚀
 
 If you’re a freelancer, designer, agency owner, or indie hacker:
-Check it out here: https://floorly-studio.vercel.app
+Check it out here: https://floorlystudio.me
 
 Retweet the first tweet if you believe freelancers should never undercharge again! ❤️
 ```
@@ -157,20 +165,22 @@ Retweet the first tweet if you believe freelancers should never undercharge agai
 ### Standalone Short Viral Tweets
 
 **Post 1:**
+
 ```text
 Rule #1 of freelancing: If you price based on what "feels fair," you are undercharging by at least 40%.
 
 We built Floorly to calculate your exact pricing floor and generate client proposals in minutes.
 
-Try it free: https://floorly-studio.vercel.app
+Try it free: https://floorlystudio.me
 ```
 
 **Post 2:**
+
 ```text
 You don't need Notion + Google Docs + Excel + Freshbooks + DocuSign to run a freelance studio.
 
 You just need one unified dashboard: Floorly.
-👉 https://floorly-studio.vercel.app
+👉 https://floorlystudio.me
 ```
 
 ---
@@ -179,20 +189,11 @@ You just need one unified dashboard: Floorly.
 
 ### Reel / Shorts Script (30 Seconds)
 
-- **Video Hook (0-3s):**  
-  *(Screen recording showing a crazy long client brief / email)*  
-  **Voiceover / Text on Screen:** *"Stop guessing your freelance prices. It’s costing you thousands."*
-
-- **Problem (3-10s):**  
-  *(Quick transition to a stressed expression or calculator app)*  
-  **Voiceover:** *"A client asks: 'What will this website cost?' You guess $800. Two weeks later, you've spent 60 hours on it and made less than minimum wage."*
-
-- **Solution Demo (10-22s):**  
-  *(Clean screen capture showing Floorly dashboard, AI Analyzer generating scope & pricing tiers, and interactive proposal preview)*  
-  **Voiceover:** *"Here’s what you do instead: Paste the brief into Floorly. Its AI analyzes the scope, calculates risk buffers, gives you 3 pricing tiers, and builds a branded proposal clients can sign in one click."*
-
-- **CTA (22-30s):**  
-  *(Showing payment received / completed proposal screen)*  
+- **Video Hook (0-3s):***(Screen recording showing a crazy long client brief / email)***Voiceover / Text on Screen:** *"Stop guessing your freelance prices. It’s costing you thousands."*
+- **Problem (3-10s):***(Quick transition to a stressed expression or calculator app)***Voiceover:** *"A client asks: 'What will this website cost?' You guess $800. Two weeks later, you've spent 60 hours on it and made less than minimum wage."*
+- **Solution Demo (10-22s):***(Clean screen capture showing Floorly dashboard, AI Analyzer generating scope & pricing tiers, and interactive proposal preview)***Voiceover:** *"Here’s what you do instead: Paste the brief into Floorly. Its AI analyzes the scope, calculates risk buffers, gives you 3 pricing tiers, and builds a branded proposal clients can sign in one click."*
+- **CTA (22-30s):**
+  *(Showing payment received / completed proposal screen)*
   **Voiceover:** *"Work smarter and get paid what you're actually worth. Link in bio to try Floorly today!"*
 
 ---
@@ -205,9 +206,10 @@ You just need one unified dashboard: Floorly.
 - **Slide 4:** *Mistake #3: Sending boring text PDFs that take days for clients to review.*
 - **Slide 5:** *Mistake #4: Chasing payments across 5 platforms with no automated receipts.*
 - **Slide 6:** *The Solution: Floorly — The all-in-one studio OS for modern freelancers.*
-- **Slide 7 (CTA):** *Try it today at floorly-studio.vercel.app (Link in bio).*
+- **Slide 7 (CTA):** *Try it today at floorlystudio.me (Link in bio).*
 
 **Instagram Caption:**
+
 ```markdown
 Stop giving away free revisions and leaving money on the table. 📉
 
@@ -219,7 +221,7 @@ Floorly is built to handle the business side so you can focus on your craft:
 ✨ Interactive Digital Proposals
 ✨ Razorpay & Stripe Invoicing
 
-👉 Tap the link in bio to explore Floorly: https://floorly-studio.vercel.app
+👉 Tap the link in bio to explore Floorly: https://floorlystudio.me
 
 Save this post for your next client inquiry! 📌
 
@@ -251,7 +253,7 @@ To solve this for myself and fellow freelancers, I built **Floorly** (Freelancer
 4. **Studio Ledger:** Real-time visibility into income, expenses, and cash flow.
 
 It is completely live and deployed here:  
-👉 **https://floorly-studio.vercel.app**
+👉 **https://floorlystudio.me**
 
 I would love to get your honest feedback:
 - What is your current system for calculating project quotes?
@@ -277,7 +279,7 @@ If you've ever struggled with quoting projects, dealing with scope creep, or jug
 • Instant invoicing & payments via Razorpay (INR/UPI) & Stripe (USD)
 • All-in-one studio dashboard
 
-Live demo: https://floorly-studio.vercel.app
+Live demo: https://floorlystudio.me
 
 Check it out and let me know your thoughts/feedback! 🙌
 ```
@@ -291,7 +293,7 @@ Hey [Name], saw your work on [Design/Dev project/portfolio]—looks fantastic!
 
 Quick question: how do you currently calculate your project quotes and send proposals to clients?
 
-I recently launched Floorly (https://floorly-studio.vercel.app), a dedicated platform that takes client briefs, extracts deliverables, calculates pricing floors with AI, and turns them into interactive proposals clients can sign on the spot.
+I recently launched Floorly (https://floorlystudio.me), a dedicated platform that takes client briefs, extracts deliverables, calculates pricing floors with AI, and turns them into interactive proposals clients can sign on the spot.
 
 Would love for you to take a 2-minute look and give me your honest feedback as an experienced freelancer. No sales pitch, just building something genuinely useful for our community!
 ```

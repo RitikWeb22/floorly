@@ -16,11 +16,13 @@ out/
 .env.local
 !.env.example
 
-# Markdown files (Ignore all md files, preserve README.md & promote.md)
+# Markdown files (Ignore all md files, preserve README.md, promote.md, SEO_AUDIT.md & PRODUCT_HUNT.md)
 *.md
 **/*.md
 !README.md
 !promote.md
+!SEO_AUDIT.md
+!PRODUCT_HUNT.md
 
 # Logs
 logs/
