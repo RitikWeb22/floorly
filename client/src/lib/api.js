@@ -159,5 +159,9 @@ export const api = {
   updateMessageTemplate: (key, payload) => apiRequest(`/templates/messages/${key}`, { method: 'PATCH', body: JSON.stringify(payload) }),
   restoreDefaultMessageTemplate: (key) => apiRequest(`/templates/messages/${key}/restore-default`, { method: 'POST' }),
   restoreMessageVersion: (key, version) => apiRequest(`/templates/messages/${key}/restore-version`, { method: 'POST', body: JSON.stringify({ version }) }),
+  // Razorpay Standard Checkout
+  createRazorpayOrder: (payload) => apiRequest('/create-order', { method: 'POST', body: JSON.stringify(payload) }),
+  verifyRazorpayPayment: (payload) => apiRequest('/verify-payment', { method: 'POST', body: JSON.stringify(payload) }),
+  getRazorpayConfig: () => apiRequest('/config'),
   sendTestMessage: (key) => apiRequest('/templates/messages/send-test', { method: 'POST', body: JSON.stringify({ key }) }),
 };

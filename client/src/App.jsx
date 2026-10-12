@@ -19,6 +19,7 @@ import { NotFoundPage } from './pages/NotFoundPage';
 import { PricingPage } from './pages/PricingPage';
 import { AboutPage } from './pages/AboutPage';
 import { DeliveryPage } from './pages/DeliveryPage';
+import { RazorpayTestPage } from './pages/RazorpayTestPage';
 
 import { DashboardPage } from './pages/DashboardPage';
 import { AnalyzerPage } from './pages/AnalyzerPage';
@@ -107,6 +108,8 @@ function AppContent() {
         <Route path="/forgot-password" element={<ForgotPasswordPage />} />
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/pricing" element={<PricingPage />} />
+        <Route path="/checkout-test" element={<RazorpayTestPage />} />
+        <Route path="/razorpay-test" element={<RazorpayTestPage />} />
 
         {/* Public Shared Document View Pages (Accessible by clients without account) */}
         <Route path="/p/:token" element={<PublicProposalPage />} />

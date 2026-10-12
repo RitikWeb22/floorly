@@ -20,6 +20,7 @@ import { Footer } from '../components/layout/Footer';
 import { PLANS, PRICING_PLANS } from '../config/plans';
 import { useAuthStore } from '../store/useAuthStore';
 import { api } from '../lib/api';
+import { RazorpayCheckoutButton } from '../components/common/RazorpayCheckoutButton';
 
 export function PricingPage() {
   const [isAnnual, setIsAnnual] = useState(false);
@@ -412,8 +413,27 @@ export function PricingPage() {
               </p>
             </div>
           </div>
-          <div className="shrink-0 text-xs font-bold text-[#067647] bg-[#ECFDF3] border border-[#A6F4C5] px-3 py-1.5 rounded-xl">
-            100% Secure via Razorpay
+          <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0">
+            <RazorpayCheckoutButton
+              amount={100}
+              currency="INR"
+              name="Floorly SaaS"
+              description="Test Razorpay Standard Checkout (₹1.00)"
+              buttonText="Pay ₹1 with Razorpay"
+              className="bg-[#0047AB] hover:bg-[#003A8C] text-xs px-4 py-2"
+              onSuccess={(res, data) => {
+                setNotice({
+                  type: 'success',
+                  message: `Razorpay payment verified successfully! ID: ${data.razorpay_payment_id}`,
+                });
+              }}
+            />
+            <Link
+              to="/checkout-test"
+              className="text-xs font-bold text-[#0047AB] hover:underline whitespace-nowrap"
+            >
+              Full Checkout Test →
+            </Link>
           </div>
         </div>
 

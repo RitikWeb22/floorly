@@ -21,6 +21,7 @@ import subscriptionRouter from './routes/subscription.js';
 import demoRouter from './routes/demo.js';
 import templatesRouter from './routes/templates.js';
 import publicDocumentsRouter from './routes/publicDocuments.js';
+import razorpayCheckoutRouter from './routes/razorpayCheckout.js';
 
 import dns from 'dns';
 
@@ -181,6 +182,11 @@ app.use('/api/v1/subscription', subscriptionRouter);
 app.use('/api/v1/demo', demoRouter);
 app.use('/api/v1/templates', templatesRouter);
 app.use('/api/v1/public', publicDocumentsRouter);
+
+// Razorpay Standard Checkout API endpoints:
+// POST /api/create-order & POST /api/verify-payment
+app.use('/api', razorpayCheckoutRouter);
+app.use('/api/v1', razorpayCheckoutRouter);
 
 // Centralized 404 handler
 app.use((req, res) => {
