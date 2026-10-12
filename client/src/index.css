@@ -30,6 +30,11 @@
     --border-subtle: #E8E0CF;
   }
 
+  html, body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
   body {
     background-color: var(--page);
     color: var(--ink);

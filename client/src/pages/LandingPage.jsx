@@ -75,6 +75,8 @@ export function LandingPage() {
         lineHeight: 1.6,
         fontSize: '17px',
         minHeight: '100vh',
+        overflowX: 'hidden',
+        width: '100%',
       }}
     >
       {/* 1. Sticky Navigation */}
@@ -94,12 +96,12 @@ export function LandingPage() {
           style={{
             maxWidth: '1120px',
             margin: '0 auto',
-            padding: '0 24px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
             height: '68px',
           }}
+          className="px-4 sm:px-6"
         >
           {/* Logo */}
           <Link to="/" style={{ textDecoration: 'none' }} aria-label="Floorly Home">
@@ -109,7 +111,6 @@ export function LandingPage() {
           {/* Desktop Nav Items */}
           <ul
             style={{
-              display: 'flex',
               gap: '28px',
               listStyle: 'none',
               padding: 0,
@@ -247,7 +248,7 @@ export function LandingPage() {
             }}
             className="md:hidden"
           >
-            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'col', gap: '14px' }}>
+            <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '14px' }}>
               <li>
                 <a
                   href="#how"
@@ -319,21 +320,14 @@ export function LandingPage() {
       {/* Main Content Landmark for Accessibility */}
       <main id="main-content">
         {/* 2. Hero Section */}
-        <header
-          style={{
-            padding: '72px 0 88px',
-          }}
-        >
+        <header className="py-12 sm:py-20">
         <div
           style={{
             maxWidth: '1120px',
             margin: '0 auto',
-            padding: '0 24px',
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-            gap: '56px',
             alignItems: 'center',
           }}
+          className="px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14"
         >
           {/* Left Column: Left-aligned Text */}
           <div>
@@ -412,9 +406,8 @@ export function LandingPage() {
               background: '#FFFFFF',
               border: '2px solid var(--ink, #0E1A2B)',
               borderRadius: '20px',
-              padding: '28px',
-              boxShadow: '8px 8px 0 var(--ink, #0E1A2B)',
             }}
+            className="p-5 sm:p-7 shadow-[5px_5px_0_var(--ink,#0E1A2B)] sm:shadow-[8px_8px_0_var(--ink,#0E1A2B)]"
             aria-label="Interactive price floor demo"
           >
             <h2
@@ -598,7 +591,6 @@ export function LandingPage() {
           style={{
             maxWidth: '1120px',
             margin: '0 auto',
-            padding: '0 24px',
             display: 'flex',
             gap: '12px 32px',
             flexWrap: 'wrap',
@@ -608,6 +600,7 @@ export function LandingPage() {
             fontSize: '15px',
             textAlign: 'center',
           }}
+          className="px-4 sm:px-6"
         >
           <span>Built for freelance developers, designers, small agencies and consultants.</span>
           <span>Works in 8 currencies.</span>
@@ -615,11 +608,11 @@ export function LandingPage() {
       </div>
 
       {/* 4. How It Works (3 Real Steps) */}
-      <section id="how" style={{ padding: '96px 0' }}>
-        <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px' }}>
+      <section id="how" className="py-14 sm:py-24">
+        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <h2
             style={{
-              fontSize: 'clamp(34px, 4.6vw, 54px)',
+              fontSize: 'clamp(28px, 4.4vw, 52px)',
               fontWeight: 800,
               fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
               maxWidth: '18em',
@@ -627,21 +620,15 @@ export function LandingPage() {
           >
             How do you turn a client brief into a paid invoice in three steps?
           </h2>
-          <p style={{ color: 'var(--muted, #5B6676)', fontSize: '19px', maxWidth: '34em', marginTop: '16px' }}>
+          <p style={{ color: 'var(--muted, #5B6676)', fontSize: '18px', maxWidth: '34em', marginTop: '16px' }}>
             No spreadsheets, no guessing hours, no awkward rate negotiation.
           </p>
 
           <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-              gap: 0,
-              marginTop: '56px',
-              borderTop: '2px solid var(--ink, #0E1A2B)',
-            }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 mt-10 sm:mt-14 border-t-2 border-[var(--ink,#0E1A2B)]"
           >
             {/* Step 1 */}
-            <div style={{ padding: '30px 28px 10px 0' }}>
+            <div className="pt-6 md:pr-7 pb-2">
               <i
                 style={{
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
@@ -657,7 +644,7 @@ export function LandingPage() {
               </i>
               <h3
                 style={{
-                  fontSize: '26px',
+                  fontSize: '24px',
                   margin: '10px 0 8px',
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 }}
@@ -671,7 +658,7 @@ export function LandingPage() {
             </div>
 
             {/* Step 2 */}
-            <div style={{ padding: '30px 28px 10px 28px', borderLeft: '1px solid var(--line, #E8E0CF)' }}>
+            <div className="pt-6 md:px-7 pb-2 border-t md:border-t-0 md:border-l border-[var(--line,#E8E0CF)]">
               <i
                 style={{
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
@@ -687,7 +674,7 @@ export function LandingPage() {
               </i>
               <h3
                 style={{
-                  fontSize: '26px',
+                  fontSize: '24px',
                   margin: '10px 0 8px',
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 }}
@@ -701,7 +688,7 @@ export function LandingPage() {
             </div>
 
             {/* Step 3 */}
-            <div style={{ padding: '30px 0 10px 28px', borderLeft: '1px solid var(--line, #E8E0CF)' }}>
+            <div className="pt-6 md:pl-7 pb-2 border-t md:border-t-0 md:border-l border-[var(--line,#E8E0CF)]">
               <i
                 style={{
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
@@ -717,7 +704,7 @@ export function LandingPage() {
               </i>
               <h3
                 style={{
-                  fontSize: '26px',
+                  fontSize: '24px',
                   margin: '10px 0 8px',
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 }}
@@ -734,12 +721,12 @@ export function LandingPage() {
       </section>
 
       {/* 5. Product Showcase: Real Browser Frame with Segmented Switcher */}
-      <section style={{ padding: '0 0 96px 0' }}>
-        <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px' }}>
+      <section style={{ padding: '0 0 80px 0' }}>
+        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <h2
               style={{
-                fontSize: 'clamp(30px, 4vw, 44px)',
+                fontSize: 'clamp(28px, 4vw, 44px)',
                 fontWeight: 800,
                 fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 margin: '0 auto',
@@ -753,15 +740,7 @@ export function LandingPage() {
 
             {/* Segmented Switcher */}
             <div
-              style={{
-                display: 'inline-flex',
-                background: '#FFFFFF',
-                border: '2px solid var(--ink, #0E1A2B)',
-                borderRadius: '99px',
-                padding: '4px',
-                marginTop: '24px',
-                gap: '4px',
-              }}
+              className="inline-flex max-w-full overflow-x-auto p-1 mt-6 rounded-full bg-white border-2 border-[var(--ink,#0E1A2B)] gap-1"
               role="tablist"
               aria-label="Product Showcase Views"
             >
@@ -775,11 +754,10 @@ export function LandingPage() {
                   color: activeShowcase === 'proposal' ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
                   fontFamily: "'Instrument Sans', sans-serif",
                   fontWeight: 600,
-                  fontSize: '15px',
-                  padding: '8px 18px',
-                  borderRadius: '99px',
                   cursor: 'pointer',
+                  whiteSpace: 'nowrap',
                 }}
+                className="px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm rounded-full transition-colors"
               >
                 Protected Proposal
               </button>
@@ -793,11 +771,10 @@ export function LandingPage() {
                   color: activeShowcase === 'floor' ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
                   fontFamily: "'Instrument Sans', sans-serif",
                   fontWeight: 600,
-                  fontSize: '15px',
-                  padding: '8px 18px',
-                  borderRadius: '99px',
                   cursor: 'pointer',
+                  whiteSpace: 'nowrap',
                 }}
+                className="px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm rounded-full transition-colors"
               >
                 Floor Rules
               </button>
@@ -811,11 +788,10 @@ export function LandingPage() {
                   color: activeShowcase === 'profit' ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
                   fontFamily: "'Instrument Sans', sans-serif",
                   fontWeight: 600,
-                  fontSize: '15px',
-                  padding: '8px 18px',
-                  borderRadius: '99px',
                   cursor: 'pointer',
+                  whiteSpace: 'nowrap',
                 }}
+                className="px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm rounded-full transition-colors"
               >
                 Profit Dashboard
               </button>
@@ -829,8 +805,8 @@ export function LandingPage() {
               border: '2px solid var(--ink, #0E1A2B)',
               borderRadius: '16px',
               overflow: 'hidden',
-              boxShadow: '8px 8px 0 var(--ink, #0E1A2B)',
             }}
+            className="shadow-[5px_5px_0_var(--ink,#0E1A2B)] sm:shadow-[8px_8px_0_var(--ink,#0E1A2B)]"
           >
             {/* Top Bar with Window Dots */}
             <div
@@ -853,6 +829,7 @@ export function LandingPage() {
                   fontSize: '12px',
                   color: 'var(--muted, #5B6676)',
                 }}
+                className="truncate"
               >
                 {(() => {
                   try {
@@ -866,9 +843,9 @@ export function LandingPage() {
             </div>
 
             {/* Showcase View Content */}
-            <div style={{ padding: '32px', minHeight: '340px' }}>
+            <div className="p-4 sm:p-8 min-h-[320px]">
               {activeShowcase === 'proposal' && (
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-6">
                   <div style={{ border: '1px solid var(--line, #E8E0CF)', borderRadius: '12px', padding: '20px' }}>
                     <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--muted, #5B6676)' }}>CLIENT SCOPE</div>
                     <h3 style={{ fontSize: '20px', margin: '6px 0 12px', fontWeight: 700 }}>How is deliverable scope structured in proposals?</h3>
@@ -895,7 +872,7 @@ export function LandingPage() {
                     <p style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>
                       Calculated from 42h × $85/hr with 1.25x complexity factor. Safely above your $2,500 floor.
                     </p>
-                    <div style={{ marginTop: '20px', display: 'flex', gap: '8px' }}>
+                    <div style={{ marginTop: '20px', display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
                       <span style={{ padding: '8px 14px', background: 'var(--cobalt, #0047AB)', color: '#fff', borderRadius: '99px', fontSize: '13px', fontWeight: 600 }}>
                         Export PDF
                       </span>
@@ -914,21 +891,21 @@ export function LandingPage() {
                     These rules execute deterministically on the server after AI drafts any quote.
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '14px 18px', border: '1px solid var(--line, #E8E0CF)', borderRadius: '10px' }}>
+                    <div className="flex flex-col sm:flex-row sm:justify-between gap-1 p-3.5 sm:p-4 border border-[var(--line,#E8E0CF)] rounded-xl">
                       <div>
                         <strong>Minimum Hourly Floor</strong>
                         <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>No proposal can estimate labor below this rate</div>
                       </div>
                       <span style={{ fontWeight: 700, fontSize: '18px', color: 'var(--cobalt, #0047AB)' }}>$85 / hr</span>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '14px 18px', border: '1px solid var(--line, #E8E0CF)', borderRadius: '10px' }}>
+                    <div className="flex flex-col sm:flex-row sm:justify-between gap-1 p-3.5 sm:p-4 border border-[var(--line,#E8E0CF)] rounded-xl">
                       <div>
                         <strong>Minimum Project Fee (Web Apps)</strong>
                         <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>Baseline quote for any web application contract</div>
                       </div>
                       <span style={{ fontWeight: 700, fontSize: '18px', color: 'var(--cobalt, #0047AB)' }}>$2,500.00</span>
                     </div>
-                    <div style={{ display: 'flex', justifyContent: 'space-between', padding: '14px 18px', border: '1px solid var(--line, #E8E0CF)', borderRadius: '10px' }}>
+                    <div className="flex flex-col sm:flex-row sm:justify-between gap-1 p-3.5 sm:p-4 border border-[var(--line,#E8E0CF)] rounded-xl">
                       <div>
                         <strong>Complexity Multipliers</strong>
                         <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>Standard (1.0x), High Risk / Third-Party (1.25x - 1.5x)</div>
@@ -941,7 +918,7 @@ export function LandingPage() {
 
               {activeShowcase === 'profit' && (
                 <div>
-                  <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px', marginBottom: '24px' }}>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4 mb-6">
                     <div style={{ padding: '18px', border: '1px solid var(--line, #E8E0CF)', borderRadius: '12px' }}>
                       <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>Invoiced Cash</div>
                       <div style={{ fontSize: '26px', fontWeight: 800, marginTop: '4px' }}>$18,450.00</div>
@@ -966,29 +943,24 @@ export function LandingPage() {
       </section>
 
       {/* 6. Features on a Solid Cobalt Band (2-column list) */}
-      <section id="features" style={{ background: 'var(--cobalt, #0047AB)', color: '#FFFFFF', padding: '96px 0' }}>
-        <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px' }}>
+      <section id="features" style={{ background: 'var(--cobalt, #0047AB)', color: '#FFFFFF' }} className="py-14 sm:py-24">
+        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <h2
             style={{
               color: '#FFFFFF',
-              fontSize: 'clamp(34px, 4.6vw, 54px)',
+              fontSize: 'clamp(28px, 4.4vw, 50px)',
               fontWeight: 800,
               fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
             }}
           >
             What core features protect freelancers from scope creep and low quotes?
           </h2>
-          <p style={{ color: '#CFE0F7', fontSize: '19px', maxWidth: '34em', marginTop: '16px' }}>
+          <p style={{ color: '#CFE0F7', fontSize: '18px', maxWidth: '34em', marginTop: '16px' }}>
             One workspace instead of five tools that don't talk to each other.
           </p>
 
           <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '12px 64px',
-              marginTop: '52px',
-            }}
+            className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-x-16 mt-10 sm:mt-12"
           >
             {/* 1 */}
             <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
@@ -1169,13 +1141,13 @@ export function LandingPage() {
       </section>
 
       {/* 7. Interactive Profit/Floor Calculator */}
-      <section id="calculator" style={{ padding: '96px 0' }}>
-        <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px' }}>
-          <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'baseline', gap: '16px' }}>
+      <section id="calculator" className="py-14 sm:py-24">
+        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
             <div>
               <h2
                 style={{
-                  fontSize: 'clamp(32px, 4vw, 46px)',
+                  fontSize: 'clamp(28px, 4vw, 46px)',
                   fontWeight: 800,
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 }}
@@ -1219,15 +1191,11 @@ export function LandingPage() {
           <div
             style={{
               marginTop: '40px',
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
-              gap: '36px',
               background: '#FFFFFF',
               border: '2px solid var(--ink, #0E1A2B)',
               borderRadius: '20px',
-              padding: '36px',
-              boxShadow: '8px 8px 0 var(--ink, #0E1A2B)',
             }}
+            className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-5 sm:p-9 shadow-[5px_5px_0_var(--ink,#0E1A2B)] sm:shadow-[8px_8px_0_var(--ink,#0E1A2B)]"
           >
             {/* Input Controls */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
@@ -1272,7 +1240,7 @@ export function LandingPage() {
                 <span style={{ fontSize: '15px', fontWeight: 600, display: 'block', marginBottom: '8px' }}>
                   Project Complexity Factor
                 </span>
-                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '8px' }}>
+                <div className="grid grid-cols-3 gap-2">
                   {[
                     { label: 'Normal (1.0x)', val: 1.0 },
                     { label: 'Medium (1.25x)', val: 1.25 },
@@ -1282,14 +1250,15 @@ export function LandingPage() {
                       key={c.val}
                       onClick={() => setCalcComplexity(c.val)}
                       style={{
-                        padding: '10px 8px',
+                        padding: '10px 4px',
                         borderRadius: '8px',
                         border: '1.5px solid var(--ink, #0E1A2B)',
                         background: calcComplexity === c.val ? 'var(--ink, #0E1A2B)' : '#FFFFFF',
                         color: calcComplexity === c.val ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
                         fontWeight: 600,
-                        fontSize: '13px',
+                        fontSize: '12px',
                         cursor: 'pointer',
+                        textAlign: 'center',
                       }}
                     >
                       {c.label}
@@ -1399,11 +1368,11 @@ export function LandingPage() {
       </section>
 
       {/* 8. Pricing Section (Monthly / Annual Billing Toggle) */}
-      <section id="pricing" style={{ padding: '48px 0 96px' }}>
-        <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px' }}>
+      <section id="pricing" className="py-12 sm:py-20">
+        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <h2
             style={{
-              fontSize: 'clamp(34px, 4.6vw, 54px)',
+              fontSize: 'clamp(28px, 4.4vw, 50px)',
               fontWeight: 800,
               fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
             }}
@@ -1474,13 +1443,7 @@ export function LandingPage() {
 
           {/* Pricing Grid */}
           <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-              gap: '16px',
-              marginTop: '40px',
-              alignItems: 'stretch',
-            }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-10 items-stretch"
           >
             {PRICING_PLANS.map((plan) => {
               const priceVal = isAnnual ? plan.annual : plan.monthly;
@@ -1611,12 +1574,12 @@ export function LandingPage() {
       </section>
 
       {/* 9. Social Proof (Developer feedback slots, no fake logos or metrics) */}
-      <section style={{ padding: '0 0 96px 0' }}>
-        <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px' }}>
+      <section style={{ padding: '0 0 80px 0' }}>
+        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2
               style={{
-                fontSize: 'clamp(30px, 4vw, 44px)',
+                fontSize: 'clamp(28px, 4vw, 44px)',
                 fontWeight: 800,
                 fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 margin: '0 auto',
@@ -1630,11 +1593,7 @@ export function LandingPage() {
           </div>
 
           <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '24px',
-            }}
+            className="grid grid-cols-1 md:grid-cols-3 gap-6"
           >
             {/* Testimonial 1 */}
             <div
@@ -1642,10 +1601,10 @@ export function LandingPage() {
                 background: '#FFFFFF',
                 border: '1.5px solid var(--line, #E8E0CF)',
                 borderRadius: 'var(--r, 14px)',
-                padding: '28px',
+                padding: '24px',
               }}
             >
-              <p style={{ fontSize: '16px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.6, marginBottom: '20px' }}>
+              <p style={{ fontSize: '15px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.6, marginBottom: '18px' }}>
                 "Before Floorly, I would mentally talk myself down in the proposal because I wanted to win the gig. The
                 hard floor rule on the server stops me from making dumb compromises."
               </p>
@@ -1659,10 +1618,10 @@ export function LandingPage() {
                 background: '#FFFFFF',
                 border: '1.5px solid var(--line, #E8E0CF)',
                 borderRadius: 'var(--r, 14px)',
-                padding: '28px',
+                padding: '24px',
               }}
             >
-              <p style={{ fontSize: '16px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.6, marginBottom: '20px' }}>
+              <p style={{ fontSize: '15px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.6, marginBottom: '18px' }}>
                 "Dropping the generated AGENTS.md directly into Cursor is a game changer. The AI assistant actually
                 refuses to implement things outside the paid scope."
               </p>
@@ -1676,10 +1635,10 @@ export function LandingPage() {
                 background: '#FFFFFF',
                 border: '1.5px solid var(--line, #E8E0CF)',
                 borderRadius: 'var(--r, 14px)',
-                padding: '28px',
+                padding: '24px',
               }}
             >
-              <p style={{ fontSize: '16px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.6, marginBottom: '20px' }}>
+              <p style={{ fontSize: '15px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.6, marginBottom: '18px' }}>
                 "The profit dashboard finally counts my own hours as a cost. I realised my 'best' $5k project last month
                 was actually losing money once logged hours were deducted."
               </p>
@@ -1691,11 +1650,11 @@ export function LandingPage() {
       </section>
 
       {/* 10. FAQ Accordion (Native <details>) */}
-      <section id="faq" style={{ padding: '0 0 96px 0' }}>
-        <div style={{ maxWidth: '1120px', margin: '0 auto', padding: '0 24px' }}>
+      <section id="faq" className="pb-16 sm:pb-24">
+        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <h2
             style={{
-              fontSize: 'clamp(34px, 4.6vw, 54px)',
+              fontSize: 'clamp(28px, 4.4vw, 50px)',
               fontWeight: 800,
               fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
             }}
@@ -1964,12 +1923,12 @@ export function LandingPage() {
       <section
         style={{
           borderTop: '1px solid var(--line, #E8E0CF)',
-          padding: '80px 24px',
           background: 'var(--cream, #FAF5EA)',
         }}
+        className="py-14 sm:py-20"
         aria-labelledby="audience-and-methodology"
       >
-        <div style={{ maxWidth: '1120px', margin: '0 auto' }}>
+        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <span
               style={{
@@ -2016,12 +1975,7 @@ export function LandingPage() {
 
           {/* 4 Audience Cards Grid */}
           <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-              gap: '24px',
-              marginBottom: '56px',
-            }}
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14"
           >
             <div
               style={{
@@ -2135,7 +2089,7 @@ export function LandingPage() {
       </section>
 
       {/* 11. Final CTA Band (Dark Ink Background) */}
-      <aside style={{ margin: '0 24px 72px' }}>
+      <aside className="px-4 sm:px-6 mb-16 sm:mb-24">
         <div
           style={{
             maxWidth: '1120px',
@@ -2143,9 +2097,9 @@ export function LandingPage() {
             background: 'var(--ink, #0E1A2B)',
             color: '#FFFFFF',
             textAlign: 'center',
-            borderRadius: '28px',
-            padding: '72px 24px',
+            borderRadius: '24px',
           }}
+          className="py-12 px-6 sm:py-20 sm:px-8"
         >
           <h2
             style={{
