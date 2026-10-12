@@ -6,8 +6,8 @@ import React, { useEffect, useRef } from 'react';
  * Dynamically injects AdSense script on-demand so rest of SaaS stays 100% ad-free.
  */
 export function AdSenseBanner({
-  slot = import.meta.env.VITE_ADSENSE_SLOT_ID || '',
-  client = import.meta.env.VITE_ADSENSE_CLIENT_ID || '',
+  slot = import.meta.env.VITE_ADSENSE_SLOT_ID || '2876778418',
+  client = import.meta.env.VITE_ADSENSE_CLIENT_ID || 'ca-pub-1416168271239862',
   format = 'auto',
   responsive = 'true',
   className = '',
