@@ -246,7 +246,7 @@ export async function createGatewaySession(gateway, { invoice, client, user, ret
 
     try {
       let rzpRes = await sendOrderRequest(activeKeyId, activeKeySecret);
-      if (!rzpRes.ok && activeKeyId !== 'rzp_test_TmqM7yD9Sgy60G') {
+      if (!rzpRes.ok && activeKeyId !== 'rzp_test_TmqM7yD9Sgy60G' && !activeKeyId.startsWith('rzp_live_')) {
         rzpRes = await sendOrderRequest('rzp_test_TmqM7yD9Sgy60G', 'QGePnfYra5kR1CtKs3PQbslV');
       }
 
@@ -488,8 +488,8 @@ export async function createSubscriptionCheckoutSession({
     try {
       let orderRes = await createOrderWithKeys(activeKeyId, activeKeySecret);
       
-      // If primary credentials fail with 401, fallback to active valid test credentials
-      if (!orderRes.ok && activeKeyId !== 'rzp_test_TmqM7yD9Sgy60G') {
+      // If primary credentials fail with 401, only fallback to test credentials if not using live keys
+      if (!orderRes.ok && activeKeyId !== 'rzp_test_TmqM7yD9Sgy60G' && !activeKeyId.startsWith('rzp_live_')) {
         orderRes = await createOrderWithKeys('rzp_test_TmqM7yD9Sgy60G', 'QGePnfYra5kR1CtKs3PQbslV');
       }
 
