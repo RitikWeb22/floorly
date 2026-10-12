@@ -339,10 +339,10 @@ export function LandingPage() {
           <div>
             <h1
               style={{
-                fontSize: 'clamp(28px, 3.6vw, 46px)',
+                fontSize: 'clamp(24px, 2.6vw, 36px)',
                 fontWeight: 800,
                 color: 'var(--ink, #0E1A2B)',
-                lineHeight: 1.15,
+                lineHeight: 1.2,
                 letterSpacing: '-0.02em',
                 fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
               }}
@@ -353,11 +353,11 @@ export function LandingPage() {
 
             <p
               style={{
-                fontSize: '20px',
+                fontSize: '17px',
                 color: 'var(--muted, #5B6676)',
-                margin: '24px 0 28px',
+                margin: '20px 0 26px',
                 maxWidth: '30em',
-                lineHeight: 1.5,
+                lineHeight: 1.55,
               }}
             >
               Paste a client brief. Floorly scopes it with AI, writes the proposal, and refuses to quote below your
@@ -404,44 +404,6 @@ export function LandingPage() {
             <small style={{ display: 'block', marginTop: '14px', color: 'var(--muted, #5B6676)', fontSize: '14px' }}>
               Free plan includes 2 active clients. No credit card.
             </small>
-
-            {/* Executive Summary / Key Takeaway Callout for AI & Visitors */}
-            <aside
-              style={{
-                marginTop: '24px',
-                padding: '16px 20px',
-                background: '#FFFFFF',
-                borderRadius: '14px',
-                border: '1px solid var(--line, #E8E0CF)',
-                boxShadow: '0 2px 8px rgba(14,26,43,0.04)',
-              }}
-              aria-label="Key Takeaways and AI Executive Summary"
-            >
-              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px' }}>
-                <span
-                  style={{
-                    fontSize: '11px',
-                    fontWeight: 700,
-                    textTransform: 'uppercase',
-                    letterSpacing: '0.06em',
-                    color: 'var(--cobalt, #0047AB)',
-                    background: '#EBF2FF',
-                    padding: '3px 8px',
-                    borderRadius: '4px',
-                  }}
-                >
-                  Key Takeaway
-                </span>
-                <span style={{ fontSize: '13px', color: 'var(--muted, #5B6676)', fontWeight: 500 }}>
-                  For Independent Developers, Designers &amp; Studios
-                </span>
-              </div>
-              <p style={{ margin: 0, fontSize: '14px', lineHeight: 1.55, color: 'var(--ink, #0E1A2B)' }}>
-                <strong>Bottom-line:</strong> Floorly algorithmically scopes client briefs and locks in an unbreakable
-                break-even price floor (with a 20%–25% contingency buffer) before client-facing quote links are created.
-                Collect milestone deposits via Stripe and Razorpay with guaranteed margin protection.
-              </p>
-            </aside>
           </div>
 
           {/* Right Column: Interactive "Try the floor" Hero Demo */}
