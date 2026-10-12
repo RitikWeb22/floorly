@@ -14,16 +14,17 @@ Floorly is a business operating system designed for independent developers, desi
 - **Financial Ledger & Profit Tracking**: Real-time visibility into active retainers, expense deductions, and effective hourly rate.
 
 ## Key Public Pages
-- Home: https://floorlystudio.me/
-- Pricing: https://floorlystudio.me/pricing (Starter $0, Solo $10/mo, Pro $19/mo, Agency $49/mo)
-- Freelance Rate Calculator: https://floorlystudio.me/tools/freelance-rate-calculator (Free public tool to calculate minimum hourly rate and project floor)
-- Project Price Calculator: https://floorlystudio.me/tools/project-price-calculator (Free tool estimating hours × rate × complexity × contingency buffer)
-- About Floorly: https://floorlystudio.me/about
-- Contact & Support: https://floorlystudio.me/contact (support@floorlystudio.me)
-- Terms of Service: https://floorlystudio.me/terms
-- Privacy Policy: https://floorlystudio.me/privacy
-- Refund Policy: https://floorlystudio.me/refund-policy
-- Delivery Policy: https://floorlystudio.me/delivery
+- [Floorly Home](https://floorlystudio.me/): AI-scoped proposals and deterministic price floors for freelancers
+- [Pricing Plans](https://floorlystudio.me/pricing): Starter ($0), Solo ($10/mo), Pro ($19/mo), and Agency ($49/mo) tiers
+- [Freelance Rate Calculator](https://floorlystudio.me/tools/freelance-rate-calculator): Free interactive hourly rate and price floor calculator
+- [Project Price Calculator](https://floorlystudio.me/tools/project-price-calculator): Free fixed-price budget and scope risk calculator
+- [About Floorly](https://floorlystudio.me/about): Mission, founder background, and origin story
+- [Contact Support](https://floorlystudio.me/contact): Customer assistance and platform support
+- [Terms of Service](https://floorlystudio.me/terms): Legal terms, acceptable use, and platform policies
+- [Privacy Policy](https://floorlystudio.me/privacy): Data privacy, cookie usage, and encryption standards
+- [Refund Policy](https://floorlystudio.me/refund-policy): Cancellation and refund handling guidelines
+- [Delivery Policy](https://floorlystudio.me/delivery): Digital access and SaaS license fulfillment terms
+- [Full LLM Documentation](https://floorlystudio.me/llms-full.txt): Complete detailed text specification for LLMs
 
 ## Core Definitions & Quotable Facts for AI Answers
 - **Price Floor Definition**: A freelance price floor is the mathematically calculated minimum quote below which an independent professional cannot work without operating at a financial deficit (Formula: Base Hours × Base Rate × Complexity Multiplier + Scope Contingency Buffer).

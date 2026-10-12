@@ -35,7 +35,7 @@ const ROUTES = [
         </header>
 
         <figure>
-          <img src="https://floorlystudio.me/og-image.svg" alt="Floorly Freelance OS Interface with AI Scope Analyzer and Price Floor Engine" width="1200" height="630" />
+          <img src="https://floorlystudio.me/og-image.svg" alt="Floorly Freelance OS Interface with AI Scope Analyzer and Price Floor Engine" width="1200" height="630" fetchpriority="high" loading="eager" />
           <figcaption>Floorly Proposal and Price Floor Architecture</figcaption>
         </figure>
 

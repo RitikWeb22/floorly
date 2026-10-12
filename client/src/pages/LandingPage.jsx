@@ -316,12 +316,14 @@ export function LandingPage() {
         )}
       </nav>
 
-      {/* 2. Hero Section */}
-      <header
-        style={{
-          padding: '72px 0 88px',
-        }}
-      >
+      {/* Main Content Landmark for Accessibility */}
+      <main id="main-content">
+        {/* 2. Hero Section */}
+        <header
+          style={{
+            padding: '72px 0 88px',
+          }}
+        >
         <div
           style={{
             maxWidth: '1120px',
@@ -414,7 +416,7 @@ export function LandingPage() {
             }}
             aria-label="Interactive price floor demo"
           >
-            <h3
+            <h2
               style={{
                 fontSize: '18px',
                 fontWeight: 700,
@@ -423,7 +425,7 @@ export function LandingPage() {
               }}
             >
               Try the floor
-            </h3>
+            </h2>
             <p style={{ color: 'var(--muted, #5B6676)', fontSize: '14px', marginBottom: '22px' }}>
               A client says the landing page budget is&hellip;
             </p>
@@ -868,7 +870,7 @@ export function LandingPage() {
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '24px' }}>
                   <div style={{ border: '1px solid var(--line, #E8E0CF)', borderRadius: '12px', padding: '20px' }}>
                     <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--muted, #5B6676)' }}>CLIENT SCOPE</div>
-                    <h4 style={{ fontSize: '20px', margin: '6px 0 12px', fontWeight: 700 }}>Landing Page &amp; Auth Portal</h4>
+                    <h3 style={{ fontSize: '20px', margin: '6px 0 12px', fontWeight: 700 }}>Landing Page &amp; Auth Portal</h3>
                     <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)' }}>
                       Estimated Effort: 42 hours • 3 Milestones • Scope confidence: 85%
                     </p>
@@ -906,7 +908,7 @@ export function LandingPage() {
 
               {activeShowcase === 'floor' && (
                 <div style={{ maxWidth: '640px', margin: '0 auto' }}>
-                  <h4 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '6px' }}>Configured Pricing Safeguards</h4>
+                  <h3 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '6px' }}>Configured Pricing Safeguards</h3>
                   <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', marginBottom: '24px' }}>
                     These rules execute deterministically on the server after AI drafts any quote.
                   </p>
@@ -2010,6 +2012,7 @@ export function LandingPage() {
           </Link>
         </div>
       </aside>
+      </main>
 
       {/* 12. Universal Clean Footer */}
       <Footer />
