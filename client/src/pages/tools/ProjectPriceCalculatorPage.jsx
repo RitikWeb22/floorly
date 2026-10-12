@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { Logo } from '../../components/common/Logo';
 import { Footer } from '../../components/layout/Footer';
+import { AdSenseBanner } from '../../components/common/AdSenseBanner';
 
 const COMPLEXITY_TIERS = [
   { label: 'Standard / Familiar Stack', multiplier: 1.0, desc: 'Well-defined specs, standard technologies' },
@@ -304,6 +305,9 @@ export function ProjectPriceCalculatorPage() {
             </div>
           </div>
         </div>
+
+        {/* Isolated AdSense Placement (Only on this free calculator tool) */}
+        <AdSenseBanner className="mt-12" />
 
         {/* Answer Engine Block (AEO) */}
         <section className="mt-20 pt-12 border-t border-[#E8E0CF] max-w-3xl mx-auto space-y-6">

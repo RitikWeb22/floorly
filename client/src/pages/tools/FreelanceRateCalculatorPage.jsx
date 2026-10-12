@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { Logo } from '../../components/common/Logo';
 import { Footer } from '../../components/layout/Footer';
+import { AdSenseBanner } from '../../components/common/AdSenseBanner';
 
 const CURRENCIES = {
   USD: { symbol: '$', code: 'USD', defaultIncome: 90000, defaultExpenses: 12000, step: 1000 },
@@ -303,6 +304,9 @@ export function FreelanceRateCalculatorPage() {
             </div>
           </div>
         </div>
+
+        {/* Isolated AdSense Placement (Only on this free calculator tool) */}
+        <AdSenseBanner className="mt-12" />
 
         {/* Answer Engine FAQ Section (AEO) */}
         <section className="mt-20 pt-12 border-t border-[#E8E0CF] max-w-3xl mx-auto space-y-8">
