@@ -72,6 +72,37 @@ Once approved with one-click digital signing, it generates milestone invoices, c
 
 ---
 
+## 🌟 2. Product Shoutouts ("Products that helped make yours awesome")
+
+*Add 3 (or more) of these shoutouts in the Product Hunt form. Each shoutout acts as a founder review on that product's page with a backlink to Floorly!*
+
+### Shoutout 1: Google Gemini (or Gemini / Google AI Studio)
+- **Product Name on PH:** `Gemini` or `Google Gemini`
+- **Founder Review / How it helped:**
+  > We use Google Gemini to power Floorly's core AI Scope & Risk Analyzer. Its huge context window and reasoning accuracy allow us to parse messy client briefs, extract exact technical deliverables, and detect scope creep in seconds. An indispensable part of our AI workflow!
+
+### Shoutout 2: Razorpay
+- **Product Name on PH:** `Razorpay`
+- **Founder Review / How it helped:**
+  > Razorpay powers our domestic INR checkouts, UPI payments, and subscription billing seamlessly. The Standard Checkout modal works reliably across web and mobile, giving our freelance users and their clients a trusted, instant payment experience.
+
+### Shoutout 3: Vite
+- **Product Name on PH:** `Vite`
+- **Founder Review / How it helped:**
+  > Vite made our frontend development and build pipeline blistering fast. Instant Hot Module Replacement (HMR) and optimized production bundling allowed us to iterate and ship Floorly with zero tooling friction.
+
+### Shoutout 4: Tailwind CSS
+- **Product Name on PH:** `Tailwind CSS`
+- **Founder Review / How it helped:**
+  > Tailwind CSS enabled us to craft Floorly's bespoke design system—from our signature cobalt and cream brand palette to data-dense financial dashboards—with zero CSS bloat and maximum consistency.
+
+### Shoutout 5: Vercel
+- **Product Name on PH:** `Vercel`
+- **Founder Review / How it helped:**
+  > Vercel hosts our frontend with zero-config edge deployments, lightning-fast CDN delivery, and automatic branch preview environments for every git commit. It made going from local dev to global production effortless.
+
+---
+
 ## 💬 2. Maker's First Comment (Pinned Launch Comment)
 
 *Post this immediately when your product goes live to kick off the community discussion:*
