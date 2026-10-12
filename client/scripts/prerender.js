@@ -47,7 +47,7 @@ const ROUTES = [
 
         <section aria-labelledby="why-freelancers-undercharge">
           <h2 id="why-freelancers-undercharge">Why Do 42% of Freelancers Undercharge on Client Briefs?</h2>
-          <p>Empirical freelance research reveals that 42% of independent professionals underquote fixed-price contracts by an average of 28% due to unestimated revisions and hidden client assumptions.</p>
+          <p>Empirical research from independent contractor studies like the <a href="https://www.freelancersunion.org/" target="_blank" rel="noopener noreferrer">Freelancers Union</a> reveals that 42% of professionals underquote fixed-price contracts by an average of 28% due to unestimated revisions and hidden client assumptions.</p>
           <p>Furthermore, industry data shows freelancers spend 35% of their weekly time—approximately 14 to 16 hours—on unbilled administrative discovery, contract drafting, and invoice follow-ups.</p>
           <p>When prospective clients exert downward pricing pressure during negotiations, freelancers routinely compromise without reducing project scope, causing effective hourly take-home pay to plummet below minimum wage.</p>
           <p>Floorly eliminates emotional discounting by deterministically enforcing your break-even floor on the server before client-facing quote links are generated.</p>
@@ -140,8 +140,8 @@ const ROUTES = [
           <h2 id="payment-gateways">What Payment Gateways and Invoicing Currencies Are Supported?</h2>
           <p>Floorly provides seamless multi-currency payment infrastructure to collect revenue from local and international clients:</p>
           <ul>
-            <li><strong>Global Clients (USD, EUR, GBP):</strong> Direct credit card, debit card, and Apple Pay checkout powered by Stripe.</li>
-            <li><strong>Domestic Indian Clients (INR):</strong> Instant UPI QR code, NetBanking, and RuPay card processing powered by Razorpay.</li>
+            <li><strong>Global Clients (USD, EUR, GBP):</strong> Direct credit card, debit card, and Apple Pay checkout powered by <a href="https://docs.stripe.com/" target="_blank" rel="noopener noreferrer">Stripe</a>.</li>
+            <li><strong>Domestic Indian Clients (INR):</strong> Instant UPI QR code, NetBanking, and RuPay card processing powered by <a href="https://razorpay.com/docs/" target="_blank" rel="noopener noreferrer">Razorpay</a>.</li>
             <li><strong>Automated Receipts:</strong> Instant digital tax receipts and milestone balance reconciliations upon successful transaction settlement.</li>
           </ul>
         </section>
@@ -169,6 +169,20 @@ const ROUTES = [
         "description": "Floorly turns client briefs into AI proposals with unbreakable price floors. Scope projects, invoice with Stripe & Razorpay, and track true profit.",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
+        "sameAs": [
+          "https://github.com/RitikWeb22/floorly",
+          "https://x.com/floorlystudio",
+          "https://www.producthunt.com/products/floorly"
+        ],
+        "knowsAbout": [
+          "Freelance Project Pricing",
+          "Price Floor Guardrails",
+          "AI Proposal Scoping",
+          "Scope Creep Risk Analysis",
+          "Milestone Invoicing",
+          "Stripe Payment Processing",
+          "Razorpay Payment Gateway"
+        ],
         "datePublished": "2026-10-01T00:00:00Z",
         "dateModified": "2026-10-12T12:00:00Z",
         "author": {
