@@ -18,34 +18,67 @@ const ROUTES = [
     content: `
       <main>
         <header>
-          <h1>Never undercharge again.</h1>
-          <p>Paste a client brief. Floorly scopes it with AI, writes the proposal, and refuses to quote below your minimum. Then it invoices, tracks payments and shows your real profit.</p>
-          <nav>
-            <a href="/pricing">View Pricing Plans</a>
-            <a href="/tools/freelance-rate-calculator">Free Rate Calculator</a>
+          <nav aria-label="Main Navigation">
+            <a href="/">Floorly Home</a>
+            <a href="/pricing">Pricing Plans</a>
+            <a href="/about">About Floorly</a>
+            <a href="/tools/freelance-rate-calculator">Freelance Rate Calculator</a>
             <a href="/tools/project-price-calculator">Project Price Calculator</a>
+            <a href="/contact">Contact Support</a>
+            <a href="/login">Log In</a>
             <a href="/signup">Start Free</a>
           </nav>
+          <h1>Never undercharge again.</h1>
+          <p>Floorly turns messy client briefs into AI-scoped proposals that can never drop below your price floor. Built specifically for independent freelancers, solo consultants, and boutique creative studios.</p>
+          <p>Paste a client brief or email thread. Floorly scopes technical deliverables with AI, drafts the client agreement, and enforces your deterministic price floor so you never negotiate against yourself or work at a loss.</p>
         </header>
-        <section>
-          <h2>How Floorly Works</h2>
-          <div>
-            <h3>1. AI Scope Analyzer</h3>
-            <p>Paste any client brief or email thread. Floorly extracts exact technical deliverables and flags hidden scope creep before you send a quote.</p>
-          </div>
-          <div>
-            <h3>2. Deterministic Price Floor Guardrail</h3>
-            <p>Calculate your break-even baseline. Floorly algorithmically prevents quoting below your safety floor so you never work at a loss.</p>
-          </div>
-          <div>
-            <h3>3. Interactive Client Proposals &amp; Signatures</h3>
-            <p>Send branded proposals clients can review and digitally sign in seconds, complete with deliverable breakdowns and milestone schedules.</p>
-          </div>
-          <div>
-            <h3>4. Multi-Currency Milestone Invoicing</h3>
-            <p>Collect domestic payments via Razorpay (UPI &amp; INR) and global payments via Stripe (USD) with instant digital receipts.</p>
-          </div>
+
+        <section aria-labelledby="core-capabilities">
+          <h2 id="core-capabilities">AI-Scoped Proposals &amp; Deterministic Price Floors for Freelancers</h2>
+          <article>
+            <h3>1. AI-Scoped Proposals from Raw Client Briefs</h3>
+            <p>Stop spending hours decoding vague client requirements. Floorly ingests client emails, RFP documents, and project briefs to generate complete AI-scoped proposals. It identifies exact deliverables, flags out-of-scope tasks, estimates realistic engineering hours, and structures 3-tier milestone schedules that clients can digitally sign in minutes.</p>
+          </article>
+          <article>
+            <h3>2. Unbreakable Price Floors</h3>
+            <p>Freelancers frequently undercharge under client pressure. Floorly enforces a strict mathematical price floor based on your living expenses, tax reserves, hourly break-even costs, and project complexity. The system algorithmically prevents you from sending proposals or issuing invoices below your defined price floor.</p>
+          </article>
+          <article>
+            <h3>3. Branded Proposals &amp; Digital Signatures</h3>
+            <p>Deliver interactive, branded proposals that build trust and close contracts faster. Clients can review milestone breakdowns, select project add-ons, and provide one-click digital signatures with full audit logging.</p>
+          </article>
+          <article>
+            <h3>4. Multi-Currency Global &amp; Domestic Invoicing</h3>
+            <p>Issue professional invoices with automated payment tracking. Accept international cards in USD via Stripe and domestic payments in INR via Razorpay with instant UPI and NetBanking checkout.</p>
+          </article>
+          <article>
+            <h3>5. Real Net Profit &amp; Expense Tracking</h3>
+            <p>Revenue is not profit. Floorly deducts software subscriptions, sub-contractor fees, transaction processing costs, and tax obligations to reveal your true hourly take-home profit margin on every client engagement.</p>
+          </article>
         </section>
+
+        <section aria-labelledby="free-tools">
+          <h2 id="free-tools">Free Interactive Financial Tools for Freelancers</h2>
+          <p>Calculate your sustainable freelance pricing baseline before you pitch your next prospective client:</p>
+          <ul>
+            <li><a href="/tools/freelance-rate-calculator">Freelance Hourly Rate &amp; Price Floor Calculator</a> — Determine your absolute minimum hourly rate and daily rate based on living expenses, billable capacity, and business overhead.</li>
+            <li><a href="/tools/project-price-calculator">Freelance Project Price &amp; Scope Risk Calculator</a> — Estimate fixed-price project budgets with complexity multipliers and contingency buffers to prevent scope creep losses.</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="comparison">
+          <h2 id="comparison">Why Freelancers Choose Floorly Over Generic Invoicing Software</h2>
+          <p>Traditional invoicing tools like FreshBooks, Bonsai, and HoneyBook only record numbers after the contract is already agreed upon. Floorly safeguards your revenue before you quote by calculating scope risks and enforcing non-negotiable price floors.</p>
+        </section>
+
+        <footer>
+          <nav aria-label="Footer Navigation">
+            <p>Product &amp; Tools: <a href="/pricing">Pricing</a> | <a href="/tools/freelance-rate-calculator">Rate Calculator</a> | <a href="/tools/project-price-calculator">Price Calculator</a> | <a href="/signup">Sign Up Free</a></p>
+            <p>Company: <a href="/about">About Floorly</a> | <a href="/contact">Contact</a> | <a href="mailto:support@floorlystudio.me">support@floorlystudio.me</a></p>
+            <p>Legal &amp; Compliance: <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a> | <a href="/refund-policy">Refund Policy</a> | <a href="/delivery">Delivery Policy</a></p>
+            <p>Connect &amp; Community: <a href="https://github.com/RitikWeb22/floorly" target="_blank" rel="noopener noreferrer">Floorly on GitHub</a> | <a href="https://www.producthunt.com/products/floorly" target="_blank" rel="noopener noreferrer">Floorly on Product Hunt</a> | <a href="https://x.com/floorlystudio" target="_blank" rel="noopener noreferrer">Follow @floorlystudio on X</a></p>
+          </nav>
+        </footer>
       </main>
     `,
     schemas: [
