@@ -63,6 +63,44 @@ const ROUTES = [
           { "@type": "Offer", "name": "Pro", "price": "19", "priceCurrency": "USD" },
           { "@type": "Offer", "name": "Agency", "price": "49", "priceCurrency": "USD" }
         ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a price floor for freelancers?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A freelance price floor is the non-negotiable minimum monetary quote an independent professional can accept without working at a financial deficit. It is mathematically calculated by multiplying required hourly break-even costs by project scope, complexity multipliers, and contingency buffers to guarantee sustainable profitability."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How many hours should I add as a contingency buffer?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Freelancers should add a 15% to 25% contingency buffer to all fixed-price project estimates to absorb unstated revisions without eroding effective take-home hourly rates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What should a professional freelance proposal include?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A high-converting freelance proposal must include: an executive problem summary, itemized deliverables, explicit exclusions, a 3-tier pricing schedule, payment milestones (50% deposit upfront), revision limits, and a one-click digital signature authorization."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does the price floor work in Floorly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You set a minimum hourly rate and a minimum fee per category. After the AI drafts a proposal, Floorly checks the totals on the server and raises anything below your floor. The AI cannot override it."
+            }
+          }
+        ]
       }
     ]
   },
@@ -196,7 +234,29 @@ const ROUTES = [
         </section>
       </main>
     `,
-    schemas: []
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Floorly",
+        "url": `${SITE_URL}/`,
+        "logo": `${SITE_URL}/og-image.svg`,
+        "description": "Floorly is an AI-powered freelance management workstation designed for independent software developers, UI/UX designers, and technical agencies.",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@floorlystudio.me",
+          "contactType": "customer service"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": `${SITE_URL}/` },
+          { "@type": "ListItem", "position": 2, "name": "About", "item": `${SITE_URL}/about` }
+        ]
+      }
+    ]
   },
   {
     path: '/contact',

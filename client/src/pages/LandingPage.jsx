@@ -1706,6 +1706,7 @@ export function LandingPage() {
                 borderTop: '1px solid var(--line, #E8E0CF)',
                 padding: '20px 0',
               }}
+              open
             >
               <summary
                 style={{
@@ -1720,7 +1721,88 @@ export function LandingPage() {
                   gap: '16px',
                 }}
               >
-                <span>How does the price floor work?</span>
+                <span>What is a price floor for freelancers?</span>
+                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+              </summary>
+              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+                A freelance price floor is the non-negotiable minimum monetary quote an independent professional can accept without working at a financial deficit. It is mathematically calculated by multiplying required hourly break-even costs by project scope, complexity multipliers, and contingency buffers to guarantee sustainable profitability.
+              </p>
+            </details>
+
+            <details
+              style={{
+                borderTop: '1px solid var(--line, #E8E0CF)',
+                padding: '20px 0',
+              }}
+            >
+              <summary
+                style={{
+                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  cursor: 'pointer',
+                  listStyle: 'none',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  gap: '16px',
+                }}
+              >
+                <span>How many hours should I add as a contingency buffer?</span>
+                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+              </summary>
+              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+                Freelancers should add a 15% to 25% contingency buffer to all fixed-price project estimates. Client briefs routinely omit third-party API dependencies, revision cycles, and responsive edge cases. The contingency buffer absorbs unstated revisions without eroding your effective take-home hourly rate.
+              </p>
+            </details>
+
+            <details
+              style={{
+                borderTop: '1px solid var(--line, #E8E0CF)',
+                padding: '20px 0',
+              }}
+            >
+              <summary
+                style={{
+                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  cursor: 'pointer',
+                  listStyle: 'none',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  gap: '16px',
+                }}
+              >
+                <span>What should a professional freelance proposal include?</span>
+                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+              </summary>
+              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+                A high-converting freelance proposal must include: an executive problem summary, itemized deliverables, explicit exclusions (what is out of scope), a 3-tier pricing schedule, payment milestones (50% deposit upfront), revision limits, and a one-click digital signature authorization.
+              </p>
+            </details>
+
+            <details
+              style={{
+                borderTop: '1px solid var(--line, #E8E0CF)',
+                padding: '20px 0',
+              }}
+            >
+              <summary
+                style={{
+                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontWeight: 700,
+                  fontSize: '21px',
+                  cursor: 'pointer',
+                  listStyle: 'none',
+                  display: 'flex',
+                  justifyContent: 'space-between',
+                  alignItems: 'center',
+                  gap: '16px',
+                }}
+              >
+                <span>How does the price floor work in Floorly?</span>
                 <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
               </summary>
               <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>

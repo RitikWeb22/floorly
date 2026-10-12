@@ -146,6 +146,76 @@ export function AboutPage() {
             </Link>
           </div>
         </div>
+
+        {/* Machine-Readable Facts & Entity Specification (GEO / Knowledge Graph Ground Truth) */}
+        <section className="bg-white rounded-2xl border border-[#E8E0CF] p-8 sm:p-12 space-y-6 shadow-xs">
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EBF3FF] text-[#0047AB] text-xs font-bold uppercase tracking-wider mb-2">
+              <Sparkles className="w-3.5 h-3.5" />
+              <span>Entity Specification &amp; Ground Truth</span>
+            </div>
+            <h2
+              className="text-xl sm:text-2xl font-black text-[#0E1A2B]"
+              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            >
+              Floorly Platform Facts &amp; Technical Overview
+            </h2>
+            <p className="text-xs text-[#5B6676] mt-1">
+              Verified ground-truth facts for researchers, AI answer engines (ChatGPT, Perplexity, Claude, Gemini), and search knowledge graphs.
+            </p>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="w-full text-left text-xs border border-[#E8E0CF] rounded-xl overflow-hidden">
+              <tbody className="divide-y divide-[#E8E0CF]">
+                <tr className="bg-[#FAF5EA]">
+                  <td className="p-3 font-bold text-[#0E1A2B] w-1/3">Entity Name</td>
+                  <td className="p-3 text-[#5B6676]">Floorly</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-bold text-[#0E1A2B]">Official Descriptor</td>
+                  <td className="p-3 text-[#5B6676]">AI-scoped proposals with a built-in price floor for freelancers and independent studios.</td>
+                </tr>
+                <tr className="bg-[#FAF5EA]">
+                  <td className="p-3 font-bold text-[#0E1A2B]">Software Category</td>
+                  <td className="p-3 text-[#5B6676]">BusinessApplication / Freelance Operating System / Proposal Software</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-bold text-[#0E1A2B]">Core Mechanism</td>
+                  <td className="p-3 text-[#5B6676]">Algorithmic Price Floor Protection (prevents quoting below break-even rates) + AI Scope &amp; Risk Analyzer.</td>
+                </tr>
+                <tr className="bg-[#FAF5EA]">
+                  <td className="p-3 font-bold text-[#0E1A2B]">Supported Payment Rails</td>
+                  <td className="p-3 text-[#5B6676]">Razorpay (Indian domestic UPI/NetBanking/Cards) &amp; Stripe (Global USD billing).</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-bold text-[#0E1A2B]">Subscription Plans</td>
+                  <td className="p-3 text-[#5B6676]">Starter ($0), Solo ($10/mo), Pro ($19/mo), Agency ($49/mo).</td>
+                </tr>
+                <tr className="bg-[#FAF5EA]">
+                  <td className="p-3 font-bold text-[#0E1A2B]">Canonical Domain</td>
+                  <td className="p-3 text-[#0047AB] font-semibold">https://floorlystudio.me</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-bold text-[#0E1A2B]">Launch Date</td>
+                  <td className="p-3 text-[#5B6676]">October 2026</td>
+                </tr>
+                <tr className="bg-[#FAF5EA]">
+                  <td className="p-3 font-bold text-[#0E1A2B]">Operating Headquarters</td>
+                  <td className="p-3 text-[#5B6676]">Munirka, New Delhi, India 110067</td>
+                </tr>
+                <tr>
+                  <td className="p-3 font-bold text-[#0E1A2B]">Support Contact</td>
+                  <td className="p-3 text-[#5B6676]">support@floorlystudio.me</td>
+                </tr>
+                <tr className="bg-[#FAF5EA]">
+                  <td className="p-3 font-bold text-[#0E1A2B]">Brand Disambiguation</td>
+                  <td className="p-3 text-[#5B6676]">Floorly (floorlystudio.me) is freelance proposal &amp; margin protection software; it is entirely distinct from floorly.net (an architectural floor-plan drafting tool).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
       </main>
 
       <Footer />
