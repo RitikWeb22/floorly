@@ -66,13 +66,12 @@ export function ContactPage() {
       <main className="flex-1 max-w-5xl mx-auto w-full px-4 sm:px-6 py-12">
         {/* Page Hero */}
         <div className="text-center max-w-2xl mx-auto mb-12 space-y-3">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0FB] text-[#0047AB] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0FB] text-[#0047AB] text-xs font-mono font-medium uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Official Contact Desk</span>
           </div>
           <h1
-            className="text-3xl sm:text-4xl font-black text-[#0E1A2B] tracking-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-3xl sm:text-4xl font-semibold text-[#0E1A2B] tracking-[-0.03em] font-display"
           >
             Get in touch with the Floorly team
           </h1>
@@ -86,8 +85,7 @@ export function ContactPage() {
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-white rounded-2xl border border-[#E8E0CF] p-6 space-y-5 shadow-xs">
               <h2
-                className="text-base font-bold text-[#0E1A2B] flex items-center gap-2"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                className="text-base font-medium text-[#0E1A2B] flex items-center gap-2 font-display tracking-[-0.01em]"
               >
                 <Mail className="w-4 h-4 text-[#0047AB]" />
                 <span>Contact Channels</span>
@@ -168,8 +166,7 @@ export function ContactPage() {
                 <div className="flex items-center gap-2">
                   <ShieldCheck className="w-4 h-4 text-[#0047AB]" />
                   <h3
-                    className="text-sm font-bold text-[#0E1A2B]"
-                    style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                    className="text-sm font-medium text-[#0E1A2B] font-display"
                   >
                     Grievance Officer
                   </h3>
@@ -209,8 +206,7 @@ export function ContactPage() {
                     <CheckCircle2 className="w-7 h-7" />
                   </div>
                   <h3
-                    className="text-xl font-bold text-[#0E1A2B]"
-                    style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                    className="text-xl font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
                   >
                     Message Dispatched Successfully
                   </h3>
@@ -232,8 +228,7 @@ export function ContactPage() {
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
                     <h2
-                      className="text-lg font-bold text-[#0E1A2B]"
-                      style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                      className="text-lg font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
                     >
                       Send us an inquiry
                     </h2>

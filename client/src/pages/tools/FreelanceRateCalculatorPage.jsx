@@ -70,7 +70,7 @@ export function FreelanceRateCalculatorPage() {
       style={{
         backgroundColor: 'var(--page, #FAF5EA)',
         color: 'var(--ink, #0E1A2B)',
-        fontFamily: "'Instrument Sans', system-ui, sans-serif",
+        fontFamily: 'var(--font-sans)',
         lineHeight: 1.6,
         fontSize: '16px',
         minHeight: '100vh',
@@ -99,13 +99,12 @@ export function FreelanceRateCalculatorPage() {
       {/* Hero Header */}
       <main className="max-w-5xl mx-auto px-6 pt-12 pb-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF3FF] border border-[#CCE0FF] text-xs font-bold text-[#0047AB] mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF3FF] border border-[#CCE0FF] text-xs font-mono font-medium text-[#0047AB] mb-4">
             <Calculator className="w-3.5 h-3.5" />
             <span>100% Free Public Tool • No Signup Required</span>
           </div>
           <h1
-            className="text-3xl sm:text-5xl font-black text-[#0E1A2B] tracking-tight leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-3xl sm:text-5xl font-semibold text-[#0E1A2B] tracking-[-0.03em] leading-[1.05] font-display"
           >
             Freelance Hourly Rate &amp; Project Floor Calculator
           </h1>
@@ -235,14 +234,13 @@ export function FreelanceRateCalculatorPage() {
           {/* Outputs Column */}
           <div className="lg:col-span-5 space-y-6">
             <div className="bg-[#FAF5EA] p-6 sm:p-8 rounded-2xl border-2 border-[#0047AB] shadow-sm">
-              <span className="text-xs font-black uppercase tracking-wider text-[#0047AB]">
+              <span className="text-xs font-mono font-medium uppercase tracking-wider text-[#0047AB]">
                 Your Calculated Pricing Floor
               </span>
               <div className="mt-3">
                 <div className="text-xs font-bold text-[#5B6676]">MINIMUM HOURLY RATE (BREAK-EVEN)</div>
                 <div
-                  className="text-4xl sm:text-5xl font-black text-[#0E1A2B] mt-1"
-                  style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                  className="text-4xl sm:text-5xl font-semibold text-[#0E1A2B] mt-1 font-display tabular-nums lining-nums tracking-[-0.02em]"
                 >
                   {fmt(minHourlyRate)}
                   <span className="text-lg font-normal text-[#5B6676]">/hr</span>
@@ -311,15 +309,14 @@ export function FreelanceRateCalculatorPage() {
         {/* Answer Engine FAQ Section (AEO) */}
         <section className="mt-20 pt-12 border-t border-[#E8E0CF] max-w-3xl mx-auto space-y-8">
           <h2
-            className="text-2xl sm:text-3xl font-black text-[#0E1A2B] text-center"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-2xl sm:text-3xl font-semibold text-[#0E1A2B] text-center font-display tracking-[-0.02em]"
           >
             Frequently Asked Questions on Freelance Rates
           </h2>
 
           <div className="space-y-6">
             <div className="bg-white p-6 rounded-xl border border-[#E8E0CF]">
-              <h3 className="text-base font-bold text-[#0E1A2B]">
+              <h3 className="text-base font-display font-medium text-[#0E1A2B]">
                 What is a freelance price floor?
               </h3>
               <p className="text-sm text-[#5B6676] mt-2 leading-relaxed">
@@ -328,7 +325,7 @@ export function FreelanceRateCalculatorPage() {
             </div>
 
             <div className="bg-white p-6 rounded-xl border border-[#E8E0CF]">
-              <h3 className="text-base font-bold text-[#0E1A2B]">
+              <h3 className="text-base font-display font-medium text-[#0E1A2B]">
                 Why can't freelancers bill 40 hours per week?
               </h3>
               <p className="text-sm text-[#5B6676] mt-2 leading-relaxed">
@@ -337,7 +334,7 @@ export function FreelanceRateCalculatorPage() {
             </div>
 
             <div className="bg-white p-6 rounded-xl border border-[#E8E0CF]">
-              <h3 className="text-base font-bold text-[#0E1A2B]">
+              <h3 className="text-base font-display font-medium text-[#0E1A2B]">
                 How does Floorly enforce a price floor?
               </h3>
               <p className="text-sm text-[#5B6676] mt-2 leading-relaxed">

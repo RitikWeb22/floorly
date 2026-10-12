@@ -93,7 +93,7 @@ export function LandingPage() {
       style={{
         backgroundColor: 'var(--page, #FAF5EA)',
         color: 'var(--ink, #0E1A2B)',
-        fontFamily: "'Instrument Sans', system-ui, sans-serif",
+        fontFamily: 'var(--font-sans)',
         lineHeight: 1.6,
         fontSize: '17px',
         minHeight: '100vh',
@@ -355,12 +355,12 @@ export function LandingPage() {
           <div>
             <h1
               style={{
-                fontSize: 'clamp(24px, 2.6vw, 36px)',
-                fontWeight: 800,
+                fontSize: 'clamp(44px, 6.5vw, 80px)',
+                fontWeight: 600,
                 color: 'var(--ink, #0E1A2B)',
-                lineHeight: 1.2,
-                letterSpacing: '-0.02em',
-                fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                lineHeight: 1.02,
+                letterSpacing: '-0.03em',
+                fontFamily: 'var(--font-display)',
               }}
             >
               AI-Scoped Proposals &amp; Price Floors{' '}
@@ -445,9 +445,10 @@ export function LandingPage() {
             <h2
               style={{
                 fontSize: '18px',
-                fontWeight: 700,
+                fontWeight: 500,
+                letterSpacing: '-0.01em',
                 marginBottom: '4px',
-                fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                fontFamily: 'var(--font-display)',
               }}
             >
               What is your break-even project price floor?
@@ -471,10 +472,11 @@ export function LandingPage() {
               <span>Client's budget</span>
               <b
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 800,
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 600,
                   fontSize: '30px',
                   color: 'var(--ink, #0E1A2B)',
+                  fontVariantNumeric: 'tabular-nums lining-nums',
                   letterSpacing: '-0.02em',
                 }}
               >
@@ -555,8 +557,8 @@ export function LandingPage() {
                     top: '-24px',
                     background: 'var(--sun, #FFC72C)',
                     color: 'var(--ink, #0E1A2B)',
-                    fontFamily: "'Instrument Sans', sans-serif",
-                    fontWeight: 600,
+                    fontFamily: 'var(--font-mono)',
+                    fontWeight: 500,
                     fontSize: '12px',
                     fontStyle: 'normal',
                     padding: '2px 10px',
@@ -647,9 +649,11 @@ export function LandingPage() {
         <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <h2
             style={{
-              fontSize: 'clamp(28px, 4.4vw, 52px)',
-              fontWeight: 800,
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+              fontSize: 'clamp(32px, 4.2vw, 52px)',
+              fontWeight: 600,
+              lineHeight: 1.08,
+              letterSpacing: '-0.025em',
+              fontFamily: 'var(--font-display)',
               maxWidth: '18em',
             }}
           >
@@ -666,8 +670,8 @@ export function LandingPage() {
             <div className="pt-6 md:pr-7 pb-2">
               <i
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 800,
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 600,
                   fontSize: '44px',
                   color: 'var(--sun, #FFC72C)',
                   WebkitTextStroke: '2px var(--ink, #0E1A2B)',
@@ -680,8 +684,11 @@ export function LandingPage() {
               <h3
                 style={{
                   fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.015em',
                   margin: '10px 0 8px',
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontFamily: 'var(--font-display)',
                 }}
               >
                 Step 1: How do you scope an unstructured client brief?
@@ -696,8 +703,8 @@ export function LandingPage() {
             <div className="pt-6 md:px-7 pb-2 border-t md:border-t-0 md:border-l border-[var(--line,#E8E0CF)]">
               <i
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 800,
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 600,
                   fontSize: '44px',
                   color: 'var(--sun, #FFC72C)',
                   WebkitTextStroke: '2px var(--ink, #0E1A2B)',
@@ -710,8 +717,11 @@ export function LandingPage() {
               <h3
                 style={{
                   fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.015em',
                   margin: '10px 0 8px',
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontFamily: 'var(--font-display)',
                 }}
               >
                 Step 2: How does AI enforce your minimum price floor?
@@ -726,8 +736,8 @@ export function LandingPage() {
             <div className="pt-6 md:pl-7 pb-2 border-t md:border-t-0 md:border-l border-[var(--line,#E8E0CF)]">
               <i
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 800,
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 600,
                   fontSize: '44px',
                   color: 'var(--sun, #FFC72C)',
                   WebkitTextStroke: '2px var(--ink, #0E1A2B)',
@@ -740,8 +750,11 @@ export function LandingPage() {
               <h3
                 style={{
                   fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.015em',
                   margin: '10px 0 8px',
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontFamily: 'var(--font-display)',
                 }}
               >
                 Step 3: How do you invoice milestones, record payments, and see real profit?
@@ -760,9 +773,11 @@ export function LandingPage() {
           <div style={{ textAlign: 'center', marginBottom: '32px' }}>
             <h2
               style={{
-                fontSize: 'clamp(28px, 4vw, 44px)',
-                fontWeight: 800,
-                fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                fontSize: 'clamp(32px, 4.2vw, 52px)',
+                fontWeight: 600,
+                lineHeight: 1.08,
+                letterSpacing: '-0.025em',
+                fontFamily: 'var(--font-display)',
                 margin: '0 auto',
               }}
             >
@@ -786,8 +801,8 @@ export function LandingPage() {
                   border: 0,
                   background: activeShowcase === 'proposal' ? 'var(--ink, #0E1A2B)' : 'none',
                   color: activeShowcase === 'proposal' ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
-                  fontFamily: "'Instrument Sans', sans-serif",
-                  fontWeight: 600,
+                  fontFamily: 'var(--font-sans)',
+                  fontWeight: 500,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
                 }}
@@ -803,8 +818,8 @@ export function LandingPage() {
                   border: 0,
                   background: activeShowcase === 'floor' ? 'var(--ink, #0E1A2B)' : 'none',
                   color: activeShowcase === 'floor' ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
-                  fontFamily: "'Instrument Sans', sans-serif",
-                  fontWeight: 600,
+                  fontFamily: 'var(--font-sans)',
+                  fontWeight: 500,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
                 }}
@@ -820,8 +835,8 @@ export function LandingPage() {
                   border: 0,
                   background: activeShowcase === 'profit' ? 'var(--ink, #0E1A2B)' : 'none',
                   color: activeShowcase === 'profit' ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
-                  fontFamily: "'Instrument Sans', sans-serif",
-                  fontWeight: 600,
+                  fontFamily: 'var(--font-sans)',
+                  fontWeight: 500,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
                 }}
@@ -898,12 +913,12 @@ export function LandingPage() {
 
                   <div style={{ border: '2px solid var(--cobalt, #0047AB)', borderRadius: '12px', padding: '20px', background: '#F4F8FD' }}>
                     <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                      <span style={{ fontSize: '13px', fontWeight: 700, color: 'var(--cobalt, #0047AB)' }}>FLOOR PROTECTED QUOTE</span>
+                      <span style={{ fontSize: '12px', fontWeight: 500, fontFamily: 'var(--font-mono)', letterSpacing: '0.04em', color: 'var(--cobalt, #0047AB)' }}>FLOOR PROTECTED QUOTE</span>
                       <span style={{ background: 'var(--sun, #FFC72C)', fontSize: '11px', fontWeight: 700, padding: '2px 8px', borderRadius: '99px' }}>
                         Checked
                       </span>
                     </div>
-                    <div style={{ fontSize: '38px', fontWeight: 800, margin: '10px 0 4px', color: 'var(--ink, #0E1A2B)', fontFamily: "'Bricolage Grotesque', sans-serif" }}>
+                    <div style={{ fontSize: '38px', fontWeight: 600, margin: '10px 0 4px', color: 'var(--ink, #0E1A2B)', fontFamily: 'var(--font-display)', fontVariantNumeric: 'tabular-nums lining-nums' }}>
                       $3,570.00
                     </div>
                     <p style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>
@@ -985,9 +1000,11 @@ export function LandingPage() {
           <h2
             style={{
               color: '#FFFFFF',
-              fontSize: 'clamp(28px, 4.4vw, 50px)',
-              fontWeight: 800,
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+              fontSize: 'clamp(32px, 4.2vw, 52px)',
+              fontWeight: 600,
+              lineHeight: 1.08,
+              letterSpacing: '-0.025em',
+              fontFamily: 'var(--font-display)',
             }}
           >
             What core features protect freelancers from scope creep and low quotes?
@@ -1003,9 +1020,12 @@ export function LandingPage() {
             <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
               <h3
                 style={{
-                  fontSize: '23px',
+                  fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.015em',
                   marginBottom: '6px',
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontFamily: 'var(--font-display)',
                   display: 'flex',
                   alignItems: 'center',
                 }}
@@ -1032,9 +1052,12 @@ export function LandingPage() {
             <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
               <h3
                 style={{
-                  fontSize: '23px',
+                  fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.015em',
                   marginBottom: '6px',
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontFamily: 'var(--font-display)',
                   display: 'flex',
                   alignItems: 'center',
                 }}
@@ -1061,9 +1084,12 @@ export function LandingPage() {
             <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
               <h3
                 style={{
-                  fontSize: '23px',
+                  fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.015em',
                   marginBottom: '6px',
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontFamily: 'var(--font-display)',
                   display: 'flex',
                   alignItems: 'center',
                 }}
@@ -1090,9 +1116,12 @@ export function LandingPage() {
             <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
               <h3
                 style={{
-                  fontSize: '23px',
+                  fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.015em',
                   marginBottom: '6px',
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontFamily: 'var(--font-display)',
                   display: 'flex',
                   alignItems: 'center',
                 }}
@@ -1119,9 +1148,12 @@ export function LandingPage() {
             <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
               <h3
                 style={{
-                  fontSize: '23px',
+                  fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.015em',
                   marginBottom: '6px',
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontFamily: 'var(--font-display)',
                   display: 'flex',
                   alignItems: 'center',
                 }}
@@ -1148,9 +1180,12 @@ export function LandingPage() {
             <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
               <h3
                 style={{
-                  fontSize: '23px',
+                  fontSize: '24px',
+                  fontWeight: 500,
+                  lineHeight: 1.2,
+                  letterSpacing: '-0.015em',
                   marginBottom: '6px',
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontFamily: 'var(--font-display)',
                   display: 'flex',
                   alignItems: 'center',
                 }}
@@ -1184,9 +1219,11 @@ export function LandingPage() {
             <div>
               <h2
                 style={{
-                  fontSize: 'clamp(28px, 4vw, 46px)',
-                  fontWeight: 800,
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                  fontSize: 'clamp(32px, 4.2vw, 52px)',
+                  fontWeight: 600,
+                  lineHeight: 1.08,
+                  letterSpacing: '-0.025em',
+                  fontFamily: 'var(--font-display)',
                 }}
               >
                 How do you calculate a safe project price floor before quoting?
@@ -1210,8 +1247,8 @@ export function LandingPage() {
                   borderRadius: '8px',
                   border: '2px solid var(--ink, #0E1A2B)',
                   background: '#FFFFFF',
-                  fontFamily: "'Instrument Sans', sans-serif",
-                  fontWeight: 600,
+                  fontFamily: 'var(--font-sans)',
+                  fontWeight: 500,
                   fontSize: '14px',
                   cursor: 'pointer',
                 }}
@@ -1337,15 +1374,16 @@ export function LandingPage() {
               }}
             >
               <div>
-                <div style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', fontWeight: 600 }}>
+                <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)', fontWeight: 500, fontFamily: 'var(--font-mono)', letterSpacing: '0.04em' }}>
                   RECOMMENDED QUOTATION
                 </div>
                 <div
                   style={{
                     fontSize: '46px',
-                    fontWeight: 800,
+                    fontWeight: 600,
                     color: 'var(--ink, #0E1A2B)',
-                    fontFamily: "'Bricolage Grotesque', sans-serif",
+                    fontFamily: 'var(--font-display)',
+                    fontVariantNumeric: 'tabular-nums lining-nums',
                     margin: '6px 0 2px',
                   }}
                 >
@@ -1409,9 +1447,11 @@ export function LandingPage() {
         <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <h2
             style={{
-              fontSize: 'clamp(28px, 4.4vw, 50px)',
-              fontWeight: 800,
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+              fontSize: 'clamp(32px, 4.2vw, 52px)',
+              fontWeight: 600,
+              lineHeight: 1.08,
+              letterSpacing: '-0.025em',
+              fontFamily: 'var(--font-display)',
             }}
           >
             What are the pricing plans for Floorly?
@@ -1440,8 +1480,8 @@ export function LandingPage() {
                 border: 0,
                 background: !isAnnual ? 'var(--ink, #0E1A2B)' : 'none',
                 color: !isAnnual ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
-                fontFamily: "'Instrument Sans', sans-serif",
-                fontWeight: 600,
+                fontFamily: 'var(--font-sans)',
+                fontWeight: 500,
                 fontSize: '15px',
                 padding: '9px 20px',
                 borderRadius: '99px',
@@ -1457,8 +1497,8 @@ export function LandingPage() {
                 border: 0,
                 background: isAnnual ? 'var(--ink, #0E1A2B)' : 'none',
                 color: isAnnual ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
-                fontFamily: "'Instrument Sans', sans-serif",
-                fontWeight: 600,
+                fontFamily: 'var(--font-sans)',
+                fontWeight: 500,
                 fontSize: '15px',
                 padding: '9px 20px',
                 borderRadius: '99px',
@@ -1525,7 +1565,7 @@ export function LandingPage() {
                     </span>
                   )}
 
-                  <h3 style={{ fontSize: '22px', fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}>
+                  <h3 style={{ fontSize: '22px', fontWeight: 500, lineHeight: 1.2, letterSpacing: '-0.015em', fontFamily: 'var(--font-display)' }}>
                     {plan.name}
                   </h3>
                   <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', minHeight: '44px', marginTop: '2px' }}>
@@ -1534,17 +1574,18 @@ export function LandingPage() {
 
                   <div
                     style={{
-                      fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                      fontWeight: 800,
+                      fontFamily: 'var(--font-display)',
+                      fontWeight: 600,
                       fontSize: '44px',
-                      letterSpacing: '-0.03em',
+                      fontVariantNumeric: 'tabular-nums lining-nums',
+                      letterSpacing: '-0.02em',
                       margin: '14px 0 2px',
                     }}
                   >
                     ${formattedPrice}
                     <small
                       style={{
-                        fontFamily: "'Instrument Sans', sans-serif",
+                        fontFamily: 'var(--font-sans)',
                         fontWeight: 500,
                         fontSize: '15px',
                         color: 'var(--muted, #5B6676)',
@@ -1619,9 +1660,11 @@ export function LandingPage() {
           <div style={{ textAlign: 'center', marginBottom: '40px' }}>
             <h2
               style={{
-                fontSize: 'clamp(28px, 4vw, 44px)',
-                fontWeight: 800,
-                fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+                fontSize: 'clamp(32px, 4.2vw, 52px)',
+                fontWeight: 600,
+                lineHeight: 1.08,
+                letterSpacing: '-0.025em',
+                fontFamily: 'var(--font-display)',
                 margin: '0 auto',
               }}
             >
@@ -1694,9 +1737,11 @@ export function LandingPage() {
         <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <h2
             style={{
-              fontSize: 'clamp(28px, 4.4vw, 50px)',
-              fontWeight: 800,
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+              fontSize: 'clamp(32px, 4.2vw, 52px)',
+              fontWeight: 600,
+              lineHeight: 1.08,
+              letterSpacing: '-0.025em',
+              fontFamily: 'var(--font-display)',
             }}
           >
             Frequently asked questions: how does Floorly protect freelancer income?
@@ -1715,9 +1760,10 @@ export function LandingPage() {
             >
               <summary
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 700,
-                  fontSize: '21px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   listStyle: 'none',
                   display: 'flex',
@@ -1742,9 +1788,10 @@ export function LandingPage() {
             >
               <summary
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 700,
-                  fontSize: '21px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   listStyle: 'none',
                   display: 'flex',
@@ -1769,9 +1816,10 @@ export function LandingPage() {
             >
               <summary
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 700,
-                  fontSize: '21px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   listStyle: 'none',
                   display: 'flex',
@@ -1796,9 +1844,10 @@ export function LandingPage() {
             >
               <summary
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 700,
-                  fontSize: '21px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   listStyle: 'none',
                   display: 'flex',
@@ -1824,9 +1873,10 @@ export function LandingPage() {
             >
               <summary
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 700,
-                  fontSize: '21px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   listStyle: 'none',
                   display: 'flex',
@@ -1852,9 +1902,10 @@ export function LandingPage() {
             >
               <summary
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 700,
-                  fontSize: '21px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   listStyle: 'none',
                   display: 'flex',
@@ -1879,9 +1930,10 @@ export function LandingPage() {
             >
               <summary
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 700,
-                  fontSize: '21px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   listStyle: 'none',
                   display: 'flex',
@@ -1910,9 +1962,10 @@ export function LandingPage() {
             >
               <summary
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 700,
-                  fontSize: '21px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   listStyle: 'none',
                   display: 'flex',
@@ -1938,9 +1991,10 @@ export function LandingPage() {
             >
               <summary
                 style={{
-                  fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                  fontWeight: 700,
-                  fontSize: '21px',
+                  fontFamily: 'var(--font-display)',
+                  fontWeight: 500,
+                  fontSize: '20px',
+                  letterSpacing: '-0.01em',
                   cursor: 'pointer',
                   listStyle: 'none',
                   display: 'flex',
@@ -1974,10 +2028,10 @@ export function LandingPage() {
           <div style={{ textAlign: 'center', marginBottom: '48px' }}>
             <span
               style={{
-                fontFamily: "'Instrument Sans', system-ui, sans-serif",
+                fontFamily: 'var(--font-mono)',
                 fontSize: '12px',
-                fontWeight: 700,
-                letterSpacing: '0.08em',
+                fontWeight: 500,
+                letterSpacing: '0.04em',
                 textTransform: 'uppercase',
                 color: 'var(--cobalt, #0047AB)',
                 background: '#EBF2FF',
@@ -1992,9 +2046,11 @@ export function LandingPage() {
             <h2
               id="audience-and-methodology"
               style={{
-                fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                fontSize: 'clamp(28px, 4vw, 42px)',
-                fontWeight: 800,
+                fontFamily: 'var(--font-display)',
+                fontSize: 'clamp(32px, 4.2vw, 52px)',
+                fontWeight: 600,
+                lineHeight: 1.08,
+                letterSpacing: '-0.025em',
                 color: 'var(--ink, #0E1A2B)',
                 margin: 0,
               }}
@@ -2028,7 +2084,7 @@ export function LandingPage() {
                 boxShadow: '0 2px 10px rgba(14,26,43,0.03)',
               }}
             >
-              <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: 500, letterSpacing: '-0.01em', fontFamily: 'var(--font-display)', color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
                 How does Floorly protect full-stack developers?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
@@ -2045,7 +2101,7 @@ export function LandingPage() {
                 boxShadow: '0 2px 10px rgba(14,26,43,0.03)',
               }}
             >
-              <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
+              <h3 style={{ fontSize: '18px', fontWeight: 500, letterSpacing: '-0.01em', fontFamily: 'var(--font-display)', color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
                 How does Floorly protect UI/UX product designers?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
@@ -2101,9 +2157,11 @@ export function LandingPage() {
           >
             <h3
               style={{
-                fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                fontSize: '22px',
-                fontWeight: 800,
+                fontFamily: 'var(--font-display)',
+                fontSize: '20px',
+                fontWeight: 500,
+                lineHeight: 1.2,
+                letterSpacing: '-0.015em',
                 color: 'var(--ink, #0E1A2B)',
                 margin: '0 0 12px',
               }}
@@ -2139,9 +2197,11 @@ export function LandingPage() {
           <h2
             style={{
               color: '#FFFFFF',
-              fontSize: 'clamp(32px, 4.5vw, 50px)',
-              fontWeight: 800,
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+              fontSize: 'clamp(32px, 4.2vw, 52px)',
+              fontWeight: 600,
+              lineHeight: 1.08,
+              letterSpacing: '-0.025em',
+              fontFamily: 'var(--font-display)',
               margin: '0 auto',
             }}
           >

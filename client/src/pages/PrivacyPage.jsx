@@ -36,7 +36,7 @@ export function PrivacyPage() {
             <div className="w-10 h-10 rounded-xl bg-brand-50 text-brand-600 flex items-center justify-center mb-4">
               <ShieldCheck className="w-5 h-5" />
             </div>
-            <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-charcoal-900">
+            <h1 className="text-2xl sm:text-3xl font-semibold tracking-[-0.03em] text-charcoal-900 font-display">
               Privacy Policy
             </h1>
             <p className="text-sm text-charcoal-500 mt-2">

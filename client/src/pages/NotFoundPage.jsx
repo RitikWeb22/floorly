@@ -14,7 +14,7 @@ export function NotFoundPage() {
         minHeight: '100vh',
         backgroundColor: 'var(--page, #FAF5EA)',
         color: 'var(--ink, #0E1A2B)',
-        fontFamily: "'Instrument Sans', system-ui, sans-serif",
+        fontFamily: 'var(--font-sans)',
         display: 'flex',
         flexDirection: 'column',
       }}
@@ -75,15 +75,15 @@ export function NotFoundPage() {
           <span
             style={{
               display: 'inline-block',
-              fontFamily: 'monospace',
-              fontSize: '13px',
-              fontWeight: 700,
+              fontFamily: 'var(--font-mono)',
+              fontSize: '12px',
+              fontWeight: 500,
               color: 'var(--cobalt, #0047AB)',
               backgroundColor: '#EAF1FB',
               padding: '4px 12px',
               borderRadius: '999px',
               marginBottom: '16px',
-              letterSpacing: '0.05em',
+              letterSpacing: '0.04em',
             }}
           >
             ERROR 404
@@ -91,9 +91,9 @@ export function NotFoundPage() {
 
           <h1
             style={{
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-              fontSize: '28px',
-              fontWeight: 800,
+              fontFamily: 'var(--font-display)',
+              fontSize: '30px',
+              fontWeight: 600,
               color: 'var(--ink, #0E1A2B)',
               letterSpacing: '-0.02em',
               marginBottom: '12px',

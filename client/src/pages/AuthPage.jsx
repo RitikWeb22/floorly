@@ -210,9 +210,9 @@ export function AuthPage() {
         {/* Hero Headline & Floor Demo Illustration */}
         <div className="my-auto py-8 z-10 max-w-lg">
           <h1
-            className="text-white font-extrabold tracking-tight leading-[1.12]"
+            className="text-white font-semibold tracking-tight leading-[1.12]"
             style={{
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+              fontFamily: 'var(--font-display)',
               fontSize: '44px',
               letterSpacing: '-0.03em',
             }}
@@ -222,7 +222,7 @@ export function AuthPage() {
 
           <p
             className="text-white/90 text-[17px] leading-relaxed mt-4 font-normal"
-            style={{ fontFamily: "'Instrument Sans', system-ui, sans-serif" }}
+            style={{ fontFamily: 'var(--font-sans)' }}
           >
             Paste a client brief. Get a proposal that can't drop below your floor.
           </p>

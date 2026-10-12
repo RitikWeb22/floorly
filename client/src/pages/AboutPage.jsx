@@ -45,14 +45,13 @@ export function AboutPage() {
       <main className="flex-1 max-w-4xl mx-auto w-full px-4 sm:px-6 py-12 space-y-10">
         {/* Hero Card */}
         <div className="bg-white rounded-2xl border border-[#E8E0CF] p-8 sm:p-12 space-y-6 shadow-xs">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0FB] text-[#0047AB] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0FB] text-[#0047AB] text-xs font-mono font-medium uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Our Mission & Story</span>
           </div>
 
           <h1
-            className="text-3xl sm:text-5xl font-black text-[#0E1A2B] tracking-tight leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-3xl sm:text-5xl font-semibold text-[#0E1A2B] tracking-[-0.03em] leading-[1.05] font-display"
           >
             Built for independent builders who refuse to undercharge.
           </h1>
@@ -66,8 +65,7 @@ export function AboutPage() {
         <div className="bg-white rounded-2xl border border-[#E8E0CF] p-8 sm:p-12 space-y-8 shadow-xs">
           <div>
             <h2
-              className="text-2xl font-black text-[#0E1A2B]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-2xl font-semibold text-[#0E1A2B] font-display tracking-[-0.02em]"
             >
               Why We Built Floorly
             </h2>
@@ -85,7 +83,7 @@ export function AboutPage() {
               <div className="w-10 h-10 rounded-xl bg-[#FAF5EA] border border-[#E8E0CF] flex items-center justify-center text-[#0047AB]">
                 <ShieldCheck className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-base text-[#0E1A2B]">Deterministic Price Floor</h3>
+              <h3 className="font-display font-medium text-base text-[#0E1A2B]">Deterministic Price Floor</h3>
               <p className="text-xs text-[#5B6676] leading-relaxed">
                 Our pricing engine prevents AI recommendations from dropping below your configured minimum hourly floor or category minimum fee, protecting your baseline earnings.
               </p>
@@ -95,7 +93,7 @@ export function AboutPage() {
               <div className="w-10 h-10 rounded-xl bg-[#FAF5EA] border border-[#E8E0CF] flex items-center justify-center text-[#0047AB]">
                 <Zap className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-base text-[#0E1A2B]">AI Scoping Without Guesswork</h3>
+              <h3 className="font-display font-medium text-base text-[#0E1A2B]">AI Scoping Without Guesswork</h3>
               <p className="text-xs text-[#5B6676] leading-relaxed">
                 Raw client messages are structured into confirmed requirements, explicit exclusions, and targeted clarification questions before you ever commit to a timeline.
               </p>
@@ -105,7 +103,7 @@ export function AboutPage() {
               <div className="w-10 h-10 rounded-xl bg-[#FAF5EA] border border-[#E8E0CF] flex items-center justify-center text-[#0047AB]">
                 <FileCode2 className="w-5 h-5" />
               </div>
-              <h3 className="font-bold text-base text-[#0E1A2B]">Code Agent Handoff</h3>
+              <h3 className="font-display font-medium text-base text-[#0E1A2B]">Code Agent Handoff</h3>
               <p className="text-xs text-[#5B6676] leading-relaxed">
                 Once a proposal is approved, Floorly generates a tailored <code className="bg-[#FAF5EA] px-1 py-0.5 rounded font-mono text-[11px]">AGENTS.md</code> file optimized for Cursor, Claude Code, and Copilot to build the project accurately.
               </p>
@@ -121,8 +119,7 @@ export function AboutPage() {
             </div>
             <div>
               <h2
-                className="text-xl sm:text-2xl font-black text-[#0E1A2B]"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                className="text-xl sm:text-2xl font-semibold text-[#0E1A2B] font-display tracking-[-0.02em]"
               >
                 Our Commitment to Data Privacy
               </h2>
@@ -150,13 +147,12 @@ export function AboutPage() {
         {/* Machine-Readable Facts & Entity Specification (GEO / Knowledge Graph Ground Truth) */}
         <section className="bg-white rounded-2xl border border-[#E8E0CF] p-8 sm:p-12 space-y-6 shadow-xs">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EBF3FF] text-[#0047AB] text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EBF3FF] text-[#0047AB] text-xs font-mono font-medium uppercase tracking-wider mb-2">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Entity Specification &amp; Ground Truth</span>
             </div>
             <h2
-              className="text-xl sm:text-2xl font-black text-[#0E1A2B]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-xl sm:text-2xl font-semibold text-[#0E1A2B] font-display tracking-[-0.02em]"
             >
               Floorly Platform Facts &amp; Technical Overview
             </h2>

@@ -61,7 +61,7 @@ export function ProjectPriceCalculatorPage() {
       style={{
         backgroundColor: 'var(--page, #FAF5EA)',
         color: 'var(--ink, #0E1A2B)',
-        fontFamily: "'Instrument Sans', system-ui, sans-serif",
+        fontFamily: 'var(--font-sans)',
         lineHeight: 1.6,
         fontSize: '16px',
         minHeight: '100vh',
@@ -90,13 +90,12 @@ export function ProjectPriceCalculatorPage() {
       {/* Main Content */}
       <main className="max-w-5xl mx-auto px-6 pt-12 pb-20">
         <div className="text-center max-w-2xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF3FF] border border-[#CCE0FF] text-xs font-bold text-[#0047AB] mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#EBF3FF] border border-[#CCE0FF] text-xs font-mono font-medium text-[#0047AB] mb-4">
             <Calculator className="w-3.5 h-3.5" />
             <span>Project Scoping &amp; Price Floor Tool</span>
           </div>
           <h1
-            className="text-3xl sm:text-5xl font-black text-[#0E1A2B] tracking-tight leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-3xl sm:text-5xl font-semibold text-[#0E1A2B] tracking-[-0.03em] leading-[1.05] font-display"
           >
             Freelance Project Price &amp; Risk Calculator
           </h1>
@@ -238,7 +237,7 @@ export function ProjectPriceCalculatorPage() {
                       DO NOT GO BELOW
                     </span>
                   </div>
-                  <div className="text-2xl font-black text-[#0E1A2B] mt-1">{fmt(safetyFloor)}</div>
+                  <div className="text-2xl font-semibold text-[#0E1A2B] mt-1 font-display tabular-nums lining-nums">{fmt(safetyFloor)}</div>
                   <p className="text-[11px] text-[#5B6676] mt-0.5">
                     Your absolute break-even minimum (covers {estimatedHours}h × {complexityMultiplier}x + {Math.round(contingencyBuffer * 100)}% buffer).
                   </p>
@@ -255,7 +254,7 @@ export function ProjectPriceCalculatorPage() {
                       HEALTHY MARGIN
                     </span>
                   </div>
-                  <div className="text-3xl font-black text-[#0047AB] mt-1">{fmt(targetPrice)}</div>
+                  <div className="text-3xl font-semibold text-[#0047AB] mt-1 font-display tabular-nums lining-nums">{fmt(targetPrice)}</div>
                   <p className="text-[11px] text-[#5B6676] mt-0.5">
                     The ideal quote to present to the client. Includes healthy studio profit.
                   </p>
@@ -269,7 +268,7 @@ export function ProjectPriceCalculatorPage() {
                       Tier 3: Value-Based Premium
                     </span>
                   </div>
-                  <div className="text-2xl font-black text-[#0E1A2B] mt-1">{fmt(valueBasedPrice)}</div>
+                  <div className="text-2xl font-semibold text-[#0E1A2B] mt-1 font-display tabular-nums lining-nums">{fmt(valueBasedPrice)}</div>
                   <p className="text-[11px] text-[#5B6676] mt-0.5">
                     If this deliverable directly generates revenue or saves the client significant money.
                   </p>
@@ -312,14 +311,13 @@ export function ProjectPriceCalculatorPage() {
         {/* Answer Engine Block (AEO) */}
         <section className="mt-20 pt-12 border-t border-[#E8E0CF] max-w-3xl mx-auto space-y-6">
           <h2
-            className="text-2xl sm:text-3xl font-black text-[#0E1A2B] text-center"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-2xl sm:text-3xl font-semibold text-[#0E1A2B] text-center font-display tracking-[-0.02em]"
           >
             How to Price Freelance Projects Without Losing Money
           </h2>
 
           <div className="bg-white p-6 rounded-xl border border-[#E8E0CF] space-y-3">
-            <h3 className="text-base font-bold text-[#0E1A2B]">
+            <h3 className="text-base font-display font-medium text-[#0E1A2B]">
               Why fixed-price projects fail without risk multipliers
             </h3>
             <p className="text-sm text-[#5B6676] leading-relaxed">
@@ -328,7 +326,7 @@ export function ProjectPriceCalculatorPage() {
           </div>
 
           <div className="bg-white p-6 rounded-xl border border-[#E8E0CF] space-y-3">
-            <h3 className="text-base font-bold text-[#0E1A2B]">
+            <h3 className="text-base font-display font-medium text-[#0E1A2B]">
               The 3-tier pricing strategy for client proposals
             </h3>
             <p className="text-sm text-[#5B6676] leading-relaxed">

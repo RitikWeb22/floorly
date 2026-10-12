@@ -265,13 +265,12 @@ export function PricingPage() {
       <main className="flex-1 max-w-6xl mx-auto w-full px-4 sm:px-6 py-12 space-y-12">
         {/* Hero Section */}
         <div className="text-center max-w-2xl mx-auto space-y-4">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0FB] text-[#0047AB] text-xs font-bold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0FB] text-[#0047AB] text-xs font-mono font-medium uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Honest, Transparent Pricing</span>
           </div>
           <h1
-            className="text-3xl sm:text-5xl font-black text-[#0E1A2B] tracking-tight leading-tight"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-3xl sm:text-5xl font-semibold text-[#0E1A2B] tracking-[-0.03em] leading-[1.05] font-display"
           >
             Manage your freelance career with complete clarity
           </h1>
@@ -376,8 +375,7 @@ export function PricingPage() {
                   </div>
 
                   <h3
-                    className="text-xl font-black text-[#0E1A2B]"
-                    style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                    className="text-xl font-medium text-[#0E1A2B] font-display tracking-[-0.01em]"
                   >
                     {plan.name}
                   </h3>
@@ -389,8 +387,7 @@ export function PricingPage() {
                   <div className="mt-4 mb-6 pb-6 border-b border-[#E8E0CF]">
                     <div className="flex items-baseline gap-1">
                       <span
-                        className="text-4xl font-black text-[#0E1A2B] tracking-tight"
-                        style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+                        className="text-4xl font-semibold text-[#0E1A2B] font-display tracking-[-0.02em] tabular-nums lining-nums"
                       >
                         ${formattedPrice}
                       </span>
@@ -473,8 +470,7 @@ export function PricingPage() {
         <div className="bg-white rounded-2xl border border-[#E8E0CF] p-6 sm:p-8 space-y-6">
           <div>
             <h2
-              className="text-xl sm:text-2xl font-black text-[#0E1A2B]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-xl sm:text-2xl font-semibold text-[#0E1A2B] font-display tracking-[-0.02em]"
             >
               Compare features across tiers
             </h2>
@@ -487,11 +483,11 @@ export function PricingPage() {
             <table className="w-full text-left text-xs border-collapse">
               <thead>
                 <tr className="border-b border-[#E8E0CF] text-[#5B6676]">
-                  <th className="py-3 px-4 font-bold uppercase tracking-wider">Capability</th>
-                  <th className="py-3 px-4 font-bold uppercase tracking-wider text-center">Starter</th>
-                  <th className="py-3 px-4 font-bold uppercase tracking-wider text-center">Solo ($9)</th>
-                  <th className="py-3 px-4 font-bold uppercase tracking-wider text-center text-[#0047AB]">Pro ($19)</th>
-                  <th className="py-3 px-4 font-bold uppercase tracking-wider text-center">Agency ($49)</th>
+                  <th className="py-3 px-4 font-sans font-medium text-[13px] normal-case tracking-normal">Capability</th>
+                  <th className="py-3 px-4 font-sans font-medium text-[13px] normal-case tracking-normal text-center">Starter</th>
+                  <th className="py-3 px-4 font-sans font-medium text-[13px] normal-case tracking-normal text-center">Solo ($9)</th>
+                  <th className="py-3 px-4 font-sans font-medium text-[13px] normal-case tracking-normal text-center text-[#0047AB]">Pro ($19)</th>
+                  <th className="py-3 px-4 font-sans font-medium text-[13px] normal-case tracking-normal text-center">Agency ($49)</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-[#E8E0CF]/60 text-[#0E1A2B]">
@@ -552,33 +548,32 @@ export function PricingPage() {
         {/* Frequently Asked Questions */}
         <div className="bg-[#FAF5EA]/60 rounded-2xl border border-[#E8E0CF] p-6 sm:p-8 space-y-6">
           <h2
-            className="text-xl sm:text-2xl font-black text-[#0E1A2B]"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+            className="text-xl sm:text-2xl font-semibold text-[#0E1A2B] font-display tracking-[-0.02em]"
           >
             Frequently Asked Questions
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 text-xs text-[#0E1A2B]">
             <div className="space-y-1.5">
-              <h3 className="font-bold text-sm">Can I change or cancel my plan at any time?</h3>
+              <h3 className="font-display font-medium text-sm text-[#0E1A2B]">Can I change or cancel my plan at any time?</h3>
               <p className="text-[#5B6676] leading-relaxed">
                 Yes. If you cancel or change tiers, your features remain active through the end of your prepaid billing period. We never lock you into long contracts.
               </p>
             </div>
             <div className="space-y-1.5">
-              <h3 className="font-bold text-sm">What happens to my data if I downgrade?</h3>
+              <h3 className="font-display font-medium text-sm text-[#0E1A2B]">What happens to my data if I downgrade?</h3>
               <p className="text-[#5B6676] leading-relaxed">
                 No proposals, invoices, or client records are ever deleted. Existing client records remain intact and readable even if you exceed the Starter limit.
               </p>
             </div>
             <div className="space-y-1.5">
-              <h3 className="font-bold text-sm">What is the "Pricing Floor Guard"?</h3>
+              <h3 className="font-display font-medium text-sm text-[#0E1A2B]">What is the "Pricing Floor Guard"?</h3>
               <p className="text-[#5B6676] leading-relaxed">
                 Floorly checks AI recommendations against your minimum hourly rate and minimum project floor, ensuring proposals cannot be quoted below your configured minimum.
               </p>
             </div>
             <div className="space-y-1.5">
-              <h3 className="font-bold text-sm">Do clients need a Floorly account to view proposals?</h3>
+              <h3 className="font-display font-medium text-sm text-[#0E1A2B]">Do clients need a Floorly account to view proposals?</h3>
               <p className="text-[#5B6676] leading-relaxed">
                 No. Shareable client document links allow clients to securely view, approve, and print proposals and invoices without creating an account.
               </p>

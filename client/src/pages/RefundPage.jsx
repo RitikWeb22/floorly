@@ -39,8 +39,7 @@ export function RefundPage() {
               <RefreshCw className="w-5 h-5" />
             </div>
             <h1
-              className="text-2xl sm:text-3xl font-black text-[#0E1A2B] tracking-tight"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-2xl sm:text-3xl font-semibold text-[#0E1A2B] tracking-[-0.03em] font-display"
             >
               Subscription Cancellation & Refund Policy
             </h1>

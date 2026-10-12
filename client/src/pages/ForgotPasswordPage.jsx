@@ -41,7 +41,7 @@ export function ForgotPasswordPage() {
         minHeight: '100vh',
         backgroundColor: 'var(--page, #FAF5EA)',
         color: 'var(--ink, #0E1A2B)',
-        fontFamily: "'Instrument Sans', system-ui, sans-serif",
+        fontFamily: 'var(--font-sans)',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
@@ -67,9 +67,9 @@ export function ForgotPasswordPage() {
         >
           <h1
             style={{
-              fontSize: '24px',
-              fontWeight: 800,
-              fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
+              fontSize: '26px',
+              fontWeight: 600,
+              fontFamily: 'var(--font-display)',
               marginBottom: '8px',
               color: 'var(--ink, #0E1A2B)',
               letterSpacing: '-0.02em',
@@ -199,7 +199,7 @@ export function ForgotPasswordPage() {
                     width: '100%',
                     padding: '12px 14px',
                     fontSize: '16px',
-                    fontFamily: "'Instrument Sans', sans-serif",
+                    fontFamily: 'var(--font-sans)',
                     borderRadius: '12px',
                     border: emailError ? '1.5px solid var(--error, #B42318)' : '1px solid var(--line, #E8E0CF)',
                     background: '#FFFFFF',
@@ -230,10 +230,10 @@ export function ForgotPasswordPage() {
                   color: '#FFFFFF',
                   border: 'none',
                   fontSize: '16px',
-                  fontWeight: 600,
+                  fontWeight: 500,
                   cursor: isLoading ? 'not-allowed' : 'pointer',
                   opacity: isLoading ? 0.7 : 1,
-                  fontFamily: "'Instrument Sans', sans-serif",
+                  fontFamily: 'var(--font-sans)',
                   transition: 'background 0.15s ease',
                 }}
                 className="hover:bg-[var(--cobalt-dark,#003A8C)]"
