@@ -141,7 +141,7 @@ export async function generateProposalPdf(firstArg, clientArg, userArg, optionsA
   <title>Proposal-${escapeHtml(proposalId)}-${escapeHtml(clientCompany || contactPerson || 'Client')}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Arabic:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     @page {
       size: ${pageSize};
@@ -157,7 +157,7 @@ export async function generateProposalPdf(firstArg, clientArg, userArg, optionsA
     html, body {
       background: #ffffff !important;
       color: #0E1A2B;
-      font-family: 'Instrument Sans', 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Arabic', 'Noto Sans SC', system-ui, sans-serif;
+      font-family: 'Geist', 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Arabic', 'Noto Sans SC', system-ui, sans-serif;
       font-size: 10.5pt;
       line-height: 1.5;
       -webkit-print-color-adjust: exact !important;
@@ -165,7 +165,7 @@ export async function generateProposalPdf(firstArg, clientArg, userArg, optionsA
     }
 
     h1, h2, h3, .heading-font {
-      font-family: 'Bricolage Grotesque', 'Instrument Sans', system-ui, sans-serif;
+      font-family: 'Clash Grotesk', 'Geist', system-ui, sans-serif;
       color: #0E1A2B;
     }
 
@@ -266,7 +266,7 @@ export async function generateProposalPdf(firstArg, clientArg, userArg, optionsA
       font-size: 17pt;
       font-weight: 800;
       color: #0047AB;
-      font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+      font-family: 'Clash Grotesk', system-ui, sans-serif;
     }
 
     .signature-grid {
@@ -326,7 +326,7 @@ export async function generateProposalPdf(firstArg, clientArg, userArg, optionsA
       </div>
     </div>
     <div style="text-align: right;">
-      <div style="font-size: 20pt; font-weight: 800; color: #0047AB; font-family: 'Bricolage Grotesque', system-ui, sans-serif;">Proposal</div>
+      <div style="font-size: 20pt; font-weight: 800; color: #0047AB; font-family: 'Clash Grotesk', system-ui, sans-serif;">Proposal</div>
       <div style="font-size: 9.5pt; font-weight: 700; margin-top: 2pt;">${escapeHtml(proposalId)}</div>
       <div class="text-muted" style="font-size: 8.5pt; margin-top: 4pt; line-height: 1.4;">
         <div>Issue date: <strong style="color: #0E1A2B;">${issueDate}</strong></div>
@@ -345,7 +345,7 @@ export async function generateProposalPdf(firstArg, clientArg, userArg, optionsA
     </div>
     <div style="text-align: right; max-width: 48%;">
       <div style="font-size: 8pt; font-weight: 700; color: #5B6676; text-transform: uppercase; letter-spacing: 0.5pt; margin-bottom: 2pt;">Project engagement</div>
-      <div style="font-size: 11pt; font-weight: 700; color: #0E1A2B; font-family: 'Bricolage Grotesque', system-ui, sans-serif;">${escapeHtml(cleanTitle)}</div>
+      <div style="font-size: 11pt; font-weight: 700; color: #0E1A2B; font-family: 'Clash Grotesk', system-ui, sans-serif;">${escapeHtml(cleanTitle)}</div>
       <div class="text-muted">Delivery model: <span style="color:#0E1A2B; font-weight: 500;">Fixed scope, paid in milestones</span></div>
       <div class="text-muted">Currency: <span style="color:#0E1A2B; font-weight: 500;">${escapeHtml(currency)}</span></div>
     </div>
@@ -607,7 +607,7 @@ export async function generateProposalPdf(firstArg, clientArg, userArg, optionsA
       displayHeaderFooter: true,
       headerTemplate: '<div></div>',
       footerTemplate: `
-        <div style="font-family: 'Instrument Sans', Arial, sans-serif; font-size: 8pt; color: #5B6676; width: 100%; padding: 0 16mm; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+        <div style="font-family: 'Geist', Arial, sans-serif; font-size: 8pt; color: #5B6676; width: 100%; padding: 0 16mm; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
           <span>${escapeHtml(proposalId)} · ${escapeHtml(businessName)}${showWatermark ? ' · Created with Floorly' : ''}</span>
           <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
         </div>
@@ -753,7 +753,7 @@ export async function generateInvoicePdf(firstArg, clientArg, userArg, optionsAr
   <title>Invoice-${escapeHtml(invoiceNumber)}-${escapeHtml(clientCompany || contactPerson || 'Client')}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Arabic:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     @page {
       size: ${pageSize};
@@ -769,7 +769,7 @@ export async function generateInvoicePdf(firstArg, clientArg, userArg, optionsAr
     html, body {
       background: #ffffff !important;
       color: #0E1A2B;
-      font-family: 'Instrument Sans', 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Arabic', 'Noto Sans SC', system-ui, sans-serif;
+      font-family: 'Geist', 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Arabic', 'Noto Sans SC', system-ui, sans-serif;
       font-size: 10.5pt;
       line-height: 1.5;
       -webkit-print-color-adjust: exact !important;
@@ -777,7 +777,7 @@ export async function generateInvoicePdf(firstArg, clientArg, userArg, optionsAr
     }
 
     .heading-font {
-      font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+      font-family: 'Clash Grotesk', system-ui, sans-serif;
       color: #0E1A2B;
     }
 
@@ -889,7 +889,7 @@ export async function generateInvoicePdf(firstArg, clientArg, userArg, optionsAr
       font-size: 16pt;
       font-weight: 800;
       color: #0047AB;
-      font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+      font-family: 'Clash Grotesk', system-ui, sans-serif;
     }
 
     .badge {
@@ -937,7 +937,7 @@ export async function generateInvoicePdf(firstArg, clientArg, userArg, optionsAr
       letter-spacing: 12pt;
       pointer-events: none;
       z-index: 0;
-      font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+      font-family: 'Clash Grotesk', system-ui, sans-serif;
     }
   </style>
 </head>
@@ -961,7 +961,7 @@ export async function generateInvoicePdf(firstArg, clientArg, userArg, optionsAr
       </div>
     </div>
     <div style="text-align: right;">
-      <div style="font-size: 22pt; font-weight: 800; color: #0047AB; font-family: 'Bricolage Grotesque', system-ui, sans-serif; line-height: 1;">Invoice</div>
+      <div style="font-size: 22pt; font-weight: 800; color: #0047AB; font-family: 'Clash Grotesk', system-ui, sans-serif; line-height: 1;">Invoice</div>
       <div style="font-size: 10pt; font-weight: 700; margin-top: 3pt;" class="font-tabular">${escapeHtml(invoiceNumber)}</div>
       <div style="margin-top: 4pt;">
         <span class="badge ${isPaid ? 'badge-paid' : isPartial ? 'badge-partial' : isOverdue ? 'badge-overdue' : 'badge-sent'}">${escapeHtml(statusLabel)}</span>
@@ -985,7 +985,7 @@ export async function generateInvoicePdf(firstArg, clientArg, userArg, optionsAr
     </div>
     <div style="text-align: right; max-width: 48%;">
       <div style="font-size: 8pt; font-weight: 700; color: #5B6676; text-transform: uppercase; letter-spacing: 0.5pt; margin-bottom: 2pt;">Reference details</div>
-      <div style="font-size: 10pt; font-weight: 700; color: #0E1A2B; font-family: 'Bricolage Grotesque', system-ui, sans-serif;">
+      <div style="font-size: 10pt; font-weight: 700; color: #0E1A2B; font-family: 'Clash Grotesk', system-ui, sans-serif;">
         ${escapeHtml((invoice.projectTitle || invoice.referenceTitle || 'Professional Services').replace(/^Proposal:\s*/i, ''))}
       </div>
       ${invoice.poNumber ? `<div class="text-muted">PO number: <strong style="color:#0E1A2B;">${escapeHtml(invoice.poNumber)}</strong></div>` : ''}
@@ -1199,7 +1199,7 @@ export async function generateInvoicePdf(firstArg, clientArg, userArg, optionsAr
       displayHeaderFooter: true,
       headerTemplate: '<div></div>',
       footerTemplate: `
-        <div style="font-family: 'Instrument Sans', Arial, sans-serif; font-size: 8pt; color: #5B6676; width: 100%; padding: 0 16mm; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+        <div style="font-family: 'Geist', Arial, sans-serif; font-size: 8pt; color: #5B6676; width: 100%; padding: 0 16mm; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
           <span>${escapeHtml(invoiceNumber)} · ${escapeHtml(businessName)}${showWatermark ? ' · Created with Floorly' : ''}</span>
           <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
         </div>
@@ -1290,7 +1290,7 @@ export async function generateReceiptPdf(firstArg, invoiceArg, clientArg, userAr
   <title>Receipt-${escapeHtml(receiptNumber)}-${escapeHtml(clientCompany || contactPerson || 'Client')}</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Noto+Sans+Arabic:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;600&family=Noto+Sans+Devanagari:wght@400;600&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     @page {
       size: ${pageSize};
@@ -1306,7 +1306,7 @@ export async function generateReceiptPdf(firstArg, invoiceArg, clientArg, userAr
     html, body {
       background: #ffffff !important;
       color: #0E1A2B;
-      font-family: 'Instrument Sans', 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Arabic', 'Noto Sans SC', system-ui, sans-serif;
+      font-family: 'Geist', 'Noto Sans', 'Noto Sans Devanagari', 'Noto Sans Arabic', 'Noto Sans SC', system-ui, sans-serif;
       font-size: 10.5pt;
       line-height: 1.5;
       -webkit-print-color-adjust: exact !important;
@@ -1314,7 +1314,7 @@ export async function generateReceiptPdf(firstArg, invoiceArg, clientArg, userAr
     }
 
     .heading-font {
-      font-family: 'Bricolage Grotesque', system-ui, sans-serif;
+      font-family: 'Clash Grotesk', system-ui, sans-serif;
       color: #0E1A2B;
     }
 
@@ -1403,7 +1403,7 @@ export async function generateReceiptPdf(firstArg, invoiceArg, clientArg, userAr
       </div>
     </div>
     <div style="text-align: right;">
-      <div style="font-size: 22pt; font-weight: 800; color: #0047AB; font-family: 'Bricolage Grotesque', system-ui, sans-serif; line-height: 1;">Payment receipt</div>
+      <div style="font-size: 22pt; font-weight: 800; color: #0047AB; font-family: 'Clash Grotesk', system-ui, sans-serif; line-height: 1;">Payment receipt</div>
       <div style="font-size: 10pt; font-weight: 700; margin-top: 3pt;" class="font-tabular">${escapeHtml(receiptNumber)}</div>
       <div class="text-muted" style="font-size: 8.5pt; margin-top: 4pt; line-height: 1.4;">
         <div>Payment date: <strong style="color: #0E1A2B;">${paymentDate}</strong></div>
@@ -1416,7 +1416,7 @@ export async function generateReceiptPdf(firstArg, invoiceArg, clientArg, userAr
   <section class="box-tint" style="margin-bottom: 14pt; border-left: 3pt solid #0047AB; display: flex; justify-content: space-between; align-items: center;">
     <div>
       <div style="font-size: 8.5pt; font-weight: 700; color: #5B6676; text-transform: uppercase; letter-spacing: 0.5pt;">Amount received</div>
-      <div style="font-size: 24pt; font-weight: 800; color: #0047AB; font-family: 'Bricolage Grotesque', system-ui, sans-serif; margin-top: 2pt;" class="font-tabular">
+      <div style="font-size: 24pt; font-weight: 800; color: #0047AB; font-family: 'Clash Grotesk', system-ui, sans-serif; margin-top: 2pt;" class="font-tabular">
         ${formatMoney(amountPaid, currency)}
       </div>
     </div>
@@ -1448,7 +1448,7 @@ export async function generateReceiptPdf(firstArg, invoiceArg, clientArg, userAr
 
   <!-- Invoice Remittance Summary Table -->
   <section class="section-border" style="break-inside: avoid; page-break-inside: avoid;">
-    <h2 style="font-size: 11pt; font-weight: 700; color: #0E1A2B; margin-bottom: 4pt; font-family: 'Bricolage Grotesque', system-ui, sans-serif;">
+    <h2 style="font-size: 11pt; font-weight: 700; color: #0E1A2B; margin-bottom: 4pt; font-family: 'Clash Grotesk', system-ui, sans-serif;">
       Invoice remittance summary
     </h2>
     <table>
@@ -1533,7 +1533,7 @@ export async function generateReceiptPdf(firstArg, invoiceArg, clientArg, userAr
       displayHeaderFooter: true,
       headerTemplate: '<div></div>',
       footerTemplate: `
-        <div style="font-family: 'Instrument Sans', Arial, sans-serif; font-size: 8pt; color: #5B6676; width: 100%; padding: 0 16mm; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
+        <div style="font-family: 'Geist', Arial, sans-serif; font-size: 8pt; color: #5B6676; width: 100%; padding: 0 16mm; display: flex; justify-content: space-between; align-items: center; box-sizing: border-box;">
           <span>${escapeHtml(receiptNumber)} · ${escapeHtml(businessName)}${showWatermark ? ' · Created with Floorly' : ''}</span>
           <span>Page <span class="pageNumber"></span> of <span class="totalPages"></span></span>
         </div>

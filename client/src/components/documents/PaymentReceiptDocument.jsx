@@ -108,7 +108,7 @@ export function PaymentReceiptDocumentSheet({
       style={{
         boxSizing: 'border-box',
         color: '#0E1A2B',
-        fontFamily: "'Instrument Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
+        fontFamily: "var(--font-sans, 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif)",
         fontSize: '10.5pt',
         lineHeight: 1.5,
         backgroundColor: '#FFFFFF',
@@ -129,10 +129,7 @@ export function PaymentReceiptDocumentSheet({
               className="max-h-12 w-auto object-contain mb-2.5"
             />
           ) : (
-            <h1
-              className="text-xl sm:text-2xl font-black text-[#0E1A2B] leading-tight"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <h1 className="text-xl sm:text-2xl font-semibold text-[#0E1A2B] leading-tight font-display tracking-[-0.02em]">
               {businessName}
             </h1>
           )}
@@ -158,17 +155,11 @@ export function PaymentReceiptDocumentSheet({
           <div className="inline-block bg-[#F3F7FD] border border-[#D9D4C7] px-3 py-1 rounded-full text-xs font-semibold text-[#0047AB] mb-2">
             Verified payment receipt
           </div>
-          <h2
-            className="text-2xl sm:text-3xl font-extrabold text-[#0047AB] tracking-tight leading-none"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#0047AB] tracking-[-0.02em] leading-none font-display">
             Payment receipt
           </h2>
 
-          <div
-            className="text-sm font-bold text-[#0E1A2B] mt-2"
-            style={{ fontVariantNumeric: 'tabular-nums' }}
-          >
+          <div className="text-sm font-semibold text-[#0E1A2B] mt-2 font-mono">
             {receiptNumber}
           </div>
 
@@ -196,16 +187,10 @@ export function PaymentReceiptDocumentSheet({
         />
         <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
           <div>
-            <span className="text-xs font-semibold text-[#5B6676] uppercase tracking-wider block">
+            <span className="font-mono font-medium text-[12px] text-[#5B6676] block">
               Amount received
             </span>
-            <div
-              className="text-3xl sm:text-4xl font-extrabold text-[#0047AB] mt-1 tracking-tight"
-              style={{
-                fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
-                fontVariantNumeric: 'tabular-nums',
-              }}
-            >
+            <div className="text-3xl sm:text-4xl font-semibold text-[#0047AB] mt-1 tracking-tight font-display tabular-nums lining-nums">
               {formatMoney(amountPaid)}
             </div>
           </div>
@@ -297,9 +282,8 @@ export function PaymentReceiptDocumentSheet({
         style={{ breakInside: 'avoid', pageBreakInside: 'avoid' }}
       >
         <h3
-          className="text-sm font-bold text-[#0E1A2B] mb-2"
+          className="text-sm font-medium text-[#0E1A2B] mb-2 font-display tracking-[-0.01em]"
           style={{
-            fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
             breakAfter: 'avoid',
             pageBreakAfter: 'avoid',
           }}
@@ -533,8 +517,7 @@ export function PaymentReceiptDocument({ payment, invoice, client, user, onClose
           <div className="min-w-0">
             <h2
               id="receipt-modal-title"
-              className="text-sm sm:text-base font-bold text-[#0E1A2B] truncate"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-sm sm:text-base font-medium text-[#0E1A2B] truncate font-display tracking-[-0.01em]"
             >
               Payment receipt {receiptNumber}
             </h2>

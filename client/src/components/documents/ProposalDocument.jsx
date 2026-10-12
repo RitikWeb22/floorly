@@ -108,7 +108,7 @@ export function ProposalDocument({
           boxShadow: printMode ? 'none' : '0 10px 30px -10px rgba(14, 26, 43, 0.08)',
           borderColor: printMode ? 'transparent' : '#D9D4C7',
           color: '#0E1A2B',
-          fontFamily: "'Instrument Sans', system-ui, -apple-system, sans-serif",
+          fontFamily: "var(--font-sans, 'Geist', system-ui, -apple-system, sans-serif)",
           pageBreakInside: 'avoid',
         }}
       >
@@ -125,10 +125,7 @@ export function ProposalDocument({
                 className="h-10 w-auto object-contain mb-3"
               />
             ) : (
-              <h1
-                className="text-[24px] font-extrabold text-[#0E1A2B] leading-none mb-1 tracking-tight"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h1 className="text-[24px] font-semibold text-[#0E1A2B] leading-none mb-1 tracking-[-0.02em] font-display">
                 {businessName}
               </h1>
             )}
@@ -148,13 +145,10 @@ export function ProposalDocument({
 
           {/* Right: Proposal Title & Dates */}
           <div className="sm:text-right space-y-1">
-            <span
-              className="text-[26px] font-extrabold text-[#0047AB] tracking-tight block leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <span className="text-[26px] font-semibold text-[#0047AB] tracking-[-0.02em] block leading-none font-display">
               Proposal
             </span>
-            <span className="text-xs font-semibold text-[#0E1A2B] block pt-1">
+            <span className="text-xs font-semibold text-[#0E1A2B] block pt-1 font-mono">
               {proposalId}
             </span>
             <div className="text-xs text-[#5B6676] space-y-0.5 pt-2">
@@ -191,10 +185,7 @@ export function ProposalDocument({
             <span className="text-[11px] font-bold text-[#5B6676] uppercase tracking-wider block">
               Project engagement
             </span>
-            <p
-              className="text-sm font-bold text-[#0E1A2B]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <p className="text-sm font-semibold text-[#0E1A2B] font-display tracking-[-0.01em]">
               {cleanTitle}
             </p>
             <p className="text-xs text-[#5B6676]">
@@ -210,10 +201,7 @@ export function ProposalDocument({
            3. SECTION: EXECUTIVE SUMMARY
            ============================================================= */}
         <section className="py-6 border-b border-[#D9D4C7] space-y-2">
-          <h2
-            className="text-base font-bold text-[#0E1A2B] flex items-center gap-1.5"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h2 className="text-base font-medium text-[#0E1A2B] flex items-center gap-1.5 font-display tracking-[-0.01em]">
             <span>{getNextSectionNumber()}</span>
             <span>Executive summary</span>
           </h2>
@@ -228,10 +216,7 @@ export function ProposalDocument({
            ============================================================= */}
         <section className="py-6 border-b border-[#D9D4C7] space-y-3">
           <div className="flex items-center justify-between">
-            <h2
-              className="text-base font-bold text-[#0E1A2B] flex items-center gap-1.5"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <h2 className="text-base font-medium text-[#0E1A2B] flex items-center gap-1.5 font-display tracking-[-0.01em]">
               <span>{getNextSectionNumber()}</span>
               <span>Scope of work</span>
             </h2>
@@ -286,10 +271,7 @@ export function ProposalDocument({
            5. SECTION: INVESTMENT (Totals Box)
            ============================================================= */}
         <section className="py-6 border-b border-[#D9D4C7] space-y-3 investment-box">
-          <h2
-            className="text-base font-bold text-[#0E1A2B] flex items-center gap-1.5"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h2 className="text-base font-medium text-[#0E1A2B] flex items-center gap-1.5 font-display tracking-[-0.01em]">
             <span>{getNextSectionNumber()}</span>
             <span>Investment & financial summary</span>
           </h2>
@@ -346,10 +328,7 @@ export function ProposalDocument({
             {/* Total */}
             <div className="pt-3 border-t-2 border-[#0047AB] flex justify-between items-baseline">
               <span className="text-sm font-bold text-[#0E1A2B]">Total contract investment</span>
-              <span
-                className="text-[22px] font-black text-[#0047AB] font-tabular leading-none"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <span className="text-[22px] font-semibold text-[#0047AB] tabular-nums lining-nums leading-none font-display">
                 {formatMoney(totals.total)}
               </span>
             </div>
@@ -367,10 +346,7 @@ export function ProposalDocument({
            6. SECTION: PAYMENT SCHEDULE (Milestones)
            ============================================================= */}
         <section className="py-6 border-b border-[#D9D4C7] space-y-3 payment-schedule-box">
-          <h2
-            className="text-base font-bold text-[#0E1A2B] flex items-center gap-1.5"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h2 className="text-base font-medium text-[#0E1A2B] flex items-center gap-1.5 font-display tracking-[-0.01em]">
             <span>{getNextSectionNumber()}</span>
             <span>Milestone payment schedule</span>
           </h2>
@@ -408,10 +384,7 @@ export function ProposalDocument({
            7. SECTION: HOW TO PAY (Remittance Details)
            ============================================================= */}
         <section className="py-6 border-b border-[#D9D4C7] space-y-3 how-to-pay-box">
-          <h2
-            className="text-base font-bold text-[#0E1A2B] flex items-center gap-1.5"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h2 className="text-base font-medium text-[#0E1A2B] flex items-center gap-1.5 font-display tracking-[-0.01em]">
             <span>{getNextSectionNumber()}</span>
             <span>How to pay</span>
           </h2>
@@ -442,10 +415,7 @@ export function ProposalDocument({
            ============================================================= */}
         {proposal.termsAndConditions && (
           <section className="py-6 border-b border-[#D9D4C7] space-y-3">
-            <h2
-              className="text-base font-bold text-[#0E1A2B] flex items-center gap-1.5"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <h2 className="text-base font-medium text-[#0E1A2B] flex items-center gap-1.5 font-display tracking-[-0.01em]">
               <span>{getNextSectionNumber()}</span>
               <span>Terms of agreement</span>
             </h2>
@@ -479,10 +449,7 @@ export function ProposalDocument({
            9. SECTION: ACCEPTANCE & SIGNATURES
            ============================================================= */}
         <section className="py-8 space-y-6 acceptance-section signature-box">
-          <h2
-            className="text-base font-bold text-[#0E1A2B] flex items-center gap-1.5"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h2 className="text-base font-medium text-[#0E1A2B] flex items-center gap-1.5 font-display tracking-[-0.01em]">
             <span>{getNextSectionNumber()}</span>
             <span>Acceptance and authorization</span>
           </h2>

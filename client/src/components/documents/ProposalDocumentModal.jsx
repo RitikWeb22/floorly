@@ -234,8 +234,7 @@ export function ProposalDocumentModal({
           <div className="min-w-0">
             <h2
               id="proposal-modal-title"
-              className="text-sm sm:text-base font-bold text-[#0E1A2B] truncate"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-sm sm:text-base font-medium text-[#0E1A2B] truncate font-display tracking-[-0.01em]"
             >
               {proposal.title || `Proposal ${proposalNumber}`}
             </h2>

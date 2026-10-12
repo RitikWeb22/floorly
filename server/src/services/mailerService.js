@@ -106,7 +106,7 @@ export async function sendPasswordResetEmail({ to, resetUrl }) {
     subject: 'Floorly — Reset your password',
     text: `A password reset was requested for your Floorly account.\n\nClick the link below to set a new password:\n${resetUrl}\n\nThis link expires in 1 hour. If you did not request this, you can ignore this email.`,
     html: `
-      <div style="font-family: sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
         <h2 style="color: #0E1A2B;">Reset your password</h2>
         <p style="color: #5B6676;">A password reset was requested for your Floorly account.</p>
         <p style="margin: 24px 0;">
@@ -130,7 +130,7 @@ export async function sendProposalEmail({ to, clientName, proposalTitle, proposa
     subject: `New Proposal: ${proposalTitle}`,
     text: `Hello ${clientName || 'there'},\n\nA new project proposal "${proposalTitle}" has been prepared for your review.\n\nView and sign proposal:\n${proposalUrl}\n`,
     html: `
-      <div style="font-family: sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
         <h2 style="color: #0E1A2B;">Project Proposal</h2>
         <p style="color: #5B6676;">Hello ${clientName || 'there'},</p>
         <p style="color: #5B6676;">A new proposal <strong>${proposalTitle}</strong> is ready for your review and approval.</p>
@@ -153,7 +153,7 @@ export async function sendInvoiceEmail({ to, clientName, invoiceNumber, invoiceU
     subject: `Invoice ${invoiceNumber} from Floorly Workspace`,
     text: `Hello ${clientName || 'there'},\n\nInvoice ${invoiceNumber} for ${amountDueFormatted} is ready for payment.\n\nView invoice:\n${invoiceUrl}\n`,
     html: `
-      <div style="font-family: sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
+      <div style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; max-width: 560px; margin: 0 auto; padding: 24px;">
         <h2 style="color: #0E1A2B;">Invoice ${invoiceNumber}</h2>
         <p style="color: #5B6676;">Hello ${clientName || 'there'},</p>
         <p style="color: #5B6676;">Invoice <strong>${invoiceNumber}</strong> for <strong>${amountDueFormatted}</strong> is available for settlement.</p>

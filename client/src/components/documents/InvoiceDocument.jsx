@@ -196,7 +196,7 @@ export function InvoiceDocumentSheet({
           boxShadow: printMode ? 'none' : '0 10px 30px -10px rgba(14, 26, 43, 0.08)',
           borderColor: printMode ? 'transparent' : '#D9D4C7',
           color: '#0E1A2B',
-          fontFamily: "'Instrument Sans', system-ui, -apple-system, sans-serif",
+          fontFamily: "var(--font-sans, 'Geist', system-ui, -apple-system, sans-serif)",
         }}
       >
         {/* Draft or Void Watermark Overlay */}
@@ -206,8 +206,7 @@ export function InvoiceDocumentSheet({
             className="absolute inset-0 flex items-center justify-center pointer-events-none select-none z-0 overflow-hidden"
           >
             <span
-              className="text-[120px] font-black uppercase tracking-widest text-[#0E1A2B]/[0.04] rotate-[-25deg]"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-[120px] font-semibold uppercase tracking-widest text-[#0E1A2B]/[0.04] rotate-[-25deg] font-display"
             >
               {status === 'draft' ? 'Draft' : 'Void'}
             </span>
@@ -227,10 +226,7 @@ export function InvoiceDocumentSheet({
                 className="h-10 w-auto object-contain mb-3"
               />
             ) : (
-              <h1
-                className="text-[24px] font-extrabold text-[#0E1A2B] leading-none mb-1 tracking-tight"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <h1 className="text-[24px] font-semibold text-[#0E1A2B] leading-none mb-1 tracking-[-0.02em] font-display">
                 {businessName}
               </h1>
             )}
@@ -250,13 +246,10 @@ export function InvoiceDocumentSheet({
 
           {/* Right: Invoice Title & Meta */}
           <div className="sm:text-right space-y-1">
-            <span
-              className="text-[28px] font-extrabold text-[#0047AB] tracking-tight block leading-none"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-            >
+            <span className="text-[28px] font-semibold text-[#0047AB] tracking-[-0.02em] block leading-none font-display">
               Invoice
             </span>
-            <span className="text-sm font-bold text-[#0E1A2B] block pt-1 font-tabular">
+            <span className="text-sm font-semibold text-[#0E1A2B] block pt-1 font-mono">
               {invoiceNumber}
             </span>
 
@@ -419,10 +412,7 @@ export function InvoiceDocumentSheet({
             {/* Balance Due (Cobalt & Emphasized) */}
             <div className="pt-3 border-t-2 border-[#0047AB] flex justify-between items-baseline">
               <span className="text-sm font-black text-[#0E1A2B]">Balance due</span>
-              <span
-                className="text-[22px] font-black text-[#0047AB] font-tabular leading-none"
-                style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-              >
+              <span className="text-[22px] font-semibold text-[#0047AB] tabular-nums lining-nums leading-none font-display">
                 {formatMoney(balanceDue)}
               </span>
             </div>
@@ -440,10 +430,7 @@ export function InvoiceDocumentSheet({
            5. HOW TO PAY (Remittance Details)
            ============================================================= */}
         <section className="py-6 border-b border-[#D9D4C7] space-y-3 invoice-payment-details-box relative z-10">
-          <h2
-            className="text-sm font-bold text-[#0E1A2B] flex items-center gap-1.5"
-            style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
-          >
+          <h2 className="text-sm font-medium text-[#0E1A2B] flex items-center gap-1.5 font-display tracking-[-0.01em]">
             <span>Payment instructions</span>
           </h2>
 
@@ -707,8 +694,7 @@ export function InvoiceDocument({ invoice, client, user, onClose }) {
           <div className="min-w-0">
             <h2
               id="invoice-modal-title"
-              className="text-sm sm:text-base font-bold text-[#0E1A2B] truncate"
-              style={{ fontFamily: "'Bricolage Grotesque', system-ui, sans-serif" }}
+              className="text-sm sm:text-base font-medium text-[#0E1A2B] truncate font-display tracking-[-0.01em]"
             >
               Invoice {invoiceNumber}
             </h2>
