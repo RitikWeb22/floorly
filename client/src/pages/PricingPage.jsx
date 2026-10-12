@@ -276,7 +276,7 @@ export function PricingPage() {
             Manage your freelance career with complete clarity
           </h1>
           <p className="text-sm sm:text-base text-[#5B6676] leading-relaxed">
-            From your very first client brief to multi-milestone agency contracts. Every plan includes the strict mathematical price floor guard.
+            From your very first client brief to multi-milestone agency contracts. Every plan includes the minimum price floor guard.
           </p>
 
           {/* Billing Toggle */}
@@ -574,7 +574,7 @@ export function PricingPage() {
             <div className="space-y-1.5">
               <h3 className="font-bold text-sm">What is the "Pricing Floor Guard"?</h3>
               <p className="text-[#5B6676] leading-relaxed">
-                Floorly mathematically prohibits AI recommendations from dropping below your minimum hourly rate or minimum project floor, ensuring you never work at a loss.
+                Floorly checks AI recommendations against your minimum hourly rate and minimum project floor, ensuring proposals cannot be quoted below your configured minimum.
               </p>
             </div>
             <div className="space-y-1.5">

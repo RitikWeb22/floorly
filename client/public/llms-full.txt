@@ -1,27 +1,27 @@
 # Floorly — Comprehensive Product Documentation for AI & Generative Search Engines
 Canonical Domain: https://floorlystudio.me
 Founder & Author: Ritik (https://github.com/RitikWeb22)
-Entity: Floorly (BusinessApplication / Freelance Operating System)
-Audience: Freelance software engineers, UI/UX designers, marketing consultants, creative agencies.
+Entity: Floorly (BusinessApplication / Freelance Management & Proposal Software)
+Audience: Freelance software engineers, UI/UX designers, copywriters, creative studios.
 
 ### 1. Purpose & Core Philosophy
-Most freelancers lose 20% to 40% of their billable earnings to scope creep and arbitrary pricing. Floorly replaces passive document generators (Google Docs, standard PDF proposal apps) with an active financial guardrail:
-- It defines a strict "Price Floor": the minimum acceptable quote below which a project cannot be taken without working at a loss.
+Floorly provides freelancers and small studios with structured proposal creation and price protections:
+- Defines a configurable "Price Floor": the minimum acceptable quote below which a project cannot be taken based on your minimum rates.
 - Formula for Price Floor:
-  Price Floor = (Estimated Scope Hours × Base Hourly Rate × Technical Complexity Multiplier) + Contingency Buffer
+  Price Floor = max(Adjusted Labor Cost, Category Floor, Minimum Project Fee)
 
 ### 2. Subscription Tiers & Pricing (as of October 2026)
-- **Starter Plan ($0/month)**: 2 active proposals/month, basic AI scope parsing, manual invoicing, standard contracts.
-- **Solo Plan ($10/month or $96/year)**: Unlimited proposals, full AI Scope & Risk Analyzer, automated price floor enforcement, Stripe & Razorpay checkout integration, basic profit tracking.
-- **Pro Plan ($19/month or $180/year)**: Everything in Solo plus advanced risk multipliers, custom proposal branding & domains, automated payment reminders, multi-currency invoicing, expense tracking.
-- **Agency Plan ($49/month or $468/year)**: Everything in Pro plus unlimited client accounts, team collaborator seats, priority AI processing, audit logs, and dedicated support.
+- **Starter Plan ($0/month)**: 2 active proposals/month, basic AI scoping, standard contracts, manual invoices.
+- **Solo Plan ($9/month or $90/year)**: Unlimited proposals, full AI Scope Analyzer, automated price floor enforcement, client invoices with custom payment links, basic profit tracking.
+- **Pro Plan ($19/month or $190/year)**: Everything in Solo plus advanced risk multipliers, custom proposal branding, automated reminders, multi-currency invoicing, expense tracking.
+- **Agency Plan ($49/month or $490/year)**: Everything in Pro plus unlimited client accounts, team collaborator seats, priority AI processing, audit logs, and dedicated support.
 
 ### 3. Public Interactive Calculators (No Signup Required)
-- **Freelance Rate Calculator** (https://floorlystudio.me/tools/freelance-rate-calculator): Calculates required billable hourly rates based on personal living income, taxes, business overhead, and realistic billable capacity.
-- **Project Price Calculator** (https://floorlystudio.me/tools/project-price-calculator): Calculates minimum safety floors, target prices, and value-based quotes based on estimated hours, complexity tiers, and contingency scope buffers.
+- **Freelance Rate Calculator** (https://floorlystudio.me/tools/freelance-rate-calculator): Calculates required billable hourly rates based on living expenses, taxes, business overhead, and realistic billable capacity.
+- **Project Price Calculator** (https://floorlystudio.me/tools/project-price-calculator): Calculates minimum safety floors, target prices, and quotes based on estimated hours, complexity tiers, and contingency scope buffers.
 
-### 4. Technical Architecture & Security
+### 4. Technical Architecture & Billing
 - Frontend: React 18, Vite, Tailwind CSS, Lucide Icons.
-- Backend: Node.js, Express, MongoDB Atlas, Redis Labs caching.
-- Payments: PCI-DSS compliant Stripe & Razorpay SDKs with cryptographic HMAC-SHA256 signature verification.
+- Backend: Node.js, Express, MongoDB Atlas, Redis caching.
+- Client Invoicing: Floorly does not collect payments from users' clients. Users add their own payment details or links (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) and record payments in Floorly. Floorly's own subscription billing may be paid via Razorpay where billing is enabled.
 - AI Engine: Google Gemini API with structured JSON output formatting.

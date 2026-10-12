@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && node scripts/prerender.js",
+    "build": "vite build && node scripts/generate-og.js && node scripts/prerender.js && node scripts/generate-sitemap.js && node scripts/verify-sitemap.js",
+    "verify:sitemap": "node scripts/verify-sitemap.js",
     "preview": "vite preview"
   },
   "dependencies": {

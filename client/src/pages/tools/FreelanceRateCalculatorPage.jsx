@@ -323,7 +323,7 @@ export function FreelanceRateCalculatorPage() {
                 What is a freelance price floor?
               </h3>
               <p className="text-sm text-[#5B6676] mt-2 leading-relaxed">
-                A freelance price floor is the absolute minimum monetary quote you can accept for a project without working at a financial deficit. It accounts for non-billable overhead, vacation days, self-employment taxes, and software costs to guarantee your basic cost of living is protected.
+                A freelance price floor is the minimum monetary quote you accept for a project to cover your living expenses and business costs. It accounts for non-billable overhead, time off, self-employment taxes, and software costs so your baseline financial requirements are met.
               </p>
             </div>
 
@@ -332,7 +332,7 @@ export function FreelanceRateCalculatorPage() {
                 Why can't freelancers bill 40 hours per week?
               </h3>
               <p className="text-sm text-[#5B6676] mt-2 leading-relaxed">
-                Freelancers operate a full business by themselves. Approximately 30% to 50% of work hours are consumed by unbilled activities: client prospecting, scope drafting, contract negotiations, invoicing, and learning. Realistic weekly billable capacity ranges between 20 and 25 hours.
+                Freelancers operate a full business by themselves. Significant work time is consumed by unbilled activities: client prospecting, scope drafting, contract negotiations, invoicing, and administration. Realistic weekly billable capacity often ranges between 20 and 25 hours.
               </p>
             </div>
 
@@ -341,7 +341,7 @@ export function FreelanceRateCalculatorPage() {
                 How does Floorly enforce a price floor?
               </h3>
               <p className="text-sm text-[#5B6676] mt-2 leading-relaxed">
-                Floorly takes your predefined minimum hourly rate and risk criteria, analyzes client briefs with AI, and computes the project floor. When generating interactive proposals, the system restricts quoting below your floor, ensuring you never agree to unprofitable engagements.
+                Floorly takes your predefined minimum hourly rate and risk criteria, analyzes client briefs with AI, and computes the project floor. When generating proposals, the system checks totals against your floor, helping you maintain your minimum pricing.
               </p>
             </div>
           </div>

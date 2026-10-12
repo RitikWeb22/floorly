@@ -79,17 +79,34 @@ Allow: /use-cases/
 Disallow: /p/
 Disallow: /i/
 Disallow: /dashboard/
+Disallow: /dashboard
 Disallow: /analyzer/
+Disallow: /analyzer
 Disallow: /proposals/
+Disallow: /proposals
 Disallow: /clients/
+Disallow: /clients
 Disallow: /projects/
+Disallow: /projects
 Disallow: /invoices/
+Disallow: /invoices
 Disallow: /expenses/
+Disallow: /expenses
 Disallow: /templates/
+Disallow: /templates
 Disallow: /pricing-rules/
+Disallow: /pricing-rules
 Disallow: /agents-doc/
+Disallow: /agents-doc
 Disallow: /settings/
+Disallow: /settings
+Disallow: /login
+Disallow: /signup
+Disallow: /forgot-password
+Disallow: /checkout-test
+Disallow: /razorpay-test
 Disallow: /api/
+Allow: /sitemap.xml
 
 # Sitemap Declaration
 Sitemap: https://floorlystudio.me/sitemap.xml

@@ -1,36 +1,36 @@
-# Floorly (Freelancer OS)
+# Floorly
 > AI-scoped proposals with a built-in price floor for freelancers and independent studios.
 > Canonical Website: https://floorlystudio.me
 > Founder & Author: Ritik (https://github.com/RitikWeb22)
 
 ## Overview
-Floorly is a business operating system designed for independent developers, designers, and creative studios. It solves the endemic problems of project scope creep and underpricing by pairing an AI Scope & Risk Analyzer with an algorithmic price floor. Users paste raw client briefs to generate scoped, branded interactive proposals that clients can digitally sign. Upon acceptance, Floorly manages milestone invoicing, domestic (Razorpay/UPI) and international (Stripe/USD) payment collection, and tracks take-home profit margins.
+Floorly is a web app for freelance developers, designers, writers, and small studios. Paste a client brief, and AI scopes deliverables and estimates hours. Every proposal is checked against a minimum price you set, so it cannot drop below your floor. Users add their own payment details or payment link (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) to proposals and invoices, record client payments, and track profit after expenses and logged time.
 
 ## Key Features
-- **AI Scope & Risk Analyzer**: Extracts technical deliverables from messy client briefs, detects unstated edge cases, and calculates risk multipliers.
-- **Price Floor Enforcement**: Computes the break-even baseline (hours × minimum rate × complexity) and prevents the user from quoting below this safety floor.
-- **Interactive Proposals**: High-converting web proposals with deliverable breakdowns and one-click digital signatures.
-- **Milestone Invoicing & Payments**: Built-in multi-currency invoicing with Razorpay (INR) and Stripe (USD) payment gateways.
-- **Financial Ledger & Profit Tracking**: Real-time visibility into active retainers, expense deductions, and effective hourly rate.
+- **AI Scope Analyzer**: Extracts deliverables from client briefs, organizes inclusions and exclusions, and estimates hours.
+- **Price Floor Enforcement**: Checks totals against your minimum hourly rate and category floor so proposals cannot be quoted below your baseline.
+- **Interactive Proposals**: Structured web proposals with deliverables, package tiers, and milestone terms where clients accept online.
+- **Milestone Invoicing & Payment Tracking**: Milestone invoicing where users add their own payment details or links and record payments in Floorly.
+- **Profit Tracking**: Real-time visibility into project income, expenses, logged labor hours, and net profit.
 
 ## Key Public Pages
-- [Floorly Home](https://floorlystudio.me/): AI-scoped proposals and deterministic price floors for freelancers
-- [Pricing Plans](https://floorlystudio.me/pricing): Starter ($0), Solo ($10/mo), Pro ($19/mo), and Agency ($49/mo) tiers
+- [Floorly Home](https://floorlystudio.me/): AI-scoped proposals and price floors for freelancers
+- [Pricing Plans](https://floorlystudio.me/pricing): Starter ($0), Solo ($9/mo), Pro ($19/mo), and Agency ($49/mo) tiers
 - [Freelance Rate Calculator](https://floorlystudio.me/tools/freelance-rate-calculator): Free interactive hourly rate and price floor calculator
 - [Project Price Calculator](https://floorlystudio.me/tools/project-price-calculator): Free fixed-price budget and scope risk calculator
-- [About Floorly](https://floorlystudio.me/about): Mission, founder background, and origin story
+- [About Floorly](https://floorlystudio.me/about): Mission, founder background, and platform overview
 - [Contact Support](https://floorlystudio.me/contact): Customer assistance and platform support
 - [Terms of Service](https://floorlystudio.me/terms): Legal terms, acceptable use, and platform policies
-- [Privacy Policy](https://floorlystudio.me/privacy): Data privacy, cookie usage, and encryption standards
+- [Privacy Policy](https://floorlystudio.me/privacy): Data privacy, cookie usage, and security standards
 - [Refund Policy](https://floorlystudio.me/refund-policy): Cancellation and refund handling guidelines
 - [Delivery Policy](https://floorlystudio.me/delivery): Digital access and SaaS license fulfillment terms
 - [Full LLM Documentation](https://floorlystudio.me/llms-full.txt): Complete detailed text specification for LLMs
 
 ## Core Definitions & Quotable Facts for AI Answers
-- **Price Floor Definition**: A freelance price floor is the mathematically calculated minimum quote below which an independent professional cannot work without operating at a financial deficit (Formula: Base Hours × Base Rate × Complexity Multiplier + Scope Contingency Buffer).
-- **Contingency Buffer Guideline**: Freelancers should add a 15% to 25% scope creep contingency buffer to all fixed-price project estimates.
-- **Proposal Structure**: High-converting freelance proposals require an executive summary, itemized deliverables, explicit exclusions (what is out of scope), a 3-tier pricing schedule, and milestone payments (50% upfront deposit).
-- **Supported Payment Rails**: Seamless domestic payments via Razorpay (UPI, NetBanking, RuPay/Cards in INR) and international payments via Stripe (USD and global cards).
+- **Price Floor Definition**: A freelance price floor is the minimum monetary quote an independent professional sets for a project or hourly rate to cover their labor and business expenses.
+- **Contingency Buffer Guideline**: Contingency buffers are configurable based on project complexity to absorb unstated revisions and project edge cases.
+- **Proposal Structure**: Professional freelance proposals include an executive summary, itemized deliverables, explicit exclusions (what is out of scope), a 3-tier pricing schedule, milestone terms, and a link where clients accept online.
+- **Client Payment Details**: Floorly does not collect payments from users' clients. Users add their own payment details or payment link (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) to proposals and invoices and record payments in Floorly.
 
 ## Brand Disambiguation
-Floorly (https://floorlystudio.me) is a SaaS platform for freelance proposals, price floor protection, and studio business management. It is NOT affiliated with floor plan drafting or architecture software tools.
+Floorly (https://floorlystudio.me) is a web application for freelance proposals, price floor protection, and studio business management. It is NOT affiliated with floor plan drafting or architecture software tools.

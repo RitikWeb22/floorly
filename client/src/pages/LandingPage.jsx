@@ -4,6 +4,7 @@ import { Logo } from '../components/common/Logo';
 import { Footer } from '../components/layout/Footer';
 import { siteConfig } from '../config/site';
 import { PRICING_PLANS } from '../config/plans';
+import { computePricing } from '../utils/pricingEngine';
 
 const CURRENCIES = {
   USD: { label: 'USD ($)', symbol: '$', defaultRate: 75, defaultFloor: 1200, step: 50 },
@@ -62,6 +63,27 @@ export function LandingPage() {
       currency: calcCurrency,
       maximumFractionDigits: 0,
     }).format(n);
+
+  // Real pricing calculation for illustrative example (Requirement 4)
+  const illustrativeExample = computePricing(
+    {
+      estimatedHours: 40,
+      projectType: 'landing-pages',
+      complexity: 'medium',
+      isRushDelivery: false,
+    },
+    {
+      hourlyRate: 50,
+      minHourlyRate: 35,
+      minProjectFee: 300,
+      categoryMinimums: { 'landing-pages': 500 },
+      complexityMultipliers: { simple: 1.0, medium: 1.25, complex: 1.5 },
+      defaultContingencyPercent: 10,
+      preferredProfitMargin: 25,
+      tierMultipliers: { essential: 1.0, standard: 1.20, premium: 1.50 },
+      roundingStep: 50,
+    }
+  );
 
   // 4. Pricing Billing Period Toggle
   const [isAnnual, setIsAnnual] = useState(false);
@@ -347,16 +369,26 @@ export function LandingPage() {
 
             <p
               style={{
-                fontSize: '17px',
-                color: 'var(--muted, #5B6676)',
-                margin: '20px 0 26px',
-                maxWidth: '30em',
-                lineHeight: 1.55,
+                fontSize: '16px',
+                color: 'var(--ink, #0E1A2B)',
+                margin: '18px 0 8px',
+                maxWidth: '34em',
+                lineHeight: 1.6,
+                fontWeight: 500,
               }}
             >
-              Paste a client brief. Floorly scopes it with AI, writes the proposal, and refuses to quote below your
-              minimum. Then it invoices, tracks payments and shows your real profit.
+              Floorly is a web app for freelancers and small studios. Paste a client brief, and AI scopes the work and estimates the hours. Every proposal is checked against a minimum price you set, so it can't go below your floor. Then invoice by milestone, record payments, and see your profit after expenses and your own time. Built for freelance developers, designers, writers and small agencies who send fixed-price proposals.
             </p>
+            <div
+              style={{
+                fontSize: '13px',
+                color: 'var(--muted, #5B6676)',
+                marginBottom: '20px',
+                fontWeight: 500,
+              }}
+            >
+              Last updated: October 13, 2026
+            </div>
 
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link
@@ -420,6 +452,9 @@ export function LandingPage() {
             >
               What is your break-even project price floor?
             </h2>
+            <p style={{ color: 'var(--muted, #5B6676)', fontSize: '14px', marginBottom: '12px', lineHeight: 1.5 }}>
+              A break-even price floor is the minimum price required to cover your target hourly rate, technical complexity, and contingency time without working at a loss.
+            </p>
             <p style={{ color: 'var(--muted, #5B6676)', fontSize: '14px', marginBottom: '22px' }}>
               A client says the landing page budget is&hellip;
             </p>
@@ -621,7 +656,7 @@ export function LandingPage() {
             How do you turn a client brief into a paid invoice in three steps?
           </h2>
           <p style={{ color: 'var(--muted, #5B6676)', fontSize: '18px', maxWidth: '34em', marginTop: '16px' }}>
-            No spreadsheets, no guessing hours, no awkward rate negotiation.
+            Paste a brief to let AI scope deliverables, review the draft against your minimum price floor, and invoice milestones while recording payments as they arrive.
           </p>
 
           <div
@@ -709,11 +744,10 @@ export function LandingPage() {
                   fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
                 }}
               >
-                Step 3: How do you collect milestone payments and see real profit?
+                Step 3: How do you invoice milestones, record payments, and see real profit?
               </h3>
               <p style={{ color: 'var(--muted, #5B6676)' }}>
-                Milestone invoices, payment tracking and expenses roll into a net margin that counts your own time, not
-                just cash in.
+                Add your own payment details or links to milestone invoices and record payments in Floorly when received. Income and expenses roll into a net margin that counts your own time.
               </p>
             </div>
           </div>
@@ -734,8 +768,8 @@ export function LandingPage() {
             >
               How does Floorly work across proposals, floors, and profit tracking?
             </h2>
-            <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px' }}>
-              Clean, fast and purpose-built for client work.
+            <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px', maxWidth: '36em', margin: '8px auto 0' }}>
+              Floorly connects your workflow from initial brief to final payment. AI scopes deliverables, your floor protects your pricing, and the ledger tracks your payments and net margins.
             </p>
 
             {/* Segmented Switcher */}
@@ -849,11 +883,14 @@ export function LandingPage() {
                   <div style={{ border: '1px solid var(--line, #E8E0CF)', borderRadius: '12px', padding: '20px' }}>
                     <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--muted, #5B6676)' }}>CLIENT SCOPE</div>
                     <h3 style={{ fontSize: '20px', margin: '6px 0 12px', fontWeight: 700 }}>How is deliverable scope structured in proposals?</h3>
+                    <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', marginBottom: '10px' }}>
+                      Proposals separate included deliverables from out-of-scope items so project boundaries are clear before work starts.
+                    </p>
                     <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)' }}>
                       Estimated Effort: 42 hours • 3 Milestones • Scope confidence: 85%
                     </p>
                     <div style={{ marginTop: '16px', fontSize: '14px', lineHeight: 1.8 }}>
-                      <div>✓ Stripe Checkout integration (Included)</div>
+                      <div>✓ Checkout &amp; payment link integration (Included)</div>
                       <div>✓ Responsive UI components (Included)</div>
                       <div style={{ color: '#B91C1C' }}>✕ Custom CRM sync (Excluded - Change Order required)</div>
                     </div>
@@ -888,7 +925,7 @@ export function LandingPage() {
                 <div style={{ maxWidth: '640px', margin: '0 auto' }}>
                   <h3 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '6px' }}>What pricing safeguards prevent freelancer undercharging?</h3>
                   <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', marginBottom: '24px' }}>
-                    These rules execute deterministically on the server after AI drafts any quote.
+                    Floorly checks every proposal on the server against your minimum hourly rate and minimum project fee. If an estimate falls below your floor, the price is automatically raised to your baseline.
                   </p>
                   <div style={{ display: 'flex', flexDirection: 'column', gap: '14px' }}>
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-1 p-3.5 sm:p-4 border border-[var(--line,#E8E0CF)] rounded-xl">
@@ -908,7 +945,7 @@ export function LandingPage() {
                     <div className="flex flex-col sm:flex-row sm:justify-between gap-1 p-3.5 sm:p-4 border border-[var(--line,#E8E0CF)] rounded-xl">
                       <div>
                         <strong>Complexity Multipliers</strong>
-                        <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>Standard (1.0x), High Risk / Third-Party (1.25x - 1.5x)</div>
+                        <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>Configurable based on project complexity (e.g. 1.0x to 1.5x)</div>
                       </div>
                       <span style={{ fontWeight: 700, fontSize: '18px', color: 'var(--cobalt, #0047AB)' }}>Enabled</span>
                     </div>
@@ -956,7 +993,7 @@ export function LandingPage() {
             What core features protect freelancers from scope creep and low quotes?
           </h2>
           <p style={{ color: '#CFE0F7', fontSize: '18px', maxWidth: '34em', marginTop: '16px' }}>
-            One workspace instead of five tools that don't talk to each other.
+            Floorly combines AI scope analysis, server-enforced minimum price floors, scope-guard clauses, milestone invoicing, and profit tracking into a single workflow.
           </p>
 
           <div
@@ -1071,10 +1108,10 @@ export function LandingPage() {
                     shrink: 0,
                   }}
                 />
-                Which global payment gateways and currencies are supported?
+                How do payment details and invoicing currencies work?
               </h3>
               <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
-                Multi-currency, VAT/GST/sales tax, tax IDs, and payment instructions for card, PayPal or bank transfer.
+                Floorly does not collect client payments directly. You add your own payment details or links (such as bank details, PayPal, Stripe or Razorpay links, or UPI for INR) to invoices and log payments in Floorly across 8 supported currencies.
               </p>
             </div>
 
@@ -1155,7 +1192,7 @@ export function LandingPage() {
                 How do you calculate a safe project price floor before quoting?
               </h2>
               <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px' }}>
-                See how complexity multipliers and baseline rules safeguard your quotation.
+                Multiply estimated hours by your hourly rate, apply a complexity multiplier for risk, and compare against your configured minimum project fee.
               </p>
             </div>
 
@@ -1377,8 +1414,11 @@ export function LandingPage() {
               fontFamily: "'Bricolage Grotesque', system-ui, sans-serif",
             }}
           >
-            What are the pricing plans for Floorly Freelance Studio OS?
+            What are the pricing plans for Floorly?
           </h2>
+          <p style={{ color: 'var(--muted, #5B6676)', marginTop: '12px', fontSize: '17px', maxWidth: '42em', lineHeight: 1.6 }}>
+            Floorly offers four tiers, from a free Starter plan for early-stage freelancers to paid plans with full AI scoping, custom proposals, milestone invoicing, and profit tracking. Choose monthly billing or save 17% with annual billing.
+          </p>
 
           {/* Toggle */}
           <div
@@ -1585,10 +1625,10 @@ export function LandingPage() {
                 margin: '0 auto',
               }}
             >
-              Why do independent developers and designers trust Floorly?
+              Why do independent developers and designers use Floorly?
             </h2>
             <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px', fontSize: '16px' }}>
-              Used by freelance developers, agency owners and consultants holding their ground on pricing.
+              Freelance developers, designers, and consultants use Floorly to calculate sustainable quotes, enforce minimum price floors, and track project profit after expenses and logged time.
             </p>
           </div>
 
@@ -1661,6 +1701,9 @@ export function LandingPage() {
           >
             Frequently asked questions: how does Floorly protect freelancer income?
           </h2>
+          <p style={{ color: 'var(--muted, #5B6676)', marginTop: '12px', fontSize: '17px', maxWidth: '42em', lineHeight: 1.6 }}>
+            Here are direct answers to common questions about setting minimum price floors, structuring project proposals, and managing client billing.
+          </p>
 
           <div style={{ maxWidth: '780px', marginTop: '40px' }}>
             <details
@@ -1687,7 +1730,7 @@ export function LandingPage() {
                 <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
               </summary>
               <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
-                A freelance price floor is the non-negotiable minimum monetary quote an independent professional can accept without working at a financial deficit. It is mathematically calculated by multiplying required hourly break-even costs by project scope, complexity multipliers, and contingency buffers to guarantee sustainable profitability.
+                A freelance price floor is the minimum monetary quote an independent professional sets for a project or hourly rate to cover their labor and business expenses. It combines your baseline hourly rate, estimated hours, and configurable scope buffers so you never quote below your minimum.
               </p>
             </details>
 
@@ -1714,7 +1757,7 @@ export function LandingPage() {
                 <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
               </summary>
               <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
-                Freelancers should add a 15% to 25% contingency buffer to all fixed-price project estimates. Client briefs routinely omit third-party API dependencies, revision cycles, and responsive edge cases. The contingency buffer absorbs unstated revisions without eroding your effective take-home hourly rate.
+                Contingency buffers are configurable based on project complexity, with a common starting buffer of 10% to 20% on fixed-price estimates. This extra margin absorbs unanticipated revisions and project edge cases without lowering your effective hourly earnings.
               </p>
             </details>
 
@@ -1741,7 +1784,7 @@ export function LandingPage() {
                 <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
               </summary>
               <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
-                A high-converting freelance proposal must include: an executive problem summary, itemized deliverables, explicit exclusions (what is out of scope), a 3-tier pricing schedule, payment milestones (50% deposit upfront), revision limits, and a one-click digital signature authorization.
+                A professional freelance proposal includes an executive project summary, itemized deliverables, explicit out-of-scope exclusions, a 3-tier pricing schedule, milestone payment terms, revision limits, and a link where clients accept online.
               </p>
             </details>
 
@@ -1824,8 +1867,7 @@ export function LandingPage() {
                 <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
               </summary>
               <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
-                Add your own payment link (Stripe, PayPal or others) or bank transfer details to any invoice, and mark it
-                paid when the money arrives.
+                Floorly does not collect payments from your clients. You add your own payment details or payment link (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) to proposals and invoices, and record payments in Floorly once received.
               </p>
             </details>
 
@@ -1990,8 +2032,7 @@ export function LandingPage() {
                 How does Floorly protect full-stack developers?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
-                Catches unstated API integrations, background task queues, and edge cases from unstructured client briefs.
-                Applies 1.15x–1.50x technical complexity multipliers automatically.
+                Catches unstated API integrations, background task queues, and edge cases from unstructured client briefs, applying configurable technical complexity multipliers to protect your time.
               </p>
             </div>
 
@@ -2008,8 +2049,7 @@ export function LandingPage() {
                 How does Floorly protect UI/UX product designers?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
-                Defines itemized screen deliverables, design systems, and explicit revision limits. Bakes in a 20% scope
-                contingency buffer so design iterations never eat into profits.
+                Defines itemized screen deliverables, design systems, and explicit revision limits. Includes a configurable contingency buffer so design iterations never eat into profits.
               </p>
             </div>
 
@@ -2026,8 +2066,7 @@ export function LandingPage() {
                 How does Floorly benefit copywriters and strategists?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
-                Prevents open-ended feedback loops and rewrites. Locks in milestone billing structures (50% deposit upfront)
-                with legally binding digital authorization.
+                Prevents open-ended feedback loops and rewrites. Organizes milestone billing schedules with clear terms where clients accept online.
               </p>
             </div>
 
@@ -2044,13 +2083,12 @@ export function LandingPage() {
                 How does Floorly streamline boutique creative studios?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
-                For 2–5 person agencies standardizing intake. Guarantees team members never quote below target margin floors,
-                regardless of client pushback or aggressive negotiation.
+                For small studios standardizing intake and proposals. Helps team members consistently adhere to target price floors, preventing underquoting during client negotiations.
               </p>
             </div>
           </div>
 
-          {/* Real-World Case Study Box */}
+          {/* Illustrative Example Box */}
           <div
             style={{
               background: '#FFFFFF',
@@ -2070,19 +2108,16 @@ export function LandingPage() {
                 margin: '0 0 12px',
               }}
             >
-              Case Study: How did a mathematical price floor preserve $2,250 on a fixed quote?
+              Example (illustrative): How does the pricing calculation work?
             </h3>
             <p style={{ fontSize: '15px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: '0 0 16px' }}>
-              On a custom e-commerce web build (60 estimated hours at a baseline of $75/hr), the raw labor estimate was
-              $4,500. Floorly applied a 1.25x complexity multiplier for webhook payment integrations ($5,625) plus a 20%
-              mandatory scope contingency ($1,125), locking the minimum quote at $6,750. When the client requested 3
-              unanticipated checkout modifications, the freelancer absorbed zero financial loss.
+              For a sample {illustrativeExample.estimatedHours}-hour project at a baseline rate of ${illustrativeExample.standardHourlyRate}/hr, Floorly adds a configurable {illustrativeExample.contingencyPercent}% scope contingency (+{illustrativeExample.contingencyHours}h) and applies a {illustrativeExample.complexityMultiplier}x multiplier for medium complexity. This calculates structured package tiers starting at ${illustrativeExample.tiers.essential.toLocaleString()} (Essential), ${illustrativeExample.tiers.standard.toLocaleString()} (Standard), and ${illustrativeExample.tiers.premium.toLocaleString()} (Premium), while ensuring total pricing never drops below your configured category floor (${illustrativeExample.categoryFloor.toLocaleString()}).
             </p>
             <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', fontSize: '13px', fontWeight: 600 }}>
-              <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Base: $4,500 (60h @ $75/hr)</span>
-              <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Complexity Multiplier: 1.25x ($5,625)</span>
-              <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Contingency Buffer: 20% (+$1,125)</span>
-              <span style={{ color: '#047857' }}>★ Enforced Floor: $6,750 Total</span>
+              <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Base: ${illustrativeExample.labor.toLocaleString()} ({illustrativeExample.hours} total hours @ ${illustrativeExample.standardHourlyRate}/hr)</span>
+              <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Complexity Multiplier: {illustrativeExample.complexityMultiplier}x</span>
+              <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Contingency: {illustrativeExample.contingencyPercent}% (+{illustrativeExample.contingencyHours}h)</span>
+              <span style={{ color: '#047857' }}>★ Package Tiers: Essential ${illustrativeExample.tiers.essential.toLocaleString()} | Standard ${illustrativeExample.tiers.standard.toLocaleString()} | Premium ${illustrativeExample.tiers.premium.toLocaleString()}</span>
             </div>
           </div>
         </div>

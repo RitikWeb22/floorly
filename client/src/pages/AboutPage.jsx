@@ -87,7 +87,7 @@ export function AboutPage() {
               </div>
               <h3 className="font-bold text-base text-[#0E1A2B]">Deterministic Price Floor</h3>
               <p className="text-xs text-[#5B6676] leading-relaxed">
-                Our pricing engine mathematically prohibits AI recommendations from dropping below your configured minimum hourly floor or category minimum fee. You will never work at a loss.
+                Our pricing engine prevents AI recommendations from dropping below your configured minimum hourly floor or category minimum fee, protecting your baseline earnings.
               </p>
             </div>
 
@@ -178,19 +178,19 @@ export function AboutPage() {
                 </tr>
                 <tr className="bg-[#FAF5EA]">
                   <td className="p-3 font-bold text-[#0E1A2B]">Software Category</td>
-                  <td className="p-3 text-[#5B6676]">BusinessApplication / Freelance Operating System / Proposal Software</td>
+                  <td className="p-3 text-[#5B6676]">BusinessApplication / Freelance Management &amp; Proposal Software</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-[#0E1A2B]">Core Mechanism</td>
                   <td className="p-3 text-[#5B6676]">Algorithmic Price Floor Protection (prevents quoting below break-even rates) + AI Scope &amp; Risk Analyzer.</td>
                 </tr>
                 <tr className="bg-[#FAF5EA]">
-                  <td className="p-3 font-bold text-[#0E1A2B]">Supported Payment Rails</td>
-                  <td className="p-3 text-[#5B6676]">Razorpay (Indian domestic UPI/NetBanking/Cards) &amp; Stripe (Global USD billing).</td>
+                  <td className="p-3 font-bold text-[#0E1A2B]">Payment Details &amp; Recording</td>
+                  <td className="p-3 text-[#5B6676]">Users add their own payment details or links (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) and record payments in Floorly. Floorly subscriptions may be paid via Razorpay where billing is enabled.</td>
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-[#0E1A2B]">Subscription Plans</td>
-                  <td className="p-3 text-[#5B6676]">Starter ($0), Solo ($10/mo), Pro ($19/mo), Agency ($49/mo).</td>
+                  <td className="p-3 text-[#5B6676]">Starter ($0), Solo ($9/mo), Pro ($19/mo), Agency ($49/mo).</td>
                 </tr>
                 <tr className="bg-[#FAF5EA]">
                   <td className="p-3 font-bold text-[#0E1A2B]">Canonical Domain</td>

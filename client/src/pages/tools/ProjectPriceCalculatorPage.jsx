@@ -299,7 +299,7 @@ export function ProjectPriceCalculatorPage() {
                   <ArrowRight className="w-4 h-4" />
                 </Link>
                 <p className="text-[11px] text-center text-[#5B6676] mt-2">
-                  Floorly writes the scope, creates the proposal, and collects deposit payments automatically.
+                  Floorly scopes the deliverables, creates the proposal, and helps you invoice by milestone with your own payment details or links.
                 </p>
               </div>
             </div>
@@ -323,7 +323,7 @@ export function ProjectPriceCalculatorPage() {
               Why fixed-price projects fail without risk multipliers
             </h3>
             <p className="text-sm text-[#5B6676] leading-relaxed">
-              When a client says "it's just a simple 2-page website," they rarely account for browser cross-compatibility, third-party authentication errors, image formatting, or content delays. Applying a 1.25x to 1.5x complexity multiplier ensures your quote covers technical realities instead of optimistic fantasies.
+              When a client says "it's just a simple 2-page website," they rarely account for browser cross-compatibility, third-party authentication errors, image formatting, or content delays. Applying configurable complexity multipliers ensures your quote covers technical realities instead of optimistic guesses.
             </p>
           </div>
 

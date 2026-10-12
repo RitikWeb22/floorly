@@ -34,8 +34,8 @@
     <rect x="16" y="51" width="32" height="5" rx="2.5" fill="#FFC72C"/>
     
     <text x="84" y="44" font-family="'Bricolage Grotesque', system-ui, -apple-system, sans-serif" font-size="40" font-weight="800" fill="#0E1A2B" letter-spacing="-1">Floorly</text>
-    <rect x="235" y="16" width="145" height="34" rx="17" fill="#E8F0FE" stroke="#CCE0FF" stroke-width="1.5" />
-    <text x="252" y="38" font-family="'Instrument Sans', system-ui, sans-serif" font-size="14" font-weight="700" fill="#0047AB" letter-spacing="0.5">STUDIO OS</text>
+    <rect x="235" y="16" width="165" height="34" rx="17" fill="#E8F0FE" stroke="#CCE0FF" stroke-width="1.5" />
+    <text x="252" y="38" font-family="'Instrument Sans', system-ui, sans-serif" font-size="14" font-weight="700" fill="#0047AB" letter-spacing="0.5">FOR FREELANCERS</text>
   </g>
 
   <!-- Hero Typography -->
@@ -51,7 +51,7 @@
     AI-scoped proposals with a built-in price floor for freelancers &amp; studios.
   </text>
   <text x="100" y="450" font-family="'Instrument Sans', system-ui, sans-serif" font-size="24" font-weight="500" fill="#5B6676">
-    From brief to signed proposal, milestone invoices, and real profit tracking.
+    From brief to accepted proposal, milestone invoices, and real profit tracking.
   </text>
 
   <!-- Feature Pills -->
