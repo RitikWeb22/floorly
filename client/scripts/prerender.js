@@ -29,32 +29,38 @@ const ROUTES = [
             <a href="/signup">Start Free</a>
           </nav>
           <h1>Never undercharge again.</h1>
-          <p>Floorly turns messy client briefs into AI-scoped proposals that can never drop below your price floor. Built specifically for independent freelancers, solo consultants, and boutique creative studios.</p>
-          <p>Paste a client brief or email thread. Floorly scopes technical deliverables with AI, drafts the client agreement, and enforces your deterministic price floor so you never negotiate against yourself or work at a loss.</p>
+          <p>Floorly turns client briefs into AI-scoped proposals with deterministic price floors.</p>
+          <p>Scope technical deliverables, draft agreements, and enforce non-negotiable minimum rates.</p>
+          <p>Built for independent freelance developers, UI/UX designers, and creative boutique agencies.</p>
         </header>
+
+        <figure>
+          <img src="https://floorlystudio.me/og-image.svg" alt="Floorly Freelance OS Interface with AI Scope Analyzer and Price Floor Engine" width="1200" height="630" />
+          <figcaption>Floorly Proposal and Price Floor Architecture</figcaption>
+        </figure>
 
         <section aria-labelledby="core-capabilities">
           <h2 id="core-capabilities">AI-Scoped Proposals &amp; Deterministic Price Floors for Freelancers</h2>
           <ol>
             <li>
-              <strong>1. AI-Scoped Proposals from Raw Client Briefs:</strong>
-              <p>Stop spending hours decoding vague client requirements. Floorly ingests client emails, RFP documents, and project briefs to generate complete AI-scoped proposals. It identifies exact deliverables, flags out-of-scope tasks, estimates realistic engineering hours, and structures 3-tier milestone schedules that clients can digitally sign in minutes.</p>
+              <h3>1. AI-Scoped Proposals</h3>
+              <p>Extract exact deliverables from messy client briefs, detect edge cases, and stop unbilled revisions.</p>
             </li>
             <li>
-              <strong>2. Unbreakable Price Floors:</strong>
-              <p>Freelancers frequently undercharge under client pressure. Floorly enforces a strict mathematical price floor based on your living expenses, tax reserves, hourly break-even costs, and project complexity. The system algorithmically prevents you from sending proposals or issuing invoices below your defined price floor.</p>
+              <h3>2. Deterministic Price Floors</h3>
+              <p>Enforce unbreakable minimum fees based on your hourly costs, tax reserves, and project scope.</p>
             </li>
             <li>
-              <strong>3. Branded Proposals &amp; Digital Signatures:</strong>
-              <p>Deliver interactive, branded proposals that build trust and close contracts faster. Clients can review milestone breakdowns, select project add-ons, and provide one-click digital signatures with full audit logging.</p>
+              <h3>3. Interactive Proposals</h3>
+              <p>Deliver branded client proposals with itemized milestones, add-on tiers, and one-click signatures.</p>
             </li>
             <li>
-              <strong>4. Multi-Currency Global &amp; Domestic Invoicing:</strong>
-              <p>Issue professional invoices with automated payment tracking. Accept international cards in USD via Stripe and domestic payments in INR via Razorpay with instant UPI and NetBanking checkout.</p>
+              <h3>4. Multi-Currency Invoicing</h3>
+              <p>Collect domestic payments via Razorpay (UPI and INR) and international card payments via Stripe (USD).</p>
             </li>
             <li>
-              <strong>5. Real Net Profit &amp; Expense Tracking:</strong>
-              <p>Revenue is not profit. Floorly deducts software subscriptions, sub-contractor fees, transaction processing costs, and tax obligations to reveal your true hourly take-home profit margin on every client engagement.</p>
+              <h3>5. Real Profit Margins</h3>
+              <p>Deduct software fees, subcontractors, and taxes automatically to view your true hourly take-home pay.</p>
             </li>
           </ol>
         </section>
@@ -81,11 +87,16 @@ const ROUTES = [
 
         <section aria-labelledby="comparison">
           <h2 id="comparison">Floorly vs. Generic Freelance Invoicing Software</h2>
+          <p>Floorly protects freelance income before quoting, whereas legacy apps only track invoices after contracts are signed.</p>
           <ul>
             <li><strong>Floorly:</strong> Safeguards revenue before you quote with AI scoping, risk detection, and mathematical price floors.</li>
             <li><strong>Generic Invoicing Tools:</strong> Only record numbers after the contract is already signed, offering zero undercharging prevention.</li>
           </ul>
         </section>
+
+        <aside aria-label="Article Metadata">
+          <p>Published: <time datetime="2026-10-01">October 1, 2026</time> | Last Modified: <time datetime="2026-10-12">October 12, 2026</time> | Author: Ritik</p>
+        </aside>
 
         <footer>
           <nav aria-label="Footer Navigation">
@@ -106,6 +117,8 @@ const ROUTES = [
         "description": "Floorly turns client briefs into AI proposals with unbreakable price floors. Scope projects, invoice with Stripe & Razorpay, and track true profit.",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Web",
+        "datePublished": "2026-10-01T00:00:00Z",
+        "dateModified": "2026-10-12T12:00:00Z",
         "author": {
           "@type": "Person",
           "name": "Ritik",
