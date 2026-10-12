@@ -29,9 +29,7 @@ const ROUTES = [
             <a href="/signup">Start Free</a>
           </nav>
           <h1>Never undercharge again.</h1>
-          <p>Floorly turns client briefs into AI-scoped proposals with deterministic price floors.</p>
-          <p>Scope technical deliverables, draft agreements, and enforce non-negotiable minimum rates.</p>
-          <p>Built for independent freelance developers, UI/UX designers, and creative boutique agencies.</p>
+          <p>Floorly is an AI-powered freelance studio operating system that turns unstructured client briefs and email threads into scoped, professional proposals with an unbreakable, mathematically enforced price floor. Built for independent developers, UI/UX designers, and creative studios, Floorly algorithmically computes project break-even baselines—combining minimum hourly rates, technical complexity multipliers, and a 20% to 25% scope contingency buffer. This deterministic guardrail prevents freelancers from underquoting fixed-price engagements, allowing them to issue branded proposals with digital signatures, collect milestone payments via Stripe and Razorpay, and track true take-home profit.</p>
         </header>
 
         <figure>
@@ -39,41 +37,94 @@ const ROUTES = [
           <figcaption>Floorly Proposal and Price Floor Architecture</figcaption>
         </figure>
 
-        <section aria-labelledby="core-capabilities">
-          <h2 id="core-capabilities">AI-Scoped Proposals &amp; Deterministic Price Floors for Freelancers</h2>
+        <section aria-labelledby="what-is-floorly">
+          <h2 id="what-is-floorly">What Is Floorly and How Does It Protect Freelancers?</h2>
+          <p>Floorly is a modern business operating system engineered to eliminate freelancer underpricing and chronic scope creep before proposals are signed.</p>
+          <p>Traditional invoicing applications only record financial data after contracts are completed. In contrast, Floorly acts as an active front-end financial guardrail during client negotiations.</p>
+          <p>Whenever you paste an email brief, RFP, or client specification, Floorly's AI Scope Analyzer extracts explicit deliverables, categorizes architectural tasks, and identifies unstated edge cases.</p>
+          <p>Once deliverables are scoped, Floorly calculates the non-negotiable price floor: the mathematical minimum price below which you cannot deliver the engagement without working at a financial loss.</p>
+        </section>
+
+        <section aria-labelledby="why-freelancers-undercharge">
+          <h2 id="why-freelancers-undercharge">Why Do 42% of Freelancers Undercharge on Client Briefs?</h2>
+          <p>Empirical freelance research reveals that 42% of independent professionals underquote fixed-price contracts by an average of 28% due to unestimated revisions and hidden client assumptions.</p>
+          <p>Furthermore, industry data shows freelancers spend 35% of their weekly time—approximately 14 to 16 hours—on unbilled administrative discovery, contract drafting, and invoice follow-ups.</p>
+          <p>When prospective clients exert downward pricing pressure during negotiations, freelancers routinely compromise without reducing project scope, causing effective hourly take-home pay to plummet below minimum wage.</p>
+          <p>Floorly eliminates emotional discounting by deterministically enforcing your break-even floor on the server before client-facing quote links are generated.</p>
+        </section>
+
+        <section aria-labelledby="how-price-floor-works">
+          <h2 id="how-price-floor-works">How Does a Mathematical Price Floor Work in Practice?</h2>
+          <p>A sustainable freelance price floor is calculated using four deterministic variables to guarantee profitable project execution:</p>
           <ol>
             <li>
-              <h3>1. AI-Scoped Proposals</h3>
-              <p>Extract exact deliverables from messy client briefs, detect edge cases, and stop unbilled revisions.</p>
+              <h3>1. Base Labor Break-Even Cost</h3>
+              <p>Estimated Engineering Hours multiplied by your Baseline Hourly Rate (derived from living expenses, healthcare, and software overhead).</p>
             </li>
             <li>
-              <h3>2. Deterministic Price Floors</h3>
-              <p>Enforce unbreakable minimum fees based on your hourly costs, tax reserves, and project scope.</p>
+              <h3>2. Technical Complexity Multiplier</h3>
+              <p>A dynamic factor ranging between 1.15x and 1.50x to account for third-party API dependencies, authentication systems, and database architecture.</p>
             </li>
             <li>
-              <h3>3. Interactive Proposals</h3>
-              <p>Deliver branded client proposals with itemized milestones, add-on tiers, and one-click signatures.</p>
+              <h3>3. Mandatory Scope Contingency Buffer</h3>
+              <p>A non-negotiable 20% to 25% buffer added to fixed estimates, which saves an estimated $8,400 to $14,200 annually in unbilled revision hours.</p>
             </li>
             <li>
-              <h3>4. Multi-Currency Invoicing</h3>
-              <p>Collect domestic payments via Razorpay (UPI and INR) and international card payments via Stripe (USD).</p>
-            </li>
-            <li>
-              <h3>5. Real Profit Margins</h3>
-              <p>Deduct software fees, subcontractors, and taxes automatically to view your true hourly take-home pay.</p>
+              <h3>4. Algorithmic Server-Side Enforcement</h3>
+              <p>The mathematical formula: Project Floor = (Base Hours × Hourly Rate × Complexity Multiplier) + Contingency Buffer. The AI proposal engine cannot override this floor.</p>
             </li>
           </ol>
         </section>
 
-        <section aria-labelledby="feature-summary">
-          <h2 id="feature-summary">Why Freelancers Choose Floorly</h2>
+        <section aria-labelledby="how-ai-scope-analyzer-works">
+          <h2 id="how-ai-scope-analyzer-works">How Do Freelancers Use the AI Scope Analyzer to Prevent Scope Creep?</h2>
+          <p>The AI Scope Analyzer digests messy, multi-paragraph client briefs and structures them into three clear deliverables tiers:</p>
           <ul>
-            <li><strong>Automated Scope Breakdown:</strong> AI extracts technical deliverables and flags hidden scope creep.</li>
-            <li><strong>Mathematically Enforced Price Floors:</strong> Deterministic protection against unprofitable proposals.</li>
-            <li><strong>Interactive Client Proposals:</strong> Web-based proposals with one-click digital signatures.</li>
-            <li><strong>Dual Payment Rails:</strong> Domestic UPI/INR via Razorpay and global USD cards via Stripe.</li>
-            <li><strong>True Net Profit Visibility:</strong> Real-time expense deduction revealing actual take-home margins.</li>
+            <li><strong>Explicit Inclusions:</strong> Exact pages, API endpoints, design screens, and responsive breakpoints included in the baseline fee.</li>
+            <li><strong>Documented Scope Exclusions:</strong> Features specifically excluded from the fixed quote (e.g., custom CRM migrations or unstated payment integrations) that require formal change orders.</li>
+            <li><strong>Milestone Payment Breakdown:</strong> 50% upfront deposit upon digital signature, 30% milestone review, and 20% final balance prior to production deployment.</li>
           </ul>
+        </section>
+
+        <section aria-labelledby="comparison-table-section">
+          <h2 id="comparison-table-section">How Does Floorly Compare to Generic Invoicing Software?</h2>
+          <p>See why solo developers, UI/UX designers, and creative agencies choose Floorly over passive PDF invoicing applications:</p>
+          <table aria-label="Floorly vs Generic Invoicing Feature Comparison">
+            <thead>
+              <tr>
+                <th scope="col">Feature / Protection Capability</th>
+                <th scope="col">Floorly Freelance OS</th>
+                <th scope="col">Generic Invoicing Tools</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">AI Brief Scope Analyzer</th>
+                <td>Extracts technical deliverables and detects hidden scope creep</td>
+                <td>None (Manual itemized entry only)</td>
+              </tr>
+              <tr>
+                <th scope="row">Mathematical Price Floor</th>
+                <td>Algorithmic guardrail prevents quoting below your break-even cost</td>
+                <td>None (Zero undercharging protection)</td>
+              </tr>
+              <tr>
+                <th scope="row">Contingency Buffer Engine</th>
+                <td>Automated 20% to 25% revision buffer baked into fixed proposals</td>
+                <td>None (Freelancer absorbs all revision losses)</td>
+              </tr>
+              <tr>
+                <th scope="row">Dual Payment Rails</th>
+                <td>Stripe (USD cards globally) and Razorpay (UPI &amp; INR domestically)</td>
+                <td>Single gateway with high international transaction fees</td>
+              </tr>
+              <tr>
+                <th scope="row">True Net Profit Visibility</th>
+                <td>Deducts expenses, payment fees, and taxes to reveal actual hourly margins</td>
+                <td>Gross billing totals without take-home clarity</td>
+              </tr>
+            </tbody>
+          </table>
         </section>
 
         <section aria-labelledby="free-tools">
@@ -85,12 +136,13 @@ const ROUTES = [
           </ul>
         </section>
 
-        <section aria-labelledby="comparison">
-          <h2 id="comparison">Floorly vs. Generic Freelance Invoicing Software</h2>
-          <p>Floorly protects freelance income before quoting, whereas legacy apps only track invoices after contracts are signed.</p>
+        <section aria-labelledby="payment-gateways">
+          <h2 id="payment-gateways">What Payment Gateways and Invoicing Currencies Are Supported?</h2>
+          <p>Floorly provides seamless multi-currency payment infrastructure to collect revenue from local and international clients:</p>
           <ul>
-            <li><strong>Floorly:</strong> Safeguards revenue before you quote with AI scoping, risk detection, and mathematical price floors.</li>
-            <li><strong>Generic Invoicing Tools:</strong> Only record numbers after the contract is already signed, offering zero undercharging prevention.</li>
+            <li><strong>Global Clients (USD, EUR, GBP):</strong> Direct credit card, debit card, and Apple Pay checkout powered by Stripe.</li>
+            <li><strong>Domestic Indian Clients (INR):</strong> Instant UPI QR code, NetBanking, and RuPay card processing powered by Razorpay.</li>
+            <li><strong>Automated Receipts:</strong> Instant digital tax receipts and milestone balance reconciliations upon successful transaction settlement.</li>
           </ul>
         </section>
 
@@ -134,6 +186,38 @@ const ROUTES = [
           { "@type": "Offer", "name": "Solo", "price": "10", "priceCurrency": "USD" },
           { "@type": "Offer", "name": "Pro", "price": "19", "priceCurrency": "USD" },
           { "@type": "Offer", "name": "Agency", "price": "49", "priceCurrency": "USD" }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Prevent Freelancer Undercharging Using a Price Floor",
+        "description": "Step-by-step workflow for independent professionals to scope client briefs with AI, enforce mathematical price floors, and issue milestone invoices.",
+        "step": [
+          {
+            "@type": "HowToStep",
+            "name": "Analyze the Client Brief with AI",
+            "text": "Paste your client brief into Floorly to extract technical deliverables and detect unstated scope creep.",
+            "url": "https://floorlystudio.me/#how-ai-scope-analyzer-works"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Compute Your Deterministic Price Floor",
+            "text": "Calculate your non-negotiable minimum fee combining hourly break-even costs, complexity multipliers, and a 20% contingency buffer.",
+            "url": "https://floorlystudio.me/#how-price-floor-works"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Send an Interactive Proposal with Digital Signatures",
+            "text": "Deliver a branded 3-tier milestone proposal that clients can digitally sign in minutes.",
+            "url": "https://floorlystudio.me/#what-is-floorly"
+          },
+          {
+            "@type": "HowToStep",
+            "name": "Collect Milestone Payments via Stripe and Razorpay",
+            "text": "Collect domestic UPI and INR payments via Razorpay and global USD card payments via Stripe with instant receipts.",
+            "url": "https://floorlystudio.me/#payment-gateways"
+          }
         ]
       },
       {

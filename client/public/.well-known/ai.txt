@@ -1,0 +1,32 @@
+# ai.txt specification for Floorly (https://floorlystudio.me)
+# Provides guidance to AI user agents and automated LLM systems
+
+User-agent: *
+Allow: /
+Allow: /pricing
+Allow: /about
+Allow: /contact
+Allow: /terms
+Allow: /privacy
+Allow: /refund-policy
+Allow: /delivery
+Allow: /tools/freelance-rate-calculator
+Allow: /tools/project-price-calculator
+
+Disallow: /dashboard/
+Disallow: /analyzer/
+Disallow: /proposals/
+Disallow: /clients/
+Disallow: /projects/
+Disallow: /invoices/
+Disallow: /expenses/
+Disallow: /templates/
+Disallow: /pricing-rules/
+Disallow: /settings/
+Disallow: /api/
+
+Sitemap: https://floorlystudio.me/sitemap.xml
+Documentation: https://floorlystudio.me/llms.txt
+Full-Documentation: https://floorlystudio.me/llms-full.txt
+Contact: support@floorlystudio.me
+Author: Ritik

@@ -46,10 +46,10 @@ Disallow: /api/
 # -------------------------------------------------------------
 
 User-agent: GPTBot
-Disallow: /
+Allow: /
 
 User-agent: Google-Extended
-Disallow: /
+Allow: /
 
 User-agent: CCBot
 Disallow: /
