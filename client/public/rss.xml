@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Floorly – AI Scoped Proposals &amp; Freelance Price Floors</title>
+    <link>https://floorlystudio.me/</link>
+    <description>Latest guides, pricing updates, and scope calculators for independent freelancers and digital agencies.</description>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 13 Oct 2026 00:00:00 GMT</lastBuildDate>
+    <atom:link href="https://floorlystudio.me/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>Deterministic Freelance Price Floors: Stopping Undercharging During Negotiations</title>
+      <link>https://floorlystudio.me/</link>
+      <guid>https://floorlystudio.me/#price-floors</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <description>How freelancers use server-enforced price floors to protect project profit margins against scope creep and client discounts.</description>
+    </item>
+    <item>
+      <title>Freelance Hourly Rate &amp; Price Floor Calculator Release</title>
+      <link>https://floorlystudio.me/tools/freelance-rate-calculator</link>
+      <guid>https://floorlystudio.me/tools/freelance-rate-calculator</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Free interactive tool to calculate minimum sustainable freelance hourly rates and project floors based on living expenses and billable hours.</description>
+    </item>
+    <item>
+      <title>Freelance Project Price &amp; Scope Risk Calculator Release</title>
+      <link>https://floorlystudio.me/tools/project-price-calculator</link>
+      <guid>https://floorlystudio.me/tools/project-price-calculator</guid>
+      <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Interactive tool estimating fixed project fees with complexity multipliers and contingency buffers.</description>
+    </item>
+  </channel>
+</rss>

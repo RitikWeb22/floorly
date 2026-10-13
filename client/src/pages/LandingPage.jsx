@@ -364,7 +364,7 @@ export function LandingPage() {
               }}
             >
               AI-Scoped Proposals &amp; Price Floors{' '}
-              <span style={{ display: 'block', color: 'var(--cobalt, #0047AB)' }}>Never undercharge again.</span>
+              <span style={{ display: 'block', color: 'var(--cobalt, #0047AB)' }}>for Freelancers</span>
             </h1>
 
             <p

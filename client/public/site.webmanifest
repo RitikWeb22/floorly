@@ -1,0 +1,22 @@
+{
+  "name": "Floorly – AI Proposals & Price Floors",
+  "short_name": "Floorly",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8FAFC",
+  "theme_color": "#0047AB",
+  "description": "Floorly turns client briefs into scoped proposals with price floors. Prevent underquoting, add payment links, and track true profit margins.",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/og-image.png",
+      "sizes": "1200x630",
+      "type": "image/png"
+    }
+  ]
+}
