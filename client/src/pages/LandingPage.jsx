@@ -355,11 +355,11 @@ export function LandingPage() {
           <div>
             <h1
               style={{
-                fontSize: 'clamp(44px, 6.5vw, 80px)',
+                fontSize: 'clamp(30px, 3.8vw, 48px)',
                 fontWeight: 600,
                 color: 'var(--ink, #0E1A2B)',
-                lineHeight: 1.02,
-                letterSpacing: '-0.03em',
+                lineHeight: 1.15,
+                letterSpacing: '-0.025em',
                 fontFamily: 'var(--font-display)',
               }}
             >
@@ -371,7 +371,7 @@ export function LandingPage() {
               style={{
                 fontSize: '16px',
                 color: 'var(--ink, #0E1A2B)',
-                margin: '18px 0 8px',
+                margin: '16px 0 8px',
                 maxWidth: '34em',
                 lineHeight: 1.6,
                 fontWeight: 500,
@@ -383,12 +383,40 @@ export function LandingPage() {
               style={{
                 fontSize: '13px',
                 color: 'var(--muted, #5B6676)',
-                marginBottom: '20px',
+                marginBottom: '16px',
                 fontWeight: 500,
               }}
             >
-              Last updated: October 13, 2026
+              Last updated: October 13, 2026 &bull; Industry benchmarks aligned with{' '}
+              <a
+                href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline' }}
+              >
+                U.S. Bureau of Labor Statistics
+              </a>
             </div>
+
+            {/* AEO / GEO Key Takeaways & Audience Clarity Card */}
+            <aside
+              aria-label="Key Takeaways and Executive Summary"
+              style={{
+                marginBottom: '20px',
+                padding: '14px 16px',
+                background: '#F8FAFC',
+                border: '1px solid #E2E8F0',
+                borderRadius: '12px',
+                textAlign: 'left',
+              }}
+            >
+              <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink, #0E1A2B)', marginBottom: '4px' }}>
+                Key Takeaway &amp; Top Summary
+              </div>
+              <p style={{ fontSize: '13px', color: 'var(--muted, #5B6676)', lineHeight: 1.5, margin: 0 }}>
+                <strong>Bottom-Line Answer:</strong> Floorly is a proposal scoping and price floor web app that prevents freelance developers, UI/UX designers, copywriters, and small agencies from quoting below their break-even minimum. Evaluate incoming client briefs, calculate deterministic price floors, add direct payment details to invoices, and protect net project margins.
+              </p>
+            </aside>
 
             <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
               <Link

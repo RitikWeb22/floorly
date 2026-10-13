@@ -13,7 +13,7 @@ const ROUTES = [
     path: '/',
     outPath: 'index.html',
     title: 'Floorly – AI-Scoped Proposals & Price Floors for Freelancers',
-    description: 'Floorly turns client briefs into scoped proposals with minimum price floors. Invoice by milestone, record payments with your own payment details or links, and track profit.',
+    description: 'Floorly turns client briefs into scoped proposals with price floors. Prevent underquoting, add payment links, and track true profit margins.',
     h1: 'AI-Scoped Proposals & Price Floors for Freelancers: Never Undercharge Again',
     content: `
       <main id="main-content">
@@ -33,14 +33,14 @@ const ROUTES = [
           <p><small>Last updated: October 13, 2026</small></p>
           
           <aside aria-label="Key Takeaways and AI Executive Summary" class="executive-summary">
-            <h2>What are the key takeaways and core benefits of Floorly?</h2>
-            <p>Floorly is a web app that helps freelancers and small studios scope client briefs, enforce minimum price floors, and issue milestone invoices. Users add their own payment details or links to invoices, record client payments, and track true project profit after expenses and labor time.</p>
+            <h2>What are the key takeaways and summary of Floorly?</h2>
+            <p><strong>Bottom-Line Answer &amp; Top Summary:</strong> Floorly is a proposal scoping and price floor web app that prevents freelance professionals from quoting below their minimum break-even rate. It parses raw client briefs into milestones, guarantees quotes meet server-side floor thresholds, and tracks net profit margins on milestone invoices.</p>
             <ul>
+              <li><strong>Target Audience:</strong> Solo freelance software engineers, product designers, writers, and small digital agency owners quoting fixed-price contracts.</li>
+              <li><strong>Primary Use Cases:</strong> Evaluating incoming client briefs, calculating deterministic price floors, defending against scope creep, and milestone invoicing.</li>
+              <li><strong>When to Use:</strong> At project intake when negotiating proposals with clients, to ensure every contract protects your effective hourly rate.</li>
               <li><strong>Core Problem Solved:</strong> Prevents quoting below your minimum by catching unestimated revisions, vague client requirements, and emotional discounting during negotiations.</li>
-              <li><strong>Who It Is Built For:</strong> Freelance software engineers, UI/UX designers, independent copywriters, and boutique studio owners quoting fixed-price client engagements.</li>
-              <li><strong>How It Works:</strong> An AI Scope Analyzer extracts deliverables from briefs, applies a configurable contingency buffer and complexity multiplier, and checks totals against a server-enforced price floor into proposals.</li>
               <li><strong>Client Payment Details:</strong> Users add their own payment details or payment link (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) to proposals and invoices, and record payments in Floorly.</li>
-              <li><strong>When to Use:</strong> Use Floorly at project intake to evaluate incoming client briefs, generate structured proposals where clients accept online, issue milestone invoices, and track real net profits after expenses.</li>
             </ul>
           </aside>
         </header>
@@ -52,7 +52,7 @@ const ROUTES = [
 
         <section aria-labelledby="what-is-floorly">
           <h2 id="what-is-floorly">What is Floorly and how does it protect freelancers?</h2>
-          <p>Floorly is a web app designed to help freelancers eliminate underpricing and unbilled scope creep before proposals are approved.</p>
+          <p><strong>Direct Answer:</strong> Floorly is a web app designed to help freelancers eliminate underpricing and unbilled scope creep before proposals are approved by checking all quotes against a server-side price floor.</p>
           <p>Traditional invoicing tools record financial data only after contracts are underway. In contrast, Floorly acts as an active front-end guardrail during proposal creation.</p>
           <p>Whenever you paste an email brief, RFP, or client specification, Floorly's AI Scope Analyzer extracts deliverables, categorizes tasks, and identifies potential edge cases.</p>
           <p>Once deliverables are scoped, Floorly checks the proposal against your price floor: the minimum price needed to deliver the project sustainably based on your minimum rates.</p>
@@ -60,7 +60,7 @@ const ROUTES = [
 
         <section aria-labelledby="who-is-floorly-for">
           <h2 id="who-is-floorly-for">Who is Floorly built for and when should you use it?</h2>
-          <p>Floorly is built for solo knowledge workers and boutique studios quoting fixed-price work who want to avoid chronic underpricing and scope creep.</p>
+          <p><strong>Direct Answer:</strong> Floorly is built for solo knowledge workers and boutique studios quoting fixed-price work who want to avoid chronic underpricing and scope creep.</p>
           <ul>
             <li><strong>Freelance Software Engineers &amp; Full-Stack Developers:</strong> Evaluates incoming technical specifications, detects unstated API integrations, database requirements, and background queues, applying configurable complexity multipliers.</li>
             <li><strong>UI/UX &amp; Product Designers:</strong> Scopes wireframes, prototypes, design systems, and revision limits with a configurable contingency buffer.</li>
@@ -71,14 +71,14 @@ const ROUTES = [
 
         <section aria-labelledby="why-freelancers-undercharge">
           <h2 id="why-freelancers-undercharge">Why do freelancers undercharge on fixed-price projects?</h2>
-          <p>Freelancers frequently undercharge because initial client briefs routinely omit third-party API dependencies, revision cycles, and responsive edge cases.</p>
+          <p><strong>Direct Answer:</strong> Freelancers undercharge primarily because initial client briefs omit technical dependencies, and client negotiations trigger emotional discounting without scope reduction.</p>
           <p>When prospective clients negotiate on price, freelancers often discount their rates without reducing project scope, eroding their effective hourly earnings.</p>
           <p>Floorly removes emotional discounting by checking quotes against your break-even floor on the server before client-facing links are shared.</p>
         </section>
 
         <section aria-labelledby="how-price-floor-works">
           <h2 id="how-price-floor-works">How does a freelance price floor work in practice?</h2>
-          <p>A freelance price floor establishes the minimum quote needed to cover your labor, expenses, and scope risks so you never quote below your baseline.</p>
+          <p><strong>Direct Answer:</strong> A freelance price floor establishes the minimum quote needed to cover baseline labor, technical complexity, and contingency buffers so quotes never drop below break-even.</p>
           <ol>
             <li>
               <h3>1. How is base labor cost calculated?</h3>
@@ -101,7 +101,7 @@ const ROUTES = [
 
         <section aria-labelledby="how-ai-scope-analyzer-works">
           <h2 id="how-ai-scope-analyzer-works">How do freelancers use the AI Scope Analyzer to prevent scope creep?</h2>
-          <p>The AI Scope Analyzer digests unstructured client briefs and organizes them into three clear deliverables sections:</p>
+          <p><strong>Direct Answer:</strong> The AI Scope Analyzer scans raw briefs and parses them into explicit inclusions, documented exclusions, and milestone payment schedules before contracts are signed.</p>
           <ul>
             <li><strong>Explicit Inclusions:</strong> Exact pages, API endpoints, design screens, and responsive deliverables included in the baseline fee.</li>
             <li><strong>Documented Scope Exclusions:</strong> Features specifically excluded from the fixed quote that require formal change orders.</li>
@@ -111,6 +111,7 @@ const ROUTES = [
 
         <section aria-labelledby="illustrative-example">
           <h2 id="illustrative-example">Example (illustrative): How does the pricing calculation work?</h2>
+          <p>Industry compensation research from the <a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics</a> highlights that factoring non-billable administrative time, technical complexity, and contingency buffers into baseline hourly rates is critical to prevent undercharging in professional service contracting.</p>
           <p>For a sample 40-hour project at a baseline rate of $50/hr, Floorly adds a configurable 10% scope contingency (+4h) and applies a 1.25x multiplier for medium complexity. This calculates structured package tiers starting at $2,750 (Essential), $3,300 (Standard), and $4,150 (Premium), while ensuring total pricing never drops below your configured category floor ($500).</p>
           <ul>
             <li><strong>Base Labor:</strong> $2,200 (44 total hours @ $50/hr)</li>
@@ -132,7 +133,7 @@ const ROUTES = [
 
         <section aria-labelledby="payment-gateways">
           <h2 id="payment-gateways">How do clients pay invoices generated in Floorly?</h2>
-          <p>Floorly does not collect payments from users' clients. You add your own payment details or payment link to proposals and invoices, and record payments in Floorly when received:</p>
+          <p><strong>Direct Answer:</strong> Clients pay freelancers directly. Floorly does not collect payments from users' clients; you add your own payment details or payment link to proposals and invoices, and record payments in Floorly when received.</p>
           <ul>
             <li><strong>Direct Payment Details:</strong> Add bank transfer details, UPI information for INR, or direct deposit accounts to invoices.</li>
             <li><strong>Your Own Payment Links:</strong> Insert your own Stripe payment link, PayPal link, or Razorpay payment link directly into proposals and invoices.</li>
@@ -151,6 +152,26 @@ const ROUTES = [
       </main>
     `,
     schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "@id": "https://floorlystudio.me/#article",
+        "headline": "AI-Scoped Proposals & Price Floors for Freelancers: Never Undercharge Again",
+        "description": "Floorly turns client briefs into scoped proposals with price floors. Prevent underquoting, add payment links, and track true profit margins.",
+        "inLanguage": "en-US",
+        "mainEntityOfPage": "https://floorlystudio.me/",
+        "datePublished": "2026-10-13T00:00:00Z",
+        "dateModified": "2026-10-13T00:00:00Z",
+        "author": {
+          "@type": "Person",
+          "name": "Ritik",
+          "url": "https://github.com/RitikWeb22"
+        },
+        "publisher": {
+          "@id": "https://floorlystudio.me/#organization"
+        },
+        "image": "https://floorlystudio.me/og-image.png"
+      },
       {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
