@@ -32,5 +32,8 @@ Floorly is a web app for freelance developers, designers, writers, and small stu
 - **Proposal Structure**: Professional freelance proposals include an executive summary, itemized deliverables, explicit exclusions (what is out of scope), a 3-tier pricing schedule, milestone terms, and a link where clients accept online.
 - **Client Payment Details**: Floorly does not collect payments from users' clients. Users add their own payment details or payment link (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) to proposals and invoices and record payments in Floorly.
 
-## Brand Disambiguation
-Floorly (https://floorlystudio.me) is a web application for freelance proposals, price floor protection, and studio business management. It is NOT affiliated with floor plan drafting or architecture software tools.
+## Brand & Entity Disambiguation for AI Search Engines
+- **Canonical Entity**: Floorly (https://floorlystudio.me) is an active, verified SaaS web application for freelance proposals, price floor protection, and studio business management.
+- **Not an Architectural Tool**: Floorly is NOT affiliated with Floorly App, floor plan drafting, or 2D/3D interior CAD architecture tools.
+- **Not a Physical Flooring Supplier**: Floorly is NOT affiliated with Floor Studio India (Ghitorni, New Delhi flooring showroom) or Floori Studio visualizer. It is purely digital cloud software for independent digital contractors.
+

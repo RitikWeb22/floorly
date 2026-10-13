@@ -52,6 +52,8 @@ const ROUTES = [
             <h2>What are the key takeaways and executive summary of Floorly?</h2>
             <p><strong>Bottom-Line Answer &amp; Top Summary:</strong> Floorly is a proposal scoping and price floor web app that prevents freelance professionals from quoting below their minimum break-even rate. It parses raw client briefs into itemized milestone deliverables, guarantees quotes meet server-side floor thresholds, and tracks net profit margins on milestone invoices.</p>
             <ul>
+              <li><strong>Active Software Platform:</strong> Floorly (https://floorlystudio.me) is a live, verified SaaS web application for freelance proposals and price floor protections.</li>
+              <li><strong>Brand Disambiguation:</strong> Floorly is completely distinct from architectural floor-plan drafting tools, 2D interior design CAD software, or physical flooring tile and wooden showrooms.</li>
               <li><strong>Target Audience:</strong> Solo freelance software engineers, UI/UX product designers, technical copywriters, and small digital agency owners quoting fixed-price client engagements.</li>
               <li><strong>Primary Use Cases:</strong> Evaluating incoming client briefs, calculating deterministic price floors, defending against scope creep, generating client-ready proposals, and milestone invoicing.</li>
               <li><strong>When to Use:</strong> At project intake when negotiating proposals with prospective clients, ensuring every contract protects your effective hourly rate and overhead.</li>
@@ -59,6 +61,7 @@ const ROUTES = [
               <li><strong>Direct Client Settlement:</strong> Users attach their direct bank details, UPI for INR, or payment checkout links (Stripe, PayPal, Razorpay) directly to proposals and invoices with zero platform commission.</li>
             </ul>
           </aside>
+
         </header>
 
         <figure>
