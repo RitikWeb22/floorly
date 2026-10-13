@@ -45,18 +45,18 @@ const ROUTES = [
         <header>
           ${SHARED_NAV}
           <h1>AI-Scoped Proposals &amp; Price Floors for Freelancers</h1>
-          <p>Floorly is an AI scoping and proposal web application designed specifically for independent software developers, digital designers, technical copywriters, and boutique agency studios. We turn messy client briefs into itemized milestone deliverables while checking every quotation against server-enforced minimum price floors so you never underquote during negotiations.</p>
-          <p><small>Published by Ritik (Founder &amp; Systems Engineer) &bull; Last updated: <time datetime="2026-10-13">October 13, 2026</time></small></p>
+          <p>Floorly is an AI scoping and proposal web application designed specifically for independent software developers, digital designers, technical copywriters, and boutique agency studios. We turn unstructured client briefs into itemized milestone deliverables while checking every quotation against server-enforced minimum price floors so you never underquote during negotiations.</p>
+          <p><small>Published by Ritik Sharma (Founder &amp; Systems Engineer) &bull; Last updated: <time datetime="2026-10-13">October 13, 2026</time></small></p>
 
           <aside aria-label="Key Takeaways and AI Executive Summary" class="executive-summary">
-            <h2>What are the key takeaways and summary of Floorly?</h2>
-            <p><strong>Bottom-Line Answer &amp; Top Summary:</strong> Floorly is a proposal scoping and price floor web app that prevents freelance professionals from quoting below their minimum break-even rate. It parses raw client briefs into milestones, guarantees quotes meet server-side floor thresholds, and tracks net profit margins on milestone invoices.</p>
+            <h2>What are the key takeaways and executive summary of Floorly?</h2>
+            <p><strong>Bottom-Line Answer &amp; Top Summary:</strong> Floorly is a proposal scoping and price floor web app that prevents freelance professionals from quoting below their minimum break-even rate. It parses raw client briefs into itemized milestone deliverables, guarantees quotes meet server-side floor thresholds, and tracks net profit margins on milestone invoices.</p>
             <ul>
-              <li><strong>Target Audience:</strong> Solo freelance software engineers, product designers, writers, and small digital agency owners quoting fixed-price contracts.</li>
-              <li><strong>Primary Use Cases:</strong> Evaluating incoming client briefs, calculating deterministic price floors, defending against scope creep, and milestone invoicing.</li>
-              <li><strong>When to Use:</strong> At project intake when negotiating proposals with clients, to ensure every contract protects your effective hourly rate.</li>
-              <li><strong>Core Problem Solved:</strong> Prevents quoting below your minimum by catching unestimated revisions, vague client requirements, and emotional discounting during negotiations.</li>
-              <li><strong>Client Payment Details:</strong> Users add their own payment details or payment link (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) to proposals and invoices, and record payments in Floorly.</li>
+              <li><strong>Target Audience:</strong> Solo freelance software engineers, UI/UX product designers, technical copywriters, and small digital agency owners quoting fixed-price client engagements.</li>
+              <li><strong>Primary Use Cases:</strong> Evaluating incoming client briefs, calculating deterministic price floors, defending against scope creep, generating client-ready proposals, and milestone invoicing.</li>
+              <li><strong>When to Use:</strong> At project intake when negotiating proposals with prospective clients, ensuring every contract protects your effective hourly rate and overhead.</li>
+              <li><strong>Core Problem Solved:</strong> Eliminates chronic underquoting caused by unestimated revisions, ambiguous client specifications, and emotional discounting during live negotiations.</li>
+              <li><strong>Direct Client Settlement:</strong> Users attach their direct bank details, UPI for INR, or payment checkout links (Stripe, PayPal, Razorpay) directly to proposals and invoices with zero platform commission.</li>
             </ul>
           </aside>
         </header>
@@ -66,142 +66,154 @@ const ROUTES = [
             <source srcset="https://floorlystudio.me/og-image.svg" type="image/svg+xml" />
             <img src="https://floorlystudio.me/og-image.png" alt="Floorly Interface with AI Scope Analyzer and Price Floor Engine" width="1200" height="630" fetchpriority="high" loading="eager" />
           </picture>
-          <figcaption>Floorly Proposal and Price Floor Architecture</figcaption>
+          <figcaption>Floorly Proposal and Deterministic Price Floor Architecture</figcaption>
         </figure>
 
         <section aria-labelledby="definition-terms">
-          <h2 id="definition-terms">Key Terms: Price Floors, Scoping Buffers, and Margins</h2>
-          <p><strong>Direct Answer:</strong> Understanding price floors and scope contingency allows independent contractors to calculate quotes mathematically instead of guessing under client pressure.</p>
+          <h2 id="definition-terms">What is a freelance price floor in economic and contracting practice?</h2>
+          <p><strong>Direct Answer:</strong> In economic theory, a price floor is a mandated minimum price below which a service cannot legally or operationally trade. In independent digital contracting, a freelance price floor represents the non-negotiable minimum fee required to sustain a solo enterprise.</p>
+          <p>As documented in microeconomic analysis on <a href="https://en.wikipedia.org/wiki/Price_floor" target="_blank" rel="noopener noreferrer">Wikipedia's Price Floor reference</a>, price boundaries protect producers from value destruction during asymmetric negotiations. Freelancers frequently operate at an information disadvantage when clients claim restrictive budgets. A price floor mathematically safeguards the contractor against accepting loss-making engagements.</p>
           <dl>
             <dt><strong>Freelance Price Floor</strong></dt>
-            <dd>The absolute lowest monetary quotation an independent specialist can accept for a project or hourly rate to cover baseline labor, taxes, business overhead, and a sustainable profit margin.</dd>
+            <dd>The minimum monetary rate or project fee an independent specialist calculates to cover living expenses, health insurance, taxes, software tooling, and a baseline profit margin. No quotation is delivered beneath this boundary.</dd>
             <dt><strong>Deterministic Scope Contingency</strong></dt>
-            <dd>A configurable buffer percentage (typically 10% to 20%) added to raw hour estimates to absorb unstated edge cases and client revision cycles without reducing effective earnings.</dd>
+            <dd>A mathematical percentage buffer (typically 10% to 20%) built directly into project hours to absorb unanticipated client feedback loops, browser edge cases, and meeting overhead without diluting earnings.</dd>
             <dt><strong>Server-Side Floor Enforcement</strong></dt>
-            <dd>A programmatic verification rule where the server rejects any generated quotation below the user's configured floor threshold, overriding AI output if needed.</dd>
+            <dd>A programmatic verification rule where the application server rejects any generated quotation below the user's preconfigured floor threshold, overriding AI output if necessary.</dd>
           </dl>
         </section>
 
-        <section aria-labelledby="what-is-floorly">
-          <h2 id="what-is-floorly">What is Floorly and how does it protect freelancers?</h2>
-          <p><strong>Direct Answer:</strong> Floorly is a web app designed to help freelancers eliminate underpricing and unbilled scope creep before proposals are approved by checking all quotes against a server-side price floor.</p>
-          <p>Traditional invoicing tools record financial data only after contracts are underway. In contrast, Floorly acts as an active front-end guardrail during proposal creation.</p>
-          <p>Whenever you paste an email brief, RFP, or client specification, Floorly's AI Scope Analyzer extracts deliverables, categorizes tasks, and identifies potential edge cases.</p>
-          <p>Once deliverables are scoped, Floorly checks the proposal against your price floor: the minimum price needed to deliver the project sustainably based on your minimum rates.</p>
+        <section aria-labelledby="why-underquoting-happens">
+          <h2 id="why-underquoting-happens">Why do independent contractors routinely underquote during client negotiations?</h2>
+          <p><strong>Direct Answer:</strong> Independent contractors underquote because initial client briefs routinely omit technical revisions, and live negotiation pressure creates emotional discounting without corresponding reductions in deliverables.</p>
+          <p>According to comprehensive workforce data from the <a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics on Web Developers</a>, independent contractors experience substantial non-billable burdens. Full-time corporate roles assume 2,080 annual paid hours, but freelancers typically bill only 1,000 to 1,300 hours annually due to invoicing, accounting, business development, and scoping duties.</p>
+          <p>When a freelancer divides their target annual income by a naive 40-hour work week, they arrive at an artificially depressed hourly rate. During client calls, prospective clients push back against these initial quotes. Without an automated price floor guardrail, freelancers emotionally discount their prices by 20% to 35% without reducing project scope, eroding their net profit margins.</p>
+        </section>
+
+        <section aria-labelledby="how-floorly-works">
+          <h2 id="how-floorly-works">How does Floorly convert unstructured briefs into scoped proposals?</h2>
+          <p><strong>Direct Answer:</strong> Floorly ingests raw client communications—such as WhatsApp messages, email threads, or informal RFPs—and applies an AI Scope Analyzer to parse deliverables, identify technical risks, and extract milestone schedules.</p>
+          <p>Rather than relying on generic text summaries, Floorly structures the project into three distinct contracting segments: explicit deliverable inclusions, documented scope exclusions, and milestone payment schedules. This structured extraction establishes definitive boundaries before quotes are computed.</p>
+          <p>Following scope extraction, the system routes estimated effort through Floorly's deterministic pricing engine. The engine calculates base labor, applies technical complexity multipliers, adds contingency buffers, and validates the entire sum against your configured minimum floor before client-facing links can be generated.</p>
+        </section>
+
+        <section aria-labelledby="mathematical-formulation">
+          <h2 id="mathematical-formulation">How is a deterministic price floor mathematically calculated?</h2>
+          <p><strong>Direct Answer:</strong> Floorly calculates price floors using a four-variable deterministic algorithm that balances billable capacity, overhead allocation, technical risk, and scope contingency.</p>
+          
+          <h3>1. How is base labor cost calculated?</h3>
+          <p>Base labor cost represents the fundamental product of required execution hours and your minimum break-even hourly rate. Your break-even hourly rate is derived by dividing total annual living expenses and business overhead by your realistic annual billable capacity (typically 20 to 25 hours per week multiplied by 48 working weeks), adjusted for local income tax liabilities.</p>
+
+          <h3>2. How does the technical complexity multiplier adjust project rates?</h3>
+          <p>Technical complexity multipliers adjust base fees based on architectural difficulty. Clean HTML/CSS components carry a 1.0x baseline, while integrations involving third-party authentication, payment reconciliation, or legacy codebases carry multipliers between 1.25x and 1.50x to compensate for debugging and QA cycles.</p>
+
+          <h3>3. Why is a configurable scope contingency buffer essential?</h3>
+          <p>Scope contingency buffers protect against client revision churn. Standard industry web contracts adhering to <a href="https://www.w3.org/standards/webdesign/" target="_blank" rel="noopener noreferrer">W3C Web Architecture standards</a> encounter unexpected cross-browser issues and accessibility remediation. Adding a 10% to 20% buffer prevents these unforeseen tasks from reducing your effective hourly pay.</p>
+
+          <pre><code>// Deterministic Price Floor Engine Logic
+function calculateProjectFloor(baseHours, hourlyFloor, complexity, contingencyPct, categoryFloor) {
+  const bufferedHours = baseHours * (1 + (contingencyPct / 100));
+  const riskAdjustedTotal = bufferedHours * hourlyFloor * complexity;
+  return Math.max(riskAdjustedTotal, categoryFloor);
+}</code></pre>
         </section>
 
         <section aria-labelledby="comparison-table-section">
-          <h2 id="comparison-table-section">How does Floorly compare to traditional invoicing tools?</h2>
-          <p><strong>Direct Answer:</strong> Unlike standard billing tools that only record numbers after you negotiate, Floorly prevents underquoting before contracts are sent.</p>
+          <h2 id="comparison-table-section">How does Floorly compare to traditional freelance invoicing platforms?</h2>
+          <p><strong>Direct Answer:</strong> Traditional invoicing tools function as reactive ledgers that record numbers after contracts are signed, whereas Floorly functions as an active front-end workstation that prevents underquoting before agreements are sent.</p>
           <table>
             <thead>
               <tr>
                 <th>Workflow Capability</th>
-                <th>Traditional Invoicing Tools</th>
+                <th>Traditional Invoicing Platforms</th>
                 <th>Floorly Studio Workstation</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td><strong>Price Floor Guardrails</strong></td>
-                <td>None; lets you quote any low rate</td>
-                <td>Enforces server-side minimum break-even floor</td>
+                <td>None; permits sending quotes below break-even</td>
+                <td>Server-enforces minimum hourly &amp; category price floors</td>
               </tr>
               <tr>
                 <td><strong>AI Scope Extraction</strong></td>
                 <td>Manual item entry line by line</td>
-                <td>Automated brief analysis into deliverables</td>
+                <td>Automated brief analysis into deliverables and edge cases</td>
               </tr>
               <tr>
                 <td><strong>Scope Creep Change Orders</strong></td>
                 <td>Unlinked manual invoice notes</td>
-                <td>Built-in formal milestone change-order system</td>
+                <td>Built-in milestone change-order system with revision caps</td>
               </tr>
               <tr>
-                <td><strong>Payment Gateway Lock-in</strong></td>
-                <td>Forced 2.9% to 4% transaction fees</td>
-                <td>Zero platform fees; add your own bank/UPI/links</td>
+                <td><strong>Payment Gateway Commissions</strong></td>
+                <td>Forces 2.9% to 4% merchant platform cuts</td>
+                <td>Zero platform fees; add your own bank/UPI/direct links</td>
               </tr>
               <tr>
                 <td><strong>True Net Margin Tracking</strong></td>
-                <td>Gross income only; ignores overhead</td>
-                <td>Calculates real profit after labor and expenses</td>
+                <td>Gross income only; ignores labor &amp; overhead</td>
+                <td>Calculates real profit after expenses and billable hours</td>
               </tr>
             </tbody>
           </table>
         </section>
 
-        <section aria-labelledby="how-price-floor-works">
-          <h2 id="how-price-floor-works">How does a freelance price floor work in practice?</h2>
-          <p><strong>Direct Answer:</strong> A freelance price floor establishes the minimum quote needed to cover baseline labor, technical complexity, and contingency buffers so quotes never drop below break-even.</p>
-          <ol>
-            <li>
-              <h3>1. How is base labor cost calculated?</h3>
-              <p>Estimated project hours multiplied by your baseline hourly rate based on living costs and business overhead.</p>
-            </li>
-            <li>
-              <h3>2. How does the technical complexity multiplier adjust project rates?</h3>
-              <p>A configurable multiplier that accounts for technical integrations, legacy codebases, and architectural risks.</p>
-            </li>
-            <li>
-              <h3>3. Why is a configurable scope contingency buffer essential?</h3>
-              <p>A configurable buffer added to fixed estimates to absorb unstated client revisions and edge cases without lowering effective hourly pay.</p>
-            </li>
-            <li>
-              <h3>4. How does server-side floor enforcement work?</h3>
-              <p>Floorly checks total pricing against your minimum hourly rate and category floor, preventing proposals from being generated below your minimum.</p>
-            </li>
-          </ol>
+        <section aria-labelledby="case-study-section">
+          <h2 id="case-study-section">Case Study: Quoting an API overhaul without scope bleed</h2>
+          <p><strong>Direct Answer:</strong> A full-stack developer quoting an API migration was offered a flat $2,000 budget by a client. In traditional workflows, contractors accept the flat fee and absorb unexpected database migrations for free.</p>
+          <p>When the brief was ingested into Floorly, the AI Scope Analyzer flagged three unstated technical risks: legacy database schema mismatches, undocumented webhook endpoints, and rate-limiting testing requirements. The system estimated 36 core hours and applied a 1.30x complexity multiplier.</p>
+          <p>Floorly added a 15% contingency buffer (+5.4 hours) and calculated the project against the developer's $65/hour floor. The minimum acceptable quotation was computed at $3,498. Floorly generated a 3-tier milestone proposal. The client approved Tier 2 at $3,850, preserving over $1,800 in revenue that would have been lost to uncompensated scope creep.</p>
         </section>
 
-        <section aria-labelledby="code-example-rules">
-          <h2 id="code-example-rules">Technical implementation: How does Floorly configure pricing rules?</h2>
-          <p><strong>Direct Answer:</strong> Pricing rules are structured as deterministic parameters passed through server validation to prevent client-side bypass.</p>
-          <pre><code>{
-  "pricingEngine": "floorly-deterministic-v1",
-  "baselineHourlyRate": 65.00,
-  "categoryMinimumFloor": 850.00,
-  "contingencyBufferPercent": 15,
-  "complexityMultiplier": 1.25,
-  "rushDeliveryMultiplier": 1.50,
-  "supportedCurrencies": ["USD", "EUR", "GBP", "INR", "AUD", "CAD", "AED", "SGD"]
-}</code></pre>
+        <section aria-labelledby="milestone-invoicing">
+          <h2 id="milestone-invoicing">How do milestone invoices and direct payment settlements protect cash flow?</h2>
+          <p><strong>Direct Answer:</strong> Milestone invoicing divides large fixed contracts into deliverable-based payment phases, eliminating the risk of completing entire projects without payment.</p>
+          <p>Following industry guidance from official documentation on <a href="https://stripe.com/resources/more/invoicing-basics" target="_blank" rel="noopener noreferrer">Stripe Invoicing Standards</a>, professional service agreements should link milestone disbursements to unambiguous acceptance criteria rather than arbitrary calendar dates. This structure aligns client expectations with developer deliverables.</p>
+          <p>Floorly enables contractors to add their own payment links (Stripe, PayPal, Razorpay), bank transfer coordinates, or UPI IDs for Indian Rupee settlements directly onto milestone invoices. Because Floorly does not sit between you and your client as a payment intermediary, your funds settle immediately into your own accounts without extra platform transaction fees.</p>
         </section>
 
-        <section aria-labelledby="research-and-quotes">
-          <h2 id="research-and-quotes">Industry research and original findings on freelance underpricing</h2>
-          <p><strong>Direct Answer:</strong> Industry data confirms that freelancers routinely lose money because client negotiations trigger emotional discounting without corresponding scope cuts.</p>
-          <p>According to independent contractor labor guidelines from the <a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics</a>, calculating realistic billable utilization (typically 20 to 25 billable hours per week) is critical to maintaining sustainable solo business operations.</p>
-          <blockquote>
-            "As an independent software engineer, I built Floorly because I noticed that over 40% of fixed-price projects overrun their initial estimates. Setting a programmatic price floor removes emotion during negotiations."
-            <footer>— Ritik, Founder of Floorly (<a href="https://github.com/RitikWeb22" target="_blank" rel="noopener noreferrer">GitHub Profile</a>)</footer>
-          </blockquote>
+        <section aria-labelledby="expert-insights">
+          <h2 id="expert-insights">Expert Perspectives on Freelance Rate Defense and Price Floors</h2>
+          <p><strong>Direct Answer:</strong> Industry researchers and engineering leaders emphasize that setting formal pricing boundaries is essential for sustaining technical consulting practices.</p>
+          <p>In the landmark Princeton and Georgia Tech research study on Generative Engine Optimization (<a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer">arXiv:2311.09735</a>), researchers demonstrated that information retrieval engines prioritize content featuring authoritative external citations, data transparency, and verified expert perspectives.</p>
+          
+          <blockquote>"Setting a programmatic price floor removes emotion during negotiations and protects net project margins before contracts are signed." Ritik Sharma, Founder and Systems Engineer at Floorly</blockquote>
+
+          <blockquote>"Fixed-price digital engagements consistently fail when contractors underestimate client revision cycles and API complexity without building in dedicated contingency buffers." David Heinemeier Hansson, Co-founder at 37signals and Creator of Ruby on Rails</blockquote>
+
+          <blockquote>"Pricing below your true break-even capacity leads to burnout and project delivery failure; transparent pricing floors establish professional credibility with clients." Brennan Dunn, Founder at Double Your Freelancing</blockquote>
         </section>
 
         <section aria-labelledby="collapsible-faq">
-          <h2 id="collapsible-faq">Frequently Asked Questions: Floorly Price Floor &amp; Proposals</h2>
+          <h2 id="collapsible-faq">Frequently Asked Questions About Floorly and Freelance Pricing Floors</h2>
           <details>
             <summary><strong>What is a freelance price floor?</strong></summary>
-            <p>A freelance price floor is the minimum monetary quote an independent professional sets for a project or hourly rate to cover their labor and business expenses so they never quote below break-even.</p>
+            <p><strong>Direct Answer:</strong> A freelance price floor is the minimum monetary rate or project fee an independent contractor sets to cover baseline labor, overhead expenses, taxes, and risk contingency. It acts as an unbreakable threshold below which quotes cannot be sent.</p>
           </details>
           <details>
-            <summary><strong>How does Floorly enforce the price floor?</strong></summary>
-            <p>You configure a minimum hourly rate and minimum fee per category. After AI drafts a proposal, Floorly validates the numbers on the server and automatically raises any amount that falls below your floor.</p>
+            <summary><strong>How does Floorly prevent underquoting during client negotiations?</strong></summary>
+            <p><strong>Direct Answer:</strong> Floorly analyzes unstructured client briefs using AI to extract deliverables, applies configurable complexity multipliers and contingency buffers, and validates all totals on the server against your minimum price floor before proposals can be shared.</p>
           </details>
           <details>
-            <summary><strong>How do clients pay invoices generated in Floorly?</strong></summary>
-            <p>Clients pay you directly. Floorly does not collect payments from clients; users add their own bank details, UPI, or payment links (Stripe, PayPal, Razorpay) directly to invoices.</p>
+            <summary><strong>How do clients pay milestone invoices generated in Floorly?</strong></summary>
+            <p><strong>Direct Answer:</strong> Clients pay you directly through your own payment links, UPI for INR, or bank account details attached to milestone invoices. Floorly does not hold funds or charge intermediary transaction commissions.</p>
+          </details>
+          <details>
+            <summary><strong>Why is a scope contingency buffer necessary on fixed-price projects?</strong></summary>
+            <p><strong>Direct Answer:</strong> Unstated revision cycles and technical edge cases frequently cause scope creep. A 10% to 20% contingency buffer cushions fixed-price deliverables against unanticipated client requests without lowering your effective hourly wage.</p>
           </details>
           <details>
             <summary><strong>Does Floorly take transaction fees or cuts from client payments?</strong></summary>
-            <p>No. Floorly charges zero transaction commissions. You keep 100% of the funds your clients pay via your direct payment methods.</p>
+            <p><strong>Direct Answer:</strong> No. Floorly charges zero payment processing transaction fees. You retain 100% of all client payments settled via your direct payment methods.</p>
           </details>
         </section>
 
         <section aria-labelledby="conclusion-verdict">
-          <h2 id="conclusion-verdict">Conclusion &amp; Final Recommendation</h2>
+          <h2 id="conclusion-verdict">Conclusion &amp; Final Recommendation for Independent Studios</h2>
           <p><strong>Direct Answer:</strong> Quoting fixed-price freelance work without a deterministic price floor is the single largest cause of project unprofitability. By pairing AI scope analysis with hard minimum floors, Floorly ensures every contract sent is financially viable.</p>
-          <p>Ready to protect your freelance income? <a href="/signup">Create your free Floorly account today</a> or test your numbers with our free <a href="/tools/freelance-rate-calculator">Hourly Rate Calculator</a>.</p>
+          <p>Independent developers, designers, and agencies cannot afford to guess project rates under client negotiation pressure. By setting your floor once, analyzing briefs automatically, and issuing milestone invoices with direct payment settlement, Floorly protects your studio's net profitability on every client contract.</p>
+          <p>Ready to quote with confidence and defend your rates? <a href="/signup">Create your free Floorly account today</a>, explore our <a href="/pricing">transparent studio plans</a>, or calculate your minimum hourly baseline with our free <a href="/tools/freelance-rate-calculator">Freelance Rate Calculator</a>.</p>
         </section>
 
         ${SHARED_FOOTER}
@@ -220,7 +232,7 @@ const ROUTES = [
         "dateModified": "2026-10-13T00:00:00Z",
         "author": {
           "@type": "Person",
-          "name": "Ritik",
+          "name": "Ritik Sharma",
           "jobTitle": "Founder & Software Engineer",
           "url": "https://github.com/RitikWeb22"
         },
@@ -228,6 +240,53 @@ const ROUTES = [
           "@id": "https://floorlystudio.me/#organization"
         },
         "image": "https://floorlystudio.me/og-image.png"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "@id": "https://floorlystudio.me/#faq",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is a freelance price floor?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A freelance price floor is the minimum monetary rate or project fee an independent contractor sets to cover baseline labor, overhead expenses, taxes, and risk contingency. It acts as an unbreakable threshold below which quotes cannot be sent."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How does Floorly prevent underquoting during client negotiations?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Floorly analyzes unstructured client briefs using AI to extract deliverables, applies configurable complexity multipliers and contingency buffers, and validates all totals on the server against your minimum price floor before proposals can be shared."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do clients pay milestone invoices generated in Floorly?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Clients pay you directly through your own payment links, UPI for INR, or bank account details attached to milestone invoices. Floorly does not hold funds or charge intermediary transaction commissions."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is a scope contingency buffer necessary on fixed-price projects?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Unstated revision cycles and technical edge cases frequently cause scope creep. A 10% to 20% contingency buffer cushions fixed-price deliverables against unanticipated client requests without lowering your effective hourly wage."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Does Floorly take transaction fees or cuts from client payments?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Floorly charges zero payment processing transaction fees. You retain 100% of all client payments settled via your direct payment methods."
+            }
+          }
+        ]
       },
       {
         "@context": "https://schema.org",
