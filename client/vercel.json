@@ -55,12 +55,24 @@
       "source": "/(.*)",
       "headers": [
         {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=63072000; includeSubDomains; preload"
+        },
+        {
           "key": "X-Content-Type-Options",
           "value": "nosniff"
         },
         {
           "key": "X-Frame-Options",
           "value": "SAMEORIGIN"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        },
+        {
+          "key": "Cross-Origin-Opener-Policy",
+          "value": "same-origin-allow-popups"
         },
         {
           "key": "Referrer-Policy",
@@ -72,10 +84,11 @@
         },
         {
           "key": "Content-Security-Policy",
-          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://va.vercel-scripts.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://va.vercel-scripts.com https://api.razorpay.com; frame-src 'self' https://api.razorpay.com;"
+          "value": "default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://va.vercel-scripts.com https://checkout.razorpay.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https: blob:; font-src 'self' data:; connect-src 'self' https://www.google-analytics.com https://va.vercel-scripts.com https://api.razorpay.com https://*.onrender.com https://floorlystudio.me; frame-src 'self' https://api.razorpay.com https://checkout.razorpay.com;"
         }
       ]
     },
+
     {
       "source": "/(dashboard|analyzer|proposals|clients|projects|invoices|expenses|templates|pricing-rules|agents-doc|settings|p|i)/(.*)",
       "headers": [

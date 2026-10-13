@@ -33,9 +33,11 @@ try {
 }
 
 import { securityHeaders, sanitizeRequest } from './middleware/security.js';
+import { rateLimit } from './middleware/rateLimiter.js';
 import { ensureAllDatabaseIndexes } from './config/dbIndexes.js';
 import { initRedis, getCacheStatus } from './services/redisService.js';
 import { errorHandler } from './middleware/errorHandler.js';
+
 
 const app = express();
 app.disable('x-powered-by');
@@ -100,15 +102,30 @@ app.use(cors({
 }));
 
 
+// Global API rate limiter (protects all API endpoints against DDoS & brute-force abuse)
+const apiRateLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  max: 300,
+  message: 'Too many requests from this IP address. Please slow down and try again shortly.',
+});
+
+// Stricter rate limiter for expensive AI scoping requests (protects Gemini API quota & prevents wallet draining)
+const aiRateLimiter = rateLimit({
+  windowMs: 10 * 60 * 1000,
+  max: 40,
+  message: 'AI scoping rate limit reached. Please wait a few minutes before submitting new briefs.',
+});
+
 // Webhook route: express.raw mounted BEFORE express.json and sanitizeRequest with 2mb limit
 app.use(
   ['/api/v1/subscription/webhook', '/api/v1/subscription/webhook/:provider'],
   express.raw({ type: '*/*', limit: '2mb' })
 );
 
-app.use(express.json({ limit: '10mb' }));
-app.use(express.urlencoded({ extended: true, limit: '10mb' }));
+app.use(express.json({ limit: '2mb' }));
+app.use(express.urlencoded({ extended: true, limit: '2mb' }));
 app.use(sanitizeRequest);
+
 
 // Request logging middleware
 app.use((req, res, next) => {
@@ -167,21 +184,26 @@ app.get('/api/v1/public/business-info', (req, res) => {
   });
 });
 
+// Apply global API rate limiter to all API endpoints
+app.use('/api', apiRateLimiter);
+app.use('/api/v1', apiRateLimiter);
+
 // Mount versioned API routes
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/clients', clientsRouter);
-app.use('/api/v1/analyses', analysesRouter);
+app.use('/api/v1/analyses', aiRateLimiter, analysesRouter);
 app.use('/api/v1/pricing', pricingRouter);
 app.use('/api/v1/proposals', proposalsRouter);
 app.use('/api/v1/projects', projectsRouter);
 app.use('/api/v1/invoices', invoicesRouter);
 app.use('/api/v1/expenses', expensesRouter);
-app.use('/api/v1/agents-doc', agentsDocRouter);
+app.use('/api/v1/agents-doc', aiRateLimiter, agentsDocRouter);
 app.use('/api/v1/dashboard', dashboardRouter);
 app.use('/api/v1/subscription', subscriptionRouter);
 app.use('/api/v1/demo', demoRouter);
 app.use('/api/v1/templates', templatesRouter);
 app.use('/api/v1/public', publicDocumentsRouter);
+
 
 // Razorpay Standard Checkout API endpoints:
 // POST /api/create-order & POST /api/verify-payment

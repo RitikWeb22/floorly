@@ -1,0 +1,11 @@
+# Security Policy for Floorly (https://floorlystudio.me)
+# RFC 9116 Security Reporting Standard
+
+Contact: mailto:security@floorlystudio.me
+Contact: https://floorlystudio.me/contact
+Expires: 2027-12-31T23:59:59.000Z
+Preferred-Languages: en
+Canonical: https://floorlystudio.me/.well-known/security.txt
+Policy: https://floorlystudio.me/privacy
+Acknowledgments: https://floorlystudio.me/about
+Hiring: https://floorlystudio.me/about

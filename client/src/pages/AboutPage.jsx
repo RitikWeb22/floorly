@@ -212,7 +212,44 @@ export function AboutPage() {
             </table>
           </div>
         </section>
+
+        {/* Embeddable Studio Badge & Dofollow Citation Section */}
+        <section className="bg-white rounded-2xl border border-[#E8E0CF] p-8 sm:p-12 space-y-6 shadow-xs">
+          <div>
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#E8F0FB] text-[#0047AB] text-xs font-mono font-medium uppercase tracking-wider mb-2">
+              <ShieldCheck className="w-3.5 h-3.5" />
+              <span>Studio Citation &amp; Badges</span>
+            </div>
+            <h2 className="text-2xl font-semibold text-[#0E1A2B] font-display tracking-[-0.02em]">
+              Embed the "Floorly Price Protected" Badge on Your Portfolio
+            </h2>
+            <p className="text-xs sm:text-sm text-[#5B6676] mt-2 leading-relaxed">
+              Show prospective clients that your independent studio works with structured deliverables and deterministic price floor standards. Copy and paste this embed snippet into your portfolio or GitHub profile:
+            </p>
+          </div>
+
+          <div className="bg-[#FAF5EA] border border-[#E8E0CF] rounded-xl p-4 sm:p-5 space-y-3">
+            <div className="flex items-center justify-between">
+              <span className="text-xs font-semibold text-[#0E1A2B]">HTML Embed Code (Dofollow Portfolio Badge)</span>
+              <span className="text-[11px] text-[#5B6676] font-mono">Clean Dofollow</span>
+            </div>
+            <pre className="text-xs font-mono bg-white p-3.5 rounded-lg border border-[#E8E0CF] overflow-x-auto text-[#0E1A2B] select-all">
+{`<a href="https://floorlystudio.me/" target="_blank" rel="noopener" title="Scoped with Floorly Freelance Price Floor">
+  <img src="https://floorlystudio.me/og-image.svg" alt="Scoped with Floorly Price Floor" height="32" style="height:32px;border-radius:6px;" />
+</a>`}
+            </pre>
+          </div>
+
+          <div className="flex flex-wrap items-center gap-4 pt-2">
+            <span className="text-xs text-[#5B6676]">Live Badge Preview:</span>
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-lg bg-[#FAF5EA] border border-[#E8E0CF] text-xs font-semibold text-[#0047AB]">
+              <ShieldCheck className="w-4 h-4 text-[#0047AB]" />
+              <span>Protected by Floorly Price Floor Guardrails</span>
+            </div>
+          </div>
+        </section>
       </main>
+
 
       <Footer />
     </div>
