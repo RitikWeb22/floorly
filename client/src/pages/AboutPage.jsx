@@ -57,7 +57,7 @@ export function AboutPage() {
           </h1>
 
           <p className="text-sm sm:text-base text-[#5B6676] leading-relaxed">
-            Floorly is an AI-powered freelance management workstation designed specifically for independent software developers, UI/UX designers, and technical agencies. We help professionals transform unstructured client conversations into transparent quotations, ironclad proposals, client-specific <code className="bg-[#FAF5EA] px-1.5 py-0.5 rounded text-xs font-mono text-[#0E1A2B] border border-[#E8E0CF]">AGENTS.md</code> instruction files, and trackable financial records.
+            Floorly is an AI-powered freelance management tool designed specifically for independent software developers, UI/UX designers, and technical agencies. We help professionals transform unstructured client conversations into transparent quotations, structured proposals, client-specific <code className="bg-[#FAF5EA] px-1.5 py-0.5 rounded text-xs font-mono text-[#0E1A2B] border border-[#E8E0CF]">AGENTS.md</code> instruction files, and trackable financial records.
           </p>
         </div>
 

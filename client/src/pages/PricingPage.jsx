@@ -456,7 +456,7 @@ export function PricingPage() {
             <div>
               <div className="text-xs font-bold text-[#0E1A2B]">Global USD &amp; Indian Domestic INR Billing</div>
               <p className="text-xs text-[#5B6676] mt-0.5 leading-relaxed">
-                Prices shown in USD. Indian customers paying via Razorpay are billed in Indian Rupees (INR) at standard bank conversion rates (approx. ₹749/mo for Solo, ₹1,577/mo for Pro, ₹4,067/mo for Agency) with digital tax invoices provided immediately upon settlement.
+                Prices shown in USD. Indian customers paying via Razorpay are billed in Indian Rupees (INR) at standard bank conversion rates (approx. ₹749/mo for Solo, ₹1,577/mo for Pro, ₹4,067/mo for Agency) with digital tax invoices provided upon payment confirmation.
               </p>
             </div>
           </div>
@@ -527,11 +527,11 @@ export function PricingPage() {
                   <td className="py-3.5 px-4 text-center font-bold">100% White-label</td>
                 </tr>
                 <tr>
-                  <td className="py-3.5 px-4 font-semibold">Online Gateway Integration</td>
-                  <td className="py-3.5 px-4 text-center">Manual wire</td>
-                  <td className="py-3.5 px-4 text-center">Manual + UPI/PayPal</td>
-                  <td className="py-3.5 px-4 text-center font-bold text-[#0047AB]">Stripe / Razorpay</td>
-                  <td className="py-3.5 px-4 text-center font-bold">Multi-gateway Global</td>
+                  <td className="py-3.5 px-4 font-semibold">Client Payment Details on Invoices</td>
+                  <td className="py-3.5 px-4 text-center">Bank / Manual</td>
+                  <td className="py-3.5 px-4 text-center">Bank + UPI / PayPal link</td>
+                  <td className="py-3.5 px-4 text-center font-bold text-[#0047AB]">Stripe / Razorpay link</td>
+                  <td className="py-3.5 px-4 text-center font-bold">Any payment link or bank details</td>
                 </tr>
                 <tr>
                   <td className="py-3.5 px-4 font-semibold">Profitability & Expense Ledger</td>

@@ -1,6 +1,11 @@
 # Floorly 🚀
 
+[![Live Website](https://img.shields.io/badge/Website-floorlystudio.me-blue?style=for-the-badge&logo=googlechrome)](https://floorlystudio.me)
+[![GitHub License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](https://github.com/RitikWeb22/floorly)
+
 **Never undercharge again — Global AI Business & Proposal Engine**
+👉 **Live Platform:** [https://floorlystudio.me](https://floorlystudio.me)
+
 Floorly is a production-ready, full-stack SaaS application engineered for independent freelancers, web developers, designers, and small digital agencies to convert unstructured client briefs into professional proposals, transparent quotations with strict floor price enforcement, project execution roadmaps, client-specific `AGENTS.md` instructions, and trackable financial records across global currencies (USD, EUR, GBP, INR, AUD, CAD, AED, SGD).
 
 ---

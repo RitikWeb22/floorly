@@ -1411,7 +1411,7 @@ export function LandingPage() {
                     <strong>Floor protection active:</strong> Adjusted labor was {fmtCurrency(adjustedLabor)}, but Floorly
                     held the proposal at your {fmtCurrency(calcFloor)} minimum.
                     <div style={{ marginTop: '6px', fontWeight: 700 }}>
-                      Money saved vs underquoting: {fmtCurrency(moneyProtected)}
+                      Extra revenue protected by your floor: {fmtCurrency(moneyProtected)}
                     </div>
                   </div>
                 ) : (
@@ -2139,7 +2139,7 @@ export function LandingPage() {
                 How does Floorly streamline boutique creative studios?
               </h3>
               <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
-                For small studios standardizing intake and proposals. Helps team members consistently adhere to target price floors, preventing underquoting during client negotiations.
+                For small studios standardizing intake and proposals. Helps team members consistently adhere to target price floors so quotes stay above your minimum during client negotiations.
               </p>
             </div>
           </div>

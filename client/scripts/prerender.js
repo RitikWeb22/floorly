@@ -36,7 +36,7 @@ const ROUTES = [
             <h2>What are the key takeaways and core benefits of Floorly?</h2>
             <p>Floorly is a web app that helps freelancers and small studios scope client briefs, enforce minimum price floors, and issue milestone invoices. Users add their own payment details or links to invoices, record client payments, and track true project profit after expenses and labor time.</p>
             <ul>
-              <li><strong>Core Problem Solved:</strong> Prevents project underquoting caused by unestimated revisions, vague client requirements, and emotional discounting during negotiations.</li>
+              <li><strong>Core Problem Solved:</strong> Prevents quoting below your minimum by catching unestimated revisions, vague client requirements, and emotional discounting during negotiations.</li>
               <li><strong>Who It Is Built For:</strong> Freelance software engineers, UI/UX designers, independent copywriters, and boutique studio owners quoting fixed-price client engagements.</li>
               <li><strong>How It Works:</strong> An AI Scope Analyzer extracts deliverables from briefs, applies a configurable contingency buffer and complexity multiplier, and checks totals against a server-enforced price floor into proposals.</li>
               <li><strong>Client Payment Details:</strong> Users add their own payment details or payment link (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) to proposals and invoices, and record payments in Floorly.</li>

@@ -13,7 +13,7 @@ export function Footer() {
           <div style={{ maxWidth: '340px' }}>
             <Logo size="md" />
             <p style={{ marginTop: '12px', fontSize: '13px', lineHeight: '1.6', color: 'var(--muted, #5B6676)' }}>
-              AI-powered requirement scoping and deterministic floor pricing workstation for independent developers and design studios.
+              AI-powered requirement scoping and price floor enforcement for independent developers and design studios.
             </p>
             <p style={{ marginTop: '8px', fontSize: '13px', lineHeight: '1.5', color: 'var(--muted, #5B6676)' }}>
               Support:{' '}
