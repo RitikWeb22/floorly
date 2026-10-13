@@ -7,12 +7,25 @@ import {
   AlertCircle,
   CheckCircle2,
   Loader2,
+  Eye,
+  EyeOff,
+  Building2,
+  Receipt,
+  CreditCard,
+  FileText,
+  Bell,
+  Globe,
+  Zap,
+  Shield,
+  UserCheck,
+  Sparkles,
 } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore';
 import { useNotificationStore } from '../store/useNotificationStore';
 import { api } from '../lib/api';
 import { SettingsNav } from '../components/settings/SettingsNav';
 import { LivePreviewCard } from '../components/settings/LivePreviewCard';
+
 import { CountryChangeDialog } from '../components/settings/CountryChangeDialog';
 import { BusinessSection } from '../components/settings/sections/BusinessSection';
 import { TaxesSection } from '../components/settings/sections/TaxesSection';
@@ -33,6 +46,63 @@ import {
   validateUrl,
 } from '../components/settings/settingsConstants';
 
+const SECTION_META = {
+  business: {
+    title: 'Business Profile',
+    description: 'Trading name, registered address, contact info and branding identity.',
+    icon: Building2,
+    badge: 'Core Identity',
+  },
+  taxes: {
+    title: 'Taxes & Compliance',
+    description: 'Tax identification, default rates, and country-specific fiscal rules.',
+    icon: Receipt,
+    badge: 'Fiscal',
+  },
+  payments: {
+    title: 'Payment Methods',
+    description: 'Bank transfers, UPI, Stripe, PayPal and automated payout instructions.',
+    icon: CreditCard,
+    badge: 'Payouts',
+  },
+  documents: {
+    title: 'Document Defaults',
+    description: 'Invoice prefixes, payment terms, currency and custom memo notes.',
+    icon: FileText,
+    badge: 'Templates',
+  },
+  notifications: {
+    title: 'Notifications & Alerts',
+    description: 'Email receipts, overdue reminders, and platform activity pings.',
+    icon: Bell,
+    badge: 'Communications',
+  },
+  regional: {
+    title: 'Regional & Localization',
+    description: 'Language, timezone, currency format and fiscal calendar boundaries.',
+    icon: Globe,
+    badge: 'Locale',
+  },
+  'plan-and-billing': {
+    title: 'Plan & Billing',
+    description: 'Subscription tier, monthly invoice credits, and add-on modules.',
+    icon: Zap,
+    badge: 'Subscription',
+  },
+  'data-and-privacy': {
+    title: 'Data & Privacy',
+    description: 'Data export, audit trails, activity telemetry and GDPR erasure.',
+    icon: Shield,
+    badge: 'Security',
+  },
+  account: {
+    title: 'Personal Account',
+    description: 'Login credentials, avatar, security settings and connected accounts.',
+    icon: UserCheck,
+    badge: 'Profile',
+  },
+};
+
 export function SettingsPage() {
   const { section = 'business' } = useParams();
   const navigate = useNavigate();
@@ -40,6 +110,7 @@ export function SettingsPage() {
   const queryClient = useQueryClient();
   const { user, setUser, logout } = useAuthStore();
   const { showToast } = useNotificationStore();
+  const [showPreview, setShowPreview] = useState(true);
 
   // Document Title
   useEffect(() => {
@@ -650,7 +721,9 @@ export function SettingsPage() {
     }
   };
 
-  const showLivePreview = ['business', 'taxes', 'payments'].includes(section);
+  const isPreviewEligible = ['business', 'taxes', 'payments'].includes(section);
+  const currentMeta = SECTION_META[section] || SECTION_META.business;
+  const SectionIcon = currentMeta.icon || Building2;
 
   return (
     <div
@@ -659,18 +732,43 @@ export function SettingsPage() {
         backgroundColor: 'var(--page, #FAF5EA)',
       }}
     >
-      {/* Page Header */}
+      {/* Top Header Bar */}
       <header className="mb-6 sm:mb-8 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
-          <h1 className="font-display font-semibold text-[30px] text-[#0E1A2B] tracking-[-0.02em] leading-[1.15]">
+          {/* Breadcrumb path */}
+          <div className="flex items-center gap-2 text-xs text-[#5B6676] mb-1.5 font-medium">
+            <span>Workspace</span>
+            <span>/</span>
+            <span>Settings</span>
+            <span>/</span>
+            <span className="text-[#0047AB] font-semibold">{currentMeta.title}</span>
+          </div>
+
+          <h1 className="font-display font-semibold text-[28px] sm:text-[32px] text-[#0E1A2B] tracking-[-0.02em] leading-[1.15]">
             Settings
           </h1>
-          <p className="text-sm sm:text-[15px] text-[#5B6676] mt-1.5 max-w-2xl leading-relaxed">
-            Your business details, taxes, payments and defaults. They appear on every proposal and invoice.
+          <p className="text-xs sm:text-[14px] text-[#5B6676] mt-1 max-w-2xl leading-relaxed">
+            Manage your studio identity, financial compliance, client defaults and platform preferences.
           </p>
         </div>
 
-        <div className="flex items-center gap-2.5 shrink-0">
+        <div className="flex items-center gap-2.5 shrink-0 flex-wrap">
+          {isPreviewEligible && (
+            <button
+              type="button"
+              onClick={() => setShowPreview(!showPreview)}
+              className={`inline-flex items-center gap-1.5 px-3.5 h-[42px] rounded-xl border text-xs font-semibold transition-all shadow-xs ${
+                showPreview
+                  ? 'bg-white border-[#0047AB]/30 text-[#0047AB] hover:bg-[#E8F0FB]/50'
+                  : 'bg-white border-[#E8E0CF] text-[#5B6676] hover:bg-[#FAF5EA] hover:text-[#0E1A2B]'
+              }`}
+              title={showPreview ? 'Hide document live preview' : 'Show document live preview'}
+            >
+              {showPreview ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5 text-[#5B6676]" />}
+              <span>{showPreview ? 'Live Preview' : 'Show Preview'}</span>
+            </button>
+          )}
+
           {isDirty && (
             <button
               type="button"
@@ -713,22 +811,60 @@ export function SettingsPage() {
         </div>
       </header>
 
-      {/* Main 3-Column Desktop Grid / Fluid Mobile Layout */}
-      <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-8">
-        {/* Left Nav (240px) */}
-        <SettingsNav
-          activeSection={section}
-          onSelectSection={(secId) => navigate(`/settings/${secId}`)}
-        />
+      {/* Main Responsive Layout */}
+      <div className="flex flex-col lg:flex-row items-start gap-6 lg:gap-8 max-w-[1440px] mx-auto">
+        {/* Left Navigation (Categorized Sidebar) */}
+        <aside className="w-full lg:w-[260px] shrink-0 lg:sticky lg:top-6 z-20">
+          <SettingsNav
+            activeSection={section}
+            onSelectSection={(secId) => navigate(`/settings/${secId}`)}
+          />
+        </aside>
 
-        {/* Center Content Column (Max 760px) */}
-        <div className="flex-1 w-full min-w-0 max-w-[760px]">
+        {/* Center Content Column */}
+        <main className={`flex-1 w-full min-w-0 transition-all duration-200 ${isPreviewEligible && showPreview ? 'max-w-[780px]' : 'max-w-4xl'}`}>
+          {/* Section Banner Header Card */}
+          <div className="bg-white rounded-2xl border border-[#E8E0CF] p-5 sm:p-6 mb-6 shadow-xs flex items-start justify-between gap-4">
+            <div className="flex items-start gap-4">
+              <div className="w-11 h-11 rounded-xl bg-[#E8F0FB] text-[#0047AB] flex items-center justify-center shrink-0 border border-[#0047AB]/10 shadow-xs">
+                <SectionIcon className="w-5 h-5" />
+              </div>
+              <div>
+                <div className="flex items-center gap-2.5 flex-wrap">
+                  <h2 className="text-lg sm:text-xl font-bold font-display text-[#0E1A2B] tracking-[-0.01em]">
+                    {currentMeta.title}
+                  </h2>
+                  <span className="text-[10.5px] font-semibold px-2.5 py-0.5 rounded-full bg-[#FAF5EA] text-[#5B6676] border border-[#E8E0CF]">
+                    {currentMeta.badge}
+                  </span>
+                </div>
+                <p className="text-xs sm:text-sm text-[#5B6676] mt-1 leading-relaxed max-w-xl">
+                  {currentMeta.description}
+                </p>
+              </div>
+            </div>
+
+            {isPreviewEligible && (
+              <button
+                type="button"
+                onClick={() => setShowPreview(!showPreview)}
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#E8E0CF] bg-[#FAF5EA]/50 hover:bg-[#FAF5EA] text-[11px] font-semibold text-[#5B6676] hover:text-[#0E1A2B] transition-colors shrink-0"
+              >
+                {showPreview ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
+                <span>{showPreview ? 'Hide preview' : 'View preview'}</span>
+              </button>
+            )}
+          </div>
+
+          {/* Active Settings Section Form Component */}
           {renderSectionContent()}
-        </div>
+        </main>
 
-        {/* Right Sticky Live Preview Card (320px) on Business, Taxes, Payments */}
-        {showLivePreview && (
-          <LivePreviewCard formData={formData} />
+        {/* Right Column: Live Document Preview (When eligible and toggled on) */}
+        {isPreviewEligible && showPreview && (
+          <div className="w-full xl:w-[320px] shrink-0">
+            <LivePreviewCard formData={formData} onClose={() => setShowPreview(false)} />
+          </div>
         )}
       </div>
 
@@ -737,11 +873,11 @@ export function SettingsPage() {
         <div
           role="region"
           aria-label="Unsaved settings save bar"
-          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-2xl bg-white border border-[#E8E0CF] rounded-2xl shadow-xl px-5 py-3.5 flex items-center justify-between gap-4 animate-in fade-in slide-in-from-bottom-5 duration-200"
+          className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40 w-[92%] max-w-2xl backdrop-blur-md bg-white/95 border border-[#E8E0CF] rounded-2xl shadow-2xl px-5 py-3.5 flex items-center justify-between gap-4 animate-in fade-in slide-in-from-bottom-5 duration-200"
         >
-          <div className="flex items-center gap-2 text-sm font-semibold text-[#0E1A2B]">
+          <div className="flex items-center gap-2.5 text-sm font-semibold text-[#0E1A2B]">
             <span className="w-2.5 h-2.5 rounded-full bg-[#B54708] animate-pulse" />
-            <span>Unsaved changes</span>
+            <span>Unsaved modifications in {currentMeta.title}</span>
           </div>
 
           <div className="flex items-center gap-2.5">

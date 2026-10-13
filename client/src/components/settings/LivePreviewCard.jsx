@@ -9,10 +9,12 @@ import {
   ChevronUp,
   ShieldCheck,
   Check,
+  FileText,
+  X,
 } from 'lucide-react';
 import { maskAccountNumber } from './settingsConstants';
 
-export function LivePreviewCard({ formData }) {
+export function LivePreviewCard({ formData, onClose }) {
   const [showMasked, setShowMasked] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState(false);
 
@@ -36,23 +38,26 @@ export function LivePreviewCard({ formData }) {
   const isIndiaOrInr = formData.country === 'IN' || formData.defaultCurrency === 'INR' || formData.currency === 'INR';
 
   const previewContent = (
-    <div className="space-y-5 text-xs text-[#0E1A2B]">
+    <div className="space-y-4 text-xs text-[#0E1A2B]">
       {/* 1. Letterhead Card */}
-      <div className="bg-[#FAF5EA]/50 rounded-xl p-3.5 border border-[#E8E0CF] space-y-2">
-        <span className="text-[10px] font-bold uppercase tracking-wider text-[#5B6676] block">
-          Document header
-        </span>
+      <div className="bg-[#FAF5EA]/60 rounded-xl p-3.5 border border-[#E8E0CF] space-y-2.5">
+        <div className="flex items-center justify-between">
+          <span className="text-[10px] font-bold uppercase tracking-wider text-[#5B6676]">
+            Document Header
+          </span>
+          <span className="text-[10px] font-mono text-[#0047AB] bg-[#E8F0FB] px-1.5 py-0.5 rounded font-medium">
+            Proposal / Invoice
+          </span>
+        </div>
 
         {formData.logoUrl ? (
           <img
             src={formData.logoUrl}
             alt="Studio logo"
-            className="h-8 max-w-[140px] object-contain"
+            className="h-8 max-w-[140px] object-contain rounded"
           />
         ) : (
-          <h2
-            className="text-base font-semibold text-[#0E1A2B] font-display tracking-[-0.01em] leading-none"
-          >
+          <h2 className="text-base font-semibold text-[#0E1A2B] font-display tracking-[-0.01em] leading-none">
             {formData.businessName || formData.name || 'Your Studio Name'}
           </h2>
         )}
@@ -61,20 +66,21 @@ export function LivePreviewCard({ formData }) {
           {formData.businessEmail && <p>{formData.businessEmail}</p>}
           {formData.businessPhone && <p>{formData.businessPhone}</p>}
           {fullAddress && <p className="whitespace-pre-line">{fullAddress}</p>}
-          {formData.website && <p className="text-[#0047AB]">{formData.website}</p>}
+          {formData.website && <p className="text-[#0047AB] font-medium">{formData.website}</p>}
         </div>
 
         {formData.taxEnabled && formData.taxId && (
-          <div className="pt-1.5 border-t border-[#E8E0CF] text-[11px] font-semibold text-[#0E1A2B]">
-            {formData.taxIdLabel || formData.taxType || 'Tax ID'}: {formData.taxId}
+          <div className="pt-2 border-t border-[#E8E0CF] text-[11px] font-semibold text-[#0E1A2B] flex items-center justify-between">
+            <span className="text-[#5B6676]">{formData.taxIdLabel || formData.taxType || 'Tax ID'}:</span>
+            <span className="font-mono">{formData.taxId}</span>
           </div>
         )}
       </div>
 
       {/* 2. Tax Summary Preview */}
-      <div className="bg-[#FAF5EA]/50 rounded-xl p-3.5 border border-[#E8E0CF] space-y-1.5">
+      <div className="bg-[#FAF5EA]/60 rounded-xl p-3.5 border border-[#E8E0CF] space-y-1.5">
         <span className="text-[10px] font-bold uppercase tracking-wider text-[#5B6676] block">
-          Tax configuration
+          Tax Application
         </span>
         {formData.taxEnabled ? (
           <div className="space-y-1 text-[11px]">
@@ -108,13 +114,13 @@ export function LivePreviewCard({ formData }) {
       </div>
 
       {/* 3. Invoice Remittance Preview */}
-      <div className="bg-[#FAF5EA]/50 rounded-xl p-3.5 border border-[#E8E0CF] space-y-2">
+      <div className="bg-[#FAF5EA]/60 rounded-xl p-3.5 border border-[#E8E0CF] space-y-2">
         <div className="flex items-center justify-between">
           <span className="text-[10px] font-bold uppercase tracking-wider text-[#5B6676]">
-            Invoice remittance
+            Payment Remittance
           </span>
           <span className="text-[10px] font-semibold text-[#0047AB] bg-[#E8F0FB] px-1.5 py-0.5 rounded">
-            Live preview
+            Client view
           </span>
         </div>
 
@@ -123,8 +129,8 @@ export function LivePreviewCard({ formData }) {
           <div
             className={`p-2.5 rounded-lg border text-[11px] space-y-1 ${
               defaultMethod === 'bankTransfer'
-                ? 'bg-white border-[#0047AB]/30 shadow-xs'
-                : 'bg-white/60 border-[#E8E0CF]'
+                ? 'bg-white border-[#0047AB]/30 shadow-2xs'
+                : 'bg-white/70 border-[#E8E0CF]'
             }`}
           >
             <div className="flex items-center justify-between font-bold text-[#0E1A2B]">
@@ -133,7 +139,7 @@ export function LivePreviewCard({ formData }) {
                 <span>Bank transfer</span>
               </span>
               {defaultMethod === 'bankTransfer' && (
-                <span className="text-[10px] text-[#0047AB] bg-[#E8F0FB] px-1 py-0.2 rounded font-bold">
+                <span className="text-[10px] text-[#0047AB] bg-[#E8F0FB] px-1.5 py-0.2 rounded font-bold">
                   Default
                 </span>
               )}
@@ -174,14 +180,14 @@ export function LivePreviewCard({ formData }) {
           <div
             className={`p-2.5 rounded-lg border text-[11px] space-y-1 ${
               defaultMethod === 'paypal'
-                ? 'bg-white border-[#0047AB]/30 shadow-xs'
-                : 'bg-white/60 border-[#E8E0CF]'
+                ? 'bg-white border-[#0047AB]/30 shadow-2xs'
+                : 'bg-white/70 border-[#E8E0CF]'
             }`}
           >
             <div className="flex items-center justify-between font-bold text-[#0E1A2B]">
               <span>PayPal</span>
               {defaultMethod === 'paypal' && (
-                <span className="text-[10px] text-[#0047AB] bg-[#E8F0FB] px-1 py-0.2 rounded font-bold">
+                <span className="text-[10px] text-[#0047AB] bg-[#E8F0FB] px-1.5 py-0.2 rounded font-bold">
                   Default
                 </span>
               )}
@@ -195,19 +201,19 @@ export function LivePreviewCard({ formData }) {
           <div
             className={`p-2.5 rounded-lg border text-[11px] space-y-1 ${
               defaultMethod === 'onlinePayment'
-                ? 'bg-white border-[#0047AB]/30 shadow-xs'
-                : 'bg-white/60 border-[#E8E0CF]'
+                ? 'bg-white border-[#0047AB]/30 shadow-2xs'
+                : 'bg-white/70 border-[#E8E0CF]'
             }`}
           >
             <div className="flex items-center justify-between font-bold text-[#0E1A2B]">
               <span>{online.label || 'Online payment link'}</span>
               {defaultMethod === 'onlinePayment' && (
-                <span className="text-[10px] text-[#0047AB] bg-[#E8F0FB] px-1 py-0.2 rounded font-bold">
+                <span className="text-[10px] text-[#0047AB] bg-[#E8F0FB] px-1.5 py-0.2 rounded font-bold">
                   Default
                 </span>
               )}
             </div>
-            <p className="text-[#0047AB] truncate">{online.url}</p>
+            <p className="text-[#0047AB] truncate font-medium">{online.url}</p>
           </div>
         )}
 
@@ -216,14 +222,14 @@ export function LivePreviewCard({ formData }) {
           <div
             className={`p-2.5 rounded-lg border text-[11px] space-y-1 ${
               defaultMethod === 'upi'
-                ? 'bg-white border-[#0047AB]/30 shadow-xs'
-                : 'bg-white/60 border-[#E8E0CF]'
+                ? 'bg-white border-[#0047AB]/30 shadow-2xs'
+                : 'bg-white/70 border-[#E8E0CF]'
             }`}
           >
             <div className="flex items-center justify-between font-bold text-[#0E1A2B]">
               <span>UPI ID</span>
               {defaultMethod === 'upi' && (
-                <span className="text-[10px] text-[#0047AB] bg-[#E8F0FB] px-1 py-0.2 rounded font-bold">
+                <span className="text-[10px] text-[#0047AB] bg-[#E8F0FB] px-1.5 py-0.2 rounded font-bold">
                   Default
                 </span>
               )}
@@ -234,7 +240,7 @@ export function LivePreviewCard({ formData }) {
 
         {/* Other */}
         {other?.enabled && other.instructions && (
-          <div className="p-2.5 rounded-lg border bg-white/60 border-[#E8E0CF] text-[11px]">
+          <div className="p-2.5 rounded-lg border bg-white/70 border-[#E8E0CF] text-[11px]">
             <p className="text-[#5B6676] whitespace-pre-line leading-relaxed">
               {other.instructions}
             </p>
@@ -252,21 +258,41 @@ export function LivePreviewCard({ formData }) {
 
   return (
     <>
-      {/* Desktop Sticky Live Preview Card (320px) */}
-      <aside className="hidden xl:block w-[320px] shrink-0 sticky top-6 self-start">
-        <div className="bg-white rounded-2xl border border-[#E8E0CF] p-5 shadow-xs">
-          <div className="flex items-center justify-between pb-3 mb-4 border-b border-[#E8E0CF]">
-            <div>
-              <h3
-                className="text-base font-medium text-[#0E1A2B] leading-none font-display tracking-[-0.01em]"
-              >
-                Live preview
-              </h3>
-              <p className="text-[11px] text-[#5B6676] mt-0.5">
-                How clients see your documents
-              </p>
+      {/* Desktop Sticky Live Preview Card (340px) */}
+      <aside className="hidden xl:block w-[340px] shrink-0 sticky top-6 self-start">
+        <div className="bg-white rounded-2xl border border-[#E8E0CF] p-5 shadow-sm relative overflow-hidden">
+          {/* Top subtle brand accent bar */}
+          <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0047AB] via-[#0047AB]/70 to-[#FFC72C]" />
+
+          <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-[#E8E0CF] pt-1">
+            <div className="flex items-center gap-2">
+              <div className="w-6 h-6 rounded-md bg-[#E8F0FB] flex items-center justify-center text-[#0047AB]">
+                <FileText className="w-3.5 h-3.5" />
+              </div>
+              <div>
+                <h3 className="text-sm font-bold text-[#0E1A2B] leading-none font-display">
+                  Live Preview
+                </h3>
+                <p className="text-[10.5px] text-[#5B6676] mt-0.5">
+                  Client document letterhead
+                </p>
+              </div>
             </div>
-            <span className="w-2 h-2 rounded-full bg-[#067647] animate-pulse" title="Syncing live" />
+
+            <div className="flex items-center gap-2">
+              <span className="w-2 h-2 rounded-full bg-[#067647] animate-pulse" title="Live sync active" />
+              {onClose && (
+                <button
+                  type="button"
+                  onClick={onClose}
+                  className="p-1 rounded-lg text-[#5B6676] hover:bg-[#FAF5EA] hover:text-[#0E1A2B] transition-colors"
+                  title="Hide preview"
+                  aria-label="Hide preview"
+                >
+                  <X className="w-3.5 h-3.5" />
+                </button>
+              )}
+            </div>
           </div>
 
           {previewContent}
@@ -275,26 +301,28 @@ export function LivePreviewCard({ formData }) {
 
       {/* Mobile / Tablet Collapsible Drawer Card */}
       <div className="xl:hidden w-full mb-6">
-        <div className="bg-white rounded-2xl border border-[#E8E0CF] overflow-hidden">
+        <div className="bg-white rounded-2xl border border-[#E8E0CF] overflow-hidden shadow-xs">
           <button
             type="button"
             onClick={() => setMobileExpanded(!mobileExpanded)}
             className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-[#FAF5EA]/50 transition-colors"
           >
-            <div className="flex items-center gap-2">
-              <Eye className="w-4 h-4 text-[#0047AB]" />
+            <div className="flex items-center gap-2.5">
+              <div className="w-6 h-6 rounded-md bg-[#E8F0FB] flex items-center justify-center text-[#0047AB]">
+                <FileText className="w-3.5 h-3.5" />
+              </div>
               <span className="text-sm font-bold text-[#0E1A2B]">
                 Live document preview
               </span>
             </div>
-            <div className="flex items-center gap-1 text-xs font-semibold text-[#5B6676]">
+            <div className="flex items-center gap-1.5 text-xs font-semibold text-[#5B6676]">
               <span>{mobileExpanded ? 'Collapse' : 'Tap to expand'}</span>
               {mobileExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
             </div>
           </button>
 
           {mobileExpanded && (
-            <div className="p-4 border-t border-[#E8E0CF] bg-[#FAF5EA]/30">
+            <div className="p-4 border-t border-[#E8E0CF] bg-[#FAF5EA]/20">
               {previewContent}
             </div>
           )}
@@ -303,3 +331,4 @@ export function LivePreviewCard({ formData }) {
     </>
   );
 }
+
