@@ -15,6 +15,18 @@ export class ErrorBoundary extends React.Component {
     this.setState({ errorInfo });
     // In production, structured error logging could be sent to telemetry
     console.error('Unhandled UI Error caught by ErrorBoundary:', error, errorInfo);
+
+    const isDynamicImportError =
+      error?.message?.includes('Failed to fetch dynamically imported module') ||
+      error?.name === 'ChunkLoadError' ||
+      error?.message?.includes('Importing a module script failed') ||
+      error?.message?.includes('error loading dynamically imported module');
+
+    const refreshed = JSON.parse(window.sessionStorage.getItem('page-has-been-force-refreshed') || 'false');
+    if (isDynamicImportError && !refreshed) {
+      window.sessionStorage.setItem('page-has-been-force-refreshed', 'true');
+      window.location.reload();
+    }
   }
 
   handleReset = () => {

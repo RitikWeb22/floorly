@@ -7,41 +7,70 @@ import { AppLayout } from './components/layout/AppLayout';
 import { ErrorBoundary } from './components/common/ErrorBoundary';
 import { Analytics } from '@vercel/analytics/react';
 
+// Robust lazy-loader that automatically catches stale deployment chunks and force-refreshes once
+function lazyWithRetry(componentImport) {
+  return lazy(async () => {
+    const pageHasAlreadyBeenForceRefreshed = JSON.parse(
+      window.sessionStorage.getItem('page-has-been-force-refreshed') || 'false'
+    );
+
+    try {
+      const component = await componentImport();
+      window.sessionStorage.setItem('page-has-been-force-refreshed', 'false');
+      return component;
+    } catch (error) {
+      const isDynamicImportError =
+        error?.message?.includes('Failed to fetch dynamically imported module') ||
+        error?.name === 'ChunkLoadError' ||
+        error?.message?.includes('Importing a module script failed') ||
+        error?.message?.includes('error loading dynamically imported module');
+
+      if (!pageHasAlreadyBeenForceRefreshed && isDynamicImportError) {
+        window.sessionStorage.setItem('page-has-been-force-refreshed', 'true');
+        window.location.reload();
+        return { default: () => null };
+      }
+
+      throw error;
+    }
+  });
+}
+
 // Lazy-loaded Public Pages
-const LandingPage = lazy(() => import('./pages/LandingPage').then((m) => ({ default: m.LandingPage })));
-const AuthPage = lazy(() => import('./pages/AuthPage').then((m) => ({ default: m.AuthPage })));
-const TermsPage = lazy(() => import('./pages/TermsPage').then((m) => ({ default: m.TermsPage })));
-const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then((m) => ({ default: m.PrivacyPage })));
-const RefundPage = lazy(() => import('./pages/RefundPage').then((m) => ({ default: m.RefundPage })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then((m) => ({ default: m.ContactPage })));
-const ForgotPasswordPage = lazy(() => import('./pages/ForgotPasswordPage').then((m) => ({ default: m.ForgotPasswordPage })));
-const PublicProposalPage = lazy(() => import('./pages/PublicProposalPage').then((m) => ({ default: m.PublicProposalPage })));
-const PublicInvoicePage = lazy(() => import('./pages/PublicInvoicePage').then((m) => ({ default: m.PublicInvoicePage })));
-const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
-const PricingPage = lazy(() => import('./pages/PricingPage').then((m) => ({ default: m.PricingPage })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
-const DeliveryPage = lazy(() => import('./pages/DeliveryPage').then((m) => ({ default: m.DeliveryPage })));
-const RazorpayTestPage = lazy(() => import('./pages/RazorpayTestPage').then((m) => ({ default: m.RazorpayTestPage })));
-const FreelanceRateCalculatorPage = lazy(() => import('./pages/tools/FreelanceRateCalculatorPage').then((m) => ({ default: m.FreelanceRateCalculatorPage })));
-const ProjectPriceCalculatorPage = lazy(() => import('./pages/tools/ProjectPriceCalculatorPage').then((m) => ({ default: m.ProjectPriceCalculatorPage })));
+const LandingPage = lazyWithRetry(() => import('./pages/LandingPage').then((m) => ({ default: m.LandingPage })));
+const AuthPage = lazyWithRetry(() => import('./pages/AuthPage').then((m) => ({ default: m.AuthPage })));
+const TermsPage = lazyWithRetry(() => import('./pages/TermsPage').then((m) => ({ default: m.TermsPage })));
+const PrivacyPage = lazyWithRetry(() => import('./pages/PrivacyPage').then((m) => ({ default: m.PrivacyPage })));
+const RefundPage = lazyWithRetry(() => import('./pages/RefundPage').then((m) => ({ default: m.RefundPage })));
+const ContactPage = lazyWithRetry(() => import('./pages/ContactPage').then((m) => ({ default: m.ContactPage })));
+const ForgotPasswordPage = lazyWithRetry(() => import('./pages/ForgotPasswordPage').then((m) => ({ default: m.ForgotPasswordPage })));
+const PublicProposalPage = lazyWithRetry(() => import('./pages/PublicProposalPage').then((m) => ({ default: m.PublicProposalPage })));
+const PublicInvoicePage = lazyWithRetry(() => import('./pages/PublicInvoicePage').then((m) => ({ default: m.PublicInvoicePage })));
+const NotFoundPage = lazyWithRetry(() => import('./pages/NotFoundPage').then((m) => ({ default: m.NotFoundPage })));
+const PricingPage = lazyWithRetry(() => import('./pages/PricingPage').then((m) => ({ default: m.PricingPage })));
+const AboutPage = lazyWithRetry(() => import('./pages/AboutPage').then((m) => ({ default: m.AboutPage })));
+const DeliveryPage = lazyWithRetry(() => import('./pages/DeliveryPage').then((m) => ({ default: m.DeliveryPage })));
+const RazorpayTestPage = lazyWithRetry(() => import('./pages/RazorpayTestPage').then((m) => ({ default: m.RazorpayTestPage })));
+const FreelanceRateCalculatorPage = lazyWithRetry(() => import('./pages/tools/FreelanceRateCalculatorPage').then((m) => ({ default: m.FreelanceRateCalculatorPage })));
+const ProjectPriceCalculatorPage = lazyWithRetry(() => import('./pages/tools/ProjectPriceCalculatorPage').then((m) => ({ default: m.ProjectPriceCalculatorPage })));
 
 // Lazy-loaded Authenticated Pages
-const DashboardPage = lazy(() => import('./pages/DashboardPage').then((m) => ({ default: m.DashboardPage })));
-const AnalyzerPage = lazy(() => import('./pages/AnalyzerPage').then((m) => ({ default: m.AnalyzerPage })));
-const ProposalsPage = lazy(() => import('./pages/ProposalsPage').then((m) => ({ default: m.ProposalsPage })));
-const ProposalBuilderPage = lazy(() => import('./pages/ProposalBuilderPage').then((m) => ({ default: m.ProposalBuilderPage })));
-const ClientsPage = lazy(() => import('./pages/ClientsPage').then((m) => ({ default: m.ClientsPage })));
-const ClientDetailPage = lazy(() => import('./pages/ClientDetailPage').then((m) => ({ default: m.ClientDetailPage })));
-const ProjectsPage = lazy(() => import('./pages/ProjectsPage').then((m) => ({ default: m.ProjectsPage })));
-const InvoicesPage = lazy(() => import('./pages/InvoicesPage').then((m) => ({ default: m.InvoicesPage })));
-const ExpensesPage = lazy(() => import('./pages/ExpensesPage').then((m) => ({ default: m.ExpensesPage })));
-const TemplatesPage = lazy(() => import('./pages/TemplatesPage').then((m) => ({ default: m.TemplatesPage })));
-const PricingRulesPage = lazy(() => import('./pages/PricingRulesPage').then((m) => ({ default: m.PricingRulesPage })));
-const AgentsDocPage = lazy(() => import('./pages/AgentsDocPage').then((m) => ({ default: m.AgentsDocPage })));
-const SettingsPage = lazy(() => import('./pages/SettingsPage').then((m) => ({ default: m.SettingsPage })));
-const ProposalPrintPage = lazy(() => import('./pages/ProposalPrintPage').then((m) => ({ default: m.ProposalPrintPage })));
-const InvoicePrintPage = lazy(() => import('./pages/InvoicePrintPage').then((m) => ({ default: m.InvoicePrintPage })));
-const PaymentReceiptPrintPage = lazy(() => import('./pages/PaymentReceiptPrintPage').then((m) => ({ default: m.PaymentReceiptPrintPage })));
+const DashboardPage = lazyWithRetry(() => import('./pages/DashboardPage').then((m) => ({ default: m.DashboardPage })));
+const AnalyzerPage = lazyWithRetry(() => import('./pages/AnalyzerPage').then((m) => ({ default: m.AnalyzerPage })));
+const ProposalsPage = lazyWithRetry(() => import('./pages/ProposalsPage').then((m) => ({ default: m.ProposalsPage })));
+const ProposalBuilderPage = lazyWithRetry(() => import('./pages/ProposalBuilderPage').then((m) => ({ default: m.ProposalBuilderPage })));
+const ClientsPage = lazyWithRetry(() => import('./pages/ClientsPage').then((m) => ({ default: m.ClientsPage })));
+const ClientDetailPage = lazyWithRetry(() => import('./pages/ClientDetailPage').then((m) => ({ default: m.ClientDetailPage })));
+const ProjectsPage = lazyWithRetry(() => import('./pages/ProjectsPage').then((m) => ({ default: m.ProjectsPage })));
+const InvoicesPage = lazyWithRetry(() => import('./pages/InvoicesPage').then((m) => ({ default: m.InvoicesPage })));
+const ExpensesPage = lazyWithRetry(() => import('./pages/ExpensesPage').then((m) => ({ default: m.ExpensesPage })));
+const TemplatesPage = lazyWithRetry(() => import('./pages/TemplatesPage').then((m) => ({ default: m.TemplatesPage })));
+const PricingRulesPage = lazyWithRetry(() => import('./pages/PricingRulesPage').then((m) => ({ default: m.PricingRulesPage })));
+const AgentsDocPage = lazyWithRetry(() => import('./pages/AgentsDocPage').then((m) => ({ default: m.AgentsDocPage })));
+const SettingsPage = lazyWithRetry(() => import('./pages/SettingsPage').then((m) => ({ default: m.SettingsPage })));
+const ProposalPrintPage = lazyWithRetry(() => import('./pages/ProposalPrintPage').then((m) => ({ default: m.ProposalPrintPage })));
+const InvoicePrintPage = lazyWithRetry(() => import('./pages/InvoicePrintPage').then((m) => ({ default: m.InvoicePrintPage })));
+const PaymentReceiptPrintPage = lazyWithRetry(() => import('./pages/PaymentReceiptPrintPage').then((m) => ({ default: m.PaymentReceiptPrintPage })));
 
 const queryClient = new QueryClient({
   defaultOptions: {
