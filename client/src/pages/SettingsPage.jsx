@@ -19,6 +19,7 @@ import {
   Shield,
   UserCheck,
   Sparkles,
+  X,
 } from 'lucide-react';
 import { useAuthStore } from '../store/useAuthStore';
 import { useNotificationStore } from '../store/useNotificationStore';
