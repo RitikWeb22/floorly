@@ -110,7 +110,17 @@ export function SettingsPage() {
   const queryClient = useQueryClient();
   const { user, setUser, logout } = useAuthStore();
   const { showToast } = useNotificationStore();
-  const [showPreview, setShowPreview] = useState(true);
+  const [showPreview, setShowPreview] = useState(false);
+
+  // Close live preview on Escape key press
+  useEffect(() => {
+    if (!showPreview) return;
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setShowPreview(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [showPreview]);
 
   // Document Title
   useEffect(() => {
@@ -822,16 +832,16 @@ export function SettingsPage() {
         </aside>
 
         {/* Center Content Column */}
-        <main className={`flex-1 w-full min-w-0 transition-all duration-200 ${isPreviewEligible && showPreview ? 'xl:max-w-[780px]' : 'max-w-4xl'}`}>
+        <main className="flex-1 w-full min-w-0 max-w-4xl">
           {/* Section Banner Header Card */}
-          <div className="bg-white rounded-2xl border border-[#E8E0CF] p-5 sm:p-6 mb-6 shadow-xs flex items-start justify-between gap-4">
+          <div className="bg-white rounded-2xl border border-[#E8E0CF] p-5 sm:p-6 mb-6 shadow-xs flex items-center justify-between gap-4">
             <div className="flex items-start gap-4 min-w-0 flex-1">
               <div className="w-11 h-11 rounded-xl bg-[#E8F0FB] text-[#0047AB] flex items-center justify-center shrink-0 border border-[#0047AB]/10 shadow-xs">
                 <SectionIcon className="w-5 h-5" />
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2.5 flex-wrap">
-                  <h2 className="text-lg sm:text-xl font-bold font-display text-[#0E1A2B] tracking-[-0.01em] whitespace-nowrap">
+                  <h2 className="text-lg sm:text-xl font-bold font-display text-[#0E1A2B] tracking-[-0.01em]">
                     {currentMeta.title}
                   </h2>
                   <span className="text-[10.5px] font-semibold px-2.5 py-0.5 rounded-full bg-[#FAF5EA] text-[#5B6676] border border-[#E8E0CF] whitespace-nowrap">
@@ -847,33 +857,74 @@ export function SettingsPage() {
             {isPreviewEligible && (
               <button
                 type="button"
-                onClick={() => setShowPreview(!showPreview)}
-                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#E8E0CF] bg-[#FAF5EA]/50 hover:bg-[#FAF5EA] text-[11px] font-semibold text-[#5B6676] hover:text-[#0E1A2B] transition-colors shrink-0"
+                onClick={() => setShowPreview(true)}
+                className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-[#E8E0CF] bg-[#FAF5EA]/50 hover:bg-[#FAF5EA] text-[11px] font-semibold text-[#5B6676] hover:text-[#0E1A2B] transition-colors shrink-0 cursor-pointer"
               >
-                {showPreview ? <EyeOff className="w-3.5 h-3.5" /> : <Eye className="w-3.5 h-3.5" />}
-                <span>{showPreview ? 'Hide preview' : 'View preview'}</span>
+                <Eye className="w-3.5 h-3.5 text-[#0047AB]" />
+                <span>Live Preview</span>
               </button>
             )}
           </div>
 
-          {/* Mobile / Tablet Live Document Preview Drawer (< xl screens) */}
-          {isPreviewEligible && showPreview && (
-            <div className="xl:hidden w-full mb-6">
-              <LivePreviewCard formData={formData} onClose={() => setShowPreview(false)} mode="mobile" />
-            </div>
-          )}
-
           {/* Active Settings Section Form Component */}
           {renderSectionContent()}
         </main>
-
-        {/* Right Column: Live Document Preview (Desktop >= xl screens) */}
-        {isPreviewEligible && showPreview && (
-          <aside className="hidden xl:block w-[340px] shrink-0 sticky top-6 self-start">
-            <LivePreviewCard formData={formData} onClose={() => setShowPreview(false)} mode="desktop" />
-          </aside>
-        )}
       </div>
+
+      {/* Slide-over Drawer for Live Document Preview */}
+      {isPreviewEligible && showPreview && (
+        <div className="fixed inset-0 z-50 overflow-hidden" role="dialog" aria-modal="true" aria-label="Live document preview">
+          {/* Backdrop */}
+          <div
+            className="fixed inset-0 bg-[#0E1A2B]/40 backdrop-blur-xs transition-opacity duration-300"
+            onClick={() => setShowPreview(false)}
+            aria-hidden="true"
+          />
+
+          <div className="fixed inset-y-0 right-0 max-w-full flex pl-6 sm:pl-10">
+            <div className="w-screen max-w-[440px] bg-white shadow-2xl border-l border-[#E8E0CF] flex flex-col h-full animate-in slide-in-from-right duration-200">
+              {/* Drawer Header */}
+              <div className="p-4 sm:p-5 border-b border-[#E8E0CF] flex items-center justify-between bg-[#FAF5EA]/60 shrink-0">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-8 h-8 rounded-lg bg-[#E8F0FB] flex items-center justify-center text-[#0047AB] border border-[#0047AB]/10 shadow-xs">
+                    <FileText className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm font-bold text-[#0E1A2B] font-display leading-tight">
+                      Live Document Preview
+                    </h3>
+                    <p className="text-[11px] text-[#5B6676]">
+                      Client document letterhead & tax format
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-2">
+                  <span className="w-2 h-2 rounded-full bg-[#067647] animate-pulse" title="Live sync active" />
+                  <button
+                    type="button"
+                    onClick={() => setShowPreview(false)}
+                    className="p-1.5 rounded-lg text-[#5B6676] hover:bg-[#FAF5EA] hover:text-[#0E1A2B] transition-colors cursor-pointer"
+                    aria-label="Close preview"
+                  >
+                    <X className="w-4 h-4" />
+                  </button>
+                </div>
+              </div>
+
+              {/* Drawer Body */}
+              <div className="flex-1 overflow-y-auto p-4 sm:p-5 custom-scrollbar bg-white">
+                <LivePreviewCard formData={formData} onClose={() => setShowPreview(false)} mode="desktop" />
+              </div>
+
+              {/* Drawer Footer */}
+              <div className="p-3 border-t border-[#E8E0CF] bg-[#FAF5EA]/40 text-center text-[11px] text-[#5B6676] font-medium shrink-0">
+                Updates live as you edit your business settings
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Sticky Save Bar (Appears ONLY when the form is dirty) */}
       {isDirty && (
