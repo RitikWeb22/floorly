@@ -913,7 +913,7 @@ export function LandingPage() {
                     const host = new URL(siteConfig.siteUrl).host;
                     return `${host}/workspace/${activeShowcase}`;
                   } catch {
-                    return `app.floorly.com/workspace/${activeShowcase}`;
+                    return `app.floorlystudio.me/workspace/${activeShowcase}`;
                   }
                 })()}
               </span>

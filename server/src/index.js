@@ -173,14 +173,14 @@ app.get('/health', (req, res) => {
 app.get('/api/v1/public/business-info', (req, res) => {
   res.json({
     success: true,
-    legalName: process.env.LEGAL_NAME || '',
-    contactAddress: process.env.CONTACT_ADDRESS || '',
-    contactPhone: process.env.CONTACT_PHONE || '',
-    supportEmail: process.env.SUPPORT_EMAIL || 'support@floorly.com',
-    grievanceOfficerName: process.env.GRIEVANCE_OFFICER_NAME || '',
-    grievanceEmail: process.env.GRIEVANCE_EMAIL || '',
-    legalJurisdiction: process.env.LEGAL_JURISDICTION || '',
-    siteUrl: process.env.SITE_URL || process.env.FRONTEND_URL || 'http://localhost:5173',
+    legalName: process.env.LEGAL_NAME || 'Ritik Sharma',
+    contactAddress: process.env.CONTACT_ADDRESS || 'Munirka, New Delhi, India 110067',
+    contactPhone: process.env.CONTACT_PHONE || '8287384970',
+    supportEmail: process.env.SUPPORT_EMAIL || 'support@floorlystudio.me',
+    grievanceOfficerName: process.env.GRIEVANCE_OFFICER_NAME || 'Ritik Sharma',
+    grievanceEmail: process.env.GRIEVANCE_EMAIL || process.env.SUPPORT_EMAIL || 'support@floorlystudio.me',
+    legalJurisdiction: process.env.LEGAL_JURISDICTION || 'New Delhi, India',
+    siteUrl: process.env.SITE_URL || process.env.FRONTEND_URL || 'https://floorlystudio.me',
   });
 });
 

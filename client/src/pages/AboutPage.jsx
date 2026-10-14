@@ -202,7 +202,11 @@ export function AboutPage() {
                 </tr>
                 <tr>
                   <td className="p-3 font-bold text-[#0E1A2B]">Support Contact</td>
-                  <td className="p-3 text-[#5B6676]">support@floorlystudio.me</td>
+                  <td className="p-3 text-[#5B6676]">
+                    <a href={`mailto:${siteConfig.supportEmail}`} className="text-[#0047AB] hover:underline">
+                      {siteConfig.supportEmail}
+                    </a>
+                  </td>
                 </tr>
                 <tr className="bg-[#FAF5EA]">
                   <td className="p-3 font-bold text-[#0E1A2B]">Brand Disambiguation</td>

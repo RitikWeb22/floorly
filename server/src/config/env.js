@@ -33,14 +33,15 @@ export const config = {
   frontendUrl: (process.env.FRONTEND_URL || process.env.SITE_URL || 'http://localhost:5173').replace(/\/+$/, ''),
 
   // Support & Privacy Emails
-  supportEmail: process.env.SUPPORT_EMAIL || 'support@floorly.com',
-  privacyEmail: process.env.PRIVACY_EMAIL || process.env.SUPPORT_EMAIL || 'privacy@floorly.com',
+  supportEmail: process.env.SUPPORT_EMAIL || 'support@floorlystudio.me',
+  privacyEmail: process.env.PRIVACY_EMAIL || process.env.SUPPORT_EMAIL || 'privacy@floorlystudio.me',
 
   // Contact Channels & Legal
-  contactEmail: process.env.CONTACT_EMAIL || '',
-  contactPhone: process.env.CONTACT_PHONE || '',
-  contactAddress: process.env.CONTACT_ADDRESS || '',
-  legalJurisdiction: process.env.LEGAL_JURISDICTION || '',
+  legalName: process.env.LEGAL_NAME || 'Ritik Sharma',
+  contactEmail: process.env.CONTACT_EMAIL || 'support@floorlystudio.me',
+  contactPhone: process.env.CONTACT_PHONE || '8287384970',
+  contactAddress: process.env.CONTACT_ADDRESS || 'Munirka, New Delhi, India 110067',
+  legalJurisdiction: process.env.LEGAL_JURISDICTION || 'New Delhi, India',
 
   // AI Configuration (Google Gemini) - Configured via environment variables only
   geminiApiKey: process.env.GEMINI_API_KEY || '',
@@ -69,7 +70,7 @@ export const config = {
   smtpPort: parseInt(process.env.SMTP_PORT || '587', 10),
   smtpUser: process.env.SMTP_USER || '',
   smtpPass: process.env.SMTP_PASS || '',
-  smtpFrom: process.env.SMTP_FROM || 'Floorly <no-reply@floorly.com>',
+  smtpFrom: process.env.SMTP_FROM || 'Floorly <no-reply@floorlystudio.me>',
 };
 
 /**

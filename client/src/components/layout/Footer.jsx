@@ -13,7 +13,7 @@ export function Footer() {
           <div style={{ maxWidth: '340px' }}>
             <Logo size="md" />
             <p style={{ marginTop: '12px', fontSize: '13px', lineHeight: '1.6', color: 'var(--muted, #5B6676)' }}>
-              AI-powered requirement scoping and price floor enforcement for independent developers and design studios.
+              AI-powered requirement scoping and price floor enforcement for developers, designers, writers, consultants, and independent agencies.
             </p>
             <p style={{ marginTop: '8px', fontSize: '13px', lineHeight: '1.5', color: 'var(--muted, #5B6676)' }}>
               Support:{' '}
@@ -104,11 +104,7 @@ export function Footer() {
 
         <div style={{ paddingTop: '20px', borderTop: '1px solid var(--line, #E8E0CF)', fontSize: '13px', color: 'var(--muted, #5B6676)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
           <div>
-            {siteConfig.legalName ? (
-              <p>&copy; {currentYear} Floorly. Operated by {siteConfig.legalName}. All rights reserved.</p>
-            ) : (
-              <p>&copy; {currentYear} Floorly. All rights reserved.</p>
-            )}
+            <p>&copy; {currentYear} Floorly. Operated by {siteConfig.legalName || 'Ritik Sharma'}. All rights reserved.</p>
           </div>
           <div style={{ fontSize: '12px', color: 'var(--muted, #5B6676)' }}>
             100% Digital SaaS &bull; Instant Electronic Delivery
