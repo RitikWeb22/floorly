@@ -1244,7 +1244,7 @@ export function LandingPage() {
       <section id="calculator" className="py-14 sm:py-24">
         <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
-            <div>
+            <div className="flex-1 min-w-0">
               <h2
                 style={{
                   fontSize: 'clamp(32px, 4.2vw, 52px)',
@@ -1262,8 +1262,8 @@ export function LandingPage() {
             </div>
 
             {/* Currency Selector */}
-            <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <label htmlFor="currency-select" style={{ fontSize: '14px', fontWeight: 600, color: 'var(--muted, #5B6676)' }}>
+            <div className="shrink-0" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
+              <label htmlFor="currency-select" style={{ fontSize: '14px', fontWeight: 600, color: 'var(--muted, #5B6676)', whiteSpace: 'nowrap' }}>
                 Currency:
               </label>
               <select

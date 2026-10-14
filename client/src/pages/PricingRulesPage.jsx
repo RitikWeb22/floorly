@@ -1142,7 +1142,7 @@ export function PricingRulesPage() {
           {/* CARD 2: PROJECT TYPES AND FLOORS */}
           <section className="bg-white border border-[var(--line,#E8E0CF)] rounded-2xl p-4 sm:p-6 shadow-xs">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-5">
-              <div>
+              <div className="flex-1 min-w-0">
                 <h2 className="text-[18px] font-medium font-display text-[var(--ink,#0E1A2B)] mb-1 tracking-[-0.01em]">
                   Project types and floors
                 </h2>
@@ -1152,8 +1152,8 @@ export function PricingRulesPage() {
               </div>
 
               {/* Profile Select */}
-              <div className="flex items-center gap-2">
-                <span className="text-[13px] font-semibold text-[var(--muted,#5B6676)]">Profile:</span>
+              <div className="flex items-center gap-2 shrink-0">
+                <span className="text-[13px] font-semibold text-[var(--muted,#5B6676)] whitespace-nowrap">Profile:</span>
                 <select
                   value={form.profile || 'web_developer'}
                   onChange={(e) => handleProfileChange(e.target.value)}
@@ -1186,14 +1186,14 @@ export function PricingRulesPage() {
 
             {/* PROJECT TYPES TABLE */}
             <div className="overflow-x-auto border border-[var(--line,#E8E0CF)] rounded-xl">
-              <table className="w-full text-left border-collapse text-sm">
+              <table className="w-full min-w-[580px] text-left border-collapse text-sm">
                 <thead>
                   <tr className="bg-[var(--page,#FAF5EA)] border-b border-[var(--line,#E8E0CF)] text-xs font-semibold text-[var(--muted,#5B6676)] uppercase tracking-wider">
-                    <th className="py-3 px-3 w-10 text-center">#</th>
-                    <th className="py-3 px-4">Project type</th>
-                    <th className="py-3 px-4 w-44">Typical hours</th>
-                    <th className="py-3 px-4 w-40">Floor ({rulesCurrency})</th>
-                    <th className="py-3 px-3 w-20 text-right">Actions</th>
+                    <th className="py-3 px-3 w-10 text-center whitespace-nowrap">#</th>
+                    <th className="py-3 px-4 min-w-[160px] whitespace-nowrap">Project type</th>
+                    <th className="py-3 px-4 w-44 whitespace-nowrap">Typical hours</th>
+                    <th className="py-3 px-4 w-40 whitespace-nowrap">Floor ({rulesCurrency})</th>
+                    <th className="py-3 px-3 w-20 text-right whitespace-nowrap">Actions</th>
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-[var(--line,#E8E0CF)] bg-white">

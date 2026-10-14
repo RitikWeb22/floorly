@@ -822,19 +822,19 @@ export function SettingsPage() {
         </aside>
 
         {/* Center Content Column */}
-        <main className={`flex-1 w-full min-w-0 transition-all duration-200 ${isPreviewEligible && showPreview ? 'max-w-[780px]' : 'max-w-4xl'}`}>
+        <main className={`flex-1 w-full min-w-0 transition-all duration-200 ${isPreviewEligible && showPreview ? 'xl:max-w-[780px]' : 'max-w-4xl'}`}>
           {/* Section Banner Header Card */}
           <div className="bg-white rounded-2xl border border-[#E8E0CF] p-5 sm:p-6 mb-6 shadow-xs flex items-start justify-between gap-4">
-            <div className="flex items-start gap-4">
+            <div className="flex items-start gap-4 min-w-0 flex-1">
               <div className="w-11 h-11 rounded-xl bg-[#E8F0FB] text-[#0047AB] flex items-center justify-center shrink-0 border border-[#0047AB]/10 shadow-xs">
                 <SectionIcon className="w-5 h-5" />
               </div>
-              <div>
+              <div className="min-w-0 flex-1">
                 <div className="flex items-center gap-2.5 flex-wrap">
-                  <h2 className="text-lg sm:text-xl font-bold font-display text-[#0E1A2B] tracking-[-0.01em]">
+                  <h2 className="text-lg sm:text-xl font-bold font-display text-[#0E1A2B] tracking-[-0.01em] whitespace-nowrap">
                     {currentMeta.title}
                   </h2>
-                  <span className="text-[10.5px] font-semibold px-2.5 py-0.5 rounded-full bg-[#FAF5EA] text-[#5B6676] border border-[#E8E0CF]">
+                  <span className="text-[10.5px] font-semibold px-2.5 py-0.5 rounded-full bg-[#FAF5EA] text-[#5B6676] border border-[#E8E0CF] whitespace-nowrap">
                     {currentMeta.badge}
                   </span>
                 </div>
@@ -856,15 +856,22 @@ export function SettingsPage() {
             )}
           </div>
 
+          {/* Mobile / Tablet Live Document Preview Drawer (< xl screens) */}
+          {isPreviewEligible && showPreview && (
+            <div className="xl:hidden w-full mb-6">
+              <LivePreviewCard formData={formData} onClose={() => setShowPreview(false)} mode="mobile" />
+            </div>
+          )}
+
           {/* Active Settings Section Form Component */}
           {renderSectionContent()}
         </main>
 
-        {/* Right Column: Live Document Preview (When eligible and toggled on) */}
+        {/* Right Column: Live Document Preview (Desktop >= xl screens) */}
         {isPreviewEligible && showPreview && (
-          <div className="w-full xl:w-[320px] shrink-0">
-            <LivePreviewCard formData={formData} onClose={() => setShowPreview(false)} />
-          </div>
+          <aside className="hidden xl:block w-[340px] shrink-0 sticky top-6 self-start">
+            <LivePreviewCard formData={formData} onClose={() => setShowPreview(false)} mode="desktop" />
+          </aside>
         )}
       </div>
 

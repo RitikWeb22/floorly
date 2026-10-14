@@ -256,6 +256,79 @@ export function LivePreviewCard({ formData, onClose }) {
     </div>
   );
 
+  if (mode === 'desktop') {
+    return (
+      <div className="w-full bg-white rounded-2xl border border-[#E8E0CF] p-5 shadow-sm relative overflow-hidden">
+        {/* Top subtle brand accent bar */}
+        <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#0047AB] via-[#0047AB]/70 to-[#FFC72C]" />
+
+        <div className="flex items-center justify-between pb-3.5 mb-4 border-b border-[#E8E0CF] pt-1">
+          <div className="flex items-center gap-2">
+            <div className="w-6 h-6 rounded-md bg-[#E8F0FB] flex items-center justify-center text-[#0047AB]">
+              <FileText className="w-3.5 h-3.5" />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-[#0E1A2B] leading-none font-display">
+                Live Preview
+              </h3>
+              <p className="text-[10.5px] text-[#5B6676] mt-0.5">
+                Client document letterhead
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2">
+            <span className="w-2 h-2 rounded-full bg-[#067647] animate-pulse" title="Live sync active" />
+            {onClose && (
+              <button
+                type="button"
+                onClick={onClose}
+                className="p-1 rounded-lg text-[#5B6676] hover:bg-[#FAF5EA] hover:text-[#0E1A2B] transition-colors"
+                title="Hide preview"
+                aria-label="Hide preview"
+              >
+                <X className="w-3.5 h-3.5" />
+              </button>
+            )}
+          </div>
+        </div>
+
+        {previewContent}
+      </div>
+    );
+  }
+
+  if (mode === 'mobile') {
+    return (
+      <div className="w-full bg-white rounded-2xl border border-[#E8E0CF] overflow-hidden shadow-xs">
+        <button
+          type="button"
+          onClick={() => setMobileExpanded(!mobileExpanded)}
+          className="w-full px-4 py-3 flex items-center justify-between text-left hover:bg-[#FAF5EA]/50 transition-colors"
+        >
+          <div className="flex items-center gap-2.5">
+            <div className="w-6 h-6 rounded-md bg-[#E8F0FB] flex items-center justify-center text-[#0047AB]">
+              <FileText className="w-3.5 h-3.5" />
+            </div>
+            <span className="text-sm font-bold text-[#0E1A2B]">
+              Live document preview
+            </span>
+          </div>
+          <div className="flex items-center gap-1.5 text-xs font-semibold text-[#5B6676]">
+            <span>{mobileExpanded ? 'Collapse' : 'Tap to expand'}</span>
+            {mobileExpanded ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+          </div>
+        </button>
+
+        {mobileExpanded && (
+          <div className="p-4 border-t border-[#E8E0CF] bg-[#FAF5EA]/20">
+            {previewContent}
+          </div>
+        )}
+      </div>
+    );
+  }
+
   return (
     <>
       {/* Desktop Sticky Live Preview Card (340px) */}
