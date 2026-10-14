@@ -24,12 +24,12 @@ const SHARED_NAV = `
 const SHARED_FOOTER = `
   <footer role="contentinfo">
     <nav aria-label="Footer Navigation">
-      <p><strong>Product &amp; Tools:</strong> <a href="/pricing">Pricing Plans</a> | <a href="/tools/freelance-rate-calculator">Freelance Rate Calculator</a> | <a href="/tools/project-price-calculator">Project Price Calculator</a> | <a href="/signup">Create Free Account</a></p>
+      <p><strong>Product &amp; Tools:</strong> <a href="/pricing">Pricing Plans</a> | <a href="/tools/freelance-rate-calculator">Freelance Rate Calculator</a> | <a href="/tools/project-price-calculator">Project Price Calculator</a> | <a href="/signup">Create Free Account</a> | For developers, designers, writers, consultants &amp; agencies</p>
       <p><strong>Company &amp; Trust:</strong> <a href="/about">About Floorly</a> | <a href="/contact">Contact Us</a> | <a href="mailto:support@floorlystudio.me">support@floorlystudio.me</a> | Founder: Ritik (Software Systems Engineer)</p>
       <p><strong>Legal &amp; Compliance:</strong> <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a> | <a href="/refund-policy">Refund Policy</a> | <a href="/delivery">Digital Delivery Policy</a></p>
       <p><strong>External Citations &amp; Community:</strong> <a href="https://github.com/RitikWeb22/floorly" target="_blank" rel="noopener noreferrer">Floorly Open Source on GitHub</a> | <a href="https://www.producthunt.com/products/floorly" target="_blank" rel="noopener noreferrer">Product Hunt Listing</a> | Aligned with <a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics</a> standards</p>
     </nav>
-    <p><small>&copy; <time datetime="2026-10-13">2026</time> Floorly. All rights reserved. Deterministic price floor guardrails for independent professionals.</small></p>
+    <p><small>&copy; <time datetime="2026-10-14">2026</time> Floorly. Operated by Ritik Sharma. All rights reserved. Deterministic price floor guardrails for independent professionals.</small></p>
   </footer>
 `;
 
