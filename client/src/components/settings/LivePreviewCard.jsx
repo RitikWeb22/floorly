@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { maskAccountNumber } from './settingsConstants';
 
-export function LivePreviewCard({ formData, onClose }) {
+export function LivePreviewCard({ formData, onClose, mode }) {
   const [showMasked, setShowMasked] = useState(false);
   const [mobileExpanded, setMobileExpanded] = useState(false);
 
