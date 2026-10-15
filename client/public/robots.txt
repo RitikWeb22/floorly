@@ -73,6 +73,8 @@ Allow: /terms
 Allow: /privacy
 Allow: /refund-policy
 Allow: /delivery
+Allow: /blog
+Allow: /blog/
 Allow: /tools/
 Allow: /guides/
 Allow: /use-cases/

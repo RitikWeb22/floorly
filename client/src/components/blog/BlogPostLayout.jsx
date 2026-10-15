@@ -45,6 +45,12 @@ export function BlogPostLayout({
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (title) {
+      document.title = `${title} | Floorly Engineering & Strategy`;
+    }
+  }, [title]);
+
   return (
     <div className="min-h-screen bg-[var(--page,#FAF5EA)] text-[var(--ink,#0E1A2B)] flex flex-col font-sans">
       {/* Scroll Reading Progress Bar */}

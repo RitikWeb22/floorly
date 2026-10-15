@@ -10,6 +10,9 @@ export function MiniPricingCalculator() {
   const [contingency, setContingency] = useState(0.15);
   const [minFloor, setMinFloor] = useState(2500);
 
+  // Safe number formatting helper
+  const fmt = (val) => (typeof val === 'number' && !isNaN(val) ? val.toLocaleString() : '0');
+
   // Perform calculation
   const calculation = useMemo(() => {
     const baseLabor = hours * rate;
@@ -21,20 +24,24 @@ export function MiniPricingCalculator() {
     // Use computePricing to compute package tiers
     const pricing = computePricing(
       {
-        totalHours: hours + contingencyHours,
+        estimatedHours: hours + contingencyHours,
         hourlyRate: rate,
-        projectComplexity: complexity,
-        projectCategory: 'web_development',
+        projectComplexity: complexity === 1.5 ? 'high' : complexity === 1.25 ? 'medium' : 'low',
+        category: 'landing-pages',
       },
       {
-        absoluteMinHourlyRate: 30,
-        categoryFloors: { web_development: minFloor },
+        hourlyRate: rate,
+        minHourlyRate: 30,
+        categoryFloors: { 'landing-pages': minFloor },
         minProjectFee: minFloor,
         standardMultiplier: 1.25,
         premiumMultiplier: 1.6,
       }
     );
 
+    const essential = pricing?.tiers?.essential ?? Math.max(rawTotal, minFloor);
+    const standard = pricing?.tiers?.standard ?? Math.round(essential * 1.25);
+    const premium = pricing?.tiers?.premium ?? Math.round(essential * 1.6);
     const floorHit = rawTotal < minFloor;
     const moneyProtected = floorHit ? minFloor - rawTotal : 0;
 
@@ -46,9 +53,9 @@ export function MiniPricingCalculator() {
       rawTotal,
       floorHit,
       moneyProtected,
-      essential: pricing.essential,
-      standard: pricing.standard,
-      premium: pricing.premium,
+      essential,
+      standard,
+      premium,
     };
   }, [hours, rate, complexity, contingency, minFloor]);
 
@@ -176,7 +183,7 @@ export function MiniPricingCalculator() {
             <div className="flex justify-between items-center text-sm font-semibold text-[var(--ink,#0E1A2B)] mb-1.5">
               <span>Minimum Acceptable Project Fee</span>
               <span className="font-mono text-base text-[var(--cobalt-dark,#003A8C)]">
-                ${minFloor.toLocaleString()}
+                ${fmt(minFloor)}
               </span>
             </div>
             <input
@@ -198,13 +205,13 @@ export function MiniPricingCalculator() {
               RECOMMENDED ESSENTIAL QUOTE
             </div>
             <div className="text-4xl sm:text-5xl font-extrabold text-[var(--ink,#0E1A2B)] font-display tracking-tight my-2">
-              ${calculation.essential.toLocaleString()}
+              ${fmt(calculation.essential)}
             </div>
 
             <div className="text-xs text-[var(--muted,#5B6676)] space-y-1 mb-4">
-              <div>Base labor: {hours}h &times; ${rate} = ${calculation.baseLabor.toLocaleString()}</div>
-              <div>Complexity ({complexity}x): ${calculation.adjustedForComplexity.toLocaleString()}</div>
-              <div>Contingency buffer (+{calculation.contingencyHours}h): +${calculation.contingencyLabor.toLocaleString()}</div>
+              <div>Base labor: {hours}h &times; ${rate} = ${fmt(calculation.baseLabor)}</div>
+              <div>Complexity ({complexity}x): ${fmt(calculation.adjustedForComplexity)}</div>
+              <div>Contingency buffer (+{calculation.contingencyHours}h): +${fmt(calculation.contingencyLabor)}</div>
             </div>
 
             {/* Verdict Box */}
@@ -217,13 +224,13 @@ export function MiniPricingCalculator() {
             >
               {calculation.floorHit ? (
                 <div>
-                  <strong>Floor Activated:</strong> Calculated scope totaled ${calculation.rawTotal.toLocaleString()}, but Floorly raised the proposal to your <strong>${minFloor.toLocaleString()}</strong> floor.
-                  <div className="mt-1 font-bold">Protected profit: +${calculation.moneyProtected.toLocaleString()}</div>
+                  <strong>Floor Activated:</strong> Calculated scope totaled ${fmt(calculation.rawTotal)}, but Floorly raised the proposal to your <strong>${fmt(minFloor)}</strong> floor.
+                  <div className="mt-1 font-bold">Protected profit: +${fmt(calculation.moneyProtected)}</div>
                 </div>
               ) : (
                 <div>
                   <ShieldCheck className="w-4 h-4 inline-block mr-1 text-emerald-600" />
-                  <strong>Safely Above Floor:</strong> Total proposal is safely above your ${minFloor.toLocaleString()} baseline.
+                  <strong>Safely Above Floor:</strong> Total proposal is safely above your ${fmt(minFloor)} baseline.
                 </div>
               )}
             </div>
@@ -236,15 +243,15 @@ export function MiniPricingCalculator() {
               <div className="space-y-1.5 text-xs font-semibold">
                 <div className="flex justify-between bg-white px-2.5 py-1.5 rounded border border-[var(--line,#E8E0CF)]">
                   <span>Essential (Base Scope)</span>
-                  <span className="font-mono text-[var(--cobalt,#0047AB)]">${calculation.essential.toLocaleString()}</span>
+                  <span className="font-mono text-[var(--cobalt,#0047AB)]">${fmt(calculation.essential)}</span>
                 </div>
                 <div className="flex justify-between bg-white px-2.5 py-1.5 rounded border border-[var(--line,#E8E0CF)]">
                   <span>Standard (+ Support &amp; QA)</span>
-                  <span className="font-mono text-[var(--cobalt,#0047AB)]">${calculation.standard.toLocaleString()}</span>
+                  <span className="font-mono text-[var(--cobalt,#0047AB)]">${fmt(calculation.standard)}</span>
                 </div>
                 <div className="flex justify-between bg-white px-2.5 py-1.5 rounded border border-[var(--line,#E8E0CF)]">
                   <span>Premium (+ Priority SLA)</span>
-                  <span className="font-mono text-[var(--cobalt,#0047AB)]">${calculation.premium.toLocaleString()}</span>
+                  <span className="font-mono text-[var(--cobalt,#0047AB)]">${fmt(calculation.premium)}</span>
                 </div>
               </div>
             </div>
