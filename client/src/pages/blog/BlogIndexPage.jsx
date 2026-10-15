@@ -33,41 +33,43 @@ export function BlogIndexPage() {
   });
 
   return (
-    <div className="min-h-screen bg-[#FDFBF7] text-[#0E1A2B] flex flex-col font-sans">
+    <div className="min-h-screen bg-[var(--page,#FAF5EA)] text-[var(--ink,#0E1A2B)] flex flex-col font-sans">
       {/* Top Navigation */}
-      <header className="h-16 bg-white/95 backdrop-blur-md border-b border-[#E8E0CF] px-4 sm:px-8 flex items-center justify-between sticky top-0 z-20">
-        <div className="flex items-center gap-6">
-          <Link to="/">
-            <Logo size="sm" />
-          </Link>
-          <nav className="hidden md:flex items-center gap-5 text-xs font-semibold text-[#5B6676]">
-            <Link to="/pricing" className="hover:text-[#0047AB] transition-colors">Pricing</Link>
-            <Link to="/about" className="hover:text-[#0047AB] transition-colors">About</Link>
-            <Link to="/blog" className="text-[#0047AB]">Blog & Guides</Link>
-            <Link to="/tools/freelance-rate-calculator" className="hover:text-[#0047AB] transition-colors">Rate Calculator</Link>
-            <Link to="/tools/project-price-calculator" className="hover:text-[#0047AB] transition-colors">Project Calculator</Link>
-          </nav>
-        </div>
+      <header className="h-16 bg-white/95 backdrop-blur-md border-b border-[var(--line,#E8E0CF)] sticky top-0 z-20">
+        <div className="landing-container h-full flex items-center justify-between">
+          <div className="flex items-center gap-6">
+            <Link to="/">
+              <Logo size="sm" />
+            </Link>
+            <nav className="hidden md:flex items-center gap-5 text-xs font-semibold text-[var(--muted,#5B6676)]">
+              <Link to="/pricing" className="hover:text-[var(--cobalt,#0047AB)] transition-colors">Pricing</Link>
+              <Link to="/about" className="hover:text-[var(--cobalt,#0047AB)] transition-colors">About</Link>
+              <Link to="/blog" className="text-[var(--cobalt,#0047AB)]">Blog &amp; Guides</Link>
+              <Link to="/tools/freelance-rate-calculator" className="hover:text-[var(--cobalt,#0047AB)] transition-colors">Rate Calculator</Link>
+              <Link to="/tools/project-price-calculator" className="hover:text-[var(--cobalt,#0047AB)] transition-colors">Project Calculator</Link>
+            </nav>
+          </div>
 
-        <div className="flex items-center gap-3">
-          <Link
-            to={isAuthenticated ? '/dashboard' : '/login'}
-            className="text-xs font-semibold text-[#5B6676] hover:text-[#0E1A2B] px-3 py-1.5 transition-colors"
-          >
-            {isAuthenticated ? 'Dashboard' : 'Log In'}
-          </Link>
-          <Link
-            to="/signup"
-            className="text-xs font-semibold bg-[#0047AB] text-white px-3.5 py-1.5 rounded-lg hover:bg-[#003A8C] transition-colors shadow-sm"
-          >
-            Start Free
-          </Link>
+          <div className="flex items-center gap-3">
+            <Link
+              to={isAuthenticated ? '/dashboard' : '/login'}
+              className="text-xs font-semibold text-[var(--muted,#5B6676)] hover:text-[var(--ink,#0E1A2B)] px-3 py-1.5 transition-colors"
+            >
+              {isAuthenticated ? 'Dashboard' : 'Log In'}
+            </Link>
+            <Link
+              to="/signup"
+              className="text-xs font-semibold bg-[var(--cobalt,#0047AB)] text-white px-3.5 py-1.5 rounded-full hover:bg-[var(--cobalt-dark,#003A8C)] transition-colors shadow-xs"
+            >
+              Start Free
+            </Link>
+          </div>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-b from-white to-[#FDFBF7] border-b border-[#E8E0CF] py-14 px-4 sm:px-8">
-        <div className="max-w-4xl mx-auto text-center">
+      <section className="bg-gradient-to-b from-white to-[var(--page,#FAF5EA)] border-b border-[var(--line,#E8E0CF)] py-14 sm:py-20">
+        <div className="landing-container text-center">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#0047AB]/10 text-[#0047AB] text-xs font-bold uppercase tracking-wider mb-4">
             <BookOpen className="w-3.5 h-3.5" />
             <span>Floorly Engineering &amp; Strategy Guides</span>
@@ -111,12 +113,12 @@ export function BlogIndexPage() {
       </section>
 
       {/* Main Articles Grid */}
-      <main className="flex-1 py-12 px-4 sm:px-8 max-w-6xl mx-auto w-full">
+      <main className="flex-1 py-12 landing-container">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {filteredPosts.map((post) => (
             <article
               key={post.slug}
-              className="bg-white rounded-2xl border border-[#E8E0CF] p-6 sm:p-7 flex flex-col justify-between hover:shadow-lg hover:border-[#0047AB]/40 transition-all group"
+              className="landing-card p-6 sm:p-7 flex flex-col justify-between hover:shadow-md hover:border-[var(--cobalt,#0047AB)]/40 transition-all group"
             >
               <div>
                 <div className="flex items-center justify-between gap-3 text-xs text-[#5B6676] mb-3">

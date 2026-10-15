@@ -18,6 +18,11 @@ Floorly is a web app for freelance developers, designers, writers, and small stu
 - [Pricing Plans](https://floorlystudio.me/pricing): Starter ($0), Solo ($9/mo), Pro ($19/mo), and Agency ($49/mo) tiers
 - [Freelance Rate Calculator](https://floorlystudio.me/tools/freelance-rate-calculator): Free interactive hourly rate and price floor calculator
 - [Project Price Calculator](https://floorlystudio.me/tools/project-price-calculator): Free fixed-price budget and scope risk calculator
+- [Floorly Engineering Blog](https://floorlystudio.me/blog): Guides on pricing, scoping, and developer handoffs
+- [What is AGENTS.md? Guide to AI Coding Assistant Handoffs](https://floorlystudio.me/blog/what-is-agents-md): Specification and guide for Cursor, Claude Code, and Copilot
+- [How to Price a Freelance Project](https://floorlystudio.me/blog/how-to-price-a-freelance-project): Deterministic hourly price floors, fixed fees, and break-even math
+- [Freelance Scope of Work Template](https://floorlystudio.me/blog/freelance-scope-of-work-template): SOW template turning vague briefs into clear milestones
+- [How to Prevent Scope Creep in Freelance Projects](https://floorlystudio.me/blog/prevent-scope-creep-freelance): 7 practical contract tactics and change order scripts
 - [About Floorly](https://floorlystudio.me/about): Mission, founder background, and platform overview
 - [Contact Support](https://floorlystudio.me/contact): Customer assistance and platform support
 - [Terms of Service](https://floorlystudio.me/terms): Legal terms, acceptable use, and platform policies

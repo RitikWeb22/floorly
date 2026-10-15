@@ -30,7 +30,7 @@ export const BLOG_POSTS = [
     description: 'Learn how to price freelance projects with deterministic break-even hourly floors, complexity multipliers, and risk contingency buffers.',
     publishedDate: '2026-10-15',
     lastModified: '2026-10-15',
-    readingTime: '11 min read',
+    readingTime: '14 min read',
     category: 'Freelance Pricing Strategy',
     author: {
       name: 'Ritik',
