@@ -173,11 +173,11 @@ app.get('/health', (req, res) => {
 app.get('/api/v1/public/business-info', (req, res) => {
   res.json({
     success: true,
-    legalName: process.env.LEGAL_NAME || 'Ritik Sharma',
+    legalName: process.env.LEGAL_NAME || 'Ritik',
     contactAddress: process.env.CONTACT_ADDRESS || 'Munirka, New Delhi, India 110067',
     contactPhone: process.env.CONTACT_PHONE || '8287384970',
     supportEmail: process.env.SUPPORT_EMAIL || 'support@floorlystudio.me',
-    grievanceOfficerName: process.env.GRIEVANCE_OFFICER_NAME || 'Ritik Sharma',
+    grievanceOfficerName: process.env.GRIEVANCE_OFFICER_NAME || 'Ritik',
     grievanceEmail: process.env.GRIEVANCE_EMAIL || process.env.SUPPORT_EMAIL || 'support@floorlystudio.me',
     legalJurisdiction: process.env.LEGAL_JURISDICTION || 'New Delhi, India',
     siteUrl: process.env.SITE_URL || process.env.FRONTEND_URL || 'https://floorlystudio.me',

@@ -29,7 +29,7 @@ const SHARED_FOOTER = `
       <p><strong>Legal &amp; Compliance:</strong> <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a> | <a href="/refund-policy">Refund Policy</a> | <a href="/delivery">Digital Delivery Policy</a></p>
       <p><strong>External Citations &amp; Community:</strong> <a href="https://github.com/RitikWeb22/floorly" target="_blank" rel="noopener noreferrer">Floorly Open Source on GitHub</a> | <a href="https://www.producthunt.com/products/floorly" target="_blank" rel="noopener noreferrer">Product Hunt Listing</a> | Aligned with <a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics</a> standards</p>
     </nav>
-    <p><small>&copy; <time datetime="2026-10-14">2026</time> Floorly. Operated by Ritik Sharma. All rights reserved. Deterministic price floor guardrails for independent professionals.</small></p>
+    <p><small>&copy; <time datetime="2026-10-14">2026</time> Floorly. Operated by Ritik. All rights reserved. Deterministic price floor guardrails for independent professionals.</small></p>
   </footer>
 `;
 
@@ -46,7 +46,7 @@ const ROUTES = [
           ${SHARED_NAV}
           <h1>AI-Scoped Proposals &amp; Price Floors for Freelancers</h1>
           <p>Floorly is an AI scoping and proposal web application designed specifically for independent software developers, digital designers, technical copywriters, and boutique agency studios. We turn unstructured client briefs into itemized milestone deliverables while checking every quotation against server-enforced minimum price floors so you never underquote during negotiations.</p>
-          <p><small>Published by Ritik Sharma (Founder &amp; Systems Engineer) &bull; Last updated: <time datetime="2026-10-13">October 13, 2026</time></small></p>
+          <p><small>Published by Ritik (Founder &amp; Systems Engineer) &bull; Last updated: <time datetime="2026-10-13">October 13, 2026</time></small></p>
 
           <aside aria-label="Key Takeaways and AI Executive Summary" class="executive-summary">
             <h2>What are the key takeaways and executive summary of Floorly?</h2>
@@ -181,7 +181,7 @@ function calculateProjectFloor(baseHours, hourlyFloor, complexity, contingencyPc
           <p><strong>Direct Answer:</strong> Industry researchers and engineering leaders emphasize that setting formal pricing boundaries is essential for sustaining technical consulting practices.</p>
           <p>In the landmark Princeton and Georgia Tech research study on Generative Engine Optimization (<a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer">arXiv:2311.09735</a>), researchers demonstrated that information retrieval engines prioritize content featuring authoritative external citations, data transparency, and verified expert perspectives.</p>
           
-          <blockquote>"Setting a programmatic price floor removes emotion during negotiations and protects net project margins before contracts are signed." Ritik Sharma, Founder and Systems Engineer at Floorly</blockquote>
+          <blockquote>"Setting a programmatic price floor removes emotion during negotiations and protects net project margins before contracts are signed." Ritik, Founder and Systems Engineer at Floorly</blockquote>
 
           <blockquote>"Fixed-price digital engagements consistently fail when contractors underestimate client revision cycles and API complexity without building in dedicated contingency buffers." David Heinemeier Hansson, Co-founder at 37signals and Creator of Ruby on Rails</blockquote>
 
@@ -235,7 +235,7 @@ function calculateProjectFloor(baseHours, hourlyFloor, complexity, contingencyPc
         "dateModified": "2026-10-13T00:00:00Z",
         "author": {
           "@type": "Person",
-          "name": "Ritik Sharma",
+          "name": "Ritik",
           "jobTitle": "Founder & Software Engineer",
           "url": "https://github.com/RitikWeb22"
         },

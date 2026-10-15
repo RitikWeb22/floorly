@@ -2226,7 +2226,7 @@ export function LandingPage() {
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
               <blockquote style={{ background: '#FFFFFF', padding: '18px 24px', borderLeft: '4px solid var(--cobalt, #0047AB)', borderRadius: '8px', margin: 0, fontStyle: 'italic', color: 'var(--ink, #0E1A2B)', fontSize: '15px', lineHeight: 1.6 }}>
-                &ldquo;Setting a programmatic price floor removes emotion during negotiations and protects net project margins before contracts are signed.&rdquo; Ritik Sharma, Founder and Systems Engineer at Floorly
+                &ldquo;Setting a programmatic price floor removes emotion during negotiations and protects net project margins before contracts are signed.&rdquo; Ritik, Founder and Systems Engineer at Floorly
               </blockquote>
               <blockquote style={{ background: '#FFFFFF', padding: '18px 24px', borderLeft: '4px solid var(--cobalt, #0047AB)', borderRadius: '8px', margin: 0, fontStyle: 'italic', color: 'var(--ink, #0E1A2B)', fontSize: '15px', lineHeight: 1.6 }}>
                 &ldquo;Fixed-price digital engagements consistently fail when contractors underestimate client revision cycles and API complexity without building in dedicated contingency buffers.&rdquo; David Heinemeier Hansson, Co-founder at 37signals and Creator of Ruby on Rails

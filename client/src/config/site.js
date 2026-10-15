@@ -18,8 +18,8 @@ export const siteConfig = {
   contactEmail: import.meta.env.VITE_CONTACT_EMAIL || import.meta.env.VITE_SUPPORT_EMAIL || 'support@floorlystudio.me',
   contactPhone: import.meta.env.VITE_CONTACT_PHONE || '8287384970',
   contactAddress: import.meta.env.VITE_CONTACT_ADDRESS || 'Munirka, New Delhi, India 110067',
-  legalName: import.meta.env.VITE_LEGAL_NAME || 'Ritik Sharma',
-  grievanceOfficerName: import.meta.env.VITE_GRIEVANCE_OFFICER_NAME || 'Ritik Sharma',
+  legalName: import.meta.env.VITE_LEGAL_NAME || 'Ritik',
+  grievanceOfficerName: import.meta.env.VITE_GRIEVANCE_OFFICER_NAME || 'Ritik',
   grievanceEmail: import.meta.env.VITE_GRIEVANCE_EMAIL || import.meta.env.VITE_SUPPORT_EMAIL || 'support@floorlystudio.me',
   legalJurisdiction: import.meta.env.VITE_LEGAL_JURISDICTION || 'New Delhi, India',
 };

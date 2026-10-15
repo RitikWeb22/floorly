@@ -37,7 +37,7 @@ export const config = {
   privacyEmail: process.env.PRIVACY_EMAIL || process.env.SUPPORT_EMAIL || 'privacy@floorlystudio.me',
 
   // Contact Channels & Legal
-  legalName: process.env.LEGAL_NAME || 'Ritik Sharma',
+  legalName: process.env.LEGAL_NAME || 'Ritik',
   contactEmail: process.env.CONTACT_EMAIL || 'support@floorlystudio.me',
   contactPhone: process.env.CONTACT_PHONE || '8287384970',
   contactAddress: process.env.CONTACT_ADDRESS || 'Munirka, New Delhi, India 110067',

@@ -104,7 +104,7 @@ export function Footer() {
 
         <div style={{ paddingTop: '20px', borderTop: '1px solid var(--line, #E8E0CF)', fontSize: '13px', color: 'var(--muted, #5B6676)', display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between', alignItems: 'center', gap: '12px' }}>
           <div>
-            <p>&copy; {currentYear} Floorly. Operated by {siteConfig.legalName || 'Ritik Sharma'}. All rights reserved.</p>
+            <p>&copy; {currentYear} Floorly. Operated by {siteConfig.legalName || 'Ritik'}. All rights reserved.</p>
           </div>
           <div style={{ fontSize: '12px', color: 'var(--muted, #5B6676)' }}>
             100% Digital SaaS &bull; Instant Electronic Delivery
