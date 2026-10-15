@@ -13,6 +13,17 @@
       ],
       "destination": "https://floorlystudio.me/$1",
       "permanent": true
+    },
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.floorlystudio.me"
+        }
+      ],
+      "destination": "https://floorlystudio.me/$1",
+      "permanent": true
     }
   ],
   "headers": [
@@ -152,6 +163,26 @@
     {
       "source": "/tools/project-price-calculator",
       "destination": "/tools/project-price-calculator/index.html"
+    },
+    {
+      "source": "/blog",
+      "destination": "/blog/index.html"
+    },
+    {
+      "source": "/blog/what-is-agents-md",
+      "destination": "/blog/what-is-agents-md/index.html"
+    },
+    {
+      "source": "/blog/how-to-price-a-freelance-project",
+      "destination": "/blog/how-to-price-a-freelance-project/index.html"
+    },
+    {
+      "source": "/blog/freelance-scope-of-work-template",
+      "destination": "/blog/freelance-scope-of-work-template/index.html"
+    },
+    {
+      "source": "/blog/prevent-scope-creep-freelance",
+      "destination": "/blog/prevent-scope-creep-freelance/index.html"
     },
     {
       "source": "/sitemap.xml",

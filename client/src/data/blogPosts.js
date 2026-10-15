@@ -1,0 +1,80 @@
+/**
+ * Blog Posts Data Store
+ * Authoritative, high-value technical articles for independent software developers,
+ * UI/UX designers, and freelance studio operators.
+ */
+
+export const BLOG_POSTS = [
+  {
+    slug: 'what-is-agents-md',
+    title: 'What is AGENTS.md? Guide to AI Coding Assistant Handoffs in Cursor, Claude Code & Copilot',
+    metaTitle: 'What is AGENTS.md? AI Coding Guide for Cursor & Claude Code',
+    description: 'Learn what AGENTS.md is, why AI coding tools need deterministic constraints, and how to write one for Cursor, Claude Code, and Copilot client handoffs.',
+    publishedDate: '2026-10-15',
+    lastModified: '2026-10-15',
+    readingTime: '9 min read',
+    category: 'AI Tooling & Workflow',
+    author: {
+      name: 'Ritik',
+      role: 'Founder & Systems Engineer',
+      avatar: 'https://floorlystudio.me/apple-touch-icon.png',
+      url: 'https://github.com/RitikWeb22',
+    },
+    excerpt: 'Discover what AGENTS.md is, why modern AI code assistants like Cursor, Claude Code, and Copilot fail without explicit project boundaries, and how independent contractors use automated AGENTS.md handoffs to deliver clean client repositories.',
+    relatedSlugs: ['how-to-price-a-freelance-project', 'freelance-scope-of-work-template', 'prevent-scope-creep-freelance'],
+  },
+  {
+    slug: 'how-to-price-a-freelance-project',
+    title: 'How to Price a Freelance Project: Hourly Floors, Fixed Fees & Break-Even Math',
+    metaTitle: 'How to Price a Freelance Project: Hourly Floors & Math Guide',
+    description: 'Learn how to price freelance projects with deterministic break-even hourly floors, complexity multipliers, and risk contingency buffers.',
+    publishedDate: '2026-10-15',
+    lastModified: '2026-10-15',
+    readingTime: '11 min read',
+    category: 'Freelance Pricing Strategy',
+    author: {
+      name: 'Ritik',
+      role: 'Founder & Systems Engineer',
+      avatar: 'https://floorlystudio.me/apple-touch-icon.png',
+      url: 'https://github.com/RitikWeb22',
+    },
+    excerpt: 'Stop guessing freelance quotes. Learn the mathematical formula for non-negotiable hourly price floors, how to factor non-billable overhead, and how to structure fixed-price milestones that protect studio margins.',
+    relatedSlugs: ['prevent-scope-creep-freelance', 'freelance-scope-of-work-template', 'what-is-agents-md'],
+  },
+  {
+    slug: 'freelance-scope-of-work-template',
+    title: 'Freelance Scope of Work (SOW) Template: Turning Vague Briefs into Clear Milestones',
+    metaTitle: 'Freelance Scope of Work (SOW) Template & Brief Scoping Guide',
+    description: 'Download a production-tested freelance Scope of Work (SOW) template. Learn how to convert vague client messages into structured deliverables.',
+    publishedDate: '2026-10-15',
+    lastModified: '2026-10-15',
+    readingTime: '10 min read',
+    category: 'Client Scoping & Contracts',
+    author: {
+      name: 'Ritik',
+      role: 'Founder & Systems Engineer',
+      avatar: 'https://floorlystudio.me/apple-touch-icon.png',
+      url: 'https://github.com/RitikWeb22',
+    },
+    excerpt: 'Convert disorganized client WhatsApp audios, bullet emails, and unstructured briefs into crystal-clear milestone contracts with explicit inclusions, exclusions, and payment triggers.',
+    relatedSlugs: ['prevent-scope-creep-freelance', 'how-to-price-a-freelance-project', 'what-is-agents-md'],
+  },
+  {
+    slug: 'prevent-scope-creep-freelance',
+    title: 'How to Prevent Scope Creep in Freelance Projects: 7 Practical Contract Tactics',
+    metaTitle: 'Prevent Scope Creep: 7 Tactics for Freelancers & Agencies',
+    description: 'Master practical tactics to eliminate scope creep: revision limits, formal change orders, client communication scripts, and contingency buffers.',
+    publishedDate: '2026-10-15',
+    lastModified: '2026-10-15',
+    readingTime: '10 min read',
+    category: 'Contract Protection',
+    author: {
+      name: 'Ritik',
+      role: 'Founder & Systems Engineer',
+      avatar: 'https://floorlystudio.me/apple-touch-icon.png',
+      url: 'https://github.com/RitikWeb22',
+    },
+    excerpt: 'Scope creep is the single largest cause of project unprofitability for solo developers and agencies. Implement these 7 contractual boundaries, contingency buffers, and change-order workflows.',
+    relatedSlugs: ['freelance-scope-of-work-template', 'how-to-price-a-freelance-project', 'what-is-agents-md'],
+  },
+];

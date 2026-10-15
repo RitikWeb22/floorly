@@ -1,6 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
+import { getBlogRoutes } from './prerenderBlogContent.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,6 +14,7 @@ const SHARED_NAV = `
     <a href="/">Floorly Home</a> |
     <a href="/pricing">Pricing Plans</a> |
     <a href="/about">About Floorly</a> |
+    <a href="/blog">Engineering Blog</a> |
     <a href="/tools/freelance-rate-calculator">Rate Calculator</a> |
     <a href="/tools/project-price-calculator">Project Price Calculator</a> |
     <a href="/contact">Contact Support</a> |
@@ -24,12 +26,12 @@ const SHARED_NAV = `
 const SHARED_FOOTER = `
   <footer role="contentinfo">
     <nav aria-label="Footer Navigation">
-      <p><strong>Product &amp; Tools:</strong> <a href="/pricing">Pricing Plans</a> | <a href="/tools/freelance-rate-calculator">Freelance Rate Calculator</a> | <a href="/tools/project-price-calculator">Project Price Calculator</a> | <a href="/signup">Create Free Account</a> | For developers, designers, writers, consultants &amp; agencies</p>
+      <p><strong>Product &amp; Guides:</strong> <a href="/pricing">Pricing Plans</a> | <a href="/blog">Blog &amp; Guides</a> | <a href="/blog/what-is-agents-md">What is AGENTS.md?</a> | <a href="/blog/how-to-price-a-freelance-project">How to Price a Project</a> | <a href="/blog/freelance-scope-of-work-template">Scope of Work Template</a> | <a href="/blog/prevent-scope-creep-freelance">Prevent Scope Creep</a> | <a href="/tools/freelance-rate-calculator">Rate Calculator</a> | <a href="/tools/project-price-calculator">Project Calculator</a> | <a href="/signup">Create Free Account</a></p>
       <p><strong>Company &amp; Trust:</strong> <a href="/about">About Floorly</a> | <a href="/contact">Contact Us</a> | <a href="mailto:support@floorlystudio.me">support@floorlystudio.me</a> | Founder: Ritik (Software Systems Engineer)</p>
       <p><strong>Legal &amp; Compliance:</strong> <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a> | <a href="/refund-policy">Refund Policy</a> | <a href="/delivery">Digital Delivery Policy</a></p>
       <p><strong>External Citations &amp; Community:</strong> <a href="https://github.com/RitikWeb22/floorly" target="_blank" rel="noopener noreferrer">Floorly Open Source on GitHub</a> | <a href="https://www.producthunt.com/products/floorly" target="_blank" rel="noopener noreferrer">Product Hunt Listing</a> | Aligned with <a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics</a> standards</p>
     </nav>
-    <p><small>&copy; <time datetime="2026-10-14">2026</time> Floorly. Operated by Ritik. All rights reserved. Deterministic price floor guardrails for independent professionals.</small></p>
+    <p><small>&copy; <time datetime="2026-10-15">2026</time> Floorly. Operated by Ritik. All rights reserved. Deterministic price floor guardrails for independent professionals.</small></p>
   </footer>
 `;
 
@@ -37,8 +39,8 @@ const ROUTES = [
   {
     path: '/',
     outPath: 'index.html',
-    title: 'Floorly – AI-Scoped Proposals & Price Floors for Freelancers',
-    description: 'Floorly turns client briefs into scoped proposals with price floors. Prevent underquoting, add payment links, and track true profit margins.',
+    title: 'Floorly – AI Scoped Proposals & Price Floors for Studios',
+    description: 'Convert client briefs into scoped proposals with deterministic price floors. Prevent underquoting, add payment links, and track project profit margins.',
     h1: 'AI-Scoped Proposals &amp; Price Floors for Freelancers',
     content: `
       <main id="main-content">
@@ -225,6 +227,64 @@ function calculateProjectFloor(baseHours, hourlyFloor, complexity, contingencyPc
     schemas: [
       {
         "@context": "https://schema.org",
+        "@type": "Organization",
+        "@id": "https://floorlystudio.me/#organization",
+        "name": "Floorly",
+        "url": "https://floorlystudio.me/",
+        "logo": "https://floorlystudio.me/apple-touch-icon.png",
+        "founder": {
+          "@type": "Person",
+          "name": "Ritik",
+          "url": "https://github.com/RitikWeb22"
+        },
+        "sameAs": [
+          "https://github.com/RitikWeb22/floorly",
+          "https://www.producthunt.com/products/floorly"
+        ],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "support@floorlystudio.me",
+          "contactType": "customer support"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "@id": "https://floorlystudio.me/#website",
+        "name": "Floorly",
+        "url": "https://floorlystudio.me/",
+        "description": "Floorly turns client briefs into scoped proposals with deterministic price floors.",
+        "publisher": {
+          "@id": "https://floorlystudio.me/#organization"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "@id": "https://floorlystudio.me/#software",
+        "name": "Floorly",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web Browser",
+        "url": "https://floorlystudio.me/",
+        "description": "Floorly turns client briefs into scoped proposals with price floors, AGENTS.md handoffs, and milestone invoicing.",
+        "offers": [
+          {
+            "@type": "Offer",
+            "name": "Starter Plan",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          {
+            "@type": "Offer",
+            "name": "Solo Plan",
+            "price": "9.00",
+            "priceCurrency": "USD",
+            "billingDuration": "P1M"
+          }
+        ]
+      },
+      {
+        "@context": "https://schema.org",
         "@type": "Article",
         "@id": "https://floorlystudio.me/#article",
         "headline": "AI-Scoped Proposals & Price Floors for Freelancers",
@@ -232,7 +292,7 @@ function calculateProjectFloor(baseHours, hourlyFloor, complexity, contingencyPc
         "inLanguage": "en-US",
         "mainEntityOfPage": "https://floorlystudio.me/",
         "datePublished": "2026-10-13T00:00:00Z",
-        "dateModified": "2026-10-13T00:00:00Z",
+        "dateModified": "2026-10-15T00:00:00Z",
         "author": {
           "@type": "Person",
           "name": "Ritik",
@@ -1294,8 +1354,9 @@ function prerender() {
   }
 
   const rawTemplate = fs.readFileSync(baseTemplatePath, 'utf8');
+  const allRoutes = ROUTES.concat(getBlogRoutes(SITE_URL, SHARED_NAV, SHARED_FOOTER));
 
-  for (const route of ROUTES) {
+  for (const route of allRoutes) {
     const routeUrl = `${SITE_URL}${route.path === '/' ? '/' : route.path}`;
     let html = rawTemplate;
 
@@ -1371,10 +1432,11 @@ function prerender() {
     console.log(`✓ Prerendered: ${route.path} -> dist/${route.outPath}`);
   }
 
-  // Also write 404.html
+  // Also write 404.html with noindex to prevent indexing of broken URLs
   const notFoundHtml = rawTemplate
     .replace(/<title>.*?<\/title>/i, '<title>404 Not Found – Floorly</title>')
-    .replace('<div id="root"></div>', '<div id="root"><h1>404 Not Found</h1><p>The requested page does not exist.</p><a href="/">Back to Home</a></div>');
+    .replace(/<meta\s+name="robots"\s+content="[^"]*"\s*\/?>/i, '<meta name="robots" content="noindex, nofollow" />')
+    .replace('<div id="root"></div>', '<div id="root" style="padding: 60px 24px; text-align: center; max-width: 600px; margin: 0 auto;"><h1>404 - Page Not Found</h1><p style="margin: 16px 0 24px; color: #5B6676;">The page you are looking for does not exist or has been moved.</p><a href="/" style="display: inline-block; padding: 12px 24px; background: #0047AB; color: #fff; text-decoration: none; border-radius: 999px; font-weight: 600;">Return to Home</a></div>');
   fs.writeFileSync(path.join(distDir, '404.html'), notFoundHtml, 'utf8');
   console.log('✓ Generated: dist/404.html');
 }

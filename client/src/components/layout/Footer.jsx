@@ -55,6 +55,39 @@ export function Footer() {
 
               <div>
                 <div style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#0E1A2B', marginBottom: '12px' }}>
+                  Guides &amp; Blog
+                </div>
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>
+                  <li>
+                    <Link to="/blog" style={{ color: 'var(--muted, #5B6676)', textDecoration: 'none' }} className="hover:text-[var(--cobalt,#0047AB)]">
+                      All Guides &amp; Blog
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/blog/what-is-agents-md" style={{ color: 'var(--muted, #5B6676)', textDecoration: 'none' }} className="hover:text-[var(--cobalt,#0047AB)]">
+                      What is AGENTS.md?
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/blog/how-to-price-a-freelance-project" style={{ color: 'var(--muted, #5B6676)', textDecoration: 'none' }} className="hover:text-[var(--cobalt,#0047AB)]">
+                      How to Price a Project
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/blog/freelance-scope-of-work-template" style={{ color: 'var(--muted, #5B6676)', textDecoration: 'none' }} className="hover:text-[var(--cobalt,#0047AB)]">
+                      Scope of Work Template
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/blog/prevent-scope-creep-freelance" style={{ color: 'var(--muted, #5B6676)', textDecoration: 'none' }} className="hover:text-[var(--cobalt,#0047AB)]">
+                      Prevent Scope Creep
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+
+              <div>
+                <div style={{ fontSize: '11px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: '#0E1A2B', marginBottom: '12px' }}>
                   Free Tools
                 </div>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: '10px' }}>

@@ -53,6 +53,11 @@ const DeliveryPage = lazyWithRetry(() => import('./pages/DeliveryPage').then((m)
 const RazorpayTestPage = lazyWithRetry(() => import('./pages/RazorpayTestPage').then((m) => ({ default: m.RazorpayTestPage })));
 const FreelanceRateCalculatorPage = lazyWithRetry(() => import('./pages/tools/FreelanceRateCalculatorPage').then((m) => ({ default: m.FreelanceRateCalculatorPage })));
 const ProjectPriceCalculatorPage = lazyWithRetry(() => import('./pages/tools/ProjectPriceCalculatorPage').then((m) => ({ default: m.ProjectPriceCalculatorPage })));
+const BlogIndexPage = lazyWithRetry(() => import('./pages/blog/BlogIndexPage').then((m) => ({ default: m.BlogIndexPage })));
+const WhatIsAgentsMdPage = lazyWithRetry(() => import('./pages/blog/WhatIsAgentsMdPage').then((m) => ({ default: m.WhatIsAgentsMdPage })));
+const HowToPriceFreelanceProjectPage = lazyWithRetry(() => import('./pages/blog/HowToPriceFreelanceProjectPage').then((m) => ({ default: m.HowToPriceFreelanceProjectPage })));
+const FreelanceScopeOfWorkTemplatePage = lazyWithRetry(() => import('./pages/blog/FreelanceScopeOfWorkTemplatePage').then((m) => ({ default: m.FreelanceScopeOfWorkTemplatePage })));
+const PreventScopeCreepPage = lazyWithRetry(() => import('./pages/blog/PreventScopeCreepPage').then((m) => ({ default: m.PreventScopeCreepPage })));
 
 // Lazy-loaded Authenticated Pages
 const DashboardPage = lazyWithRetry(() => import('./pages/DashboardPage').then((m) => ({ default: m.DashboardPage })));
@@ -154,6 +159,11 @@ function AppContent() {
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/tools/freelance-rate-calculator" element={<FreelanceRateCalculatorPage />} />
           <Route path="/tools/project-price-calculator" element={<ProjectPriceCalculatorPage />} />
+          <Route path="/blog" element={<BlogIndexPage />} />
+          <Route path="/blog/what-is-agents-md" element={<WhatIsAgentsMdPage />} />
+          <Route path="/blog/how-to-price-a-freelance-project" element={<HowToPriceFreelanceProjectPage />} />
+          <Route path="/blog/freelance-scope-of-work-template" element={<FreelanceScopeOfWorkTemplatePage />} />
+          <Route path="/blog/prevent-scope-creep-freelance" element={<PreventScopeCreepPage />} />
           <Route path="/checkout-test" element={<RazorpayTestPage />} />
           <Route path="/razorpay-test" element={<RazorpayTestPage />} />
 

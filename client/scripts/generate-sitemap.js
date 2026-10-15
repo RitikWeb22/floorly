@@ -86,6 +86,41 @@ const PUBLIC_ROUTES = [
     changefreq: 'monthly',
     priority: '0.5',
   },
+  {
+    path: '/blog',
+    sourceFile: 'client/src/pages/blog/BlogIndexPage.jsx',
+    defaultLastmod: '2026-10-15',
+    changefreq: 'weekly',
+    priority: '0.9',
+  },
+  {
+    path: '/blog/what-is-agents-md',
+    sourceFile: 'client/src/pages/blog/WhatIsAgentsMdPage.jsx',
+    defaultLastmod: '2026-10-15',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
+  {
+    path: '/blog/how-to-price-a-freelance-project',
+    sourceFile: 'client/src/pages/blog/HowToPriceFreelanceProjectPage.jsx',
+    defaultLastmod: '2026-10-15',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
+  {
+    path: '/blog/freelance-scope-of-work-template',
+    sourceFile: 'client/src/pages/blog/FreelanceScopeOfWorkTemplatePage.jsx',
+    defaultLastmod: '2026-10-15',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
+  {
+    path: '/blog/prevent-scope-creep-freelance',
+    sourceFile: 'client/src/pages/blog/PreventScopeCreepPage.jsx',
+    defaultLastmod: '2026-10-15',
+    changefreq: 'monthly',
+    priority: '0.8',
+  },
 ];
 
 // Determine real last-modified date using Git commit log, falling back to defined config date

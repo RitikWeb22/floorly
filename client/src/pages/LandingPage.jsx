@@ -179,6 +179,15 @@ export function LandingPage() {
             </li>
             <li>
               <Link
+                to="/blog"
+                style={{ textDecoration: 'none', fontWeight: 500, color: 'var(--muted, #5B6676)' }}
+                className="hover:text-[var(--ink,#0E1A2B)] transition-colors"
+              >
+                Guides
+              </Link>
+            </li>
+            <li>
+              <Link
                 to="/login"
                 style={{
                   textDecoration: 'none',
@@ -306,6 +315,15 @@ export function LandingPage() {
                 >
                   FAQ
                 </a>
+              </li>
+              <li>
+                <Link
+                  to="/blog"
+                  onClick={() => setMobileMenuOpen(false)}
+                  style={{ textDecoration: 'none', color: 'var(--ink, #0E1A2B)', fontWeight: 600, display: 'block', padding: '6px 0' }}
+                >
+                  Guides & Blog
+                </Link>
               </li>
               <li style={{ paddingTop: '8px', borderTop: '1px solid var(--line, #E8E0CF)', display: 'flex', gap: '12px' }}>
                 <Link
