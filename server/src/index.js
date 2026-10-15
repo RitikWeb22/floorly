@@ -148,7 +148,7 @@ app.get('/', (req, res) => {
     message: '🚀 Floorly API is active and running',
     version: '1.0.0',
     status: 'healthy',
-    frontend: process.env.FRONTEND_URL || 'https://floorly-studio.vercel.app',
+    frontend: process.env.FRONTEND_URL || 'https://floorlystudio.me',
     endpoints: {
       health: '/health',
       businessInfo: '/api/v1/public/business-info',
