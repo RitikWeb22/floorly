@@ -3,8 +3,13 @@
  * Driven by Vite environment variables with dynamic fallback from backend business-info
  */
 
+const rawSiteEnv = import.meta.env.VITE_SITE_URL;
+const canonicalOrigin = (rawSiteEnv && !rawSiteEnv.includes('vercel.app'))
+  ? rawSiteEnv
+  : (typeof window !== 'undefined' && !window.location.origin.includes('vercel.app') ? window.location.origin : 'https://floorlystudio.me');
+
 export const siteConfig = {
-  siteUrl: (import.meta.env.VITE_SITE_URL || (typeof window !== 'undefined' ? window.location.origin : 'https://floorlystudio.me')).replace(/\/+$/, ''),
+  siteUrl: canonicalOrigin.replace(/\/+$/, ''),
   siteName: 'Floorly',
   siteTitle: 'Floorly – AI-Scoped Proposals & Price Floors for Freelancers',
   defaultOgImage: 'https://floorlystudio.me/og-image.png',

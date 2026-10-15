@@ -10,9 +10,9 @@ const repoRoot = path.resolve(clientDir, '..');
 const publicDir = path.join(clientDir, 'public');
 const distDir = path.join(clientDir, 'dist');
 
-// Read SITE_URL from env, canonicalizing to remove any trailing slashes
-const rawSiteUrl = process.env.SITE_URL || process.env.VITE_SITE_URL || 'https://floorlystudio.me';
-const SITE_URL = rawSiteUrl.trim().replace(/\/+$/, '');
+// Enforce canonical production domain: sitemap must NEVER use vercel.app or preview URLs
+const CANONICAL_SITE_URL = 'https://floorlystudio.me';
+const SITE_URL = CANONICAL_SITE_URL;
 
 // Canonical list of strictly PUBLIC routes and their primary source files
 const PUBLIC_ROUTES = [

@@ -22,8 +22,8 @@ for (let i = 0; i < args.length; i++) {
   }
 }
 
-const rawEnvSiteUrl = process.env.SITE_URL || process.env.VITE_SITE_URL || 'https://floorlystudio.me';
-const CANONICAL_SITE_URL = rawEnvSiteUrl.trim().replace(/\/+$/, '');
+// Canonical production site URL - MUST always be floorlystudio.me
+const CANONICAL_SITE_URL = 'https://floorlystudio.me';
 const TEST_HOST = targetBaseUrl || (isLiveMode ? CANONICAL_SITE_URL : null);
 
 // Prohibited App Routes & Share Patterns that must NEVER appear in sitemap.xml
