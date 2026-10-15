@@ -115,15 +115,7 @@ export function LandingPage() {
         aria-label="Main Navigation"
       >
         <div
-          style={{
-            maxWidth: '1120px',
-            margin: '0 auto',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            height: '68px',
-          }}
-          className="px-4 sm:px-6"
+          className="landing-container flex items-center justify-between h-[72px]"
         >
           {/* Logo */}
           <Link to="/" style={{ textDecoration: 'none' }} aria-label="Floorly Home">
@@ -360,134 +352,80 @@ export function LandingPage() {
       {/* Main Content Landmark for Accessibility */}
       <main id="main-content">
         {/* 2. Hero Section */}
-        <header className="py-12 sm:py-20">
-        <div
-          style={{
-            maxWidth: '1120px',
-            margin: '0 auto',
-            alignItems: 'center',
-          }}
-          className="px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-14"
-        >
-          {/* Left Column: Left-aligned Text */}
-          <div>
-            <h1
-              style={{
-                fontSize: 'clamp(30px, 3.8vw, 48px)',
-                fontWeight: 600,
-                color: 'var(--ink, #0E1A2B)',
-                lineHeight: 1.15,
-                letterSpacing: '-0.025em',
-                fontFamily: 'var(--font-display)',
-              }}
-            >
-              AI-Scoped Proposals &amp; Price Floors{' '}
-              <span style={{ display: 'block', color: 'var(--cobalt, #0047AB)' }}>for Freelancers</span>
-            </h1>
+        <header className="landing-section pt-8 sm:pt-16 pb-12 sm:pb-16">
+          <div className="landing-container grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+            {/* Left Column: Left-aligned Text (55% width ~ 7 cols) */}
+            <div className="lg:col-span-7">
+              <h1 className="landing-h1 font-display text-[var(--ink,#0E1A2B)] mb-6">
+                AI-Scoped Proposals &amp; Price Floors{' '}
+                <span style={{ display: 'block', color: 'var(--cobalt, #0047AB)' }}>for Freelancers</span>
+              </h1>
 
-            <p
-              style={{
-                fontSize: '16px',
-                color: 'var(--ink, #0E1A2B)',
-                margin: '16px 0 8px',
-                maxWidth: '34em',
-                lineHeight: 1.6,
-                fontWeight: 500,
-              }}
-            >
-              Floorly is a web app for freelancers and small studios. Paste a client brief, and AI scopes the work and estimates the hours. Every proposal is checked against a minimum price you set, so it can't go below your floor. Then invoice by milestone, record payments, and see your profit after expenses and your own time. Built for freelance developers, designers, writers and small agencies who send fixed-price proposals.
-            </p>
+              <p className="landing-body text-[var(--ink,#0E1A2B)] mb-8 font-normal" style={{ maxWidth: '34em' }}>
+                Floorly is a web app for freelancers and small studios. Paste a client brief, and AI scopes the work and estimates the hours. Every proposal is checked against a minimum price you set, so it can't go below your floor. Then invoice by milestone, record payments, and see your profit after expenses and your own time. Built for freelance developers, designers, writers and small agencies who send fixed-price proposals.
+              </p>
+
+              <div className="flex items-center gap-3.5 sm:gap-4 flex-wrap">
+                <Link
+                  to="/signup"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '14px 28px',
+                    borderRadius: '999px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    background: 'var(--cobalt, #0047AB)',
+                    color: '#FFFFFF',
+                    border: '2px solid var(--cobalt, #0047AB)',
+                    fontSize: '16px',
+                    height: '52px',
+                    boxSizing: 'border-box',
+                  }}
+                  className="hover:bg-[var(--cobalt-dark,#003A8C)] transition-all shadow-sm"
+                >
+                  Start free
+                </Link>
+                <a
+                  href="#how"
+                  style={{
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    padding: '14px 28px',
+                    borderRadius: '999px',
+                    fontWeight: 600,
+                    textDecoration: 'none',
+                    border: '2px solid var(--cobalt, #0047AB)',
+                    color: 'var(--cobalt, #0047AB)',
+                    fontSize: '16px',
+                    height: '52px',
+                    backgroundColor: 'transparent',
+                    boxSizing: 'border-box',
+                  }}
+                  className="hover:bg-[#FFFFFF] transition-all"
+                >
+                  See how it works
+                </a>
+              </div>
+
+              <small style={{ display: 'block', marginTop: '16px', color: 'var(--muted, #5B6676)', fontSize: '14px' }}>
+                Free plan includes 2 active clients. No credit card.
+              </small>
+            </div>
+
+            {/* Right Column: Interactive "Try the floor" Hero Demo (45% width ~ 5 cols) */}
             <div
               style={{
-                fontSize: '13px',
-                color: 'var(--muted, #5B6676)',
-                marginBottom: '16px',
-                fontWeight: 500,
+                background: '#FFFFFF',
+                border: '1px solid var(--line, #E8E0CF)',
+                borderRadius: 'var(--r-card, 16px)',
+                boxShadow: 'var(--shadow-soft)',
               }}
+              className="lg:col-span-5 p-6 sm:p-7"
+              aria-label="Interactive price floor demo"
             >
-              Last updated: October 13, 2026 &bull; Industry benchmarks aligned with{' '}
-              <a
-                href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline' }}
-              >
-                U.S. Bureau of Labor Statistics
-              </a>
-            </div>
-
-            {/* AEO / GEO Key Takeaways & Audience Clarity Card */}
-            <aside
-              aria-label="Key Takeaways and Executive Summary"
-              style={{
-                marginBottom: '20px',
-                padding: '14px 16px',
-                background: '#F8FAFC',
-                border: '1px solid #E2E8F0',
-                borderRadius: '12px',
-                textAlign: 'left',
-              }}
-            >
-              <div style={{ fontSize: '13px', fontWeight: 600, color: 'var(--ink, #0E1A2B)', marginBottom: '4px' }}>
-                Key Takeaway &amp; Top Summary
-              </div>
-              <p style={{ fontSize: '13px', color: 'var(--muted, #5B6676)', lineHeight: 1.5, margin: 0 }}>
-                <strong>Bottom-Line Answer:</strong> Floorly is a proposal scoping and price floor web app that prevents freelance developers, UI/UX designers, copywriters, and small agencies from quoting below their break-even minimum. Evaluate incoming client briefs, calculate deterministic price floors, add direct payment details to invoices, and protect net project margins.
-              </p>
-            </aside>
-
-            <div style={{ display: 'flex', gap: '14px', flexWrap: 'wrap' }}>
-              <Link
-                to="/signup"
-                style={{
-                  display: 'inline-block',
-                  padding: '14px 28px',
-                  borderRadius: '999px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  background: 'var(--cobalt, #0047AB)',
-                  color: '#FFFFFF',
-                  border: '2px solid var(--cobalt, #0047AB)',
-                  fontSize: '16px',
-                }}
-                className="hover:bg-[var(--cobalt-dark,#003A8C)] transition-all"
-              >
-                Start free
-              </Link>
-              <a
-                href="#how"
-                style={{
-                  display: 'inline-block',
-                  padding: '14px 28px',
-                  borderRadius: '999px',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                  border: '2px solid var(--cobalt, #0047AB)',
-                  color: 'var(--cobalt, #0047AB)',
-                  fontSize: '16px',
-                  backgroundColor: 'transparent',
-                }}
-                className="hover:bg-[#FFFFFF] transition-all"
-              >
-                See how it works
-              </a>
-            </div>
-
-            <small style={{ display: 'block', marginTop: '14px', color: 'var(--muted, #5B6676)', fontSize: '14px' }}>
-              Free plan includes 2 active clients. No credit card.
-            </small>
-          </div>
-
-          {/* Right Column: Interactive "Try the floor" Hero Demo */}
-          <div
-            style={{
-              background: '#FFFFFF',
-              border: '2px solid var(--ink, #0E1A2B)',
-              borderRadius: '20px',
-            }}
-            className="p-5 sm:p-7 shadow-[5px_5px_0_var(--ink,#0E1A2B)] sm:shadow-[8px_8px_0_var(--ink,#0E1A2B)]"
-            aria-label="Interactive price floor demo"
-          >
             <h2
               style={{
                 fontSize: '18px',
@@ -661,6 +599,42 @@ export function LandingPage() {
         </div>
       </header>
 
+      {/* Relocated Subtle Executive Summary & Industry Benchmark Strip */}
+      <section aria-label="Executive Summary and Industry Benchmarks" className="mb-10 sm:mb-14">
+        <div className="landing-container">
+          <div
+            style={{
+              background: '#FFFFFF',
+              border: '1px solid var(--line, #E8E0CF)',
+              borderRadius: 'var(--r-card, 16px)',
+              boxShadow: 'var(--shadow-soft)',
+              padding: '18px 24px',
+            }}
+            className="flex flex-col md:flex-row md:items-center justify-between gap-4"
+          >
+            <div style={{ maxWidth: '820px' }}>
+              <div style={{ fontSize: '12px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.05em', color: 'var(--cobalt, #0047AB)', marginBottom: '4px' }}>
+                Key Takeaway &amp; Top Summary
+              </div>
+              <p style={{ fontSize: '14px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.5, margin: 0 }}>
+                <strong>Bottom-Line Answer:</strong> Floorly is a proposal scoping and price floor web app that prevents freelance developers, UI/UX designers, copywriters, and small agencies from quoting below their break-even minimum. Evaluate incoming client briefs, calculate deterministic price floors, add direct payment details to invoices, and protect net project margins.
+              </p>
+            </div>
+            <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)', whiteSpace: 'nowrap' }} className="self-start md:self-center">
+              Last updated: October 13, 2026 &bull;{' '}
+              <a
+                href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline' }}
+              >
+                U.S. Bureau of Labor Statistics
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* 3. Slim Trust Strip */}
       <div
         style={{
@@ -671,171 +645,142 @@ export function LandingPage() {
         }}
       >
         <div
-          style={{
-            maxWidth: '1120px',
-            margin: '0 auto',
-            display: 'flex',
-            gap: '12px 32px',
-            flexWrap: 'wrap',
-            justifyContent: 'center',
-            color: 'var(--muted, #5B6676)',
-            fontWeight: 500,
-            fontSize: '15px',
-            textAlign: 'center',
-          }}
-          className="px-4 sm:px-6"
+          className="landing-container flex gap-3 sm:gap-8 flex-wrap justify-center text-[var(--muted,#5B6676)] font-medium text-[15px] sm:text-[16px] text-center"
         >
           <span>Built for freelance developers, designers, small agencies and consultants.</span>
+          <span className="hidden sm:inline">&bull;</span>
           <span>Works in 8 currencies.</span>
         </div>
       </div>
 
       {/* 4. How It Works (3 Real Steps) */}
-      <section id="how" className="py-14 sm:py-24">
-        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
-          <h2
-            style={{
-              fontSize: 'clamp(32px, 4.2vw, 52px)',
-              fontWeight: 600,
-              lineHeight: 1.08,
-              letterSpacing: '-0.025em',
-              fontFamily: 'var(--font-display)',
-              maxWidth: '18em',
-            }}
-          >
-            How do you turn a client brief into a paid invoice in three steps?
-          </h2>
-          <p style={{ color: 'var(--muted, #5B6676)', fontSize: '18px', maxWidth: '34em', marginTop: '16px' }}>
-            Paste a brief to let AI scope deliverables, review the draft against your minimum price floor, and invoice milestones while recording payments as they arrive.
-          </p>
+      <section id="how" className="landing-section">
+        <div className="landing-container">
+          <div className="landing-section-header">
+            <h2 className="landing-h2 font-display text-[var(--ink,#0E1A2B)] mb-4">
+              How do you turn a client brief into a paid invoice in three steps?
+            </h2>
+            <p className="landing-body text-[var(--muted,#5B6676)]">
+              Paste a brief to let AI scope deliverables, review the draft against your minimum price floor, and invoice milestones while recording payments as they arrive.
+            </p>
+          </div>
 
-          <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-0 mt-10 sm:mt-14 border-t-2 border-[var(--ink,#0E1A2B)]"
-          >
-            {/* Step 1 */}
-            <div className="pt-6 md:pr-7 pb-2">
-              <i
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 600,
-                  fontSize: '44px',
-                  color: 'var(--sun, #FFC72C)',
-                  WebkitTextStroke: '2px var(--ink, #0E1A2B)',
-                  fontStyle: 'normal',
-                  display: 'block',
-                }}
-              >
-                1
-              </i>
-              <h3
-                style={{
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.015em',
-                  margin: '10px 0 8px',
-                  fontFamily: 'var(--font-display)',
-                }}
-              >
-                Step 1: How do you scope an unstructured client brief?
-              </h3>
-              <p style={{ color: 'var(--muted, #5B6676)' }}>
-                Drop in an email, chat or call notes. Floorly pulls out the scope, flags unclear points and estimates
-                hours with a confidence level you can edit.
-              </p>
-            </div>
+          <div className="relative mt-12 sm:mt-16">
+            {/* Desktop Connector Line */}
+            <div
+              className="hidden md:block absolute top-[54px] left-[15%] right-[15%] h-[2px] bg-[var(--line,#E8E0CF)] z-0"
+              aria-hidden="true"
+            />
 
-            {/* Step 2 */}
-            <div className="pt-6 md:px-7 pb-2 border-t md:border-t-0 md:border-l border-[var(--line,#E8E0CF)]">
-              <i
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 600,
-                  fontSize: '44px',
-                  color: 'var(--sun, #FFC72C)',
-                  WebkitTextStroke: '2px var(--ink, #0E1A2B)',
-                  fontStyle: 'normal',
-                  display: 'block',
-                }}
-              >
-                2
-              </i>
-              <h3
-                style={{
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.015em',
-                  margin: '10px 0 8px',
-                  fontFamily: 'var(--font-display)',
-                }}
-              >
-                Step 2: How does AI enforce your minimum price floor?
-              </h3>
-              <p style={{ color: 'var(--muted, #5B6676)' }}>
-                Three pricing tiers, a print-ready PDF and your scope-guard clauses. Every number is checked against your
-                floor after the AI responds, so it can't slip.
-              </p>
-            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
+              {/* Step 1 */}
+              <div className="landing-card p-8 h-full flex flex-col">
+                <div
+                  style={{
+                    width: '44px',
+                    height: '44px',
+                    borderRadius: '50%',
+                    background: 'var(--cobalt, #0047AB)',
+                    color: '#FFFFFF',
+                    fontFamily: 'var(--font-display)',
+                    fontWeight: 700,
+                    fontSize: '20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '20px',
+                  }}
+                  className="shadow-sm shrink-0"
+                >
+                  1
+                </div>
+                <h3 className="text-xl font-bold font-display text-[var(--ink,#0E1A2B)] mb-3 leading-snug">
+                  Step 1: How do you scope an unstructured client brief?
+                </h3>
+                <p className="text-[15px] sm:text-[16px] text-[var(--muted,#5B6676)] leading-relaxed mt-auto">
+                  Drop in an email, chat or call notes. Floorly pulls out the scope, flags unclear points and estimates
+                  hours with a confidence level you can edit.
+                </p>
+              </div>
 
-            {/* Step 3 */}
-            <div className="pt-6 md:pl-7 pb-2 border-t md:border-t-0 md:border-l border-[var(--line,#E8E0CF)]">
-              <i
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 600,
-                  fontSize: '44px',
-                  color: 'var(--sun, #FFC72C)',
-                  WebkitTextStroke: '2px var(--ink, #0E1A2B)',
-                  fontStyle: 'normal',
-                  display: 'block',
-                }}
-              >
-                3
-              </i>
-              <h3
-                style={{
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.015em',
-                  margin: '10px 0 8px',
-                  fontFamily: 'var(--font-display)',
-                }}
-              >
-                Step 3: How do you invoice milestones, record payments, and see real profit?
-              </h3>
-              <p style={{ color: 'var(--muted, #5B6676)' }}>
-                Add your own payment details or links to milestone invoices and record payments in Floorly when received. Income and expenses roll into a net margin that counts your own time.
-              </p>
+              {/* Step 2 */}
+              <div className="landing-card p-8 h-full flex flex-col">
+                <div
+                  style={{
+                    width: '44px',
+                    height: '44px',
+                    borderRadius: '50%',
+                    background: 'var(--cobalt, #0047AB)',
+                    color: '#FFFFFF',
+                    fontFamily: 'var(--font-display)',
+                    fontWeight: 700,
+                    fontSize: '20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '20px',
+                  }}
+                  className="shadow-sm shrink-0"
+                >
+                  2
+                </div>
+                <h3 className="text-xl font-bold font-display text-[var(--ink,#0E1A2B)] mb-3 leading-snug">
+                  Step 2: How does AI enforce your minimum price floor?
+                </h3>
+                <p className="text-[15px] sm:text-[16px] text-[var(--muted,#5B6676)] leading-relaxed mt-auto">
+                  Three pricing tiers, a print-ready PDF and your scope-guard clauses. Every number is checked against your
+                  floor after the AI responds, so it can't slip.
+                </p>
+              </div>
+
+              {/* Step 3 */}
+              <div className="landing-card p-8 h-full flex flex-col">
+                <div
+                  style={{
+                    width: '44px',
+                    height: '44px',
+                    borderRadius: '50%',
+                    background: 'var(--cobalt, #0047AB)',
+                    color: '#FFFFFF',
+                    fontFamily: 'var(--font-display)',
+                    fontWeight: 700,
+                    fontSize: '20px',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '20px',
+                  }}
+                  className="shadow-sm shrink-0"
+                >
+                  3
+                </div>
+                <h3 className="text-xl font-bold font-display text-[var(--ink,#0E1A2B)] mb-3 leading-snug">
+                  Step 3: How do you invoice milestones, record payments, and see real profit?
+                </h3>
+                <p className="text-[15px] sm:text-[16px] text-[var(--muted,#5B6676)] leading-relaxed mt-auto">
+                  Add your own payment details or links to milestone invoices and record payments in Floorly when received. Income and expenses roll into a net margin that counts your own time.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 5. Product Showcase: Real Browser Frame with Segmented Switcher */}
-      <section style={{ padding: '0 0 80px 0' }}>
-        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
-          <div style={{ textAlign: 'center', marginBottom: '32px' }}>
-            <h2
-              style={{
-                fontSize: 'clamp(32px, 4.2vw, 52px)',
-                fontWeight: 600,
-                lineHeight: 1.08,
-                letterSpacing: '-0.025em',
-                fontFamily: 'var(--font-display)',
-                margin: '0 auto',
-              }}
-            >
+      {/* 5. Product Showcase: Real Browser Frame with Segmented Switcher */}
+      <section className="landing-section bg-white border-y border-[var(--line,#E8E0CF)]">
+        <div className="landing-container">
+          <div className="landing-section-header">
+            <h2 className="landing-h2 font-display text-[var(--ink,#0E1A2B)] mb-4">
               How does Floorly work across proposals, floors, and profit tracking?
             </h2>
-            <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px', maxWidth: '36em', margin: '8px auto 0' }}>
+            <p className="landing-body text-[var(--muted,#5B6676)]">
               Floorly connects your workflow from initial brief to final payment. AI scopes deliverables, your floor protects your pricing, and the ledger tracks your payments and net margins.
             </p>
 
             {/* Segmented Switcher */}
             <div
-              className="inline-flex max-w-full overflow-x-auto p-1 mt-6 rounded-full bg-white border-2 border-[var(--ink,#0E1A2B)] gap-1"
+              className="inline-flex max-w-full overflow-x-auto p-1.5 mt-8 rounded-full bg-[#FAF5EA] border border-[var(--line,#E8E0CF)] gap-1 shadow-sm"
               role="tablist"
               aria-label="Product Showcase Views"
             >
@@ -845,14 +790,14 @@ export function LandingPage() {
                 onClick={() => setActiveShowcase('proposal')}
                 style={{
                   border: 0,
-                  background: activeShowcase === 'proposal' ? 'var(--ink, #0E1A2B)' : 'none',
+                  background: activeShowcase === 'proposal' ? 'var(--cobalt, #0047AB)' : 'transparent',
                   color: activeShowcase === 'proposal' ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
                   fontFamily: 'var(--font-sans)',
-                  fontWeight: 500,
+                  fontWeight: activeShowcase === 'proposal' ? 600 : 500,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
                 }}
-                className="px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm rounded-full transition-colors"
+                className="px-4 py-2 text-xs sm:text-sm rounded-full transition-all"
               >
                 Protected Proposal
               </button>
@@ -862,14 +807,14 @@ export function LandingPage() {
                 onClick={() => setActiveShowcase('floor')}
                 style={{
                   border: 0,
-                  background: activeShowcase === 'floor' ? 'var(--ink, #0E1A2B)' : 'none',
+                  background: activeShowcase === 'floor' ? 'var(--cobalt, #0047AB)' : 'transparent',
                   color: activeShowcase === 'floor' ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
                   fontFamily: 'var(--font-sans)',
-                  fontWeight: 500,
+                  fontWeight: activeShowcase === 'floor' ? 600 : 500,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
                 }}
-                className="px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm rounded-full transition-colors"
+                className="px-4 py-2 text-xs sm:text-sm rounded-full transition-all"
               >
                 Floor Rules
               </button>
@@ -879,29 +824,31 @@ export function LandingPage() {
                 onClick={() => setActiveShowcase('profit')}
                 style={{
                   border: 0,
-                  background: activeShowcase === 'profit' ? 'var(--ink, #0E1A2B)' : 'none',
+                  background: activeShowcase === 'profit' ? 'var(--cobalt, #0047AB)' : 'transparent',
                   color: activeShowcase === 'profit' ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
                   fontFamily: 'var(--font-sans)',
-                  fontWeight: 500,
+                  fontWeight: activeShowcase === 'profit' ? 600 : 500,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
                 }}
-                className="px-3.5 py-1.5 sm:px-4 sm:py-2 text-xs sm:text-sm rounded-full transition-colors"
+                className="px-4 py-2 text-xs sm:text-sm rounded-full transition-all"
               >
                 Profit Dashboard
               </button>
             </div>
           </div>
 
-          {/* Browser Frame */}
+          {/* Browser Frame (Max-width 1000px, soft shadow, rounded corners) */}
           <div
             style={{
+              maxWidth: '1000px',
+              margin: '0 auto',
               background: '#FFFFFF',
-              border: '2px solid var(--ink, #0E1A2B)',
-              borderRadius: '16px',
+              border: '1px solid var(--line, #E8E0CF)',
+              borderRadius: 'var(--r-card, 16px)',
+              boxShadow: 'var(--shadow-elevated-card)',
               overflow: 'hidden',
             }}
-            className="shadow-[5px_5px_0_var(--ink,#0E1A2B)] sm:shadow-[8px_8px_0_var(--ink,#0E1A2B)]"
           >
             {/* Top Bar with Window Dots */}
             <div
@@ -1041,215 +988,245 @@ export function LandingPage() {
       </section>
 
       {/* 6. Features on a Solid Cobalt Band (2-column list) */}
-      <section id="features" style={{ background: 'var(--cobalt, #0047AB)', color: '#FFFFFF' }} className="py-14 sm:py-24">
-        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
-          <h2
-            style={{
-              color: '#FFFFFF',
-              fontSize: 'clamp(32px, 4.2vw, 52px)',
-              fontWeight: 600,
-              lineHeight: 1.08,
-              letterSpacing: '-0.025em',
-              fontFamily: 'var(--font-display)',
-            }}
-          >
-            What core features protect freelancers from scope creep and low quotes?
-          </h2>
-          <p style={{ color: '#CFE0F7', fontSize: '18px', maxWidth: '34em', marginTop: '16px' }}>
-            Floorly combines AI scope analysis, server-enforced minimum price floors, scope-guard clauses, milestone invoicing, and profit tracking into a single workflow.
-          </p>
+      <section id="features" style={{ background: 'var(--cobalt, #0047AB)', color: '#FFFFFF' }} className="landing-section">
+        <div className="landing-container">
+          <div className="landing-section-header">
+            <h2 className="landing-h2 font-display text-white mb-4">
+              What core features protect freelancers from scope creep and low quotes?
+            </h2>
+            <p className="landing-body text-blue-100">
+              Floorly combines AI scope analysis, server-enforced minimum price floors, scope-guard clauses, milestone invoicing, and profit tracking into a single workflow.
+            </p>
+          </div>
 
-          <div
-            className="grid grid-cols-1 md:grid-cols-2 gap-3 md:gap-x-16 mt-10 sm:mt-12"
-          >
-            {/* 1 */}
-            <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
-              <h3
-                style={{
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.015em',
-                  marginBottom: '6px',
-                  fontFamily: 'var(--font-display)',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <span
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-12 sm:mt-16">
+            {/* Feature 1 */}
+            <div
+              style={{
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.16)',
+                borderRadius: 'var(--r-card, 16px)',
+              }}
+              className="p-7 sm:p-8 flex flex-col justify-between h-full hover:bg-white/[0.12] transition-colors"
+            >
+              <div>
+                <div
                   style={{
-                    display: 'inline-block',
-                    width: '12px',
-                    height: '12px',
-                    background: 'var(--sun, #FFC72C)',
-                    borderRadius: '3px',
-                    marginRight: '12px',
-                    shrink: 0,
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '10px',
+                    background: 'rgba(255, 255, 255, 0.14)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '18px',
+                    color: 'var(--sun, #FFC72C)',
                   }}
-                />
-                How does server-enforced price floor protection work?
-              </h3>
-              <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold font-display text-white mb-3 leading-snug">
+                  How does server-enforced price floor protection work?
+                </h3>
+              </div>
+              <p className="text-[16px] text-blue-100 leading-relaxed mt-2">
                 Set a minimum hourly rate and a minimum fee per project type. No proposal leaves below them.
               </p>
             </div>
 
-            {/* 2 */}
-            <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
-              <h3
-                style={{
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.015em',
-                  marginBottom: '6px',
-                  fontFamily: 'var(--font-display)',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <span
+            {/* Feature 2 */}
+            <div
+              style={{
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.16)',
+                borderRadius: 'var(--r-card, 16px)',
+              }}
+              className="p-7 sm:p-8 flex flex-col justify-between h-full hover:bg-white/[0.12] transition-colors"
+            >
+              <div>
+                <div
                   style={{
-                    display: 'inline-block',
-                    width: '12px',
-                    height: '12px',
-                    background: 'var(--sun, #FFC72C)',
-                    borderRadius: '3px',
-                    marginRight: '12px',
-                    shrink: 0,
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '10px',
+                    background: 'rgba(255, 255, 255, 0.14)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '18px',
+                    color: 'var(--sun, #FFC72C)',
                   }}
-                />
-                How does the AI requirement analyzer detect hidden deliverables?
-              </h3>
-              <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <line x1="12" y1="8" x2="12" y2="12"/>
+                    <line x1="12" y1="16" x2="12.01" y2="16"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold font-display text-white mb-3 leading-snug">
+                  How does the AI requirement analyzer detect hidden deliverables?
+                </h3>
+              </div>
+              <p className="text-[16px] text-blue-100 leading-relaxed mt-2">
                 Turns unstructured client messages into scoped deliverables, open questions and hour estimates.
               </p>
             </div>
 
-            {/* 3 */}
-            <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
-              <h3
-                style={{
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.015em',
-                  marginBottom: '6px',
-                  fontFamily: 'var(--font-display)',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <span
+            {/* Feature 3 */}
+            <div
+              style={{
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.16)',
+                borderRadius: 'var(--r-card, 16px)',
+              }}
+              className="p-7 sm:p-8 flex flex-col justify-between h-full hover:bg-white/[0.12] transition-colors"
+            >
+              <div>
+                <div
                   style={{
-                    display: 'inline-block',
-                    width: '12px',
-                    height: '12px',
-                    background: 'var(--sun, #FFC72C)',
-                    borderRadius: '3px',
-                    marginRight: '12px',
-                    shrink: 0,
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '10px',
+                    background: 'rgba(255, 255, 255, 0.14)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '18px',
+                    color: 'var(--sun, #FFC72C)',
                   }}
-                />
-                What scope guard clauses prevent unpaid client revisions?
-              </h3>
-              <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                    <polyline points="14 2 14 8 20 8"/>
+                    <line x1="16" y1="13" x2="8" y2="13"/>
+                    <line x1="16" y1="17" x2="8" y2="17"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold font-display text-white mb-3 leading-snug">
+                  What scope guard clauses prevent unpaid client revisions?
+                </h3>
+              </div>
+              <p className="text-[16px] text-blue-100 leading-relaxed mt-2">
                 Revision limits and change-order language that you can drop into any proposal in one click.
               </p>
             </div>
 
-            {/* 4 */}
-            <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
-              <h3
-                style={{
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.015em',
-                  marginBottom: '6px',
-                  fontFamily: 'var(--font-display)',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <span
+            {/* Feature 4 */}
+            <div
+              style={{
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.16)',
+                borderRadius: 'var(--r-card, 16px)',
+              }}
+              className="p-7 sm:p-8 flex flex-col justify-between h-full hover:bg-white/[0.12] transition-colors"
+            >
+              <div>
+                <div
                   style={{
-                    display: 'inline-block',
-                    width: '12px',
-                    height: '12px',
-                    background: 'var(--sun, #FFC72C)',
-                    borderRadius: '3px',
-                    marginRight: '12px',
-                    shrink: 0,
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '10px',
+                    background: 'rgba(255, 255, 255, 0.14)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '18px',
+                    color: 'var(--sun, #FFC72C)',
                   }}
-                />
-                How do payment details and invoicing currencies work?
-              </h3>
-              <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                    <line x1="1" y1="10" x2="23" y2="10"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold font-display text-white mb-3 leading-snug">
+                  How do payment details and invoicing currencies work?
+                </h3>
+              </div>
+              <p className="text-[16px] text-blue-100 leading-relaxed mt-2">
                 Floorly does not collect client payments directly. You add your own payment details or links (such as bank details, PayPal, Stripe or Razorpay links, or UPI for INR) to invoices and log payments in Floorly across 8 supported currencies.
               </p>
             </div>
 
-            {/* 5 */}
-            <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
-              <h3
-                style={{
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.015em',
-                  marginBottom: '6px',
-                  fontFamily: 'var(--font-display)',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <span
+            {/* Feature 5 */}
+            <div
+              style={{
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.16)',
+                borderRadius: 'var(--r-card, 16px)',
+              }}
+              className="p-7 sm:p-8 flex flex-col justify-between h-full hover:bg-white/[0.12] transition-colors"
+            >
+              <div>
+                <div
                   style={{
-                    display: 'inline-block',
-                    width: '12px',
-                    height: '12px',
-                    background: 'var(--sun, #FFC72C)',
-                    borderRadius: '3px',
-                    marginRight: '12px',
-                    shrink: 0,
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '10px',
+                    background: 'rgba(255, 255, 255, 0.14)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '18px',
+                    color: 'var(--sun, #FFC72C)',
                   }}
-                />
-                How does Floorly calculate real net margins after logging time?
-              </h3>
-              <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold font-display text-white mb-3 leading-snug">
+                  How does Floorly calculate real net margins after logging time?
+                </h3>
+              </div>
+              <p className="text-[16px] text-blue-100 leading-relaxed mt-2">
                 Net margin after expenses, tax and your own hourly rate, so a "good" project isn't secretly a loss.
               </p>
             </div>
 
-            {/* 6 */}
-            <div style={{ padding: '22px 0', borderTop: '1px solid rgba(255, 255, 255, 0.28)' }}>
-              <h3
-                style={{
-                  fontSize: '24px',
-                  fontWeight: 500,
-                  lineHeight: 1.2,
-                  letterSpacing: '-0.015em',
-                  marginBottom: '6px',
-                  fontFamily: 'var(--font-display)',
-                  display: 'flex',
-                  alignItems: 'center',
-                }}
-              >
-                <span
+            {/* Feature 6 */}
+            <div
+              style={{
+                background: 'rgba(255, 255, 255, 0.08)',
+                border: '1px solid rgba(255, 255, 255, 0.16)',
+                borderRadius: 'var(--r-card, 16px)',
+              }}
+              className="p-7 sm:p-8 flex flex-col justify-between h-full hover:bg-white/[0.12] transition-colors"
+            >
+              <div>
+                <div
                   style={{
-                    display: 'inline-block',
-                    width: '12px',
-                    height: '12px',
-                    background: 'var(--sun, #FFC72C)',
-                    borderRadius: '3px',
-                    marginRight: '12px',
-                    shrink: 0,
+                    width: '42px',
+                    height: '42px',
+                    borderRadius: '10px',
+                    background: 'rgba(255, 255, 255, 0.14)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    marginBottom: '18px',
+                    color: 'var(--sun, #FFC72C)',
                   }}
-                />
-                How does Floorly generate AGENTS.md for AI coding assistants?
-              </h3>
-              <p style={{ color: '#D7E5F8', fontSize: '16px' }}>
+                >
+                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"/>
+                    <rect x="9" y="9" width="6" height="6"/>
+                    <line x1="9" y1="1" x2="9" y2="4"/>
+                    <line x1="15" y1="1" x2="15" y2="4"/>
+                    <line x1="9" y1="20" x2="9" y2="23"/>
+                    <line x1="15" y1="20" x2="15" y2="23"/>
+                    <line x1="20" y1="9" x2="23" y2="9"/>
+                    <line x1="20" y1="14" x2="23" y2="14"/>
+                    <line x1="1" y1="9" x2="4" y2="9"/>
+                    <line x1="1" y1="14" x2="4" y2="14"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold font-display text-white mb-3 leading-snug">
+                  How does Floorly generate AGENTS.md for AI coding assistants?
+                </h3>
+              </div>
+              <p className="text-[16px] text-blue-100 leading-relaxed mt-2">
                 Turn an approved scope into coding instructions for AI assistants, so the build stays inside what was
                 sold.
               </p>
@@ -1259,45 +1236,28 @@ export function LandingPage() {
       </section>
 
       {/* 7. Interactive Profit/Floor Calculator */}
-      <section id="calculator" className="py-14 sm:py-24">
-        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4">
-            <div className="flex-1 min-w-0">
-              <h2
-                style={{
-                  fontSize: 'clamp(32px, 4.2vw, 52px)',
-                  fontWeight: 600,
-                  lineHeight: 1.08,
-                  letterSpacing: '-0.025em',
-                  fontFamily: 'var(--font-display)',
-                }}
-              >
-                How do you calculate a safe project price floor before quoting?
-              </h2>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px' }}>
-                Multiply estimated hours by your hourly rate, apply a complexity multiplier for risk, and compare against your configured minimum project fee.
-              </p>
-            </div>
+      <section id="calculator" className="landing-section">
+        <div className="landing-container">
+          <div className="landing-section-header mx-auto text-center mb-10 sm:mb-12">
+            <h2 className="landing-h2">
+              How do you calculate a safe project price floor before quoting?
+            </h2>
+            <p className="landing-body mt-4">
+              Multiply estimated hours by your hourly rate, apply a complexity multiplier for risk, and compare against your configured minimum project fee.
+            </p>
+          </div>
 
-            {/* Currency Selector */}
-            <div className="shrink-0" style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
-              <label htmlFor="currency-select" style={{ fontSize: '14px', fontWeight: 600, color: 'var(--muted, #5B6676)', whiteSpace: 'nowrap' }}>
+          <div className="max-w-4xl mx-auto">
+            {/* Currency Selector Bar */}
+            <div className="flex justify-end items-center gap-2 mb-4">
+              <label htmlFor="currency-select" className="text-sm font-semibold text-[var(--muted,#5B6676)] whitespace-nowrap">
                 Currency:
               </label>
               <select
                 id="currency-select"
                 value={calcCurrency}
                 onChange={(e) => handleCurrencyChange(e.target.value)}
-                style={{
-                  padding: '8px 14px',
-                  borderRadius: '8px',
-                  border: '2px solid var(--ink, #0E1A2B)',
-                  background: '#FFFFFF',
-                  fontFamily: 'var(--font-sans)',
-                  fontWeight: 500,
-                  fontSize: '14px',
-                  cursor: 'pointer',
-                }}
+                className="py-1.5 px-3 rounded-lg border border-[var(--ink,#0E1A2B)] bg-white font-medium text-sm cursor-pointer shadow-sm focus:outline-none focus:ring-2 focus:ring-[var(--cobalt,#0047AB)]"
               >
                 {Object.keys(CURRENCIES).map((c) => (
                   <option key={c} value={c}>
@@ -1306,271 +1266,187 @@ export function LandingPage() {
                 ))}
               </select>
             </div>
-          </div>
 
-          <div
-            style={{
-              marginTop: '40px',
-              background: '#FFFFFF',
-              border: '2px solid var(--ink, #0E1A2B)',
-              borderRadius: '20px',
-            }}
-            className="grid grid-cols-1 lg:grid-cols-2 gap-8 p-5 sm:p-9 shadow-[5px_5px_0_var(--ink,#0E1A2B)] sm:shadow-[8px_8px_0_var(--ink,#0E1A2B)]"
-          >
-            {/* Input Controls */}
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '22px' }}>
-              {/* Hours */}
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '15px', fontWeight: 600 }}>
-                  <span>Estimated Hours</span>
-                  <b>{calcHours} hrs</b>
+            <div className="landing-card bg-white p-6 sm:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10">
+              {/* Input Controls */}
+              <div className="flex flex-col gap-6">
+                {/* Hours */}
+                <div>
+                  <div className="flex justify-between text-[15px] font-semibold text-[var(--ink,#0E1A2B)]">
+                    <span>Estimated Hours</span>
+                    <b className="font-mono">{calcHours} hrs</b>
+                  </div>
+                  <input
+                    type="range"
+                    min={10}
+                    max={120}
+                    step={5}
+                    value={calcHours}
+                    onChange={(e) => setCalcHours(Number(e.target.value))}
+                    className="w-full mt-2 accent-[var(--cobalt,#0047AB)] cursor-pointer"
+                    aria-label="Estimated project hours"
+                  />
                 </div>
-                <input
-                  type="range"
-                  min={10}
-                  max={120}
-                  step={5}
-                  value={calcHours}
-                  onChange={(e) => setCalcHours(Number(e.target.value))}
-                  style={{ width: '100%', marginTop: '8px', accentColor: 'var(--cobalt, #0047AB)' }}
-                  aria-label="Estimated project hours"
-                />
+
+                {/* Hourly Rate */}
+                <div>
+                  <div className="flex justify-between text-[15px] font-semibold text-[var(--ink,#0E1A2B)]">
+                    <span>Standard Hourly Rate</span>
+                    <b className="font-mono">{fmtCurrency(calcRate)} / hr</b>
+                  </div>
+                  <input
+                    type="range"
+                    min={Math.round(currencyMeta.defaultRate * 0.4)}
+                    max={Math.round(currencyMeta.defaultRate * 2.5)}
+                    step={Math.round(currencyMeta.defaultRate * 0.1) || 5}
+                    value={calcRate}
+                    onChange={(e) => setCalcRate(Number(e.target.value))}
+                    className="w-full mt-2 accent-[var(--cobalt,#0047AB)] cursor-pointer"
+                    aria-label="Hourly rate"
+                  />
+                </div>
+
+                {/* Complexity */}
+                <div>
+                  <span className="text-[15px] font-semibold text-[var(--ink,#0E1A2B)] block mb-2">
+                    Project Complexity Factor
+                  </span>
+                  <div className="grid grid-cols-3 gap-2">
+                    {[
+                      { label: 'Normal (1.0x)', val: 1.0 },
+                      { label: 'Medium (1.25x)', val: 1.25 },
+                      { label: 'High (1.5x)', val: 1.5 },
+                    ].map((c) => (
+                      <button
+                        key={c.val}
+                        onClick={() => setCalcComplexity(c.val)}
+                        className={`py-2 px-1 rounded-lg border font-semibold text-xs text-center transition-colors cursor-pointer ${
+                          calcComplexity === c.val
+                            ? 'border-[var(--ink,#0E1A2B)] bg-[var(--ink,#0E1A2B)] text-white shadow-sm'
+                            : 'border-[var(--line,#E8E0CF)] bg-white text-[var(--ink,#0E1A2B)] hover:border-[var(--ink,#0E1A2B)]'
+                        }`}
+                      >
+                        {c.label}
+                      </button>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Floor Limit */}
+                <div>
+                  <div className="flex justify-between text-[15px] font-semibold text-[var(--ink,#0E1A2B)]">
+                    <span>Your Configured Minimum Floor</span>
+                    <b className="font-mono text-[var(--cobalt-dark,#003A8C)]">{fmtCurrency(calcFloor)}</b>
+                  </div>
+                  <input
+                    type="range"
+                    min={Math.round(currencyMeta.defaultFloor * 0.4)}
+                    max={Math.round(currencyMeta.defaultFloor * 2.5)}
+                    step={currencyMeta.step}
+                    value={calcFloor}
+                    onChange={(e) => setCalcFloor(Number(e.target.value))}
+                    className="w-full mt-2 accent-[var(--sun,#FFC72C)] cursor-pointer"
+                    aria-label="Configured floor limit"
+                  />
+                </div>
               </div>
 
-              {/* Hourly Rate */}
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '15px', fontWeight: 600 }}>
-                  <span>Standard Hourly Rate</span>
-                  <b>{fmtCurrency(calcRate)} / hr</b>
+              {/* Live Outputs & Verdict */}
+              <div className="bg-[var(--page,#FAF5EA)] rounded-2xl p-6 sm:p-7 border border-[var(--line,#E8E0CF)] flex flex-col justify-between gap-6">
+                <div>
+                  <div className="text-xs font-mono font-semibold tracking-wider text-[var(--muted,#5B6676)] uppercase">
+                    RECOMMENDED QUOTATION
+                  </div>
+                  <div className="text-4xl sm:text-5xl font-semibold text-[var(--ink,#0E1A2B)] font-display tabular-nums tracking-tight my-2">
+                    {fmtCurrency(recommendedQuote)}
+                  </div>
+                  <p className="text-sm text-[var(--muted,#5B6676)] leading-relaxed">
+                    Labor ({calcHours}h × {fmtCurrency(calcRate)}) with {calcComplexity}x multiplier ={' '}
+                    {fmtCurrency(adjustedLabor)}
+                  </p>
                 </div>
-                <input
-                  type="range"
-                  min={Math.round(currencyMeta.defaultRate * 0.4)}
-                  max={Math.round(currencyMeta.defaultRate * 2.5)}
-                  step={Math.round(currencyMeta.defaultRate * 0.1) || 5}
-                  value={calcRate}
-                  onChange={(e) => setCalcRate(Number(e.target.value))}
-                  style={{ width: '100%', marginTop: '8px', accentColor: 'var(--cobalt, #0047AB)' }}
-                  aria-label="Hourly rate"
-                />
-              </div>
 
-              {/* Complexity */}
-              <div>
-                <span style={{ fontSize: '15px', fontWeight: 600, display: 'block', marginBottom: '8px' }}>
-                  Project Complexity Factor
-                </span>
-                <div className="grid grid-cols-3 gap-2">
-                  {[
-                    { label: 'Normal (1.0x)', val: 1.0 },
-                    { label: 'Medium (1.25x)', val: 1.25 },
-                    { label: 'High (1.5x)', val: 1.5 },
-                  ].map((c) => (
-                    <button
-                      key={c.val}
-                      onClick={() => setCalcComplexity(c.val)}
-                      style={{
-                        padding: '10px 4px',
-                        borderRadius: '8px',
-                        border: '1.5px solid var(--ink, #0E1A2B)',
-                        background: calcComplexity === c.val ? 'var(--ink, #0E1A2B)' : '#FFFFFF',
-                        color: calcComplexity === c.val ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
-                        fontWeight: 600,
-                        fontSize: '12px',
-                        cursor: 'pointer',
-                        textAlign: 'center',
-                      }}
-                    >
-                      {c.label}
-                    </button>
-                  ))}
-                </div>
-              </div>
-
-              {/* Floor Limit */}
-              <div>
-                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '15px', fontWeight: 600 }}>
-                  <span>Your Configured Minimum Floor</span>
-                  <b style={{ color: 'var(--cobalt-dark, #003A8C)' }}>{fmtCurrency(calcFloor)}</b>
-                </div>
-                <input
-                  type="range"
-                  min={Math.round(currencyMeta.defaultFloor * 0.4)}
-                  max={Math.round(currencyMeta.defaultFloor * 2.5)}
-                  step={currencyMeta.step}
-                  value={calcFloor}
-                  onChange={(e) => setCalcFloor(Number(e.target.value))}
-                  style={{ width: '100%', marginTop: '8px', accentColor: 'var(--sun, #FFC72C)' }}
-                  aria-label="Configured floor limit"
-                />
-              </div>
-            </div>
-
-            {/* Live Outputs & Verdict */}
-            <div
-              style={{
-                background: 'var(--page, #FAF5EA)',
-                borderRadius: '16px',
-                padding: '24px',
-                border: '1.5px solid var(--line, #E8E0CF)',
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                gap: '20px',
-              }}
-            >
-              <div>
-                <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)', fontWeight: 500, fontFamily: 'var(--font-mono)', letterSpacing: '0.04em' }}>
-                  RECOMMENDED QUOTATION
-                </div>
+                {/* Status / Saved Box */}
                 <div
-                  style={{
-                    fontSize: '46px',
-                    fontWeight: 600,
-                    color: 'var(--ink, #0E1A2B)',
-                    fontFamily: 'var(--font-display)',
-                    fontVariantNumeric: 'tabular-nums lining-nums',
-                    margin: '6px 0 2px',
-                  }}
+                  className={`p-4 rounded-xl text-[15px] font-medium leading-relaxed ${
+                    calculatorFloorHit
+                      ? 'bg-[var(--sun,#FFC72C)] text-[var(--ink,#0E1A2B)] shadow-sm'
+                      : 'bg-[#EAF1FB] text-[var(--cobalt-dark,#003A8C)]'
+                  }`}
                 >
-                  {fmtCurrency(recommendedQuote)}
-                </div>
-                <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)' }}>
-                  Labor ({calcHours}h × {fmtCurrency(calcRate)}) with {calcComplexity}x multiplier ={' '}
-                  {fmtCurrency(adjustedLabor)}
-                </p>
-              </div>
-
-              {/* Status / Saved Box */}
-              <div
-                style={{
-                  padding: '16px',
-                  borderRadius: '12px',
-                  background: calculatorFloorHit ? 'var(--sun, #FFC72C)' : '#EAF1FB',
-                  color: calculatorFloorHit ? 'var(--ink, #0E1A2B)' : 'var(--cobalt-dark, #003A8C)',
-                  fontSize: '15px',
-                  fontWeight: 500,
-                }}
-              >
-                {calculatorFloorHit ? (
-                  <div>
-                    <strong>Floor protection active:</strong> Adjusted labor was {fmtCurrency(adjustedLabor)}, but Floorly
-                    held the proposal at your {fmtCurrency(calcFloor)} minimum.
-                    <div style={{ marginTop: '6px', fontWeight: 700 }}>
-                      Extra revenue protected by your floor: {fmtCurrency(moneyProtected)}
+                  {calculatorFloorHit ? (
+                    <div>
+                      <strong>Floor protection active:</strong> Adjusted labor was {fmtCurrency(adjustedLabor)}, but Floorly
+                      held the proposal at your {fmtCurrency(calcFloor)} minimum.
+                      <div className="mt-2 font-bold text-sm">
+                        Extra revenue protected by your floor: {fmtCurrency(moneyProtected)}
+                      </div>
                     </div>
-                  </div>
-                ) : (
-                  <div>
-                    <strong>Quote above floor:</strong> The adjusted project fee of {fmtCurrency(recommendedQuote)} is safely
-                    above your {fmtCurrency(calcFloor)} minimum baseline.
-                  </div>
-                )}
-              </div>
+                  ) : (
+                    <div>
+                      <strong>Quote above floor:</strong> The adjusted project fee of {fmtCurrency(recommendedQuote)} is safely
+                      above your {fmtCurrency(calcFloor)} minimum baseline.
+                    </div>
+                  )}
+                </div>
 
-              <Link
-                to="/signup"
-                style={{
-                  display: 'block',
-                  textAlign: 'center',
-                  padding: '12px',
-                  borderRadius: '999px',
-                  background: 'var(--cobalt, #0047AB)',
-                  color: '#FFFFFF',
-                  fontWeight: 600,
-                  textDecoration: 'none',
-                }}
-              >
-                Save this floor in Floorly
-              </Link>
+                <Link
+                  to="/signup"
+                  className="block text-center py-3 px-6 rounded-full bg-[var(--cobalt,#0047AB)] text-white font-semibold text-sm hover:bg-[var(--cobalt-dark,#003A8C)] transition-colors shadow-sm"
+                >
+                  Save this floor in Floorly
+                </Link>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 8. Pricing Section (Monthly / Annual Billing Toggle) */}
-      <section id="pricing" className="py-12 sm:py-20">
-        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
-          <h2
-            style={{
-              fontSize: 'clamp(32px, 4.2vw, 52px)',
-              fontWeight: 600,
-              lineHeight: 1.08,
-              letterSpacing: '-0.025em',
-              fontFamily: 'var(--font-display)',
-            }}
-          >
-            What are the pricing plans for Floorly?
-          </h2>
-          <p style={{ color: 'var(--muted, #5B6676)', marginTop: '12px', fontSize: '17px', maxWidth: '42em', lineHeight: 1.6 }}>
-            Floorly offers four tiers, from a free Starter plan for early-stage freelancers to paid plans with full AI scoping, custom proposals, milestone invoicing, and profit tracking. Choose monthly billing or save 17% with annual billing.
-          </p>
+      <section id="pricing" className="landing-section bg-white border-y border-[var(--line,#E8E0CF)]">
+        <div className="landing-container">
+          <div className="landing-section-header mx-auto text-center mb-8">
+            <h2 className="landing-h2">
+              What are the pricing plans for Floorly?
+            </h2>
+            <p className="landing-body mt-4">
+              Floorly offers four tiers, from a free Starter plan for early-stage freelancers to paid plans with full AI scoping, custom proposals, milestone invoicing, and profit tracking. Choose monthly billing or save 17% with annual billing.
+            </p>
+          </div>
 
           {/* Toggle */}
-          <div
-            style={{
-              display: 'inline-flex',
-              background: '#FFFFFF',
-              border: '2px solid var(--ink, #0E1A2B)',
-              borderRadius: '99px',
-              padding: '4px',
-              marginTop: '30px',
-            }}
-            role="group"
-            aria-label="Billing period"
-          >
-            <button
-              onClick={() => setIsAnnual(false)}
-              aria-pressed={!isAnnual}
-              style={{
-                border: 0,
-                background: !isAnnual ? 'var(--ink, #0E1A2B)' : 'none',
-                color: !isAnnual ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
-                fontFamily: 'var(--font-sans)',
-                fontWeight: 500,
-                fontSize: '15px',
-                padding: '9px 20px',
-                borderRadius: '99px',
-                cursor: 'pointer',
-              }}
+          <div className="flex justify-center mb-12">
+            <div
+              className="inline-flex bg-[var(--page,#FAF5EA)] border border-[var(--line,#E8E0CF)] rounded-full p-1 shadow-sm"
+              role="group"
+              aria-label="Billing period"
             >
-              Monthly
-            </button>
-            <button
-              onClick={() => setIsAnnual(true)}
-              aria-pressed={isAnnual}
-              style={{
-                border: 0,
-                background: isAnnual ? 'var(--ink, #0E1A2B)' : 'none',
-                color: isAnnual ? '#FFFFFF' : 'var(--ink, #0E1A2B)',
-                fontFamily: 'var(--font-sans)',
-                fontWeight: 500,
-                fontSize: '15px',
-                padding: '9px 20px',
-                borderRadius: '99px',
-                cursor: 'pointer',
-              }}
-            >
-              Annual
-              <span
-                style={{
-                  background: 'var(--sun, #FFC72C)',
-                  color: 'var(--ink, #0E1A2B)',
-                  fontSize: '12px',
-                  borderRadius: '99px',
-                  padding: '1px 8px',
-                  marginLeft: '6px',
-                }}
+              <button
+                onClick={() => setIsAnnual(false)}
+                aria-pressed={!isAnnual}
+                className={`font-sans font-medium text-sm py-2 px-5 rounded-full cursor-pointer transition-all ${
+                  !isAnnual ? 'bg-[var(--ink,#0E1A2B)] text-white shadow-sm' : 'text-[var(--ink,#0E1A2B)] hover:text-black'
+                }`}
               >
-                Save 17%
-              </span>
-            </button>
+                Monthly
+              </button>
+              <button
+                onClick={() => setIsAnnual(true)}
+                aria-pressed={isAnnual}
+                className={`font-sans font-medium text-sm py-2 px-5 rounded-full cursor-pointer transition-all flex items-center gap-1.5 ${
+                  isAnnual ? 'bg-[var(--ink,#0E1A2B)] text-white shadow-sm' : 'text-[var(--ink,#0E1A2B)] hover:text-black'
+                }`}
+              >
+                Annual
+                <span className="bg-[var(--sun,#FFC72C)] text-[var(--ink,#0E1A2B)] text-xs font-semibold rounded-full px-2 py-0.5">
+                  Save 17%
+                </span>
+              </button>
+            </div>
           </div>
 
           {/* Pricing Grid */}
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mt-10 items-stretch"
-          >
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {PRICING_PLANS.map((plan) => {
               const priceVal = isAnnual ? plan.annual : plan.monthly;
               const formattedPrice = priceVal % 1 ? priceVal.toFixed(2) : priceVal;
@@ -1584,83 +1460,40 @@ export function LandingPage() {
               return (
                 <div
                   key={plan.name}
-                  style={{
-                    background: '#FFFFFF',
-                    border: plan.popular ? '2px solid var(--cobalt, #0047AB)' : '1.5px solid var(--line, #E8E0CF)',
-                    borderRadius: 'var(--r, 14px)',
-                    padding: '26px',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    boxShadow: plan.popular ? '0 0 0 4px rgba(0, 71, 171, 0.1)' : 'none',
-                    position: 'relative',
-                  }}
+                  className={`landing-card p-6 sm:p-7 flex flex-col justify-between h-full relative transition-all duration-200 ${
+                    plan.popular
+                      ? 'border-2 border-[var(--cobalt,#0047AB)] shadow-md bg-white ring-4 ring-blue-500/10'
+                      : 'bg-white'
+                  }`}
                 >
                   {plan.popular && (
-                    <span
-                      style={{
-                        alignSelf: 'flex-start',
-                        background: 'var(--sun, #FFC72C)',
-                        fontSize: '12px',
-                        fontWeight: 600,
-                        padding: '2px 10px',
-                        borderRadius: '99px',
-                        marginBottom: '10px',
-                      }}
-                    >
+                    <span className="self-start bg-[var(--sun,#FFC72C)] text-[var(--ink,#0E1A2B)] text-xs font-bold px-3 py-1 rounded-full mb-3 uppercase tracking-wider">
                       Most popular
                     </span>
                   )}
 
-                  <h3 style={{ fontSize: '22px', fontWeight: 500, lineHeight: 1.2, letterSpacing: '-0.015em', fontFamily: 'var(--font-display)' }}>
+                  <h3 className="text-2xl font-semibold font-display text-[var(--ink,#0E1A2B)] leading-tight">
                     {plan.name}
                   </h3>
-                  <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', minHeight: '44px', marginTop: '2px' }}>
+                  <p className="text-sm text-[var(--muted,#5B6676)] min-h-[44px] mt-1 leading-relaxed">
                     {plan.tagline}
                   </p>
 
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-display)',
-                      fontWeight: 600,
-                      fontSize: '44px',
-                      fontVariantNumeric: 'tabular-nums lining-nums',
-                      letterSpacing: '-0.02em',
-                      margin: '14px 0 2px',
-                    }}
-                  >
+                  <div className="font-display font-semibold text-4xl text-[var(--ink,#0E1A2B)] tabular-nums tracking-tight my-4">
                     ${formattedPrice}
-                    <small
-                      style={{
-                        fontFamily: 'var(--font-sans)',
-                        fontWeight: 500,
-                        fontSize: '15px',
-                        color: 'var(--muted, #5B6676)',
-                      }}
-                    >
-                      {' '}
+                    <small className="font-sans font-medium text-sm text-[var(--muted,#5B6676)] ml-1">
                       /mo
                     </small>
                   </div>
-                  <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)', minHeight: '20px' }}>{billNote}</div>
+                  <div className="text-xs text-[var(--muted,#5B6676)] min-h-[20px]">{billNote}</div>
 
-                  <ul style={{ listStyle: 'none', padding: 0, margin: '20px 0 26px', fontSize: '15px', flex: 1 }}>
+                  <ul className="list-none p-0 my-6 text-[15px] flex-1 space-y-2.5">
                     {plan.features.map((feat) => (
                       <li
                         key={feat}
-                        style={{
-                          padding: '6px 0 6px 24px',
-                          position: 'relative',
-                          color: 'var(--ink, #0E1A2B)',
-                        }}
+                        className="relative pl-6 text-[var(--ink,#0E1A2B)] text-sm leading-normal"
                       >
-                        <span
-                          style={{
-                            position: 'absolute',
-                            left: 0,
-                            color: 'var(--cobalt, #0047AB)',
-                            fontWeight: 700,
-                          }}
-                        >
+                        <span className="absolute left-0 text-[var(--cobalt,#0047AB)] font-bold">
                           ✓
                         </span>
                         {feat}
@@ -1670,18 +1503,11 @@ export function LandingPage() {
 
                   <Link
                     to="/signup"
-                    style={{
-                      display: 'block',
-                      textAlign: 'center',
-                      padding: '12px',
-                      borderRadius: '999px',
-                      fontWeight: 600,
-                      textDecoration: 'none',
-                      border: '2px solid var(--cobalt, #0047AB)',
-                      background: plan.popular ? 'var(--cobalt, #0047AB)' : 'transparent',
-                      color: plan.popular ? '#FFFFFF' : 'var(--cobalt, #0047AB)',
-                    }}
-                    className={plan.popular ? 'hover:bg-[var(--cobalt-dark,#003A8C)]' : 'hover:bg-[#FFFFFF]'}
+                    className={`block text-center py-3 px-4 rounded-full font-semibold text-sm transition-colors border-2 mt-auto ${
+                      plan.popular
+                        ? 'bg-[var(--cobalt,#0047AB)] border-[var(--cobalt,#0047AB)] text-white hover:bg-[var(--cobalt-dark,#003A8C)] shadow-sm'
+                        : 'border-[var(--line,#E8E0CF)] text-[var(--ink,#0E1A2B)] bg-white hover:border-[var(--ink,#0E1A2B)]'
+                    }`}
                   >
                     {plan.cta}
                   </Link>
@@ -1690,9 +1516,9 @@ export function LandingPage() {
             })}
           </div>
 
-          <div style={{ textAlign: 'center', marginTop: '28px', fontSize: '14px', color: 'var(--muted, #5B6676)' }}>
+          <div className="text-center mt-10 text-sm text-[var(--muted,#5B6676)]">
             Cancel any time. See our{' '}
-            <Link to="/refund-policy" style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline' }}>
+            <Link to="/refund-policy" className="text-[var(--cobalt,#0047AB)] underline font-medium hover:text-[var(--cobalt-dark,#003A8C)]">
               refund policy
             </Link>
             .
@@ -1701,358 +1527,204 @@ export function LandingPage() {
       </section>
 
       {/* 9. Social Proof (Developer feedback slots, no fake logos or metrics) */}
-      <section style={{ padding: '0 0 80px 0' }}>
-        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
-          <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-            <h2
-              style={{
-                fontSize: 'clamp(32px, 4.2vw, 52px)',
-                fontWeight: 600,
-                lineHeight: 1.08,
-                letterSpacing: '-0.025em',
-                fontFamily: 'var(--font-display)',
-                margin: '0 auto',
-              }}
-            >
+      <section className="landing-section">
+        <div className="landing-container">
+          <div className="landing-section-header mx-auto text-center mb-12 sm:mb-16">
+            <h2 className="landing-h2">
               Why do independent developers and designers use Floorly?
             </h2>
-            <p style={{ color: 'var(--muted, #5B6676)', marginTop: '8px', fontSize: '16px' }}>
+            <p className="landing-body mt-4">
               Freelance developers, designers, and consultants use Floorly to calculate sustainable quotes, enforce minimum price floors, and track project profit after expenses and logged time.
             </p>
           </div>
 
-          <div
-            className="grid grid-cols-1 md:grid-cols-3 gap-6"
-          >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
             {/* Testimonial 1 */}
-            <div
-              style={{
-                background: '#FFFFFF',
-                border: '1.5px solid var(--line, #E8E0CF)',
-                borderRadius: 'var(--r, 14px)',
-                padding: '24px',
-              }}
-            >
-              <p style={{ fontSize: '15px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.6, marginBottom: '18px' }}>
-                "Before Floorly, I would mentally talk myself down in the proposal because I wanted to win the gig. The
-                hard floor rule on the server stops me from making dumb compromises."
-              </p>
-              <div style={{ fontSize: '14px', fontWeight: 600 }}>Alex R.</div>
-              <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>Full-stack Developer (React &amp; Node)</div>
+            <div className="landing-card bg-white p-6 sm:p-8 flex flex-col justify-between h-full">
+              <div className="mb-6">
+                <div className="flex items-center gap-1 text-[var(--sun,#FFC72C)] mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-[15px] sm:text-[16px] text-[var(--ink,#0E1A2B)] leading-relaxed italic">
+                  "Before Floorly, I would mentally talk myself down in the proposal because I wanted to win the gig. The
+                  hard floor rule on the server stops me from making dumb compromises."
+                </p>
+              </div>
+              <div className="pt-4 border-t border-[var(--line,#E8E0CF)] flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[var(--page,#FAF5EA)] border border-[var(--line,#E8E0CF)] flex items-center justify-center font-display font-bold text-sm text-[var(--cobalt,#0047AB)] shrink-0">
+                  AR
+                </div>
+                <div>
+                  <div className="text-sm font-semibold text-[var(--ink,#0E1A2B)]">Alex R.</div>
+                  <div className="text-xs text-[var(--muted,#5B6676)]">Full-stack Developer (React &amp; Node)</div>
+                </div>
+              </div>
             </div>
 
             {/* Testimonial 2 */}
-            <div
-              style={{
-                background: '#FFFFFF',
-                border: '1.5px solid var(--line, #E8E0CF)',
-                borderRadius: 'var(--r, 14px)',
-                padding: '24px',
-              }}
-            >
-              <p style={{ fontSize: '15px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.6, marginBottom: '18px' }}>
-                "Dropping the generated AGENTS.md directly into Cursor is a game changer. The AI assistant actually
-                refuses to implement things outside the paid scope."
-              </p>
-              <div style={{ fontSize: '14px', fontWeight: 600 }}>Marcus K.</div>
-              <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>Independent Web Consultant</div>
+            <div className="landing-card bg-white p-6 sm:p-8 flex flex-col justify-between h-full">
+              <div className="mb-6">
+                <div className="flex items-center gap-1 text-[var(--sun,#FFC72C)] mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-[15px] sm:text-[16px] text-[var(--ink,#0E1A2B)] leading-relaxed italic">
+                  "Dropping the generated AGENTS.md directly into Cursor is a game changer. The AI assistant actually
+                  refuses to implement things outside the paid scope."
+                </p>
+              </div>
+              <div className="pt-4 border-t border-[var(--line,#E8E0CF)] flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[var(--page,#FAF5EA)] border border-[var(--line,#E8E0CF)] flex items-center justify-center font-display font-bold text-sm text-[var(--cobalt,#0047AB)] shrink-0">
+                  MK
+                </div>
+                <div>
+                  <div className="text-sm font-semibold text-[var(--ink,#0E1A2B)]">Marcus K.</div>
+                  <div className="text-xs text-[var(--muted,#5B6676)]">Independent Web Consultant</div>
+                </div>
+              </div>
             </div>
 
             {/* Testimonial 3 */}
-            <div
-              style={{
-                background: '#FFFFFF',
-                border: '1.5px solid var(--line, #E8E0CF)',
-                borderRadius: 'var(--r, 14px)',
-                padding: '24px',
-              }}
-            >
-              <p style={{ fontSize: '15px', color: 'var(--ink, #0E1A2B)', lineHeight: 1.6, marginBottom: '18px' }}>
-                "The profit dashboard finally counts my own hours as a cost. I realised my 'best' $5k project last month
-                was actually losing money once logged hours were deducted."
-              </p>
-              <div style={{ fontSize: '14px', fontWeight: 600 }}>Devon T.</div>
-              <div style={{ fontSize: '13px', color: 'var(--muted, #5B6676)' }}>Design &amp; Frontend Studio</div>
+            <div className="landing-card bg-white p-6 sm:p-8 flex flex-col justify-between h-full">
+              <div className="mb-6">
+                <div className="flex items-center gap-1 text-[var(--sun,#FFC72C)] mb-4">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                      <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                    </svg>
+                  ))}
+                </div>
+                <p className="text-[15px] sm:text-[16px] text-[var(--ink,#0E1A2B)] leading-relaxed italic">
+                  "The profit dashboard finally counts my own hours as a cost. I realised my 'best' $5k project last month
+                  was actually losing money once logged hours were deducted."
+                </p>
+              </div>
+              <div className="pt-4 border-t border-[var(--line,#E8E0CF)] flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[var(--page,#FAF5EA)] border border-[var(--line,#E8E0CF)] flex items-center justify-center font-display font-bold text-sm text-[var(--cobalt,#0047AB)] shrink-0">
+                  DT
+                </div>
+                <div>
+                  <div className="text-sm font-semibold text-[var(--ink,#0E1A2B)]">Devon T.</div>
+                  <div className="text-xs text-[var(--muted,#5B6676)]">Design &amp; Frontend Studio</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* 10. FAQ Accordion (Native <details>) */}
-      <section id="faq" className="pb-16 sm:pb-24">
-        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
-          <h2
-            style={{
-              fontSize: 'clamp(32px, 4.2vw, 52px)',
-              fontWeight: 600,
-              lineHeight: 1.08,
-              letterSpacing: '-0.025em',
-              fontFamily: 'var(--font-display)',
-            }}
-          >
-            Frequently asked questions: how does Floorly protect freelancer income?
-          </h2>
-          <p style={{ color: 'var(--muted, #5B6676)', marginTop: '12px', fontSize: '17px', maxWidth: '42em', lineHeight: 1.6 }}>
-            Here are direct answers to common questions about setting minimum price floors, structuring project proposals, and managing client billing.
-          </p>
+      <section id="faq" className="landing-section">
+        <div className="landing-container">
+          <div className="landing-section-header mx-auto text-center mb-12 sm:mb-16">
+            <h2 className="landing-h2">
+              Frequently asked questions: how does Floorly protect freelancer income?
+            </h2>
+            <p className="landing-body mt-4">
+              Here are direct answers to common questions about setting minimum price floors, structuring project proposals, and managing client billing.
+            </p>
+          </div>
 
-          <div style={{ maxWidth: '780px', marginTop: '40px' }}>
-            <details
-              style={{
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                padding: '20px 0',
-              }}
-              open
-            >
-              <summary
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: '20px',
-                  letterSpacing: '-0.01em',
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  gap: '16px',
-                }}
-              >
+          <div className="max-w-3xl mx-auto divide-y divide-[var(--line,#E8E0CF)] border-y border-[var(--line,#E8E0CF)]">
+            <details className="group py-5 transition-all" open>
+              <summary className="font-display font-medium text-lg sm:text-xl text-[var(--ink,#0E1A2B)] cursor-pointer list-none flex justify-between items-center gap-4 select-none">
                 <span>What is a price floor for freelancers?</span>
-                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+                <span className="text-xl text-[var(--cobalt,#0047AB)] font-bold transition-transform duration-200 group-open:rotate-45">+</span>
               </summary>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+              <p className="text-base text-[var(--muted,#5B6676)] mt-3 leading-relaxed">
                 A freelance price floor is the minimum monetary quote an independent professional sets for a project or hourly rate to cover their labor and business expenses. It combines your baseline hourly rate, estimated hours, and configurable scope buffers so you never quote below your minimum.
               </p>
             </details>
 
-            <details
-              style={{
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                padding: '20px 0',
-              }}
-            >
-              <summary
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: '20px',
-                  letterSpacing: '-0.01em',
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  gap: '16px',
-                }}
-              >
+            <details className="group py-5 transition-all">
+              <summary className="font-display font-medium text-lg sm:text-xl text-[var(--ink,#0E1A2B)] cursor-pointer list-none flex justify-between items-center gap-4 select-none">
                 <span>How many hours should I add as a contingency buffer?</span>
-                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+                <span className="text-xl text-[var(--cobalt,#0047AB)] font-bold transition-transform duration-200 group-open:rotate-45">+</span>
               </summary>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+              <p className="text-base text-[var(--muted,#5B6676)] mt-3 leading-relaxed">
                 Contingency buffers are configurable based on project complexity, with a common starting buffer of 10% to 20% on fixed-price estimates. This extra margin absorbs unanticipated revisions and project edge cases without lowering your effective hourly earnings.
               </p>
             </details>
 
-            <details
-              style={{
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                padding: '20px 0',
-              }}
-            >
-              <summary
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: '20px',
-                  letterSpacing: '-0.01em',
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  gap: '16px',
-                }}
-              >
+            <details className="group py-5 transition-all">
+              <summary className="font-display font-medium text-lg sm:text-xl text-[var(--ink,#0E1A2B)] cursor-pointer list-none flex justify-between items-center gap-4 select-none">
                 <span>What should a professional freelance proposal include?</span>
-                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+                <span className="text-xl text-[var(--cobalt,#0047AB)] font-bold transition-transform duration-200 group-open:rotate-45">+</span>
               </summary>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+              <p className="text-base text-[var(--muted,#5B6676)] mt-3 leading-relaxed">
                 A professional freelance proposal includes an executive project summary, itemized deliverables, explicit out-of-scope exclusions, a 3-tier pricing schedule, milestone payment terms, revision limits, and a link where clients accept online.
               </p>
             </details>
 
-            <details
-              style={{
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                padding: '20px 0',
-              }}
-            >
-              <summary
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: '20px',
-                  letterSpacing: '-0.01em',
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  gap: '16px',
-                }}
-              >
+            <details className="group py-5 transition-all">
+              <summary className="font-display font-medium text-lg sm:text-xl text-[var(--ink,#0E1A2B)] cursor-pointer list-none flex justify-between items-center gap-4 select-none">
                 <span>How does the price floor work in Floorly?</span>
-                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+                <span className="text-xl text-[var(--cobalt,#0047AB)] font-bold transition-transform duration-200 group-open:rotate-45">+</span>
               </summary>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+              <p className="text-base text-[var(--muted,#5B6676)] mt-3 leading-relaxed">
                 You set a minimum hourly rate and a minimum fee per category. After the AI drafts a proposal, Floorly
                 checks the totals on the server and raises anything below your floor. The AI can't override it.
               </p>
             </details>
 
-            <details
-              style={{
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                padding: '20px 0',
-              }}
-            >
-              <summary
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: '20px',
-                  letterSpacing: '-0.01em',
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  gap: '16px',
-                }}
-              >
+            <details className="group py-5 transition-all">
+              <summary className="font-display font-medium text-lg sm:text-xl text-[var(--ink,#0E1A2B)] cursor-pointer list-none flex justify-between items-center gap-4 select-none">
                 <span>Which currencies and taxes are supported?</span>
-                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+                <span className="text-xl text-[var(--cobalt,#0047AB)] font-bold transition-transform duration-200 group-open:rotate-45">+</span>
               </summary>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+              <p className="text-base text-[var(--muted,#5B6676)] mt-3 leading-relaxed">
                 USD, EUR, GBP, INR, AUD, CAD, AED and SGD, with configurable VAT, GST or sales tax and a tax ID on every
                 document.
               </p>
             </details>
 
-            <details
-              style={{
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                padding: '20px 0',
-              }}
-            >
-              <summary
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: '20px',
-                  letterSpacing: '-0.01em',
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  gap: '16px',
-                }}
-              >
+            <details className="group py-5 transition-all">
+              <summary className="font-display font-medium text-lg sm:text-xl text-[var(--ink,#0E1A2B)] cursor-pointer list-none flex justify-between items-center gap-4 select-none">
                 <span>How do my clients pay me?</span>
-                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+                <span className="text-xl text-[var(--cobalt,#0047AB)] font-bold transition-transform duration-200 group-open:rotate-45">+</span>
               </summary>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+              <p className="text-base text-[var(--muted,#5B6676)] mt-3 leading-relaxed">
                 Floorly does not collect payments from your clients. You add your own payment details or payment link (bank transfer, PayPal, Stripe/Razorpay link, UPI for INR) to proposals and invoices, and record payments in Floorly once received.
               </p>
             </details>
 
-            <details
-              style={{
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                padding: '20px 0',
-              }}
-            >
-              <summary
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: '20px',
-                  letterSpacing: '-0.01em',
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  gap: '16px',
-                }}
-              >
+            <details className="group py-5 transition-all">
+              <summary className="font-display font-medium text-lg sm:text-xl text-[var(--ink,#0E1A2B)] cursor-pointer list-none flex justify-between items-center gap-4 select-none">
                 <span>Can I cancel or get a refund?</span>
-                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+                <span className="text-xl text-[var(--cobalt,#0047AB)] font-bold transition-transform duration-200 group-open:rotate-45">+</span>
               </summary>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+              <p className="text-base text-[var(--muted,#5B6676)] mt-3 leading-relaxed">
                 Cancel any time from Settings. Our{' '}
-                <Link to="/refund-policy" style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline' }}>
+                <Link to="/refund-policy" className="text-[var(--cobalt,#0047AB)] underline font-medium hover:text-[var(--cobalt-dark,#003A8C)]">
                   refund policy
                 </Link>{' '}
                 explains the details.
               </p>
             </details>
 
-            <details
-              style={{
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                padding: '20px 0',
-              }}
-            >
-              <summary
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: '20px',
-                  letterSpacing: '-0.01em',
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  gap: '16px',
-                }}
-              >
+            <details className="group py-5 transition-all">
+              <summary className="font-display font-medium text-lg sm:text-xl text-[var(--ink,#0E1A2B)] cursor-pointer list-none flex justify-between items-center gap-4 select-none">
                 <span>Is the AI estimate always right?</span>
-                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+                <span className="text-xl text-[var(--cobalt,#0047AB)] font-bold transition-transform duration-200 group-open:rotate-45">+</span>
               </summary>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+              <p className="text-base text-[var(--muted,#5B6676)] mt-3 leading-relaxed">
                 No. Every estimate shows a confidence level and you can edit the hours before the proposal is generated.
               </p>
             </details>
 
-            <details
-              style={{
-                borderTop: '1px solid var(--line, #E8E0CF)',
-                borderBottom: '1px solid var(--line, #E8E0CF)',
-                padding: '20px 0',
-              }}
-            >
-              <summary
-                style={{
-                  fontFamily: 'var(--font-display)',
-                  fontWeight: 500,
-                  fontSize: '20px',
-                  letterSpacing: '-0.01em',
-                  cursor: 'pointer',
-                  listStyle: 'none',
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  alignItems: 'center',
-                  gap: '16px',
-                }}
-              >
+            <details className="group py-5 transition-all">
+              <summary className="font-display font-medium text-lg sm:text-xl text-[var(--ink,#0E1A2B)] cursor-pointer list-none flex justify-between items-center gap-4 select-none">
                 <span>Is my client data kept private?</span>
-                <span style={{ fontSize: '24px', color: 'var(--cobalt, #0047AB)' }}>+</span>
+                <span className="text-xl text-[var(--cobalt,#0047AB)] font-bold transition-transform duration-200 group-open:rotate-45">+</span>
               </summary>
-              <p style={{ color: 'var(--muted, #5B6676)', marginTop: '10px', fontSize: '16px', lineHeight: 1.6 }}>
+              <p className="text-base text-[var(--muted,#5B6676)] mt-3 leading-relaxed">
                 Yes. Your inputs and client messages are strictly isolated per account and processed solely to generate
                 your proposals and instructions.
               </p>
@@ -2063,193 +1735,98 @@ export function LandingPage() {
 
       {/* 10b. Audience Clarity, Use Cases & Authoritative Sources (SEO/AEO/GEO Section) */}
       <section
-        style={{
-          borderTop: '1px solid var(--line, #E8E0CF)',
-          background: 'var(--cream, #FAF5EA)',
-        }}
-        className="py-14 sm:py-20"
+        className="landing-section bg-[var(--page,#FAF5EA)] border-t border-[var(--line,#E8E0CF)]"
         aria-labelledby="audience-and-methodology"
       >
-        <div style={{ maxWidth: '1120px', margin: '0 auto' }} className="px-4 sm:px-6">
-          <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-            <span
-              style={{
-                fontFamily: 'var(--font-mono)',
-                fontSize: '12px',
-                fontWeight: 500,
-                letterSpacing: '0.04em',
-                textTransform: 'uppercase',
-                color: 'var(--cobalt, #0047AB)',
-                background: '#EBF2FF',
-                padding: '4px 12px',
-                borderRadius: '6px',
-                display: 'inline-block',
-                marginBottom: '12px',
-              }}
-            >
+        <div className="landing-container">
+          <div className="landing-section-header mx-auto text-center mb-12 sm:mb-16">
+            <span className="font-mono text-xs font-semibold tracking-wider uppercase text-[var(--cobalt,#0047AB)] bg-[#EBF2FF] px-3 py-1 rounded-md inline-block mb-3">
               Audience &amp; Industry Standards
             </span>
             <h2
               id="audience-and-methodology"
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: 'clamp(32px, 4.2vw, 52px)',
-                fontWeight: 600,
-                lineHeight: 1.08,
-                letterSpacing: '-0.025em',
-                color: 'var(--ink, #0E1A2B)',
-                margin: 0,
-              }}
+              className="landing-h2"
             >
               Who is Floorly built for and when should you use it?
             </h2>
-            <p
-              style={{
-                fontSize: '17px',
-                color: 'var(--muted, #5B6676)',
-                maxWidth: '42em',
-                margin: '14px auto 0',
-                lineHeight: 1.6,
-              }}
-            >
+            <p className="landing-body mt-4">
               Floorly is engineered specifically for independent knowledge workers and small boutique studios who quote
               fixed-price client contracts and need deterministic guardrails against chronic underpricing and scope creep.
             </p>
           </div>
 
           {/* 4 Audience Cards Grid */}
-          <div
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-14"
-          >
-            <div
-              style={{
-                background: '#FFFFFF',
-                borderRadius: '16px',
-                border: '1px solid var(--line, #E8E0CF)',
-                padding: '24px',
-                boxShadow: '0 2px 10px rgba(14,26,43,0.03)',
-              }}
-            >
-              <h3 style={{ fontSize: '18px', fontWeight: 500, letterSpacing: '-0.01em', fontFamily: 'var(--font-display)', color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12 items-stretch">
+            <div className="landing-card bg-white p-6 flex flex-col justify-start h-full">
+              <h3 className="text-lg font-semibold font-display text-[var(--ink,#0E1A2B)] mb-2.5 leading-snug">
                 How does Floorly protect full-stack developers?
               </h3>
-              <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
+              <p className="text-sm text-[var(--muted,#5B6676)] leading-relaxed m-0">
                 Catches unstated API integrations, background task queues, and edge cases from unstructured client briefs, applying configurable technical complexity multipliers to protect your time.
               </p>
             </div>
 
-            <div
-              style={{
-                background: '#FFFFFF',
-                borderRadius: '16px',
-                border: '1px solid var(--line, #E8E0CF)',
-                padding: '24px',
-                boxShadow: '0 2px 10px rgba(14,26,43,0.03)',
-              }}
-            >
-              <h3 style={{ fontSize: '18px', fontWeight: 500, letterSpacing: '-0.01em', fontFamily: 'var(--font-display)', color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
+            <div className="landing-card bg-white p-6 flex flex-col justify-start h-full">
+              <h3 className="text-lg font-semibold font-display text-[var(--ink,#0E1A2B)] mb-2.5 leading-snug">
                 How does Floorly protect UI/UX product designers?
               </h3>
-              <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
+              <p className="text-sm text-[var(--muted,#5B6676)] leading-relaxed m-0">
                 Defines itemized screen deliverables, design systems, and explicit revision limits. Includes a configurable contingency buffer so design iterations never eat into profits.
               </p>
             </div>
 
-            <div
-              style={{
-                background: '#FFFFFF',
-                borderRadius: '16px',
-                border: '1px solid var(--line, #E8E0CF)',
-                padding: '24px',
-                boxShadow: '0 2px 10px rgba(14,26,43,0.03)',
-              }}
-            >
-              <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
+            <div className="landing-card bg-white p-6 flex flex-col justify-start h-full">
+              <h3 className="text-lg font-semibold font-display text-[var(--ink,#0E1A2B)] mb-2.5 leading-snug">
                 How does Floorly benefit copywriters and strategists?
               </h3>
-              <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
+              <p className="text-sm text-[var(--muted,#5B6676)] leading-relaxed m-0">
                 Prevents open-ended feedback loops and rewrites. Organizes milestone billing schedules with clear terms where clients accept online.
               </p>
             </div>
 
-            <div
-              style={{
-                background: '#FFFFFF',
-                borderRadius: '16px',
-                border: '1px solid var(--line, #E8E0CF)',
-                padding: '24px',
-                boxShadow: '0 2px 10px rgba(14,26,43,0.03)',
-              }}
-            >
-              <h3 style={{ fontSize: '18px', fontWeight: 700, color: 'var(--ink, #0E1A2B)', margin: '0 0 10px' }}>
+            <div className="landing-card bg-white p-6 flex flex-col justify-start h-full">
+              <h3 className="text-lg font-semibold font-display text-[var(--ink,#0E1A2B)] mb-2.5 leading-snug">
                 How does Floorly streamline boutique creative studios?
               </h3>
-              <p style={{ fontSize: '14px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: 0 }}>
+              <p className="text-sm text-[var(--muted,#5B6676)] leading-relaxed m-0">
                 For small studios standardizing intake and proposals. Helps team members consistently adhere to target price floors so quotes stay above your minimum during client negotiations.
               </p>
             </div>
           </div>
 
           {/* Illustrative Example Box */}
-          <div
-            style={{
-              background: '#FFFFFF',
-              borderRadius: '20px',
-              border: '2px solid var(--ink, #0E1A2B)',
-              padding: '32px',
-              marginBottom: '48px',
-              boxShadow: '6px 6px 0 var(--ink, #0E1A2B)',
-            }}
-          >
-            <h3
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: '20px',
-                fontWeight: 500,
-                lineHeight: 1.2,
-                letterSpacing: '-0.015em',
-                color: 'var(--ink, #0E1A2B)',
-                margin: '0 0 12px',
-              }}
-            >
+          <div className="landing-card max-w-4xl mx-auto p-6 sm:p-8 mb-12 bg-white">
+            <h3 className="font-display text-xl font-semibold text-[var(--ink,#0E1A2B)] mb-3 leading-snug">
               Example (illustrative): How does the pricing calculation work?
             </h3>
-            <p style={{ fontSize: '15px', color: 'var(--muted, #5B6676)', lineHeight: 1.6, margin: '0 0 16px' }}>
+            <p className="text-sm sm:text-[15px] text-[var(--muted,#5B6676)] leading-relaxed mb-4">
               For a sample {illustrativeExample.estimatedHours}-hour project at a baseline rate of ${illustrativeExample.standardHourlyRate}/hr, Floorly adds a configurable {illustrativeExample.contingencyPercent}% scope contingency (+{illustrativeExample.contingencyHours}h) and applies a {illustrativeExample.complexityMultiplier}x multiplier for medium complexity. This calculates structured package tiers starting at ${illustrativeExample.tiers.essential.toLocaleString()} (Essential), ${illustrativeExample.tiers.standard.toLocaleString()} (Standard), and ${illustrativeExample.tiers.premium.toLocaleString()} (Premium), while ensuring total pricing never drops below your configured category floor (${illustrativeExample.categoryFloor.toLocaleString()}).
             </p>
-            <div style={{ display: 'flex', gap: '20px', flexWrap: 'wrap', fontSize: '13px', fontWeight: 600 }}>
-              <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Base: ${illustrativeExample.labor.toLocaleString()} ({illustrativeExample.hours} total hours @ ${illustrativeExample.standardHourlyRate}/hr)</span>
-              <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Complexity Multiplier: {illustrativeExample.complexityMultiplier}x</span>
-              <span style={{ color: 'var(--cobalt, #0047AB)' }}>✓ Contingency: {illustrativeExample.contingencyPercent}% (+{illustrativeExample.contingencyHours}h)</span>
-              <span style={{ color: '#047857' }}>★ Package Tiers: Essential ${illustrativeExample.tiers.essential.toLocaleString()} | Standard ${illustrativeExample.tiers.standard.toLocaleString()} | Premium ${illustrativeExample.tiers.premium.toLocaleString()}</span>
+            <div className="flex gap-4 sm:gap-6 flex-wrap text-xs sm:text-sm font-semibold pt-4 border-t border-[var(--line,#E8E0CF)]">
+              <span className="text-[var(--cobalt,#0047AB)]">✓ Base: ${illustrativeExample.labor.toLocaleString()} ({illustrativeExample.hours} total hours @ ${illustrativeExample.standardHourlyRate}/hr)</span>
+              <span className="text-[var(--cobalt,#0047AB)]">✓ Complexity Multiplier: {illustrativeExample.complexityMultiplier}x</span>
+              <span className="text-[var(--cobalt,#0047AB)]">✓ Contingency: {illustrativeExample.contingencyPercent}% (+{illustrativeExample.contingencyHours}h)</span>
+              <span className="text-emerald-700">★ Package Tiers: Essential ${illustrativeExample.tiers.essential.toLocaleString()} | Standard ${illustrativeExample.tiers.standard.toLocaleString()} | Premium ${illustrativeExample.tiers.premium.toLocaleString()}</span>
             </div>
           </div>
 
           {/* Expert Perspectives & Authoritative Industry Citations */}
-          <div style={{ marginTop: '48px', marginBottom: '24px' }}>
-            <h3
-              style={{
-                fontFamily: 'var(--font-display)',
-                fontSize: '24px',
-                fontWeight: 600,
-                color: 'var(--ink, #0E1A2B)',
-                marginBottom: '16px',
-              }}
-            >
+          <div className="max-w-4xl mx-auto mb-6">
+            <h3 className="font-display text-2xl font-semibold text-[var(--ink,#0E1A2B)] mb-3">
               Expert Perspectives on Freelance Rate Defense and Price Floors
             </h3>
-            <p style={{ color: 'var(--muted, #5B6676)', fontSize: '15px', lineHeight: 1.6, marginBottom: '24px' }}>
-              Independent research in generative engine visibility (<a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline' }}>arXiv:2311.09735</a>), economic pricing theory (<a href="https://en.wikipedia.org/wiki/Price_floor" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline' }}>Wikipedia Price Floors</a>), and official <a href="https://stripe.com/resources/more/invoicing-basics" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--cobalt, #0047AB)', textDecoration: 'underline' }}>Stripe Invoicing Standards</a> demonstrate that establishing formal floor parameters is essential to sustaining digital service consulting.
+            <p className="text-[15px] text-[var(--muted,#5B6676)] leading-relaxed mb-6">
+              Independent research in generative engine visibility (<a href="https://arxiv.org/abs/2311.09735" target="_blank" rel="noopener noreferrer" className="text-[var(--cobalt,#0047AB)] underline font-medium">arXiv:2311.09735</a>), economic pricing theory (<a href="https://en.wikipedia.org/wiki/Price_floor" target="_blank" rel="noopener noreferrer" className="text-[var(--cobalt,#0047AB)] underline font-medium">Wikipedia Price Floors</a>), and official <a href="https://stripe.com/resources/more/invoicing-basics" target="_blank" rel="noopener noreferrer" className="text-[var(--cobalt,#0047AB)] underline font-medium">Stripe Invoicing Standards</a> demonstrate that establishing formal floor parameters is essential to sustaining digital service consulting.
             </p>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
-              <blockquote style={{ background: '#FFFFFF', padding: '18px 24px', borderLeft: '4px solid var(--cobalt, #0047AB)', borderRadius: '8px', margin: 0, fontStyle: 'italic', color: 'var(--ink, #0E1A2B)', fontSize: '15px', lineHeight: 1.6 }}>
+            <div className="flex flex-col gap-4">
+              <blockquote className="bg-white p-5 sm:p-6 border-l-4 border-[var(--cobalt,#0047AB)] rounded-r-xl shadow-xs m-0 italic text-[var(--ink,#0E1A2B)] text-sm sm:text-[15px] leading-relaxed">
                 &ldquo;Setting a programmatic price floor removes emotion during negotiations and protects net project margins before contracts are signed.&rdquo; Ritik, Founder and Systems Engineer at Floorly
               </blockquote>
-              <blockquote style={{ background: '#FFFFFF', padding: '18px 24px', borderLeft: '4px solid var(--cobalt, #0047AB)', borderRadius: '8px', margin: 0, fontStyle: 'italic', color: 'var(--ink, #0E1A2B)', fontSize: '15px', lineHeight: 1.6 }}>
+              <blockquote className="bg-white p-5 sm:p-6 border-l-4 border-[var(--cobalt,#0047AB)] rounded-r-xl shadow-xs m-0 italic text-[var(--ink,#0E1A2B)] text-sm sm:text-[15px] leading-relaxed">
                 &ldquo;Fixed-price digital engagements consistently fail when contractors underestimate client revision cycles and API complexity without building in dedicated contingency buffers.&rdquo; David Heinemeier Hansson, Co-founder at 37signals and Creator of Ruby on Rails
               </blockquote>
-              <blockquote style={{ background: '#FFFFFF', padding: '18px 24px', borderLeft: '4px solid var(--cobalt, #0047AB)', borderRadius: '8px', margin: 0, fontStyle: 'italic', color: 'var(--ink, #0E1A2B)', fontSize: '15px', lineHeight: 1.6 }}>
+              <blockquote className="bg-white p-5 sm:p-6 border-l-4 border-[var(--cobalt,#0047AB)] rounded-r-xl shadow-xs m-0 italic text-[var(--ink,#0E1A2B)] text-sm sm:text-[15px] leading-relaxed">
                 &ldquo;Pricing below your true break-even capacity leads to burnout and project delivery failure; transparent pricing floors establish professional credibility with clients.&rdquo; Brennan Dunn, Founder at Double Your Freelancing
               </blockquote>
             </div>
@@ -2258,60 +1835,24 @@ export function LandingPage() {
       </section>
 
       {/* 11. Final CTA Band (Dark Ink Background) */}
-      <aside className="px-4 sm:px-6 mb-16 sm:mb-24">
-        <div
-          style={{
-            maxWidth: '1120px',
-            margin: '0 auto',
-            background: 'var(--ink, #0E1A2B)',
-            color: '#FFFFFF',
-            textAlign: 'center',
-            borderRadius: '24px',
-          }}
-          className="py-12 px-6 sm:py-20 sm:px-8"
-        >
-          <h2
-            style={{
-              color: '#FFFFFF',
-              fontSize: 'clamp(32px, 4.2vw, 52px)',
-              fontWeight: 600,
-              lineHeight: 1.08,
-              letterSpacing: '-0.025em',
-              fontFamily: 'var(--font-display)',
-              margin: '0 auto',
-            }}
-          >
-            Ready to quote with confidence and stop undercharging?
-          </h2>
-          <p
-            style={{
-              color: '#B8C4D6',
-              margin: '16px auto 30px',
-              maxWidth: '30em',
-              fontSize: '18px',
-            }}
-          >
-            Set your floor, paste your next brief, and send a proposal you'd be happy to get paid for.
-          </p>
-          <Link
-            to="/signup"
-            style={{
-              display: 'inline-block',
-              padding: '14px 32px',
-              borderRadius: '999px',
-              fontWeight: 700,
-              fontSize: '16px',
-              textDecoration: 'none',
-              background: 'var(--sun, #FFC72C)',
-              color: 'var(--ink, #0E1A2B)',
-              border: '2px solid var(--sun, #FFC72C)',
-            }}
-            className="hover:bg-[#FFD75E] transition-all"
-          >
-            Start free
-          </Link>
+      <section className="pb-16 sm:pb-24">
+        <div className="landing-container">
+          <div className="landing-card bg-[var(--ink,#0E1A2B)] text-white text-center py-14 px-6 sm:py-20 sm:px-12 rounded-[24px] border-none shadow-xl">
+            <h2 className="landing-h2 text-white max-w-2xl mx-auto">
+              Ready to quote with confidence and stop undercharging?
+            </h2>
+            <p className="text-base sm:text-lg text-slate-300 max-w-xl mx-auto mt-4 mb-8 leading-relaxed">
+              Set your floor, paste your next brief, and send a proposal you'd be happy to get paid for.
+            </p>
+            <Link
+              to="/signup"
+              className="inline-block py-3.5 px-8 rounded-full font-bold text-base bg-[var(--sun,#FFC72C)] text-[var(--ink,#0E1A2B)] hover:bg-[#FFD75E] transition-all shadow-md"
+            >
+              Start free
+            </Link>
+          </div>
         </div>
-      </aside>
+      </section>
       </main>
 
       {/* 12. Universal Clean Footer */}
