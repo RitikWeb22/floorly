@@ -17,6 +17,7 @@ const SHARED_NAV = `
     <a href="/blog">Engineering Blog</a> |
     <a href="/tools/freelance-rate-calculator">Rate Calculator</a> |
     <a href="/tools/project-price-calculator">Project Price Calculator</a> |
+    <a href="/tools/freelance-proposal-generator">AI Proposal Generator</a> |
     <a href="/contact">Contact Support</a> |
     <a href="/login">Log In</a> |
     <a href="/signup">Start Free</a>
@@ -26,7 +27,7 @@ const SHARED_NAV = `
 const SHARED_FOOTER = `
   <footer role="contentinfo">
     <nav aria-label="Footer Navigation">
-      <p><strong>Product &amp; Guides:</strong> <a href="/pricing">Pricing Plans</a> | <a href="/blog">Blog &amp; Guides</a> | <a href="/blog/what-is-agents-md">What is AGENTS.md?</a> | <a href="/blog/how-to-price-a-freelance-project">How to Price a Project</a> | <a href="/blog/freelance-scope-of-work-template">Scope of Work Template</a> | <a href="/blog/prevent-scope-creep-freelance">Prevent Scope Creep</a> | <a href="/tools/freelance-rate-calculator">Rate Calculator</a> | <a href="/tools/project-price-calculator">Project Calculator</a> | <a href="/signup">Create Free Account</a></p>
+      <p><strong>Product &amp; Guides:</strong> <a href="/pricing">Pricing Plans</a> | <a href="/blog">Blog &amp; Guides</a> | <a href="/blog/what-is-agents-md">What is AGENTS.md?</a> | <a href="/blog/how-to-price-a-freelance-project">How to Price a Project</a> | <a href="/blog/freelance-scope-of-work-template">Scope of Work Template</a> | <a href="/blog/prevent-scope-creep-freelance">Prevent Scope Creep</a> | <a href="/tools/freelance-rate-calculator">Rate Calculator</a> | <a href="/tools/project-price-calculator">Project Calculator</a> | <a href="/tools/freelance-proposal-generator">AI Proposal Generator</a> | <a href="/signup">Create Free Account</a></p>
       <p><strong>Company &amp; Trust:</strong> <a href="/about">About Floorly</a> | <a href="/contact">Contact Us</a> | <a href="mailto:support@floorlystudio.me">support@floorlystudio.me</a> | Founder: Ritik (Software Systems Engineer)</p>
       <p><strong>Legal &amp; Compliance:</strong> <a href="/terms">Terms of Service</a> | <a href="/privacy">Privacy Policy</a> | <a href="/refund-policy">Refund Policy</a> | <a href="/delivery">Digital Delivery Policy</a></p>
       <p><strong>External Citations &amp; Community:</strong> <a href="https://github.com/RitikWeb22/floorly" target="_blank" rel="noopener noreferrer">Floorly Open Source on GitHub</a> | <a href="https://www.producthunt.com/products/floorly" target="_blank" rel="noopener noreferrer">Product Hunt Listing</a> | Aligned with <a href="https://www.bls.gov/ooh/computer-and-information-technology/web-developers.htm" target="_blank" rel="noopener noreferrer">U.S. Bureau of Labor Statistics</a> standards</p>
@@ -829,6 +830,135 @@ const finalProposalQuote = Math.max(rawProjectQuote, categoryMinimumFloor);</cod
     ]
   },
   {
+    path: '/tools/freelance-proposal-generator',
+    outPath: 'tools/freelance-proposal-generator/index.html',
+    title: 'Free AI Freelance Proposal Generator with Price Floor Guardrails – Floorly',
+    description: 'Generate win-ready freelance proposals from client briefs in under 60 seconds. Calculate itemized scopes, milestone payments, and unbreakable price floors.',
+    h1: 'AI Freelance Proposal Generator with Built-In Price Floor Protection',
+    content: `
+      <main id="main-content">
+        <header>
+          ${SHARED_NAV}
+          <h1>AI Freelance Proposal Generator with Built-In Price Floor Protection</h1>
+          <p>Turn messy client briefs into ironclad, win-ready proposals in under 60 seconds. Calculate itemized scopes, milestone payments, and unbreakable price floors that stop scope creep before it starts.</p>
+          <p><small>Published by Ritik (Founder &amp; Systems Engineer) &bull; Last updated: <time datetime="2026-10-17">October 17, 2026</time></small></p>
+
+          <aside aria-label="Key Takeaways and Proposal Generator Summary" class="executive-summary">
+            <h2>What are the key takeaways from the Floorly Proposal Generator?</h2>
+            <p><strong>Bottom-Line Answer &amp; Top Summary:</strong> The Floorly AI Proposal Generator transforms unstructured client briefs into production-grade proposals. Unlike generic AI copy generators, Floorly applies deterministic price floor guardrails, calculates 3-tier quotations, enforces milestone deposits, and specifies out-of-scope clauses to eliminate unbilled scope creep.</p>
+            <ul>
+              <li><strong>Deterministic Price Floor Protection:</strong> Evaluates labor hours, business overhead, and a 15% safety buffer so you never quote below break-even.</li>
+              <li><strong>Itemized Deliverables &amp; Exclusions:</strong> Clarifies exact work scope and marks out-of-scope items to prevent scope creep disputes.</li>
+              <li><strong>3-Tier Package Architecture:</strong> Generates Minimum Floor, Recommended Package, and Premium Turnkey tiers to maximize project conversion.</li>
+              <li><strong>Zero Intermediary Fees:</strong> Keep 100% of all client milestone payments settled directly through your preferred payment methods.</li>
+            </ul>
+          </aside>
+        </header>
+
+        <section aria-labelledby="why-price-floor">
+          <h2 id="why-price-floor">Why Freelance Proposals Require a Price Floor</h2>
+          <p><strong>Direct Answer:</strong> According to independent contractor research from the Freelancers Union and Upwork, over 64% of freelancers experience scope creep and unbilled revisions on fixed-fee projects. A price floor sets an unbreakable minimum rate threshold that guarantees financial viability before client proposals are sent.</p>
+          <p>When freelance developers, designers, and consultants quote fixed prices based purely on best-case labor hours, unexpected edge cases destroy net profit margins. Setting a hard price floor ensures that non-billable overhead, revision cycles, and taxes are protected.</p>
+        </section>
+
+        <section aria-labelledby="proposal-comparison">
+          <h2 id="proposal-comparison">Floorly Proposal Studio vs. Legacy Competitors</h2>
+          <p><strong>Direct Answer:</strong> Legacy proposal software like HelloBonsai and PandaDoc offer static templates that still require manual price guessing, while tools like Venngage only create visual slides. Floorly uniquely pairs AI brief parsing with server-side price floors and zero-commission milestone invoicing.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Feature / Capability</th>
+                <th>Floorly Studio</th>
+                <th>HelloBonsai</th>
+                <th>PandaDoc</th>
+                <th>Venngage</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Deterministic Price Floor Guard</strong></td>
+                <td>✓ Built-in Server Floor</td>
+                <td>✗ Manual Guessing</td>
+                <td>✗ None</td>
+                <td>✗ None</td>
+              </tr>
+              <tr>
+                <td><strong>AI Client Brief Scoping</strong></td>
+                <td>✓ Auto-extracts scope &amp; risks</td>
+                <td>✗ Static Templates</td>
+                <td>✗ Basic AI Writer</td>
+                <td>Partial (Slide maker)</td>
+              </tr>
+              <tr>
+                <td><strong>Milestone Deposit Invoicing</strong></td>
+                <td>✓ Direct Payment Links (0% Fee)</td>
+                <td>✓ Card Processing Fee</td>
+                <td>✓ Gateway Fee</td>
+                <td>✗ None</td>
+              </tr>
+              <tr>
+                <td><strong>Client-Specific AGENTS.md Export</strong></td>
+                <td>✓ Generates AI Coding Guide</td>
+                <td>✗ None</td>
+                <td>✗ None</td>
+                <td>✗ None</td>
+              </tr>
+              <tr>
+                <td><strong>Free Tool Access without Signup</strong></td>
+                <td>✓ 100% Free Instant Access</td>
+                <td>✗ Trial / Paywall</td>
+                <td>✗ Signup Required</td>
+                <td>Partial Free Tier</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section aria-labelledby="proposal-faqs">
+          <h2 id="proposal-faqs">Frequently Asked Questions About Freelance Proposals</h2>
+          <details>
+            <summary><strong>What is an AI freelance proposal generator?</strong></summary>
+            <p><strong>Direct Answer:</strong> An AI freelance proposal generator is software that converts raw project briefs into structured proposals with itemized deliverables, timelines, pricing tiers, and milestone invoicing terms.</p>
+          </details>
+          <details>
+            <summary><strong>What should every winning freelance proposal include?</strong></summary>
+            <p><strong>Direct Answer:</strong> Every winning proposal includes an executive summary mirroring the client's problem, itemized deliverables, explicit exclusions (out-of-scope), 3 tiered pricing packages, a milestone deposit schedule, and clear revision/IP terms.</p>
+          </details>
+          <details>
+            <summary><strong>How do I prevent scope creep on fixed-price projects?</strong></summary>
+            <p><strong>Direct Answer:</strong> Add an explicit 'Out of Scope' section detailing what is NOT covered, limit revision cycles to two rounds, and enforce a formal Change Order process for new feature requests.</p>
+          </details>
+        </section>
+
+        <section aria-labelledby="proposal-conclusion">
+          <h2 id="proposal-conclusion">Conclusion &amp; Next Steps</h2>
+          <p><strong>Direct Answer:</strong> Winning high-value freelance clients requires speed, clarity, and unbreakable rate protection. Use Floorly's free <a href="/tools/freelance-proposal-generator">AI Proposal Generator</a> to draft your scope, check your baseline with our <a href="/tools/freelance-rate-calculator">Rate Calculator</a>, or <a href="/signup">create a free Floorly Studio account</a> to send interactive web proposals.</p>
+        </section>
+
+        ${SHARED_FOOTER}
+      </main>
+    `,
+    schemas: [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Floorly AI Freelance Proposal & Scope Generator",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "url": "https://floorlystudio.me/tools/freelance-proposal-generator"
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://floorlystudio.me/" },
+          { "@type": "ListItem", "position": 2, "name": "Free Tools", "item": "https://floorlystudio.me/tools/freelance-rate-calculator" },
+          { "@type": "ListItem", "position": 3, "name": "AI Proposal Generator", "item": "https://floorlystudio.me/tools/freelance-proposal-generator" }
+        ]
+      }
+    ]
+  },
+  {
     path: '/contact',
     outPath: 'contact/index.html',
     title: 'Contact Floorly: Customer Support, Inquiries & Feedback',
@@ -1100,6 +1230,14 @@ const finalProposalQuote = Math.max(rawProjectQuote, categoryMinimumFloor);</cod
             <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> Permanently delete your account and all associated proposals from our servers.</li>
             <li><strong>Right to Restrict Processing:</strong> Disable AI brief analysis while retaining manual proposal generation.</li>
           </ul>
+        </section>
+
+        <section aria-labelledby="cookies-advertising">
+          <h2 id="cookies-advertising">Cookies &amp; Google AdSense Advertising Disclosures</h2>
+          <p><strong>Direct Answer:</strong> Floorly uses essential session tokens and HTTP-only cookies necessary to keep you securely signed in and maintain application functionality.</p>
+          <p>Third-party vendors, including Google, use cookies (such as DoubleClick cookies) to serve ads based on a user's prior visits to Floorly or other websites. Google's use of advertising cookies enables it and its partners to serve ads to users based on their visits to our site and/or other sites across the internet.</p>
+          <p>Sponsored display advertisements are presented exclusively on public educational guides and free calculation tools; your authenticated private workspaces, proposals, and client financials remain strictly ad-free.</p>
+          <p>Users may opt out of personalized advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer">Google Ads Settings</a> or <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer">www.aboutads.info/choices</a>.</p>
         </section>
 
         <section aria-labelledby="privacy-faq">

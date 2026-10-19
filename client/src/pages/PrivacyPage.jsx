@@ -111,11 +111,36 @@ export function PrivacyPage() {
               </ul>
             </section>
 
-            <section className="space-y-2">
-              <h2 className="text-base font-bold text-charcoal-900">7. Cookies & Session Storage</h2>
+            <section className="space-y-3">
+              <h2 className="text-base font-bold text-charcoal-900">7. Cookies &amp; Third-Party Advertising (Google AdSense)</h2>
               <p>
-                Floorly uses essential session tokens and HTTP-only cookies necessary to keep you securely signed in. We do not deploy third-party advertising cookies or cross-site tracking pixels.
+                Floorly uses essential session tokens and HTTP-only cookies necessary to keep you securely signed in and maintain application functionality.
               </p>
+              <div className="bg-charcoal-50 p-4 rounded-xl border border-charcoal-200 text-xs text-charcoal-700 space-y-2">
+                <p className="font-semibold text-charcoal-900">Google AdSense &amp; Advertising Partner Disclosures:</p>
+                <ul className="list-disc pl-5 space-y-1.5 text-charcoal-600">
+                  <li>
+                    Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites across the internet.
+                  </li>
+                  <li>
+                    Google's use of advertising cookies enables it and its partners to serve personalized or contextual advertisements to our users based on their visits to Floorly and/or other websites on the internet.
+                  </li>
+                  <li>
+                    Sponsored display advertisements are presented exclusively on public educational guides and free calculation tools; your authenticated private workspaces, proposals, and client financials remain strictly ad-free.
+                  </li>
+                  <li>
+                    <strong>Opt-Out Options:</strong> Users may opt out of personalized advertising by visiting{' '}
+                    <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline font-semibold">
+                      Google Ads Settings
+                    </a>
+                    . Alternatively, you can opt out of a third-party vendor's use of cookies for personalized advertising by visiting{' '}
+                    <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener noreferrer" className="text-brand-600 underline font-semibold">
+                      www.aboutads.info/choices
+                    </a>
+                    .
+                  </li>
+                </ul>
+              </div>
             </section>
 
             <section className="space-y-2">

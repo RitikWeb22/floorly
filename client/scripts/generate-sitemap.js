@@ -45,6 +45,13 @@ const PUBLIC_ROUTES = [
     priority: '0.9',
   },
   {
+    path: '/tools/freelance-proposal-generator',
+    sourceFile: 'client/src/pages/tools/AiProposalGeneratorPage.jsx',
+    defaultLastmod: '2026-10-17',
+    changefreq: 'weekly',
+    priority: '0.95',
+  },
+  {
     path: '/about',
     sourceFile: 'client/src/pages/AboutPage.jsx',
     defaultLastmod: '2026-10-12',

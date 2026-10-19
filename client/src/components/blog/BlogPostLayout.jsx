@@ -13,6 +13,7 @@ import {
 } from 'lucide-react';
 import { Logo } from '../common/Logo';
 import { Footer } from '../layout/Footer';
+import { AdSenseBanner } from '../common/AdSenseBanner';
 
 export function BlogPostLayout({
   title,
@@ -170,6 +171,9 @@ export function BlogPostLayout({
               <article className="prose prose-slate max-w-none text-[var(--ink,#0E1A2B)] text-[18px] leading-[32px]">
                 {children}
               </article>
+
+              {/* AdSense Unit on Educational Blog Articles */}
+              <AdSenseBanner className="my-10" />
 
               {/* Author Bio Box */}
               <section className="mt-14 p-6 sm:p-8 bg-white rounded-2xl border border-[var(--line,#E8E0CF)] shadow-xs not-prose">

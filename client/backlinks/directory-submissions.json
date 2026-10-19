@@ -1,0 +1,65 @@
+{
+  "metadata": {
+    "generatedAt": "2026-10-17T14:20:58.780Z",
+    "siteUrl": "https://floorlystudio.me",
+    "toolUrl": "https://floorlystudio.me/tools/freelance-proposal-generator",
+    "logoUrl": "https://floorlystudio.me/og-image.png"
+  },
+  "directories": [
+    {
+      "platform": "Toolify.ai",
+      "submitUrl": "https://www.toolify.ai/submit",
+      "title": "Floorly",
+      "tagline": "AI proposal generator with deterministic price floor protection",
+      "pricing": "Free / Freemium",
+      "category": "Productivity / Freelance / Business",
+      "description": "Turn client briefs into scoped proposals with price floors. Prevent underquoting, add payment links, and track true profit margins.",
+      "targetUrl": "https://floorlystudio.me/tools/freelance-proposal-generator"
+    },
+    {
+      "platform": "Futurepedia.io",
+      "submitUrl": "https://www.futurepedia.io/submit-tool",
+      "title": "Floorly Proposal Studio",
+      "tagline": "Never undercharge again — AI proposals with price floors",
+      "pricing": "Freemium",
+      "category": "Business & Finance",
+      "description": "Convert unstructured client briefs into professional proposals, transparent quotations with strict floor price enforcement, and zero-fee milestone invoicing.",
+      "targetUrl": "https://floorlystudio.me"
+    },
+    {
+      "platform": "SaaSHub",
+      "submitUrl": "https://www.saashub.com/submit",
+      "title": "Floorly",
+      "alternativesTo": [
+        "HelloBonsai",
+        "PandaDoc",
+        "Proposify",
+        "HoneyBook"
+      ],
+      "pricing": "Free plan available, Pro at $19/mo",
+      "description": "AI scoping and proposal software for independent software developers, digital designers, and digital studios.",
+      "targetUrl": "https://floorlystudio.me"
+    },
+    {
+      "platform": "AlternativeTo",
+      "submitUrl": "https://alternativeto.net/",
+      "title": "Floorly",
+      "tagline": "AI Proposals with Built-in Price Floors",
+      "license": "Proprietary / Free tier available",
+      "replaces": [
+        "Bonsai",
+        "PandaDoc",
+        "Better Proposals"
+      ],
+      "targetUrl": "https://floorlystudio.me"
+    },
+    {
+      "platform": "There Is An AI For That",
+      "submitUrl": "https://theresanaiforthat.com/submit/",
+      "title": "Floorly",
+      "task": "Generate freelance proposals with price floors",
+      "description": "AI tool that extracts deliverables from client briefs and calculates unbreakable break-even price floors.",
+      "targetUrl": "https://floorlystudio.me/tools/freelance-proposal-generator"
+    }
+  ]
+}

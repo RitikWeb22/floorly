@@ -53,6 +53,7 @@ const DeliveryPage = lazyWithRetry(() => import('./pages/DeliveryPage').then((m)
 const RazorpayTestPage = lazyWithRetry(() => import('./pages/RazorpayTestPage').then((m) => ({ default: m.RazorpayTestPage })));
 const FreelanceRateCalculatorPage = lazyWithRetry(() => import('./pages/tools/FreelanceRateCalculatorPage').then((m) => ({ default: m.FreelanceRateCalculatorPage })));
 const ProjectPriceCalculatorPage = lazyWithRetry(() => import('./pages/tools/ProjectPriceCalculatorPage').then((m) => ({ default: m.ProjectPriceCalculatorPage })));
+const AiProposalGeneratorPage = lazyWithRetry(() => import('./pages/tools/AiProposalGeneratorPage').then((m) => ({ default: m.AiProposalGeneratorPage })));
 const BlogIndexPage = lazyWithRetry(() => import('./pages/blog/BlogIndexPage').then((m) => ({ default: m.BlogIndexPage })));
 const WhatIsAgentsMdPage = lazyWithRetry(() => import('./pages/blog/WhatIsAgentsMdPage').then((m) => ({ default: m.WhatIsAgentsMdPage })));
 const HowToPriceFreelanceProjectPage = lazyWithRetry(() => import('./pages/blog/HowToPriceFreelanceProjectPage').then((m) => ({ default: m.HowToPriceFreelanceProjectPage })));
@@ -159,6 +160,8 @@ function AppContent() {
           <Route path="/pricing" element={<PricingPage />} />
           <Route path="/tools/freelance-rate-calculator" element={<FreelanceRateCalculatorPage />} />
           <Route path="/tools/project-price-calculator" element={<ProjectPriceCalculatorPage />} />
+          <Route path="/tools/freelance-proposal-generator" element={<AiProposalGeneratorPage />} />
+          <Route path="/tools/ai-proposal-generator" element={<AiProposalGeneratorPage />} />
           <Route path="/blog" element={<BlogIndexPage />} />
           <Route path="/blog/what-is-agents-md" element={<WhatIsAgentsMdPage />} />
           <Route path="/blog/how-to-price-a-freelance-project" element={<HowToPriceFreelanceProjectPage />} />

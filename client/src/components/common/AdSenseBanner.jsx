@@ -19,9 +19,9 @@ export function AdSenseBanner({
     // If no client publisher ID is provided yet, don't execute script
     if (!client) return;
 
-    // Dynamically inject Google AdSense script only on pages using this component
+    // Dynamically inject Google AdSense script if not already present in document head
     const scriptId = 'google-adsense-script';
-    let script = document.getElementById(scriptId);
+    let script = document.getElementById(scriptId) || document.querySelector('script[src*="adsbygoogle.js"]');
 
     if (!script) {
       script = document.createElement('script');

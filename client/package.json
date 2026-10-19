@@ -7,6 +7,7 @@
     "dev": "vite",
     "build": "vite build && node scripts/generate-og.js && node scripts/prerender.js && node scripts/generate-sitemap.js && node scripts/verify-sitemap.js",
     "verify:sitemap": "node scripts/verify-sitemap.js",
+    "backlinks:automate": "node scripts/automate-backlinks.js",
     "preview": "vite preview"
   },
   "dependencies": {

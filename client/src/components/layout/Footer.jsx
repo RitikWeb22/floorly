@@ -103,6 +103,11 @@ export function Footer() {
                       Project Price Calculator
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/tools/freelance-proposal-generator" style={{ color: 'var(--muted, #5B6676)', textDecoration: 'none' }} className="hover:text-[var(--cobalt,#0047AB)] transition-colors">
+                      AI Proposal Generator
+                    </Link>
+                  </li>
                 </ul>
               </div>
 

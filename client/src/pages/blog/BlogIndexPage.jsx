@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { Logo } from '../../components/common/Logo';
 import { Footer } from '../../components/layout/Footer';
+import { AdSenseBanner } from '../../components/common/AdSenseBanner';
 import { BLOG_POSTS } from '../../data/blogPosts';
 import { useAuthStore } from '../../store/useAuthStore';
 
@@ -183,8 +184,11 @@ export function BlogIndexPage() {
           </div>
         )}
 
+        {/* AdSense Unit on Guides Directory */}
+        <AdSenseBanner className="mt-12" />
+
         {/* Feature Banner Section */}
-        <div className="mt-16 bg-gradient-to-r from-[#0047AB] to-[#002D6B] rounded-2xl p-8 sm:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="mt-12 bg-gradient-to-r from-[#0047AB] to-[#002D6B] rounded-2xl p-8 sm:p-10 text-white shadow-xl flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="max-w-xl">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-[#FFC72C] mb-2">
               <Sparkles className="w-3.5 h-3.5" />

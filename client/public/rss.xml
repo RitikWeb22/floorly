@@ -28,5 +28,12 @@
       <pubDate>Tue, 13 Oct 2026 00:00:00 GMT</pubDate>
       <description>Interactive tool estimating fixed project fees with complexity multipliers and contingency buffers.</description>
     </item>
+    <item>
+      <title>AI Freelance Proposal Generator with Price Floor Guardrails</title>
+      <link>https://floorlystudio.me/tools/freelance-proposal-generator</link>
+      <guid>https://floorlystudio.me/tools/freelance-proposal-generator</guid>
+      <pubDate>Sat, 17 Oct 2026 00:00:00 GMT</pubDate>
+      <description>Generate scoped freelance proposals from client briefs in under 60 seconds with 3 pricing tiers, milestone invoicing, and scope-creep protection.</description>
+    </item>
   </channel>
 </rss>
