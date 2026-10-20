@@ -111,6 +111,7 @@ Disallow: /checkout-test
 Disallow: /razorpay-test
 Disallow: /api/
 Allow: /sitemap.xml
+Allow: /ads.txt
 
 # Sitemap Declaration
 Sitemap: https://floorlystudio.me/sitemap.xml
